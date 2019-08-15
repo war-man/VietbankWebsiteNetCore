@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Views\CaNhan\Index.cshtml" />
+    <None Remove="Views\CaNhan\Index.cshtml~RF768cf5f.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Views\CaNhan\Index.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Vietbank.Core\Vietbank.Core.csproj" />
+  </ItemGroup>
+
+</Project>

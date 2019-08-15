@@ -5,18 +5,37 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="BuildBundlerMinifier" Version="2.9.406" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.0">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="2.2.0" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.0" />
+    <Compile Remove="Modules\Modular.Modules.Personal\Controllers\**" />
+    <Compile Remove="Modules\Modular.Modules.Personal\obj\**" />
+    <Compile Remove="Modules\Modular.Modules.Personal\Repository\**" />
+    <Compile Remove="Modules\Modular.Modules.Personal\Service\**" />
+    <Content Remove="Modules\Modular.Modules.Personal\Controllers\**" />
+    <Content Remove="Modules\Modular.Modules.Personal\obj\**" />
+    <Content Remove="Modules\Modular.Modules.Personal\Repository\**" />
+    <Content Remove="Modules\Modular.Modules.Personal\Service\**" />
+    <EmbeddedResource Remove="Modules\Modular.Modules.Personal\Controllers\**" />
+    <EmbeddedResource Remove="Modules\Modular.Modules.Personal\obj\**" />
+    <EmbeddedResource Remove="Modules\Modular.Modules.Personal\Repository\**" />
+    <EmbeddedResource Remove="Modules\Modular.Modules.Personal\Service\**" />
+    <None Remove="Modules\Modular.Modules.Personal\Controllers\**" />
+    <None Remove="Modules\Modular.Modules.Personal\obj\**" />
+    <None Remove="Modules\Modular.Modules.Personal\Repository\**" />
+    <None Remove="Modules\Modular.Modules.Personal\Service\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Modules\" />
+    <Compile Remove="Extensions\ReferencesMetadataReferenceFeatureProvider.cs" />
+    <Compile Remove="Modules\Modular.Modules.Personal\ModuleInitializer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BuildBundlerMinifier" Version="2.9.406" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor" Version="2.2.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Vietbank.Core\Vietbank.Core.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,23 +1,34 @@
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Mvc.Razor;
+using Microsoft.CodeAnalysis;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
+using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Localization;
-using Microsoft.AspNetCore.Mvc.Razor;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
+using System.Reflection;
+using System.Runtime.Loader;
+using Vietbank.Core;
+using VietbankWebsite.Extensions;
 
 namespace VietbankWebsite
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        private readonly Microsoft.AspNetCore.Hosting.IHostingEnvironment _hostingEnvironment;
+        private readonly IList<ModuleInfo> _modules = new List<ModuleInfo>();
+
+        [System.Obsolete]
+        public Startup(IConfiguration configuration, Microsoft.AspNetCore.Hosting.IHostingEnvironment hostingEnvironment)
         {
+            _hostingEnvironment = hostingEnvironment;
             Configuration = configuration;
         }
 
@@ -26,7 +37,7 @@ namespace VietbankWebsite
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            LoadInstalledModules();
             services.AddLocalization(options => options.ResourcesPath = "Resources");
             var supportedCultures = new[]
             {
@@ -40,9 +51,33 @@ namespace VietbankWebsite
                 options.SupportedCultures = supportedCultures;
                 options.SupportedUICultures = supportedCultures;
             });
-            services.AddMvc()
+            services.Configure<RazorViewEngineOptions>(options =>
+            {
+                options.ViewLocationExpanders.Add(new ModuleViewLocationExpander());
+            });
+            var mvcBuilder = services.AddMvc()
             .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
-            .AddDataAnnotationsLocalization();
+            .AddDataAnnotationsLocalization()
+            .AddRazorOptions(o =>
+            {
+                foreach (var module in _modules)
+                {
+                    //o.AdditionalCompilationReferences.Add(MetadataReference.CreateFromFile(module.Assembly.Location));
+                }
+            });
+
+            foreach (var module in _modules)
+            {
+                // Register controller from modules
+                mvcBuilder.AddApplicationPart(module.Assembly);
+
+                var moduleInitializerType = module.Assembly.GetTypes().Where(x => typeof(IModuleInitializer).IsAssignableFrom(x)).FirstOrDefault();
+                if (moduleInitializerType != null && moduleInitializerType != typeof(IModuleInitializer))
+                {
+                    var moduleInitializer = (IModuleInitializer)Activator.CreateInstance(moduleInitializerType);
+                    moduleInitializer.Init(services);
+                }
+            }
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -61,7 +96,21 @@ namespace VietbankWebsite
             app.UseRequestLocalization();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            // Serving static file for modules
+            foreach (var module in _modules)
+            {
+                var wwwrootDir = new DirectoryInfo(Path.Combine(module.Path, "wwwroot"));
+                if (!wwwrootDir.Exists)
+                {
+                    continue;
+                }
 
+                app.UseStaticFiles(new StaticFileOptions()
+                {
+                    FileProvider = new PhysicalFileProvider(wwwrootDir.FullName),
+                    RequestPath = new PathString("/" + module.ShortName)
+                });
+            }
             app.UseRouting();
             app.UseEndpoints(endpoints =>
             {
@@ -70,6 +119,49 @@ namespace VietbankWebsite
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
+        }
+
+        private void LoadInstalledModules()
+        {
+            var moduleRootFolder = new DirectoryInfo(Path.Combine(_hostingEnvironment.ContentRootPath, "Modules"));
+            var moduleFolders = moduleRootFolder.GetDirectories();
+
+            foreach (var moduleFolder in moduleFolders)
+            {
+                var binFolder = new DirectoryInfo(Path.Combine(moduleFolder.FullName, "bin"));
+                if (!binFolder.Exists)
+                {
+                    continue;
+                }
+
+                foreach (var file in binFolder.GetFileSystemInfos("*.dll", SearchOption.AllDirectories))
+                {
+                    Assembly assembly;
+                    try
+                    {
+                        assembly = AssemblyLoadContext.Default.LoadFromAssemblyPath(file.FullName);
+                    }
+                    catch (FileLoadException ex)
+                    {
+                        if (ex.Message == "Assembly with same name is already loaded")
+                        {
+                            // Get loaded assembly
+                            assembly = Assembly.Load(new AssemblyName(Path.GetFileNameWithoutExtension(file.Name)));
+                        }
+                        else
+                        {
+                            throw;
+                        }
+                    }
+
+                    if (assembly.FullName.Contains(moduleFolder.Name))
+                    {
+                        _modules.Add(new ModuleInfo { Name = moduleFolder.Name, Assembly = assembly, Path = moduleFolder.FullName });
+                    }
+                }
+            }
+
+            GlobalConfigurationCore.Modules = _modules;
         }
     }
 }

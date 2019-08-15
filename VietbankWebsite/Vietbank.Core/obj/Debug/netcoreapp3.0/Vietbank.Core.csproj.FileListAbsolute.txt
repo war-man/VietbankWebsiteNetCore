@@ -1,9 +1,8 @@
 E:\github\VietbankWebsiteNetCore\VietbankWebsite\Vietbank.Core\bin\Debug\netcoreapp3.0\Vietbank.Core.deps.json
 E:\github\VietbankWebsiteNetCore\VietbankWebsite\Vietbank.Core\bin\Debug\netcoreapp3.0\Vietbank.Core.dll
-E:\github\VietbankWebsiteNetCore\VietbankWebsite\Vietbank.Core\obj\Debug\netcoreapp3.0\Vietbank.Core.csprojAssemblyReference.cache
+E:\github\VietbankWebsiteNetCore\VietbankWebsite\Vietbank.Core\bin\Debug\netcoreapp3.0\Vietbank.Core.pdb
 E:\github\VietbankWebsiteNetCore\VietbankWebsite\Vietbank.Core\obj\Debug\netcoreapp3.0\Vietbank.Core.csproj.CoreCompileInputs.cache
 E:\github\VietbankWebsiteNetCore\VietbankWebsite\Vietbank.Core\obj\Debug\netcoreapp3.0\Vietbank.Core.AssemblyInfoInputs.cache
 E:\github\VietbankWebsiteNetCore\VietbankWebsite\Vietbank.Core\obj\Debug\netcoreapp3.0\Vietbank.Core.AssemblyInfo.cs
-E:\github\VietbankWebsiteNetCore\VietbankWebsite\Vietbank.Core\bin\Debug\netcoreapp3.0\Vietbank.Core.pdb
 E:\github\VietbankWebsiteNetCore\VietbankWebsite\Vietbank.Core\obj\Debug\netcoreapp3.0\Vietbank.Core.dll
 E:\github\VietbankWebsiteNetCore\VietbankWebsite\Vietbank.Core\obj\Debug\netcoreapp3.0\Vietbank.Core.pdb

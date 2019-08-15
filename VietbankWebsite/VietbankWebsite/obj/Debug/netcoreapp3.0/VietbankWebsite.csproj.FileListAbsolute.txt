@@ -12,16 +12,20 @@ E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netco
 E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netcoreapp3.0\vi\VietbankWebsite.resources.dll
 E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netcoreapp3.0\VietbankWebsite.Views.dll
 E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netcoreapp3.0\VietbankWebsite.Views.pdb
+E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.JsonPatch.dll
+E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
 E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Razor.Language.dll
 E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netcoreapp3.0\Microsoft.CodeAnalysis.dll
 E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netcoreapp3.0\Microsoft.CodeAnalysis.CSharp.dll
 E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netcoreapp3.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netcoreapp3.0\Microsoft.CodeAnalysis.Razor.dll
 E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netcoreapp3.0\Microsoft.CodeAnalysis.Workspaces.dll
+E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netcoreapp3.0\Microsoft.DotNet.PlatformAbstractions.dll
 E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netcoreapp3.0\Microsoft.EntityFrameworkCore.dll
 E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netcoreapp3.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netcoreapp3.0\Microsoft.EntityFrameworkCore.Design.dll
 E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netcoreapp3.0\Microsoft.EntityFrameworkCore.Relational.dll
 E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netcoreapp3.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netcoreapp3.0\Microsoft.Extensions.DependencyModel.dll
 E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netcoreapp3.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
 E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netcoreapp3.0\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
 E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netcoreapp3.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
@@ -31,6 +35,7 @@ E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netco
 E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netcoreapp3.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netcoreapp3.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netcoreapp3.0\Newtonsoft.Json.dll
+E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netcoreapp3.0\Newtonsoft.Json.Bson.dll
 E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netcoreapp3.0\NuGet.Frameworks.dll
 E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netcoreapp3.0\Remotion.Linq.dll
 E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netcoreapp3.0\System.Composition.AttributedModel.dll
@@ -45,6 +50,8 @@ E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netco
 E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netcoreapp3.0\runtimes\win-x86\native\sni.dll
 E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netcoreapp3.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netcoreapp3.0\Vietbank.Core.dll
+E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netcoreapp3.0\Vietbank.Core.pdb
 E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.csprojAssemblyReference.cache
 E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\staticwebassets\VietbankWebsite.StaticWebAssets.Manifest.cache
 E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\staticwebassets\VietbankWebsite.StaticWebAssets.xml
@@ -52,8 +59,6 @@ E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netco
 E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.Resources.Views.Home.Index.vi.resources
 E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.csproj.GenerateResource.cache
 E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.csproj.CoreCompileInputs.cache
-E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.MvcApplicationPartsAssemblyInfo.cs
-E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.MvcApplicationPartsAssemblyInfo.cache
 E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.RazorAssemblyInfo.cache
 E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.RazorAssemblyInfo.cs
 E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.AssemblyInfoInputs.cache
@@ -80,3 +85,7 @@ E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netco
 E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.csproj.CopyComplete
 E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.dll
 E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.pdb
+E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.MvcApplicationPartsAssemblyInfo.cs
+E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.MvcApplicationPartsAssemblyInfo.cache
+E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\Razor\Modules\Modular.Modules.Personal\Views\CaNhan\Index.cshtml.g.cs
+E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netcoreapp3.0\Modules\Modular.Modules.Personal\bin\Debug\netcoreapp3.0\Modular.Modules.Personal.deps.json

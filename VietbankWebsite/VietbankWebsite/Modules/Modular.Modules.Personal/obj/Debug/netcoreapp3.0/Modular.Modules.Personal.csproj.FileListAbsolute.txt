@@ -1,0 +1,12 @@
+E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Modules\Modular.Modules.Personal\bin\Debug\netcoreapp3.0\Modular.Modules.Personal.deps.json
+E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Modules\Modular.Modules.Personal\bin\Debug\netcoreapp3.0\Modular.Modules.Personal.dll
+E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Modules\Modular.Modules.Personal\bin\Debug\netcoreapp3.0\Modular.Modules.Personal.pdb
+E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Modules\Modular.Modules.Personal\bin\Debug\netcoreapp3.0\Vietbank.Core.dll
+E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Modules\Modular.Modules.Personal\bin\Debug\netcoreapp3.0\Vietbank.Core.pdb
+E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Modules\Modular.Modules.Personal\obj\Debug\netcoreapp3.0\Modular.Modules.Personal.csprojAssemblyReference.cache
+E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Modules\Modular.Modules.Personal\obj\Debug\netcoreapp3.0\Modular.Modules.Personal.csproj.CoreCompileInputs.cache
+E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Modules\Modular.Modules.Personal\obj\Debug\netcoreapp3.0\Modular.Modules.Personal.AssemblyInfoInputs.cache
+E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Modules\Modular.Modules.Personal\obj\Debug\netcoreapp3.0\Modular.Modules.Personal.AssemblyInfo.cs
+E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Modules\Modular.Modules.Personal\obj\Debug\netcoreapp3.0\Modular.Modules.Personal.csproj.CopyComplete
+E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Modules\Modular.Modules.Personal\obj\Debug\netcoreapp3.0\Modular.Modules.Personal.dll
+E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Modules\Modular.Modules.Personal\obj\Debug\netcoreapp3.0\Modular.Modules.Personal.pdb
