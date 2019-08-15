@@ -1,0 +1,7 @@
+E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp2.2\VietbankWebsite.csprojAssemblyReference.cache
+E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp2.2\VietbankWebsite.Resources.Views.Home.Index.en.resources
+E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp2.2\VietbankWebsite.Resources.Views.Home.Index.vi.resources
+E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp2.2\VietbankWebsite.csproj.GenerateResource.cache
+E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp2.2\VietbankWebsite.csproj.CoreCompileInputs.cache
+E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp2.2\VietbankWebsite.AssemblyInfoInputs.cache
+E:\github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp2.2\VietbankWebsite.AssemblyInfo.cs

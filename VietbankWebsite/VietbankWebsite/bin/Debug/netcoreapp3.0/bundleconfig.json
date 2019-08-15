@@ -2,8 +2,8 @@
   {
     "outputFileName": "wwwroot/css/site.min.css",
     "inputFiles": [
-      "wwwroot/css/addon.css",
-      "wwwroot/css/main.css",
+      //"wwwroot/css/addons.css",
+      //"wwwroot/css/main.css",
       "wwwroot/css/site.css"
     ]
   },
@@ -13,7 +13,7 @@
       "wwwroot/js/jquery.3.1.1.min.js",
       "wwwroot/js/addons.js",
       "wwwroot/js/main.js",
-      "wwwroot/js/monment.js",
+      "wwwroot/js/moment.js",
       "wwwroot/js/site.js"
     ],
     "minify": {

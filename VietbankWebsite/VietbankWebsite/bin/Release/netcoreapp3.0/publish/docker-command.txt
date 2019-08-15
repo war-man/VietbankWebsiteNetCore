@@ -1,0 +1,4 @@
+﻿docker build -t still-temple-19736 E:\\github\\VietbankWebsiteNetCore\\VietbankWebsite\\VietbankWebsite\\bin\\Release\\netcoreapp3.0\\publish
+docker tag still-temple-19736 registry.heroku.com/still-temple-19736/web
+docker push registry.heroku.com/still-temple-19736/web
+heroku container:release web --app still-temple-19736
