@@ -1,12 +1,15 @@
-﻿<section class="top">
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+<section class="top">
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5 col-xl-6">
                 <section class="top-menu">
                     <ul>
-                        <li class="active"><a href="/" title="Khách hàng cá nhân">CÁ NHÂN</a></li>
-                        <li> <a href="#" title="Khách hàng cá nhân">DOANH NGHIỆP</a></li>
-                        <li> <a href="gioithieu.html" title="Khách hàng cá nhân">VỀ VIETBANK</a></li>
+                        <li class="active"><a href="@Localizer["SanPhamUrl"]" title="@Localizer["SanPham"]">@Localizer["SanPham"]</a></li>
+                        <li> <a href="@Localizer["QuanHeCoDongUrl"]" title="@Localizer["QuanHeCoDong"]">@Localizer["QuanHeCoDong"]</a></li>
+                        <li> <a href="@Localizer["TuyenDungUrl"]" title="@Localizer["TuyenDung"]">@Localizer["TuyenDung"]</a></li>
+                        <li> <a href="@Localizer["VeVietBankUrl"]" title="@Localizer["VeVietBank"]">@Localizer["VeVietBank"]</a></li>
                     </ul>
                 </section>
             </div>
@@ -15,7 +18,7 @@
                     <div class="top-contact">
                         <div class="location">
                             <i class="fa fa-map-marker"> </i>
-                            <p><a href="mangluoi.html">ATM &amp; Chi nhánh</a></p>
+                            <p><a href="@Localizer["ChiNhanhUrl"]">ATM &amp; @Localizer["ChiNhanh"]</a></p>
                         </div>
                         <div class="phone">
                             <i class="fa fa-phone"></i>
@@ -27,12 +30,7 @@
                             <input placeholder=""><span class="btn-search"> <i class="fa fa-search"></i></span>
                         </div>
                     </div>
-                    <div class="language">
-                        <div class="dropdown">
-                            <a id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">ENGLISH</a>
-                            <div aria-labelledby="dropdownMenuLink" class="dropdown-menu fadeInLeft"><a href="#" class="dropdown-item">Vietnamese</a><a href="#" class="dropdown-item">English</a></div>
-                        </div>
-                    </div>
+                    <partial name="~/Views/Partial/_SelectLanguagePartial.cshtml" />
                 </section>
             </div>
         </div>

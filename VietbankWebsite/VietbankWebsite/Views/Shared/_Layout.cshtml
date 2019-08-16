@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -12,7 +14,7 @@
     <environment exclude="Development">
         <link href="~/css/site.min.css" rel="stylesheet" />
     </environment>
-    
+
 </head>
 <body class="home">
     <div class="fullpage">
@@ -21,12 +23,12 @@
             <partial name="~/Views/Partial/_MainHeader.cshtml" />
         </header>
         <partial name="~/Views/Partial/_ToolLink.cshtml" />
-        <main>
-            @RenderBody()
-        </main>
+        
+        @RenderBody()
+        
         <partial name="~/Views/Partial/_Footer.cshtml" />
     </div>
-    
+
     <environment include="Development">
         <script src="~/js/jquery.3.1.1.min.js"></script>
         <script src="~/js/addons.js"></script>

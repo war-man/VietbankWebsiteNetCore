@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\github\\VietbankWebsiteNetCore\\VietbankWebsite\\Vietbank.Core\\Vietbank.Core.csproj": {}
+    "T:\\Github\\VietbankWebsiteNetCore\\VietbankWebsite\\Vietbank.Core\\Vietbank.Core.csproj": {}
   },
   "projects": {
-    "E:\\github\\VietbankWebsiteNetCore\\VietbankWebsite\\Vietbank.Core\\Vietbank.Core.csproj": {
+    "T:\\Github\\VietbankWebsiteNetCore\\VietbankWebsite\\Vietbank.Core\\Vietbank.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\github\\VietbankWebsiteNetCore\\VietbankWebsite\\Vietbank.Core\\Vietbank.Core.csproj",
+        "projectUniqueName": "T:\\Github\\VietbankWebsiteNetCore\\VietbankWebsite\\Vietbank.Core\\Vietbank.Core.csproj",
         "projectName": "Vietbank.Core",
-        "projectPath": "E:\\github\\VietbankWebsiteNetCore\\VietbankWebsite\\Vietbank.Core\\Vietbank.Core.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "E:\\github\\VietbankWebsiteNetCore\\VietbankWebsite\\Vietbank.Core\\obj\\",
+        "projectPath": "T:\\Github\\VietbankWebsiteNetCore\\VietbankWebsite\\Vietbank.Core\\Vietbank.Core.csproj",
+        "packagesPath": "C:\\Users\\leanhtoan\\.nuget\\packages\\",
+        "outputPath": "T:\\Github\\VietbankWebsiteNetCore\\VietbankWebsite\\Vietbank.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\leanhtoan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -42,6 +42,10 @@
         "netcoreapp3.0": {
           "dependencies": {
             "Microsoft.AspNetCore.Mvc": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Localization": {
               "target": "Package",
               "version": "[2.2.0, )"
             },

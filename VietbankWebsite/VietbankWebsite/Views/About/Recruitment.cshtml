@@ -1,0 +1,170 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.*
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<section class="banner-wrap">
+    <section class="breadcrumb-wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <ol class="breadcrumb mrt-10">
+                        <li><a href="gioithieu.html">Về Vietbank</a></li>
+                        <li><a href="tuyendung.html">Tuyển dụng</a></li>
+                        <li class="active"><span>Cơ hội nghề nghiệp</span></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="banner-page imageBanner">
+        <div style="background-image:url('/img/banner_page/banner_tuyendungct.png')" class="imgBg"></div>
+        <div class="desc">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-5 col-lg-5 col-xl-5">
+                        <h1 class="title">Cơ hội nghề nghiệp</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+<main>
+    <section class="tuyendung-wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <ul class="nav nav-bld">
+                        <li><a href="#">Chương trình tuyển dụng</a></li>
+                        <li><a href="tuyendung.html" class="active">Cơ hội nghề nghiệp</a></li>
+                        <li><a href="#">Hướng dẫn nộp hồ sơ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="search-job">
+                        <input placeholder="Từ khóa" class="field">
+                        <select name="career" class="career">
+                            <option value="1">Ngành nghề</option>
+                        </select>
+                        <select name="address" class="address">
+                            <option value="1">Nơi làm việc</option>
+                        </select>
+                        <button class="btn-filter">Tìm kiếm</button>
+                    </div>
+                    <div class="table-responsive">
+                        <div class="search-items">
+                            <div class="jobs-title">
+                                <div class="position">Vị trí tuyển dụng</div>
+                                <div class="employment">Nơi làm việc</div>
+                                <div class="date-posted">Ngày đăng</div>
+                            </div>
+                            <div class="jobs-item">
+                                <div class="job_head">
+                                    <div class="job-title"><a href="tuyendung-ct.html">Nhân viên Hỗ trợ tín dụng</a></div>
+                                    <div class="job-place">TP.HCM</div>
+                                    <div class="job-date">26/10/2016<span class="status new">Mới</span></div>
+                                </div>
+                            </div>
+                            <div class="jobs-item">
+                                <div class="job_head">
+                                    <div class="job-title"><a href="tuyendung-ct.html">Cộng tác viên Kinh doanh</a></div>
+                                    <div class="job-place">TP.HCM</div>
+                                    <div class="job-date">26/10/2016<span class="status new">Mới</span></div>
+                                </div>
+                            </div>
+                            <div class="jobs-item">
+                                <div class="job_head">
+                                    <div class="job-title"><a href="tuyendung-ct.html">Nhân viên mạng Lan</a></div>
+                                    <div class="job-place">TP.HCM</div>
+                                    <div class="job-date">26/10/2016<span class="status hot">Hot</span></div>
+                                </div>
+                            </div>
+                            <div class="jobs-item">
+                                <div class="job_head">
+                                    <div class="job-title"><a href="tuyendung-ct.html">Nhân viên Hỗ trợ và duy trì hệ thống TCBS</a></div>
+                                    <div class="job-place">TP.HCM</div>
+                                    <div class="job-date">26/10/2016<span class="status hot">Hot</span></div>
+                                </div>
+                            </div>
+                            <div class="jobs-item">
+                                <div class="job_head">
+                                    <div class="job-title"><a href="tuyendung-ct.html">Chuyên viên bảo mật thông tin</a></div>
+                                    <div class="job-place">Sóc Trăng</div>
+                                    <div class="job-date">26/10/2016</div>
+                                </div>
+                            </div>
+                            <div class="jobs-item">
+                                <div class="job_head">
+                                    <div class="job-title"><a href="tuyendung-ct.html">Nhân viên khai thác số liệu</a></div>
+                                    <div class="job-place">Cần thơ</div>
+                                    <div class="job-date">26/10/2016</div>
+                                </div>
+                            </div>
+                            <div class="jobs-item">
+                                <div class="job_head">
+                                    <div class="job-title"><a href="tuyendung-ct.html">Chuyên viên/Nhân viên Kinh doanh (tuyển dụng tại nhiều tỉnh thành)</a></div>
+                                    <div class="job-place">TP.HCM</div>
+                                    <div class="job-date">26/10/2016</div>
+                                </div>
+                            </div>
+                            <div class="jobs-item">
+                                <div class="job_head">
+                                    <div class="job-title"><a href="tuyendung-ct.html">Giao dịch viên</a></div>
+                                    <div class="job-place">TP.HCM</div>
+                                    <div class="job-date">26/10/2016</div>
+                                </div>
+                            </div>
+                            <div class="jobs-item">
+                                <div class="job_head">
+                                    <div class="job-title"> <a href="tuyendung-ct.html">Giám đốc/Phó Giám đốc Phòng giao dịch</a></div>
+                                    <div class="job-place">TP.HCM</div>
+                                    <div class="job-date">26/10/2016</div>
+                                </div>
+                            </div>
+                            <div class="jobs-item">
+                                <div class="job_head">
+                                    <div class="job-title"> <a href="tuyendung-ct.html">Nhân viên phát triển ứng dụng CNTT</a></div>
+                                    <div class="job-place">Sóc trăng</div>
+                                    <div class="job-date">26/10/2016</div>
+                                </div>
+                            </div>
+                            <div class="jobs-item">
+                                <div class="job_head">
+                                    <div class="job-title"> <a href="tuyendung-ct.html">Nhân viên Lễ tân</a></div>
+                                    <div class="job-place">Cần thơ</div>
+                                    <div class="job-date">26/10/2016</div>
+                                </div>
+                            </div>
+                            <div class="jobs-item">
+                                <div class="job_head">
+                                    <div class="job-title"> <a href="tuyendung-ct.html">Nhân viên Tái thẳm định</a></div>
+                                    <div class="job-place">TP.HCM</div>
+                                    <div class="job-date">26/10/2016</div>
+                                </div>
+                            </div>
+                            <div class="jobs-item">
+                                <div class="job_head">
+                                    <div class="job-title"> <a href="tuyendung-ct.html">Nhân viên thư ký Ban Tổng Giám đốc</a></div>
+                                    <div class="job-place">TP.HCM</div>
+                                    <div class="job-date">26/10/2016</div>
+                                </div>
+                            </div>
+                            <div class="jobs-item">
+                                <div class="job_head">
+                                    <div class="job-title"> <a href="tuyendung-ct.html">Nhân viên Xây dựng cơ bản</a></div>
+                                    <div class="job-place">TP.HCM</div>
+                                    <div class="job-date">26/10/2016</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

@@ -1,0 +1,87 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.*
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<section class="banner-wrap">
+    <section class="breadcrumb-wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <ol class="breadcrumb mrt-10">
+                        <li><a href="gioithieu.html">Về Vietbank</a></li>
+                        <li><a href="gioithieu.html">Giới thiệu</a></li>
+                        <li class="active"><span>Tầm Nhìn - Sứ Mệnh - Giá Trị Cốt Lõi</span></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="banner-page imageBanner">
+        <div style="background-image:url('/img/banner_page/banner_tamnhin.png')" class="imgBg"></div>
+        <div class="desc">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-5 col-lg-5 col-xl-5">
+                        <h1 class="title bottom">Tầm Nhìn - Sứ Mệnh - Giá Trị Cốt Lõi</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+<main>
+    <section class="tamnhin-camket">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="item-ab">
+                        <div class="row flex flex-wrap">
+                            <div class="col-xs-12 col-md-5 col-lg-4">
+                                <div class="thumb"><img src="/img/tamnhinsumenh/tamnhinchienluoc.png" alt="Tam nhin chien luoc"></div>
+                            </div>
+                            <div class="col-xs-12 col-md-7 col-lg-8">
+                                <div class="content">
+                                    <h1 class="title">Tầm nhìn chiến lược</h1>
+                                    <div class="desc">Không ngừng nâng cao chất lượng về mọi mặt để trở thành một trong những thương hiệu có uy tín trong lĩnh vực tài chính ngân hàng tại Việt Nam.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-ab">
+                        <div class="row flex flex-wrap">
+                            <div class="col-xs-12 col-md-7 col-lg-8">
+                                <div class="content">
+                                    <h2 class="title">Sứ mệnh</h2>
+                                    <div class="desc">Xây dựng Vietbank trở thành một ngân hàng bán lẻ năng động, hiện đại, có chất lượng phục vụ hàng đầu tại Việt Nam, đủ khả năng để cạnh tranh và phát triển trong giai đoạn mới.</div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-5 col-lg-4">
+                                <div class="thumb"><img src="/img/tamnhinsumenh/sumenh.png" alt="Su menh"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-ab">
+                        <div class="row flex flex-wrap">
+                            <div class="col-xs-12 col-md-5 col-lg-4">
+                                <div class="thumb"><img src="/img/tamnhinsumenh/giatricotloi.png" alt="Gia tri cot loi"></div>
+                            </div>
+                            <div class="col-xs-12 col-md-7 col-lg-8">
+                                <div class="content">
+                                    <h3 class="title">Giá trị cốt lõi</h3>
+                                    <div class="desc">
+                                        - Nguồn nhân lực chuyên môn cao, giàu kinh nghiệm và nhiệt tình.<br>
+                                        - Hệ thống công nghệ thông tin hiện đại.<br>
+                                        - Mô hình tổ chức và quản lý khoa học.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

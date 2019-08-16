@@ -11310,7 +11310,7 @@ header {
   border-top: 0;
   border-color: transparent transparent #fff transparent;
   position: absolute;
-  bottom: 0;
+  bottom: -4px;
   left: 50%;
   -webkit-transform: translateX(-50%);
   -khtml-transform: translateX(-50%);

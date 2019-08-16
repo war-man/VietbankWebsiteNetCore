@@ -1,12 +1,13 @@
-﻿<section class="tool">
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+<section class="tool">
     <nav class="tool-link">
         <ul>
-            <li> <i class="fa fa-usd"></i><a href="tygia.html" title="title">Tỷ giá</a></li>
-            <li> <i class="fa fa-map-marker"></i><a href="mangluoi.html" title="title">Mạng lưới</a></li>
-            <li> <i class="fa fa-file-text-o"></i><a href="#" title="title">Biểu mẫu</a></li>
-            <li> <i class="fa fa-gift"></i><a href="#" title="title">Khuyến mãi</a></li>
-            <li> <i class="fa fa-comments-o"></i><a href="#" title="title">Hỗ trợ</a></li>
-            <li> <i class="fa fa-phone"></i><a href="#" title="title">Liên hệ</a></li>
+            <li> <i class="fa fa-usd"></i><a href="@Localizer["TyGiaUrl"]" title="@Localizer["TyGia"]">@Localizer["TyGia"]</a></li>
+            <li> <i class="fa fa-map-marker"></i><a href="@Localizer["ChiNhanhUrl"]" title="@Localizer["ChiNhanh"]">@Localizer["ChiNhanh"]</a></li>
+            <li> <i class="fa fa-file-text-o"></i><a href="@Localizer["BieuMauUrl"]" title="@Localizer["BieuMau"]">@Localizer["BieuMau"]</a></li>
+            <li> <i class="fa fa-gift"></i><a href="@Localizer["KhuyenMaiUrl"]" title="@Localizer["KhuyenMai"]">@Localizer["KhuyenMai"]</a></li>
+            <li> <i class="fa fa-phone"></i><a href="@Localizer["LienHeUrl"]" title="@Localizer["LienHe"]">@Localizer["LienHe"]</a></li>
         </ul>
     </nav>
 </section>

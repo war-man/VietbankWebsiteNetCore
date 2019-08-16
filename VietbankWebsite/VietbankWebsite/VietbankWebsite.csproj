@@ -5,37 +5,44 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Modules\Modular.Modules.Personal\Controllers\**" />
-    <Compile Remove="Modules\Modular.Modules.Personal\obj\**" />
-    <Compile Remove="Modules\Modular.Modules.Personal\Repository\**" />
-    <Compile Remove="Modules\Modular.Modules.Personal\Service\**" />
-    <Content Remove="Modules\Modular.Modules.Personal\Controllers\**" />
-    <Content Remove="Modules\Modular.Modules.Personal\obj\**" />
-    <Content Remove="Modules\Modular.Modules.Personal\Repository\**" />
-    <Content Remove="Modules\Modular.Modules.Personal\Service\**" />
-    <EmbeddedResource Remove="Modules\Modular.Modules.Personal\Controllers\**" />
-    <EmbeddedResource Remove="Modules\Modular.Modules.Personal\obj\**" />
-    <EmbeddedResource Remove="Modules\Modular.Modules.Personal\Repository\**" />
-    <EmbeddedResource Remove="Modules\Modular.Modules.Personal\Service\**" />
-    <None Remove="Modules\Modular.Modules.Personal\Controllers\**" />
-    <None Remove="Modules\Modular.Modules.Personal\obj\**" />
-    <None Remove="Modules\Modular.Modules.Personal\Repository\**" />
-    <None Remove="Modules\Modular.Modules.Personal\Service\**" />
+    <Compile Remove="Modules\Modular.Modules.AboutVietBank\**" />
+    <Compile Remove="Modules\Modular.Modules.Personal\**" />
+    <Content Remove="Modules\Modular.Modules.AboutVietBank\**" />
+    <Content Remove="Modules\Modular.Modules.Personal\**" />
+    <EmbeddedResource Remove="Modules\Modular.Modules.AboutVietBank\**" />
+    <EmbeddedResource Remove="Modules\Modular.Modules.Personal\**" />
+    <None Remove="Modules\Modular.Modules.AboutVietBank\**" />
+    <None Remove="Modules\Modular.Modules.Personal\**" />
   </ItemGroup>
 
   <ItemGroup>
     <Compile Remove="Extensions\ReferencesMetadataReferenceFeatureProvider.cs" />
-    <Compile Remove="Modules\Modular.Modules.Personal\ModuleInitializer.cs" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="BuildBundlerMinifier" Version="2.9.406" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor" Version="2.2.0" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.0.0-preview8.19405.11">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.0.0-preview8.19405.4" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0-preview8-19413-06" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Vietbank.Core\Vietbank.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\About\Index.cshtml" />
+    <None Include="Views\About\Message.cshtml" />
+    <None Include="Views\About\Mission.cshtml" />
+    <None Include="Views\About\Quality.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Modules\" />
   </ItemGroup>
 
 </Project>
