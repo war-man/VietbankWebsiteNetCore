@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc.Razor;
-using Microsoft.CodeAnalysis;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
@@ -16,7 +16,11 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.Loader;
 using Vietbank.Core;
+using VietbankWebsite.Context;
 using VietbankWebsite.Extensions;
+using VietbankWebsite.Repository;
+using VietbankWebsite.Service;
+using VietbankWebsite.Uow;
 
 namespace VietbankWebsite
 {
@@ -38,6 +42,17 @@ namespace VietbankWebsite
         public void ConfigureServices(IServiceCollection services)
         {
             LoadInstalledModules();
+            services.AddMemoryCache();
+            services.AddTransient<IVbBannerRepository, VbBannerRepository>();
+            services.AddTransient<IVbBannerService, VbBannerService>();
+
+            services.AddTransient<IShareholderService, ShareholderService>();
+            services.AddTransient<IShareholderRepository, ShareholderRepository>();
+
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
+
+
+
             services.AddLocalization(options => options.ResourcesPath = "Resources");
             var supportedCultures = new[]
             {
@@ -45,30 +60,25 @@ namespace VietbankWebsite
                 new CultureInfo("en"),
             };
 
+
             services.Configure<RequestLocalizationOptions>(options =>
             {
                 options.DefaultRequestCulture = new RequestCulture(culture: "vi", uiCulture: "vi");
                 options.SupportedCultures = supportedCultures;
                 options.SupportedUICultures = supportedCultures;
             });
+            services.AddDbContext<VietbankContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.Configure<RazorViewEngineOptions>(options =>
             {
                 options.ViewLocationExpanders.Add(new ModuleViewLocationExpander());
             });
             var mvcBuilder = services.AddMvc()
             .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
-            .AddDataAnnotationsLocalization()
-            .AddRazorOptions(o =>
-            {
-                foreach (var module in _modules)
-                {
-                    //o.AdditionalCompilationReferences.Add(MetadataReference.CreateFromFile(module.Assembly.Location));
-                }
-            });
+            .AddDataAnnotationsLocalization();
 
             foreach (var module in _modules)
             {
-                // Register controller from modules
                 mvcBuilder.AddApplicationPart(module.Assembly);
 
                 var moduleInitializerType = module.Assembly.GetTypes().Where(x => typeof(IModuleInitializer).IsAssignableFrom(x)).FirstOrDefault();

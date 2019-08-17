@@ -6,7 +6,6 @@ namespace VietbankWebsite.Controllers
     [Route("about-vietbank")]
     public class AboutController : Controller
     {
-        [Route("")]
         [Route("gioi-thieu")]
         public IActionResult Index()
         {

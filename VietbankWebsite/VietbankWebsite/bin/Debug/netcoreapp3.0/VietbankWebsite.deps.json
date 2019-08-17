@@ -864,6 +864,39 @@
         }
       },
       "Microsoft.CSharp/4.6.0-preview8.19405.3": {},
+      "Microsoft.Data.SqlClient/1.0.19189.1-Preview": {
+        "dependencies": {
+          "Microsoft.Win32.Registry": "4.5.0",
+          "System.Configuration.ConfigurationManager": "4.5.0",
+          "System.Runtime.Caching": "4.5.0",
+          "System.Security.Principal.Windows": "4.5.0",
+          "System.Text.Encoding.CodePages": "4.5.1",
+          "runtime.native.System.Data.SqlClient.sni": "4.4.0"
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll": {
+            "assemblyVersion": "1.0.19189.1",
+            "fileVersion": "1.0.19189.1"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll": {
+            "rid": "unix",
+            "assetType": "runtime",
+            "assemblyVersion": "1.0.19189.1",
+            "fileVersion": "1.0.19189.1"
+          },
+          "runtimes/win/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "1.0.19189.1",
+            "fileVersion": "1.0.19189.1"
+          }
+        },
+        "compile": {
+          "ref/netcoreapp2.1/Microsoft.Data.SqlClient.dll": {}
+        }
+      },
       "Microsoft.DotNet.PlatformAbstractions/2.1.0": {
         "dependencies": {
           "System.AppContext": "4.3.0",
@@ -945,19 +978,19 @@
           "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Relational.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.SqlServer/2.2.6": {
+      "Microsoft.EntityFrameworkCore.SqlServer/3.0.0-preview8.19405.11": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Relational": "3.0.0-preview8.19405.11",
-          "System.Data.SqlClient": "4.6.1"
+          "Microsoft.Data.SqlClient": "1.0.19189.1-Preview",
+          "Microsoft.EntityFrameworkCore.Relational": "3.0.0-preview8.19405.11"
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.EntityFrameworkCore.SqlServer.dll": {
-            "assemblyVersion": "2.2.6.0",
-            "fileVersion": "2.2.6.19169"
+          "lib/netstandard2.1/Microsoft.EntityFrameworkCore.SqlServer.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.19.40511"
           }
         },
         "compile": {
-          "lib/netstandard2.0/Microsoft.EntityFrameworkCore.SqlServer.dll": {}
+          "lib/netstandard2.1/Microsoft.EntityFrameworkCore.SqlServer.dll": {}
         }
       },
       "Microsoft.EntityFrameworkCore.Tools/3.0.0-preview8.19405.11": {
@@ -1435,7 +1468,7 @@
           "Microsoft.NETCore.Targets": "1.1.0"
         }
       },
-      "runtime.native.System.Data.SqlClient.sni/4.5.0": {
+      "runtime.native.System.Data.SqlClient.sni/4.4.0": {
         "dependencies": {
           "runtime.win-arm64.runtime.native.System.Data.SqlClient.sni": "4.4.0",
           "runtime.win-x64.runtime.native.System.Data.SqlClient.sni": "4.4.0",
@@ -1680,6 +1713,18 @@
           "lib/netstandard1.0/System.Composition.TypedParts.dll": {}
         }
       },
+      "System.Configuration.ConfigurationManager/4.5.0": {
+        "dependencies": {
+          "System.Security.Cryptography.ProtectedData": "4.5.0",
+          "System.Security.Permissions": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
       "System.Console/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "3.0.0-preview7.19362.9",
@@ -1687,37 +1732,6 @@
           "System.IO": "4.3.0",
           "System.Runtime": "4.3.0",
           "System.Text.Encoding": "4.3.0"
-        }
-      },
-      "System.Data.SqlClient/4.6.1": {
-        "dependencies": {
-          "Microsoft.Win32.Registry": "4.5.0",
-          "System.Security.Principal.Windows": "4.5.0",
-          "System.Text.Encoding.CodePages": "4.5.1",
-          "runtime.native.System.Data.SqlClient.sni": "4.5.0"
-        },
-        "runtime": {
-          "lib/netcoreapp2.1/System.Data.SqlClient.dll": {
-            "assemblyVersion": "4.5.0.1",
-            "fileVersion": "4.6.27618.1"
-          }
-        },
-        "runtimeTargets": {
-          "runtimes/unix/lib/netcoreapp2.1/System.Data.SqlClient.dll": {
-            "rid": "unix",
-            "assetType": "runtime",
-            "assemblyVersion": "4.5.0.1",
-            "fileVersion": "4.6.27618.1"
-          },
-          "runtimes/win/lib/netcoreapp2.1/System.Data.SqlClient.dll": {
-            "rid": "win",
-            "assetType": "runtime",
-            "assemblyVersion": "4.5.0.1",
-            "fileVersion": "4.6.27618.1"
-          }
-        },
-        "compile": {
-          "ref/netcoreapp2.1/System.Data.SqlClient.dll": {}
         }
       },
       "System.Diagnostics.Debug/4.3.0": {
@@ -2012,6 +2026,32 @@
           "Microsoft.NETCore.Targets": "1.1.0"
         }
       },
+      "System.Runtime.Caching/4.5.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "3.0.0-preview7.19362.9",
+          "System.Configuration.ConfigurationManager": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Runtime.Caching.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netcoreapp2.0/System.Runtime.Caching.dll": {
+            "rid": "unix",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.26515.6"
+          },
+          "runtimes/win/lib/netcoreapp2.0/System.Runtime.Caching.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
       "System.Runtime.CompilerServices.Unsafe/4.6.0-preview8.19405.3": {
         "runtime": {
           "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {
@@ -2157,6 +2197,22 @@
           "System.Threading.Tasks": "4.3.0"
         }
       },
+      "System.Security.Cryptography.ProtectedData/4.5.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
       "System.Security.Cryptography.X509Certificates/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "3.0.0-preview7.19362.9",
@@ -2289,7 +2345,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.Mvc": "2.2.0",
           "Microsoft.AspNetCore.Mvc.Localization": "2.2.0",
-          "Microsoft.EntityFrameworkCore.SqlServer": "2.2.6",
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.0.0-preview8.19405.11",
           "Newtonsoft.Json": "12.0.2"
         },
         "runtime": {
@@ -4234,6 +4290,13 @@
       "path": "microsoft.csharp/4.6.0-preview8.19405.3",
       "hashPath": "microsoft.csharp.4.6.0-preview8.19405.3.nupkg.sha512"
     },
+    "Microsoft.Data.SqlClient/1.0.19189.1-Preview": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XZ2Euv/Hosd24ZZs7pA10YXHRGbl1afhG/VsAk5p6fpUX6tXRFv81xrDGUZrV3J2tOYEDMsACTqvXQBi5wNczQ==",
+      "path": "microsoft.data.sqlclient/1.0.19189.1-preview",
+      "hashPath": "microsoft.data.sqlclient.1.0.19189.1-preview.nupkg.sha512"
+    },
     "Microsoft.DotNet.PlatformAbstractions/2.1.0": {
       "type": "package",
       "serviceable": true,
@@ -4276,12 +4339,12 @@
       "path": "microsoft.entityframeworkcore.relational/3.0.0-preview8.19405.11",
       "hashPath": "microsoft.entityframeworkcore.relational.3.0.0-preview8.19405.11.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.SqlServer/2.2.6": {
+    "Microsoft.EntityFrameworkCore.SqlServer/3.0.0-preview8.19405.11": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-rNnCA7ntlpITeYl1p3lAeS0kyHhETlanTghfpoDgyGIoxyUm2VsI2eyzL6EMYrqWnhAOwx3HzP0/50XRM/0CHw==",
-      "path": "microsoft.entityframeworkcore.sqlserver/2.2.6",
-      "hashPath": "microsoft.entityframeworkcore.sqlserver.2.2.6.nupkg.sha512"
+      "sha512": "sha512-GNaprJMkIJD8Psrwa+4n51GEq00Ur3zkjvLZJIGe1umXDCAiU8it1Wo3JnjCA1Rgo5BxCpVTFlg0svtnxQkmTA==",
+      "path": "microsoft.entityframeworkcore.sqlserver/3.0.0-preview8.19405.11",
+      "hashPath": "microsoft.entityframeworkcore.sqlserver.3.0.0-preview8.19405.11.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.Tools/3.0.0-preview8.19405.11": {
       "type": "package",
@@ -4591,12 +4654,12 @@
       "path": "runtime.native.system/4.3.0",
       "hashPath": "runtime.native.system.4.3.0.nupkg.sha512"
     },
-    "runtime.native.System.Data.SqlClient.sni/4.5.0": {
+    "runtime.native.System.Data.SqlClient.sni/4.4.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-X4hp5h5M2plTWZnUd79d0x4actSMj9L3Hv6e1Lu+oGi35XSaXg21ha4Rqmt2KrIesfUwMfpET8QhMkS1eiWqRQ==",
-      "path": "runtime.native.system.data.sqlclient.sni/4.5.0",
-      "hashPath": "runtime.native.system.data.sqlclient.sni.4.5.0.nupkg.sha512"
+      "sha512": "sha512-A8v6PGmk+UGbfWo5Ixup0lPM4swuSwOiayJExZwKIOjTlFFQIsu3QnDXECosBEyrWSPryxBVrdqtJyhK3BaupQ==",
+      "path": "runtime.native.system.data.sqlclient.sni/4.4.0",
+      "hashPath": "runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512"
     },
     "runtime.native.System.IO.Compression/4.3.0": {
       "type": "package",
@@ -4787,19 +4850,19 @@
       "path": "system.composition.typedparts/1.0.31",
       "hashPath": "system.composition.typedparts.1.0.31.nupkg.sha512"
     },
+    "System.Configuration.ConfigurationManager/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UIFvaFfuKhLr9u5tWMxmVoDPkFeD+Qv8gUuap4aZgVGYSYMdERck4OhLN/2gulAc0nYTEigWXSJNNWshrmxnng==",
+      "path": "system.configuration.configurationmanager/4.5.0",
+      "hashPath": "system.configuration.configurationmanager.4.5.0.nupkg.sha512"
+    },
     "System.Console/4.3.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-IyO84KGxLDdtb6d0L73B0mPQuKgOZvcnzZX3QLhyJbM3jh/hzT4W1ya63rWRZYTg3oBZ+oE6qz7qfX/Lb9Hy8Q==",
       "path": "system.console/4.3.0",
       "hashPath": "system.console.4.3.0.nupkg.sha512"
-    },
-    "System.Data.SqlClient/4.6.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-7MTJhBFt4/tSJ2VRpG+TQNPcDdbCnWuoYzbe0kD5O3mQ7aZ2Q+Q3D9Y5Y3/aper5Gp3Lrs+8edk9clvxyPYXPw==",
-      "path": "system.data.sqlclient/4.6.1",
-      "hashPath": "system.data.sqlclient.4.6.1.nupkg.sha512"
     },
     "System.Diagnostics.Debug/4.3.0": {
       "type": "package",
@@ -5011,6 +5074,13 @@
       "path": "system.runtime/4.3.0",
       "hashPath": "system.runtime.4.3.0.nupkg.sha512"
     },
+    "System.Runtime.Caching/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-95j9KShuaAENf2gLbQ/9YoJDHIWAnoaFYA71xo4QVQyLkOMginn34cD1+6RcYIrqJamLkMXgvgUnOzwzBk+U0w==",
+      "path": "system.runtime.caching/4.5.0",
+      "hashPath": "system.runtime.caching.4.5.0.nupkg.sha512"
+    },
     "System.Runtime.CompilerServices.Unsafe/4.6.0-preview8.19405.3": {
       "type": "package",
       "serviceable": true,
@@ -5108,6 +5178,13 @@
       "sha512": "sha512-1tFlmZEfEt9VEVS26+FB8HYCOldLCoyaOG4edho5zHQqNU0NeAOlDqnlV6JmsfcOUM6BVGIubO8bY4HVlMJuVg==",
       "path": "system.security.cryptography.primitives/4.3.0",
       "hashPath": "system.security.cryptography.primitives.4.3.0.nupkg.sha512"
+    },
+    "System.Security.Cryptography.ProtectedData/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wLBKzFnDCxP12VL9ANydSYhk59fC4cvOr9ypYQLPnAj48NQIhqnjdD2yhP8yEKyBJEjERWS9DisKL7rX5eU25Q==",
+      "path": "system.security.cryptography.protecteddata/4.5.0",
+      "hashPath": "system.security.cryptography.protecteddata.4.5.0.nupkg.sha512"
     },
     "System.Security.Cryptography.X509Certificates/4.3.0": {
       "type": "package",

@@ -1,0 +1,94 @@
+﻿
+@{
+    ViewData["Title"] = "Calculation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="banner-wrap">
+    <section class="breadcrumb-wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <ol class="breadcrumb mrt-10">
+                        <li><a href="index.html">Cá nhân</a></li>
+                        <li><a href="hoidap.html">Hỗ trợ</a></li>
+                        <li class="active"><span>Câu hỏi thường gặp</span></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="banner-page imageBanner">
+        <div style="background-image:url('img/banner_page/banner_bieuphi.png')" class="imgBg"></div>
+        <div class="desc">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-5 col-lg-5 col-xl-5">
+                        <h1 class="title">Câu hỏi thường gặp</h1>
+                        <div class="content">Đồng hành cùng nhu cầu của bạn mọi lúc mọi nơi</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-lg-3">
+                <a href="javascript:;" class="toggle-click"><i class="fa fa-bars"></i>Danh mục</a>
+                <div class="nav-toogle">
+                    <ul class="nav left-menusp">
+                        <li><a href="hoidap.html" class="active">Câu hỏi thường gặp</a></li>
+                        <li class="has-children active">
+                            <a href="#">Công cụ - Tiện ích</a>
+                            <ul style="display:block" class="sub-menu">
+                                <li><a href="tygia-ngoaite.html">Tỷ giá / Lãi suất</a></li>
+                                <li><a href="bieumau.html">Biểu mẫu / Biểu phí</a></li>
+                                <li><a href="#">Mạng lưới</a></li>
+                                <li><a href="congcu-tinhtoan.html" class="active">Công cụ tính toán</a></li>
+                                <li><a href="#">Xác thực bảo lãnh</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-children">
+                            <a href="#">Video hướng dẫn</a>
+                            <ul class="sub-menu">
+                                <li><a href="videohuongdan.html">Hướng dẫn thanh toán Online</a></li>
+                                <li><a href="#">Hướng dẫn bảo mật tài khoản</a></li>
+                                <li><a href="#">Hướng dẫn khác</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-12 col-lg-9">
+                <section class="hotro-ct">
+                    <h1 class="title">Công cụ tính toán</h1>
+                    <nav class="nav nav-sp"><a href="congcu-tinhtoan-vay.html" class="active">Tôi có thể vay bao nhiêu</a><a href="congcu-tinhtoan.html">Tính lịch trả nợ theo dư nợ giảm dần</a><a href="tinhlai-doanhnghiep.html">Tính lãi tiền gửi</a></nav>
+                    <div class="block-borrowTool">
+                        <div class="desc"><span>Đây chỉ là kết quả ước tính dự kiến .Mọi Chi tiết vui lòng liên hệ:</span><a href="tel:18001122"><i class="fa fa-phone"> </i>Call Center 1800 1122</a></div>
+                        <div class="form-group">
+                            <label>Số tiền bạn dự định trả nợ mỗi tháng:</label>
+                            <div class="group">
+                                <input class="form-control"><span class="unit">VND</span>
+                            </div>
+                            <input type="submit" value="Ước tính khoản vay">
+                        </div>
+                        <div class="result">
+                            <h3>Kết Quả</h3>
+                            <div class="row flex flex-wrap">
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="item-result"><strong>Dự định trả nợ mỗi tháng: </strong><span>20,000,000 VND</span></div>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="item-result"><strong>Bạn sẽ vay tối đa: </strong><span>200,000,000 VND</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</main>
+

@@ -1,0 +1,110 @@
+﻿
+@{
+    ViewData["Title"] = "Branch";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="banner-wrap">
+    <section class="breadcrumb-wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <ol class="breadcrumb mrt-10">
+                        <li><a href="index.html">Cá nhân</a></li>
+                        <li class="active"><span>ATMs &amp; Chi nhánh</span></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="banner-page imageBanner">
+        <div style="background-image:url('/img/banner_page/banner_mangluoi.png')" class="imgBg"></div>
+        <div class="desc">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-5 col-lg-5 col-xl-5">
+                        <h1 class="title">ATMs &amp; Chi nhánh</h1>
+                        <div class="content">Tìm điểm giao dịch gần nhất để mọi nhu cầu bạn cần được đáp ứng tốt nhất.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+<main>
+    <section class="block-systemDealer">
+        <div class="container">
+            <div class="system-wrap">
+                <div class="row">
+                    <div class="col-xs-12 col-md-8">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6 col-xl-3 form_desc">
+                                <label for="country">Chọn hình thức giao dịch</label>
+                                <select class="form-select">
+                                    <option value="0">ATM</option>
+                                    <option value="1">Điểm giao dịch</option>
+                                </select>
+                            </div>
+                            <div class="col-xs-12 col-md-6 col-xl-3 form_desc">
+                                <label for="country">Chọn Tỉnh/Thành phố</label>
+                                <select class="form-select">
+                                    <option value="0">TP. Hồ Chí Minh</option>
+                                    <option value="1">Hà Nam</option>
+                                    <option value="2">Hà Nội</option>
+                                    <option value="3">Quãng Nam</option>
+                                    <option value="4">Cà Mau</option>
+                                </select>
+                            </div>
+                            <div class="col-xs-12 col-md-6 col-xl-3 form_desc">
+                                <label for="country">Chọn Quận/Huyện</label>
+                                <select class="form-select">
+                                    <option value="0">Quận 1</option>
+                                    <option value="1">Quận 12</option>
+                                    <option value="2">Quận Gò Vấp</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        <div class="search-text">
+                            <label>hoặc</label>
+                            <input maxlength="128" name="address" id="address" size="60" autocomplete="off" placeholder="Nhập tên đường, tỉnh thành, quận huyện" class="form-text">
+                            <button type="submit" class="btn-search"><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-8 map-location"><img src="img/map.png" alt="map"></div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="dealer-list">
+                        <div class="locate mrb-15">Có <span>46 </span>địa điểm <span>Chi nhánh </span>phù hợp tìm kiếm của bạn:</div>
+                        <ul class="list_system mrb-15">
+                            <li class="clinic_list">
+                                <div><strong>Vietbank TP. HỒ CHÍ MINH</strong></div>
+                                <div><span>62A CMT8, Phường 6, Quận 3, TP.HCM <br></span><span>Điện thoại: (08) 62 909 413 <br></span><span>Fax: (08) 62 909 412</span></div>
+                                <div class="distance"><span>0.4 km</span></div>
+                            </li>
+                            <li class="clinic_list active">
+                                <div><strong>Công ty quản lý nợ và khai thác tài sản Vietbank</strong></div>
+                                <div><span>90 Cao Thắng, Phường 4, Quận 3, TP. HCM <br></span><span>Điện thoại: (08) 62 918 100 - Nội bộ 5007 <br></span><span>Fax: (08) 62 913 621</span></div>
+                                <div class="distance"><span>1.5 km</span></div>
+                            </li>
+                            <li class="clinic_list">
+                                <div><strong>Vietbank 3 tháng 2</strong></div>
+                                <div><span>693 Ba Thang Hai , Phường 6 , Quận 10, TP.HCM <br></span><span>Tel:  (08) 38 535 820 <br></span><span>Fax: (08) 38 535 830</span></div>
+                                <div class="distance"><span>3 km</span></div>
+                            </li>
+                            <li class="clinic_list">
+                                <div><strong>Vietbank Chương Dương <br></strong><span>Tel: 04.3873.5055 <br></span><span>Fax: 04.3873.5055</span></div>
+                                <div><span> </span></div>
+                                <div class="distance"><span>0.7 km</span></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+

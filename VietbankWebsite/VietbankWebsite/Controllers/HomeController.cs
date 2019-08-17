@@ -1,30 +1,76 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Localization;
-using Microsoft.Extensions.Logging;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Threading.Tasks;
+using VietbankWebsite.Entities;
+using VietbankWebsite.ModelMap;
 using VietbankWebsite.Models;
+using VietbankWebsite.Service;
 
 namespace VietbankWebsite.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseMvcController
     {
+        private IMemoryCache _cache;
+        private readonly IVbBannerService _vbBannerService;
+        private readonly IShareholderService _shareholderService;
         private readonly IStringLocalizer<HomeController> _localizer;
-
-        public HomeController(IStringLocalizer<HomeController> localizer)
+        public HomeController(IStringLocalizer<HomeController> localizer, IMemoryCache memoryCache, IVbBannerService vbBannerService, IShareholderService shareholderService)
         {
+            _cache = memoryCache;
             _localizer = localizer;
+            _vbBannerService = vbBannerService;
+            _shareholderService = shareholderService;
         }
 
         [HttpGet]
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            ViewBag.RedirectUrl = _localizer["/"];
+            var keyBanner = GetLangCurrent() == "vi" ? CacheKeys.BannerVi : CacheKeys.BannerEn;
+            IEnumerable<VbBanner> banner;
+            if (!_cache.TryGetValue(keyBanner, out banner))
+            {
+                banner = await _vbBannerService.GetBanner(GetLangCurrent());
+                _cache.Set(keyBanner, banner, cacheEntryOptions);
+            }
+            ViewData["Title"] = _localizer["Home"];
+            return View(banner);
+        }
+
+        [HttpGet]
+        [Route("quan-he-co-dong")]
+        [Route("shareholders")]
+        public async Task<IActionResult> Shareholders()
+        {
+            var keyShareholderCategories = GetLangCurrent() == "vi" ? CacheKeys.ShareholderCategoriesVi : CacheKeys.ShareholderCategoriesEn;
+            ShareholderCategory shareholderCategories;
+            if (!_cache.TryGetValue(keyShareholderCategories, out shareholderCategories))
+            {
+                shareholderCategories = await _shareholderService.ShareholderCategories(_localizer["ShareholderUrl"], "quan-he-co-dong", GetLangCurrent());
+                _cache.Set(keyShareholderCategories, shareholderCategories, cacheEntryOptions);
+            }
+            ViewData["Title"] = _localizer["Shareholder"];
+            return View(shareholderCategories);
+        }
+
+        [HttpGet]
+        [Route("quan-he-co-dong/{detail}")]
+        [Route("shareholders/{detail}")]
+        public IActionResult ShareholdersDetail(string detail)
+        {
+            return View();
+        }
+
+        [HttpGet]
+        [Route("cong-cu/chi-nhanh")]
+        [Route("tools/branch")]
+        public IActionResult Branch(string detail)
+        {
             return View();
         }
 

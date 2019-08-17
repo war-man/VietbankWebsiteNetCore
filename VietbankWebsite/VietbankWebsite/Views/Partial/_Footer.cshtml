@@ -1,4 +1,6 @@
-﻿<footer>
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+<footer>
     <section class="footer-top">
         <div class="container">
             <div class="row">
@@ -23,7 +25,7 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-9">
                     <div class="location">
-                        <p>47 Trần Hưng Đạo, thành phố Sóc Trăng, Tỉnh Sóc Trăng. <strong>Giấy phép số 135/GP-CBC ngày 07/04/2008 - SWIFT Code: VNTTVNVX</strong></p>
+                        <p>@Localizer["Address"] <strong>@Localizer["Legal"]</strong></p>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-3">
