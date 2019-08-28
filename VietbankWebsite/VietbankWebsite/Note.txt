@@ -1,0 +1,2 @@
+﻿--vb_posts_translate
+	convert type bitInt of post_ID column to int

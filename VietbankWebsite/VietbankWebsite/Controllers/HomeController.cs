@@ -61,9 +61,12 @@ namespace VietbankWebsite.Controllers
         [HttpGet]
         [Route("quan-he-co-dong/{detail}")]
         [Route("shareholders/{detail}")]
-        public IActionResult ShareholdersDetail(string detail)
+        public async Task<IActionResult> ShareholdersDetail(string detail)
         {
-            return View();
+            var shareholderDetail = await _shareholderService.ShareholderDetail("quan-he-co-dong", detail, GetLangCurrent());
+            if (shareholderDetail == null) return RedirectToAction(nameof(NotFoundPage));
+            ViewData["Title"] = shareholderDetail.Title;
+            return View(shareholderDetail);
         }
 
         [HttpGet]
@@ -84,7 +87,7 @@ namespace VietbankWebsite.Controllers
                 new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
             );
 
-            return LocalRedirect(returnUrl);
+            return LocalRedirect("/");
         }
 
         public IActionResult Privacy()
@@ -96,6 +99,12 @@ namespace VietbankWebsite.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public IActionResult NotFoundPage()
+        {
+            ViewData["Title"] = "Không tìm thấy trang";
+            return View();
         }
         #endregion
     }

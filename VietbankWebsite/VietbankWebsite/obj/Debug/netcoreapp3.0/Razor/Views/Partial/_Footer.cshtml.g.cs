@@ -12,27 +12,21 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
-#nullable restore
 #line 1 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite;
 
 #line default
 #line hidden
-#nullable disable
-#nullable restore
 #line 2 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite.Models;
 
 #line default
 #line hidden
-#nullable disable
-#nullable restore
 #line 1 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_Footer.cshtml"
 using Microsoft.AspNetCore.Mvc.Localization;
 
 #line default
 #line hidden
-#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f907e858837e6adb2314fac4a171a813eee88215", @"/Views/Partial/_Footer.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"226e66e476153809e3942cb65fb4710596043976", @"/Views/_ViewImports.cshtml")]
     public class Views_Partial__Footer : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
@@ -75,21 +69,17 @@ using Microsoft.AspNetCore.Mvc.Localization;
                 <div class=""col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-9"">
                     <div class=""location"">
                         <p>");
-#nullable restore
 #line 28 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_Footer.cshtml"
                       Write(Localizer["Address"]);
 
 #line default
 #line hidden
-#nullable disable
             WriteLiteral(" <strong>");
-#nullable restore
 #line 28 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_Footer.cshtml"
                                                     Write(Localizer["Legal"]);
 
 #line default
 #line hidden
-#nullable disable
             WriteLiteral("</strong></p>\r\n                    </div>\r\n                </div>\r\n                <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-3\">\r\n                    <div class=\"copyright-content\">\r\n                        <p>");
             WriteLiteral("@ 2016 <strong>VietBank. All rights reserved.</strong></p>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </section>\r\n    <div class=\"up\"></div>\r\n</footer>");
         }

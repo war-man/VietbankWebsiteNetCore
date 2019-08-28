@@ -1,0 +1,75 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@model VietbankWebsite.ModelMap.NewsDetail
+@inject IViewLocalizer Localizer
+@{
+    Layout = "~/Views/Shared/_LayoutAbout.cshtml";
+}
+
+<section class="banner-wrap">
+    <section class="breadcrumb-wrap brown">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <ol class="breadcrumb mrt-10">
+                        <li><a href="@Localizer["AboutUrl"]">@Localizer["AboutName"]</a></li>
+                        <li><a href="@Localizer["NewsUrl"]">@Localizer["NewsName"]</a></li>
+                        <li class="active"><span>@Localizer["VietbannkTvName"]</span></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="vietbank-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1 class="blue">@Localizer["VietbannkTvName"]</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+<main>
+    <section class="news-detail">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <ul class="nav nav-bld">
+                        <li><a href="@Localizer["VietbankNewsUrl"]">@Localizer["VietbankNewsName"]</a></li>
+                        <li><a href="@Localizer["PromotionNewsUrl"]">@Localizer["PromotionNewsName"]</a></li>
+                        <li><a href="@Localizer["VietbannkTvUrl"]" class="active">@Localizer["VietbannkTvName"]</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-8 col-lg-9">
+                    <div class="news-content">
+                        <h1>@Model.Title</h1>
+                        <div class="time-wrap clearfix">
+                            <time>@Model.PublishedDate</time>
+                            <div class="social"><img src="/img/social_icon.png" alt="Social"></div>
+                        </div>
+                        <div class="fullContent">
+                            @Html.Raw(Model.Content)
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4 col-lg-3">
+                    <div class="other-news">
+                        <h2 id="lst-random-news">Tin khác</h2>
+
+                    </div>
+                    <div class="news-tags">
+                        <h3>Tags</h3>
+                        <nav class="nav"><a href="#">Vietbank</a><a href="#">Khuyến mãi</a><a href="#">Ngân hàng</a><a href="#">điện tử</a><a href="#">Vay vốn</a><a href="#">Gửi tiết kiệm</a><a href="#">Thanh toán</a></nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+@section Scripts{
+
+    <script src="~/page/vietbank-tv-detail.js"></script>
+}

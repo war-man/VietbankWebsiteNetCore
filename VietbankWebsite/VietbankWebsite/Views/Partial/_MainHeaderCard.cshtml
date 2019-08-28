@@ -1,0 +1,70 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+<div class="header-main">
+    <div class="container">
+        <div class="header-wrap">
+            <div class="btn-showmenu"><i class="material-icons">menu</i></div>
+            <div class="overlay"></div>
+            <div class="sitelogo"><a href="/"><img src="/img/logo.png" alt=""></a></div>
+            <div class="search d-block d-lg-none">
+                <div class="search-toggle"><i class="material-icons">search</i></div>
+                <div class="search-wrap">
+                    <div class="searchbox">
+                        <input type="text">
+                        <button class="searchbutton"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu">
+                <div class="btn-closemenu"><i class="material-icons">close</i></div>
+                <div class="menu-logo">
+                    <div class="sitelogo"><a href="/"><img src="/img/logo.png" alt=""></a></div>
+                </div>
+                <div class="menu-wrap">
+                    <ul class="menu-link">
+                        <li class="has-sub active">
+                            <a href="/the/san-pham">Sản phẩm</a>
+                            <div class="btn-showsub"></div>
+                            <div class="sub">
+                                <ul>
+                                    <li><a href="/the/san-pham/the-tin-dung-vietbank-luxury-platinum" class="">Thẻ tín dụng Vietbank Luxury Platinum</a></li>
+                                    <li><a href="/the/san-pham/the-tin-dung-vietbank-platinum" class="">Thẻ tín dụng Vietbank Platinum</a></li>
+                                    <li><a href="/the/san-pham/the-tin-dung-vietbank-my-style" class="">Thẻ tín dụng Vietbank My Style</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="has-sub">
+                            <a href="/the/uu-dai/chuong-trinh-khuyen-mai">Ưu đãi</a>
+                            <div class="btn-showsub"></div>
+                            <div class="sub">
+                                <ul>
+                                    <li><a href="/the/uu-dai/chuong-trinh-khuyen-mai" class="">Chương trình khuyến mãi</a></li>
+                                    <li><a href="/the/uu-dai/happy-day" class="">Ưu đãi dành cho chủ thẻ</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="has-sub">
+                            <a href="#!">Hỗ trợ</a>
+                            <div class="btn-showsub"></div>
+                            <div class="sub">
+                                <ul>
+                                    <li><a href="#!">Câu hỏi thường gặp</a></li>
+                                    <li class="active"><a href="#!">Tỷ giá</a></li>
+                                    <li><a href="#!">Lãi suất</a></li>
+                                    <li><a href="#!">Lãi suất cơ sở</a></li>
+                                    <li><a href="#!">Biểu mẫu</a></li>
+                                    <li><a href="#!">Biểu phí</a></li>
+                                    <li><a href="#!">Công cụ tính toán</a></li>
+                                    <li><a href="#!">Truy vấn sổ tiết kiệm</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="ebanking"><a href="#!"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Ngân hàng trực tuyến</a></div>
+                <div class="branch d-block d-md-none"><a href="#!"><i class="fa fa-map-marker" aria-hidden="true"></i>ATMs & Chi nhánh</a></div>
+                <div class="hotline d-block d-md-none"><a href="tel:1800 1122"><i class="fa fa-phone" aria-hidden="true"></i>Hotline: 1800 1122</a></div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,8 +1,33 @@
-﻿
+﻿@model VietbankWebsite.ModelMap.CardProductHomeDto
 @{
-    ViewData["Title"] = "Product";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_LayoutCard.cshtml";
 }
 
-<h1>Product</h1>
+<section class="breadcrumb-wrap">
+    <div class="breadcrumb-content">
+        <div class="container">
+            @Html.Raw(Model.SiteMap)
+        </div>
+    </div>
+    <div class="page-banner">
+        <div class="banner-img"><img src="@Model.Path" alt=""></div>
+        <div class="container">
+            <div class="banner-caption">
+                <div class="big">@Model.TitleBoxOne</div>
+                <div class="des">@Model.DescriptionBoxOne</div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="product-section">
+    <div class="container">
+        <h1 class="home-title text-center">@Model.TitleBoxTwo</h1>
+        <div class="home-content text-center" style="max-width:680px">
+            <div class="content">@Model.DescriptionBoxTwo</div>
+        </div>
+        <div class="product-list">
+            @Html.Raw(Model.ContentBoxTwo)
+        </div>
+    </div>
+</section>
 

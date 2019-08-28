@@ -124,6 +124,6 @@
     <value>Shareholders</value>
   </data>
   <data name="ShareholderUrl" xml:space="preserve">
-    <value>/shareholder</value>
+    <value>/shareholders</value>
   </data>
 </root>

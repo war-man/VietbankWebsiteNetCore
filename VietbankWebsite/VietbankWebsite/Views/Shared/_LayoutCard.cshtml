@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <environment include="Development">
+        <link href="~/card/css/core.css" rel="stylesheet" />
+        <link href="~/card/css/main.css" rel="stylesheet" />
+        <link href="~/card/css/site-card.css" rel="stylesheet" />
+    </environment>
+    <environment exclude="Development">
+        <link href="~/css/site.min.css" rel="stylesheet" />
+    </environment>
+
+</head>
+<body class="home">
+    <div class="fullpage">
+        <header>
+            <partial name="~/Views/Partial/_TopHeaderCard.cshtml" />
+            <partial name="~/Views/Partial/_MainHeaderCard.cshtml" />
+        </header>
+        <section class="tool">
+            <nav class="tool-link">
+                <ul>
+                    <li> <i class="fa fa-usd"></i><a href="tygia.html" title="title">Tỷ giá</a></li>
+                    <li> <i class="fa fa-map-marker"></i><a href="mangluoi.html" title="title">Mạng lưới</a></li>
+                    <li> <i class="fa fa-file-text-o"></i><a href="#" title="title">Biểu mẫu</a></li>
+                    <li> <i class="fa fa-gift"></i><a href="#" title="title">Khuyến mãi</a></li>
+                    <li> <i class="fa fa-comments-o"></i><a href="#" title="title">Hỗ trợ</a></li>
+                    <li> <i class="fa fa-phone"></i><a href="#" title="title">Liên hệ</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        @RenderBody()
+
+        <partial name="~/Views/Partial/_Footer.cshtml" />
+    </div>
+
+    <environment include="Development">
+        <script src="~/js/jquery.3.1.1.min.js"></script>
+        <script src="~/card/js/core.js"></script>
+        <script src="~/card/js/main.js"></script>
+        <script src="~/js/common.js"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="~/js/site.min.js"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

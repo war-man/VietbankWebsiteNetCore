@@ -1,0 +1,38 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+<section class="top">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5 col-xl-6">
+                <section class="top-menu">
+                    <ul>
+                        <li><a href="@Localizer["SanPhamUrl"]" title="@Localizer["SanPham"]">@Localizer["SanPham"]</a></li>
+                        <li class="active"> <a href="@Localizer["QuanHeCoDongUrl"]" title="@Localizer["QuanHeCoDong"]">@Localizer["QuanHeCoDong"]</a></li>
+                        <li> <a href="@Localizer["TuyenDungUrl"]" title="@Localizer["TuyenDung"]">@Localizer["TuyenDung"]</a></li>
+                        <li> <a href="@Localizer["VeVietBankUrl"]" title="@Localizer["VeVietBank"]">@Localizer["VeVietBank"]</a></li>
+                    </ul>
+                </section>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-7 col-xl-6">
+                <section class="top-misc">
+                    <div class="top-contact">
+                        <div class="location">
+                            <i class="fa fa-map-marker"> </i>
+                            <p><a href="@Localizer["ChiNhanhUrl"]">ATM &amp; @Localizer["ChiNhanh"]</a></p>
+                        </div>
+                        <div class="phone">
+                            <i class="fa fa-phone"></i>
+                            <p>Hotline: <strong> <a data-tel="+8419001122">1800 1122</a></strong></p>
+                        </div>
+                    </div>
+                    <div class="search">
+                        <div class="search-wrap">
+                            <input placeholder=""><span class="btn-search"> <i class="fa fa-search"></i></span>
+                        </div>
+                    </div>
+                    <partial name="~/Views/Partial/_SelectLanguagePartial.cshtml" />
+                </section>
+            </div>
+        </div>
+    </div>
+</section>

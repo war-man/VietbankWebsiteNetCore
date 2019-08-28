@@ -26,3 +26,22 @@ function requestAjaxGet(url) {
         contentType: "application/json"
     });
 }
+
+function isEmpty(obj) {
+    if (obj === undefined) {
+        return true;
+    }
+
+    if (obj === null) {
+        return true;
+    }
+
+    return false;
+}
+
+function replaceHtmlToNull(html,endChar) {
+    if (isEmpty(html) === false) {
+        return html.replace(/<[^>]*>?/gm, '').substring(0, endChar).concat('...');
+    }
+    return '<p></p>';
+}

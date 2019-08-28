@@ -9,10 +9,14 @@ namespace VietbankWebsite.Uow
         private readonly VietbankContext _context;
         public IVbBannerRepository _vbBannerRepository;
         public IShareholderRepository _shareholderRepository;
+        public IAboutVietbankRepository _aboutVietbankRepository;
+        public IPersonalRepository _personalRepository;
+        public ICardRepository _cardRepository;
         public IVbBannerRepository VbBannerRepository => _vbBannerRepository = _vbBannerRepository ?? new VbBannerRepository(_context);
         public IShareholderRepository ShareholderRepository => _shareholderRepository = _shareholderRepository ?? new ShareholderRepository(_context);
-
-
+        public IAboutVietbankRepository AboutVietbankRepository => _aboutVietbankRepository = _aboutVietbankRepository ?? new AboutVietbankRepository(_context);
+        public IPersonalRepository PersonalRepository => _personalRepository = _personalRepository ?? new PersonalRepository(_context);
+        public ICardRepository CardRepository => _cardRepository = _cardRepository ?? new CardRepository(_context);
         public void Complete()
         {
             _context.SaveChanges();
@@ -46,8 +50,11 @@ namespace VietbankWebsite.Uow
 
     public interface IUnitOfWork : IDisposable
     {
+        IAboutVietbankRepository AboutVietbankRepository { get; }
         IVbBannerRepository VbBannerRepository { get; }
         IShareholderRepository ShareholderRepository { get; }
+        IPersonalRepository PersonalRepository { get; }
+        ICardRepository CardRepository { get; }
         void Complete();
     }
 }

@@ -18,10 +18,16 @@ namespace VietbankWebsite.Service
         {
             return await _unitOfWork.ShareholderRepository.ShareholderCategories(category,alias, lang);
         }
+
+        public async Task<ShareholderDetail> ShareholderDetail(string category, string alias, string lang)
+        {
+            return await _unitOfWork.ShareholderRepository.ShareholderDetail(category,alias, lang);
+        }
     }
 
     public interface IShareholderService
     {
         Task<ShareholderCategory> ShareholderCategories(string category, string alias, string lang);
+        Task<ShareholderDetail> ShareholderDetail(string category,string alias, string lang);
     }
 }

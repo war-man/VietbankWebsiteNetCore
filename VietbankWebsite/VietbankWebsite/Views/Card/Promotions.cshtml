@@ -1,8 +1,44 @@
-﻿
+﻿@model VietbankWebsite.ModelMap.IncentivesCateTwoDto
 @{
-    ViewData["Title"] = "Promotions";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_LayoutCard.cshtml";
 }
 
-<h1>Promotions</h1>
+<section class="breadcrumb-wrap">
+    <div class="breadcrumb-content">
+        <div class="container">
+            @Html.Raw(Model.SiteMap)
+        </div>
+    </div>
+</section>
+<section class="banner-wrap">
+    <div class="banner home-banner">
+        <div class="item"><a class="banner-img" href="@Model.LinkBanner"><img src="@Model.PathBanner" alt=""></a></div>
+    </div>
+</section>
+<section class="promotion-page s2">
+    <div class="container">
+        <h1 class="home-title text-center mb-2">@Model.Title</h1>
+        <div class="home-content text-center" style="max-width: 550px">
+            <div class="content">
+                <p>@Model.Description</p>
+            </div>
+        </div>
+        <div class="sale-list" id="sale-list"></div>
+        <div class="pages">
+            <ul class="pagination" id="pagination">
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- Modal -->
+<div class="modal fade" id="pleaseWait" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+        </div>
+    </div>
+</div>
+@section Scripts{
 
+    <script src="~/page/card-promotion.js"></script>
+}

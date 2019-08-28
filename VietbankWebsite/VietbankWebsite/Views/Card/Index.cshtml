@@ -1,0 +1,125 @@
+﻿@model VietbankWebsite.Entities.CardHomeTemplate
+@{
+    Layout = "~/Views/Shared/_LayoutCard.cshtml";
+}
+
+<section class="banner-wrap">
+    <div class="banner home-banner">
+        @foreach (var item in Model.BoxOne)
+        {
+            <div class="item"><a href="@item.Url"><img src="@item.Path" alt=""></a></div>
+        }
+    </div>
+</section>
+<main>
+    <section class="home-card">
+        <div class="container">
+            <div class="card-slick">
+                @foreach (var item in Model.BoxTwo)
+                {
+                    <div class="item">
+                        <a class="card-item" href="@item.UrlTitle">
+                            <figure>
+                                <div class="card-img">
+                                    <img src="@item.UrlImage" alt="">
+                                </div>
+                                <figcaption>
+                                    <div class="card-logo">
+                                        <img src="~/Content/card/img/home/visa.png" alt="">
+                                    </div>
+                                    <div class="card-name">@item.Title</div>
+                                    <div class="card-des">@item.Description</div>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+    <section class="home-intro">
+        <div class="container">
+            <h1 class="home-title text-center">@Model.BoxThree.TitleOne</h1>
+            <div class="home-des text-center">@Model.BoxThree.TitleTwo</div>
+            <div class="home-content text-center" style="max-width: 770px">
+                <div class="content">
+                    <p>@Model.BoxThree.Description</p>
+                </div>
+            </div>
+            <div class="intro-img text-center"><img src="@Model.BoxThree.Url" alt=""></div>
+        </div>
+    </section>
+    <section class="home-promotion s2">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="img text-center"><img src="@Model.BoxFour.Url" alt=""></div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="promotion-content text-center">
+                        <h2 class="home-title">@Model.BoxFour.TitleOne</h2>
+                        <div class="home-des">@Model.BoxFour.TitleTwo</div>
+                        <div class="home-content" style="max-width:350px">
+                            <div class="content">
+                                <p>@Model.BoxFour.Description</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="home-promotion">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="promotion-content text-center">
+                        <h2 class="home-title">@Model.BoxFive.TitleOne</h2>
+                        <div class="home-des">@Model.BoxFive.TitleTwo</div>
+                        <div class="home-content" style="max-width:350px">
+                            <div class="content">
+                                <p>@Model.BoxFive.Description</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="img text-center"><img src="@Model.BoxFive.Url" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="home-feature s2">
+        <div class="container">
+            <h2 class="home-title text-center">@Model.BoxSix.TitleOne</h2>
+            <div class="home-des text-center">@Model.BoxSix.TitleTwo</div>
+            <div class="home-content text-center" style="max-width:460px">
+                <div class="content">
+                    <p>@Model.BoxSix.Description</p>
+                </div>
+            </div>
+            @Html.Raw(Model.BoxSix.ListBox)
+        </div>
+    </section>
+    <section class="home-promotion">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="img text-center"><img src="@Model.BoxSeven.Url" alt=""></div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="promotion-content text-center">
+                        <h2 class="home-title">@Model.BoxSeven.TitleOne</h2>
+                        <div class="home-des">@Model.BoxSeven.TitleTwo</div>
+                        <div class="home-content" style="max-width:350px">
+                            <div class="content">
+                                <p>@Model.BoxSeven.Description</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+

@@ -1,9 +1,8 @@
-﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.*
+﻿@model IEnumerable<VietbankWebsite.ModelMap.TopThreeNewsToCate>
 @using Microsoft.AspNetCore.Mvc.Localization
 @inject IViewLocalizer Localizer
 @{
-    ViewData["Title"] = "Home Page";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_LayoutAbout.cshtml";
 }
 <section class="banner-wrap">
     <section class="breadcrumb-wrap brown">
@@ -11,18 +10,18 @@
             <div class="row">
                 <div class="col-xs-12">
                     <ol class="breadcrumb mrt-10">
-                        <li><a href="gioithieu.html">Về Vietbank							</a></li>
-                        <li class="active"><span>Tin tức</span></li>
+                        <li><a href="@Localizer["AboutUrl"]">@Localizer["AboutName"]</a></li>
+                        <li style="color: #999;" class="active"><strong>@Localizer["NewsName"]</strong></li>
                     </ol>
                 </div>
             </div>
         </div>
     </section>
-    <section class="vietbank-bg">
+    <section class="VietBank-bg">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
-                    <h1 class="blue">Tin tức</h1>
+                    <h1 class="blue">@Localizer["NewsName"]                                                                                                                                                                                            </h1>
                 </div>
             </div>
         </div>
@@ -32,51 +31,28 @@
     <div class="container">
         <div class="slider">
             <div class="owl-carousel">
-                <div class="item-newspecial">
-                    <div class="row">
-                        <div class="col-xs-12 col-md-8">
-                            <div class="thumb"><a href="tintuc-ct.html"><img src="/img/tintuc/cohoidulichmy.png" alt="Tin tuc"></a></div>
-                        </div>
-                        <div class="col-xs-12 col-md-4">
-                            <div class="title-news">
-                                <h4>Tin mới nhất</h4>
-                                <time>2016-04-13</time>
+                @foreach (var news in Model)
+                {
+                    <div class="item-newspecial">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-8">
+                                <div class="thumb">
+                                    <a href="@news.Url">
+                                        <img src="@news.Thumbnail" alt="@news.Title">
+                                    </a>
+                                </div>
                             </div>
-                            <h1 class="title"><a href="tintuc-ct.html">Cơ hội du lịch Mỹ cùng Vietbank</a></h1>
-                            <div class="brief">Từ nay đến hết 12/12/2016, chỉ cần gửi từ 10 triệu đồng tại Ngân hàng Việt Nam Thương Tín (Vietbank) Quý khách hàng sẽ có cơ hội tham gia chương trình “Triệu phú trong tầm tay – Vận may đến nước Mỹ” với các giải thưởng hấp dẫn...</div>
+                            <div class="col-xs-12 col-md-4">
+                                <div class="title-news">
+                                    <h4>Tin mới nhất</h4>
+                                    <time>@news.PublishDate.ToString("dd/MM/yyyy")</time>
+                                </div>
+                                <h1 class="title"><a href="@news.Url">@news.Title</a></h1>
+                                <div class="brief">@news.Description</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="item-newspecial">
-                    <div class="row">
-                        <div class="col-xs-12 col-md-8">
-                            <div class="thumb"><a href="tintuc-ct.html"><img src="/img/tintuc/cohoidulichmy.png" alt="Tin tuc"></a></div>
-                        </div>
-                        <div class="col-xs-12 col-md-4">
-                            <div class="title-news">
-                                <h4>Tin mới nhất</h4>
-                                <time>2016-04-13</time>
-                            </div>
-                            <h2 class="title"><a href="tintuc-ct.html">Cơ hội du lịch Mỹ cùng Vietbank</a></h2>
-                            <div class="brief">Từ nay đến hết 12/12/2016, chỉ cần gửi từ 10 triệu đồng tại Ngân hàng Việt Nam Thương Tín (Vietbank) Quý khách hàng sẽ có cơ hội tham gia chương trình “Triệu phú trong tầm tay – Vận may đến nước Mỹ” với các giải thưởng hấp dẫn...</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item-newspecial">
-                    <div class="row">
-                        <div class="col-xs-12 col-md-8">
-                            <div class="thumb"><a href="tintuc-ct.html"><img src="/img/tintuc/cohoidulichmy.png" alt="Tin tuc"></a></div>
-                        </div>
-                        <div class="col-xs-12 col-md-4">
-                            <div class="title-news">
-                                <h4>Tin mới nhất</h4>
-                                <time>2016-04-13</time>
-                            </div>
-                            <h3 class="title"><a href="tintuc-ct.html">Cơ hội du lịch Mỹ cùng Vietbank</a></h3>
-                            <div class="brief">Từ nay đến hết 12/12/2016, chỉ cần gửi từ 10 triệu đồng tại Ngân hàng Việt Nam Thương Tín (Vietbank) Quý khách hàng sẽ có cơ hội tham gia chương trình “Triệu phú trong tầm tay – Vận may đến nước Mỹ” với các giải thưởng hấp dẫn...</div>
-                        </div>
-                    </div>
-                </div>
+                }
             </div>
         </div>
     </div>
@@ -87,10 +63,10 @@
             <div class="row">
                 <div class="col-xs-12">
                     <ul class="nav nav-bld">
-                        <li><a href="tintuc.html" class="active">TẤT CẢ</a></li>
-                        <li><a href="#">TIN Vietbank</a></li>
-                        <li><a href="#">TIN THỊ TRƯỜNG</a></li>
-                        <li><a href="#">TIN KHUYẾN MÃI</a></li>
+                        <li><a href="@Localizer["NewsUrl"]" class="active">@Localizer["AllNewsName"]</a></li>
+                        <li><a href="@Localizer["VietbankNewsUrl"]">@Localizer["VietbankNewsName"]</a></li>
+                        <li><a href="@Localizer["PromotionNewsUrl"]">@Localizer["PromotionNewsName"]</a></li>
+                        <li><a href="@Localizer["VietbannkTvUrl"]">@Localizer["VietbannkTvName"]</a></li>
                     </ul>
                 </div>
             </div>

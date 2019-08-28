@@ -1,0 +1,66 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+<section class="main-header">
+    <div class="container">
+        <div class="logo"><a href="/"><img src="/img/logo.png" alt=""></a></div>
+        <div class="btn-showmenu"> <i class="fa fa-bars"></i></div>
+        <div class="overlay"></div>
+        <div class="main-menu">
+            <div class="btn-closemenu">X</div>
+            <div class="menu-content">
+                <ul>
+                    <li class="dropdown">
+                        <a href="@Localizer["GioiThieuUrl"]" data-toggle="dropdown" class="dropdown-toggle">@Localizer["GioiThieuName"]<span class="caret"><i class="fa fa-caret-down"></i></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="@Localizer["QuaTrinhPhatTrienUrl"]">@Localizer["QuaTrinhPhatTrienName"]</a></li>
+                            <li><a href="@Localizer["TamNhinSuMenhUrl"]">@Localizer["TamNhinSuMenhName"]</a></li>
+                            <li><a href="@Localizer["ThuNgoUrl"]">@Localizer["ThuNgoName"]</a></li>
+                            <li><a href="@Localizer["ChatLuongUrl"]">@Localizer["ChatLuongName"]</a></li>
+                            <li><a href="@Localizer["TuanThuUrl"]">@Localizer["TuanThuName"]</a></li>
+                            <li><a href="@Localizer["NganHangDaiLyUrl"]">@Localizer["NganHangDaiLyName"]</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="@Localizer["BanLanhDaoUrl"]" data-toggle="dropdown" class="dropdown-toggle">@Localizer["BanLanhDaoName"]<span class="caret"><i class="fa fa-caret-down"></i></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="@Localizer["HoiDongQuanTriUrl"]">@Localizer["HoiDongQuanTriName"]</a></li>
+                            <li><a href="@Localizer["BanKiemSoatUrl"]">@Localizer["BanKiemSoatName"]</a></li>
+                            <li><a href="@Localizer["BanDieuHanhUrl"]">@Localizer["BanDieuHanhName"]</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="@Localizer["TinTucUrl"]" data-toggle="dropdown" class="dropdown-toggle">@Localizer["TinTucName"]<span class="caret"><i class="fa fa-caret-down"></i></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="@Localizer["TinVietbankUrl"]">@Localizer["TinVietbankName"]</a></li>
+                            <li><a href="@Localizer["TinKhuyenMaiUrl"]">@Localizer["TinKhuyenMaiName"]</a></li>
+                            <li><a href="@Localizer["VietbankTvUrl"]">@Localizer["VietbankTvName"]</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="@Localizer["LienHeUrl"]">@Localizer["LienHeName"]</a></li>
+                </ul>
+            </div>
+            <partial name="~/Views/Partial/_MenuMobile.cshtml" />
+            <a href="@Localizer["NganHangTrucTuyenUrl"]" class="btn-ibanking"><i class="fa fa-unlock-alt"></i><span>@Localizer["NganHangTrucTuyen"]</span></a>
+            <div class="top-contact">
+                <div class="location">
+                    <i class="fa fa-map-marker"> </i>
+                    <p><a href="">ATM &amp; Chi nhánh</a></p>
+                </div>
+                <div class="phone">
+                    <i class="fa fa-phone"></i>
+                    <p>Hotline: <strong> <a data-tel="+8419001122">1800 1122</a></strong></p>
+                </div>
+            </div>
+            <nav class="tool-link clearfix">
+                <ul>
+                    <li> <i class="fa fa-usd"></i><a href="tygia.html" title="title">Tỷ giá</a></li>
+                    <li> <i class="fa fa-map-marker"></i><a href="mangluoi.html" title="title">Mạng lưới</a></li>
+                    <li> <i class="fa fa-file-text-o"></i><a href="bieumau-bieuphi.html" title="title">Biểu mẫu</a></li>
+                    <li> <i class="fa fa-gift"></i><a href="#" title="title">Khuyến mãi</a></li>
+                    <li> <i class="fa fa-comments-o"></i><a href="hoidap.html" title="title">Hỗ trợ</a></li>
+                    <li> <i class="fa fa-phone"></i><a href="lienhe.html" title="title">Liên hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>

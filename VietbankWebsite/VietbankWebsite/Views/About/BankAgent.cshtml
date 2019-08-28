@@ -1,9 +1,7 @@
-﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.*
-@using Microsoft.AspNetCore.Mvc.Localization
+﻿@using Microsoft.AspNetCore.Mvc.Localization
 @inject IViewLocalizer Localizer
 @{
-    ViewData["Title"] = "Home Page";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_LayoutAbout.cshtml";
 }
 <section class="banner-wrap">
     <section class="breadcrumb-wrap">
@@ -11,8 +9,7 @@
             <div class="row">
                 <div class="col-xs-12">
                     <ol class="breadcrumb mrt-10">
-                        <li><a href="gioithieu.html">Về Vietbank</a></li>
-                        <li><a href="gioithieu.html">Giới thiệu</a></li>
+                        <li><a href="@ViewBag.AboutUrl">@ViewBag.AboutName</a></li>
                         <li class="active"><span>Định hướng phát triển</span></li>
                     </ol>
                 </div>

@@ -24,4 +24,12 @@ namespace VietbankWebsite.ModelMap
         public string Url { get; set; }
         public string Thumbnail { get; set; }
     }
+
+    public class ShareholderDetail
+    {
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public string Thumbnail { get; set; }
+        public string Content { get; set; }
+    }
 }

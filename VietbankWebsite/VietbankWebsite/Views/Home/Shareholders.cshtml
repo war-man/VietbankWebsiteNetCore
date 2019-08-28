@@ -1,6 +1,6 @@
 ﻿@model VietbankWebsite.ModelMap.ShareholderCategory
 @{
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_LayoutShareholder.cshtml";
 }
 <section class="banner-wrap">
     <section class="breadcrumb-wrap brown">
@@ -43,7 +43,7 @@
                                 <div class="caption">
                                     <h4><a href="@item.value.Url">@item.value.Title</a></h4>
                                     <div class="desc">
-                                        @item.value.Description
+                                        @Html.Raw(item.value.Description)
                                     </div>
                                 </div>
                             </div>
@@ -56,7 +56,7 @@
                                 <div class="caption">
                                     <h4><a href="@item.value.Url">@item.value.Title</a></h4>
                                     <div class="desc">
-                                        @item.value.Description
+                                        @Html.Raw(item.value.Description)
                                     </div>
                                 </div>
                                 <div class="thumb"><a href="@item.value.Url"><img src="@item.value.Thumbnail" alt=""></a></div>

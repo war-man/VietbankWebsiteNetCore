@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace VietbankWebsite.Entities
@@ -12,5 +13,7 @@ namespace VietbankWebsite.Entities
         public int post_status { get; set; }
         public string post_thumbnail { get; set; }
         public string ping_status { get; set; }
+        public string guid { get; set; }
+        public DateTime post_date { get; set; }
     }
 }

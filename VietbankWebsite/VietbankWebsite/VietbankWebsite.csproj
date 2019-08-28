@@ -39,6 +39,24 @@
     <None Include="Views\About\Message.cshtml" />
     <None Include="Views\About\Mission.cshtml" />
     <None Include="Views\About\Quality.cshtml" />
+    <None Include="wwwroot\card\css\main.css.map" />
+    <None Include="wwwroot\card\fonts\fa-brands-400.svg" />
+    <None Include="wwwroot\card\fonts\fa-brands-400.woff2" />
+    <None Include="wwwroot\card\fonts\fa-regular-400.svg" />
+    <None Include="wwwroot\card\fonts\fa-regular-400.woff2" />
+    <None Include="wwwroot\card\fonts\fa-solid-900.svg" />
+    <None Include="wwwroot\card\fonts\fa-solid-900.woff2" />
+    <None Include="wwwroot\card\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\card\fonts\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\card\fonts\Linearicons-Free.svg" />
+    <None Include="wwwroot\card\fonts\Linearicons-Free.woff2" />
+    <None Include="wwwroot\card\fonts\MaterialIcons-Regular.ijmap" />
+    <None Include="wwwroot\card\fonts\MaterialIcons-Regular.svg" />
+    <None Include="wwwroot\card\fonts\MaterialIcons-Regular.woff2" />
+    <None Include="wwwroot\card\fonts\revicons\index.php" />
+    <None Include="wwwroot\card\fonts\revicons\revicons.svg" />
+    <None Include="wwwroot\card\js\core.js" />
+    <None Include="wwwroot\card\js\main.js" />
   </ItemGroup>
 
   <ItemGroup>

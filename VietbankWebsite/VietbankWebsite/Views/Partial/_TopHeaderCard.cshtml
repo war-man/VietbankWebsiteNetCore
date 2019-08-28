@@ -1,0 +1,30 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+    <div class="header-top">
+        <div class="container">
+            <div class="header-wrap">
+                <nav class="page-nav">
+                    <div class="toggle-pagenav"></div>
+                    <ul>
+                        <li class="active"><a href="@Localizer["SanPhamUrl"]" title="@Localizer["SanPham"]">@Localizer["SanPham"]</a></li>
+                        <li> <a href="@Localizer["QuanHeCoDongUrl"]" title="@Localizer["QuanHeCoDong"]">@Localizer["QuanHeCoDong"]</a></li>
+                        <li> <a href="@Localizer["TuyenDungUrl"]" title="@Localizer["TuyenDung"]">@Localizer["TuyenDung"]</a></li>
+                        <li> <a href="@Localizer["VeVietBankUrl"]" title="@Localizer["VeVietBank"]">@Localizer["VeVietBank"]</a></li>
+                    </ul>
+                </nav>
+                <div class="header-tool">
+                    <div class="branch d-none d-md-block"><a href="@Localizer["ChiNhanhUrl"]"><i class="fa fa-map-marker" aria-hidden="true"></i>ATMs & @Localizer["ChiNhanh"]</a></div>
+                    <div class="hotline d-none d-md-block"><a href="tel:1800 1122"><i class="fa fa-phone" aria-hidden="true"></i>Hotline: 1800 1122</a></div>
+                    <div class="search d-none d-lg-block">
+                        <div class="search-wrap">
+                            <div class="searchbox">
+                                <input type="text">
+                                <button class="searchbutton"><i class="fa fa-search" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <partial name="~/Views/Partial/_SelectLanguagePartial.cshtml" />
+                </div>
+            </div>
+        </div>
+    </div>

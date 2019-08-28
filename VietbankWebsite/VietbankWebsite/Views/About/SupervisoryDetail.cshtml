@@ -1,0 +1,47 @@
+﻿@model VietbankWebsite.ModelMap.LeadershipDetail
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@{
+    Layout = "~/Views/Shared/_LayoutAbout.cshtml";
+}
+<section class=" banner-wrap">
+    <section class="breadcrumb-wrap brown">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <ol class="breadcrumb mrt-10">
+                        <li><a href="@Localizer["AboutUrl"]">@Localizer["AboutName"]</a></li>
+                        <li><a href="@Localizer["LeadershipUrl"]">@Localizer["LeadershipName"]</a></li>
+                        <li><a href="@Localizer["DirectorUrl"]">@Localizer["DirectorName"]</a></li>
+                        <li style="color: #999;" class=" active"><strong>@Model.Title</strong></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="VietBank-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1 class="blue">@Model.Title                                                                                                                                                                                      </h1>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+<main>
+    <div class="container">
+        <div class="row">
+            <div id="leadership-menu" class="col-xs-12">
+                <ul class="nav nav-bld">
+                    <li><a href="@Localizer["DirectorUrl"]">@Localizer["DirectorName"]</a></li>
+                    <li><a href="@Localizer["SupervisoryUrl"]" class="active">@Localizer["SupervisoryName"]</a></li>
+                    <li><a href="@Localizer["ManagementUrl"]">@Localizer["ManagementName"]</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    @Html.Raw(Model.Content)
+</main>
+

@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Collections.Generic;
 
 namespace VietbankWebsite.Entities
 {
@@ -17,5 +18,44 @@ namespace VietbankWebsite.Entities
         public string image { get; set; }
         public string description { get; set; }
         public string thumbnail { get; set; }
+    }
+
+    public class CategoryProduct
+    {
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public string Thumbnail { get; set; }
+        public int ParentId { get; set; }
+        public IEnumerable<ListCategoryProduct> ListCategoryProduct { get; set; }
+    }
+
+    public class ListCategoryProduct
+    {
+        public CategoryDetailShort CategoryDetailShort { get; set; }
+        public IEnumerable<CategoryProductShort> CategoryProductShorts { get; set; }
+    }
+
+    public class CategoryDetailShort
+    {
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public string Thumbnail { get; set; }
+        public string Url { get; set; }
+    }
+
+    public class ProductShort : CategoryDetailShort
+    {
+        public IEnumerable<ListProductShort> ListProductShorts { get; set; }
+        public int PageSize { get; set; }
+    }
+
+    public class ListProductShort: CategoryDetailShort {
+        public string Description { get; set; }
+    }
+
+    public class CategoryProductShort
+    {
+        public string Title { get; set; }
+        public string Url { get; set; }
     }
 }

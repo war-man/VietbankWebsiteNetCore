@@ -1,8 +1,72 @@
-﻿
+﻿@model VietbankWebsite.ModelMap.CardProductDetailDto
 @{
-    ViewData["Title"] = "ProductDetail";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_LayoutCard.cshtml";
 }
 
-<h1>ProductDetail</h1>
+<section class="breadcrumb-wrap">
+    <div class="breadcrumb-content">
+        <div class="container">
+            @Html.Raw(Model.SiteMap)
+        </div>
+    </div>
+    <div class="page-banner">
+        <div class="banner-img"><img src="@Model.Banner" alt=""></div>
+    </div>
+</section>
+<section class="home-card">
+    <div class="container">
+        <div class="card-slick">
+            @foreach (var item in Model.BoxTwo)
+            {
+                <div class="item">
+                    <a class="card-item" href="@item.UrlTitle">
+                        <figure>
+                            <div class="card-img">
+                                <img src="@item.UrlImage" alt="">
+                            </div>
+                            <figcaption>
+                                <div class="card-logo">
+                                    <img src="~/Content/card/img/home/visa.png" alt="">
+                                </div>
+                                <div class="card-name">@item.Title</div>
+                                <div class="card-des">@item.Description</div>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+<section class="product-page">
+    <div class="product-detail">
+        <div class="product-bg"><img src="@Model.PathBackgroundBoxOne" alt=""></div>
+        <div class="container">
+            <h2 class="product-cate home-des text-center">@Model.TitleOneBoxOne</h2>
+            <h1 class="product-name home-title text-center">@Model.TitleTwoBoxOne </h1>
+            <div class="product-img text-center"><img src="@Model.PathCardBoxOne" alt=""></div>
+        </div>
+    </div>
+    <div class="product-feature">
+        @Html.Raw(Model.ContentBoxTwo)
+    </div>
+    <div class="product-limit">
+        <div class="product-img"><img src="@Model.PathBackgroundBoxThree" alt=""></div>
+        <div class="container">
+            <div class="limit-content">
+                <div class="product-title">@Model.TitleBoxThree</div>
+                <div class="content">
+                    <p>@Model.DescriptionBoxThree</p>
+                </div>
+                <div class="img"><img src="~/Content/card/img/product/img3.png" alt=""></div>
+            </div>
+        </div>
+    </div>
+    <div class="product-promotion">
+        <div class="container">
+            <h2 class="product-title text-center">@Model.TitleBoxFour</h2>
+            @Html.Raw(Model.ContentBoxFour)
+        </div>
+    </div>
+</section>
 

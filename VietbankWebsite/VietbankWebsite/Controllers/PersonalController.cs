@@ -1,11 +1,22 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Localization;
+using System.Threading.Tasks;
+using VietbankWebsite.Entities;
+using VietbankWebsite.Service;
 
 namespace VietbankWebsite.Controllers
 {
     [Route("ca-nhan")]
     [Route("personal")]
-    public class PersonalController : Controller
+    public class PersonalController : BaseMvcController
     {
+        private readonly IPersonalService _personalService;
+        private readonly IStringLocalizer<PersonalController> _localizer;
+        public PersonalController(IStringLocalizer<PersonalController> localizer, IPersonalService personalService)
+        {
+            _localizer = localizer;
+            _personalService = personalService;
+        }
         public IActionResult Index()
         {
             return View();
@@ -94,17 +105,19 @@ namespace VietbankWebsite.Controllers
         [HttpGet]
         [Route("san-pham")]
         [Route("product")]
-        public IActionResult Product()
+        public async Task<IActionResult> Product()
         {
-            return View();
+            var result = await _personalService.ListCategoryProducts(5, _localizer["ProductUrl"],GetLangCurrent())??new CategoryProduct();
+            return View(result);
         }
 
         [HttpGet]
         [Route("san-pham/{list}")]
         [Route("product/{list}")]
-        public IActionResult ListProduct(string list)
+        public async Task<IActionResult> ListProduct(string list)
         {
-            return View();
+            var result = await _personalService.ListCategoryProducts(list, $"{_localizer["ProductUrl"]}", GetLangCurrent()) ?? new CategoryProduct();
+            return View(result);
         }
 
         [HttpGet]

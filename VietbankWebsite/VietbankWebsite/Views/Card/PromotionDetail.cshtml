@@ -1,0 +1,18 @@
+﻿@model VietbankWebsite.ModelMap.IncentivesPostTwoDto
+@{
+    Layout = "~/Views/Shared/_LayoutCard.cshtml";
+}
+<section class="breadcrumb-wrap">
+    <div class="breadcrumb-content">
+        <div class="container">
+            @Html.Raw(Model.SiteMap)
+        </div>
+    </div>
+</section>
+<!--<section class="banner-section">
+    <div class="banner owl-carousel" style="background: #005baa">
+        <div class="item"><a class="banner-img" href="#!"><img src="@Model.PathBanner" alt=""></a></div>
+    </div>
+</section>-->
+@Html.Raw(Model.Content)
+
