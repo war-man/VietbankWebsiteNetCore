@@ -263,6 +263,114 @@ namespace VietbankWebsite.Repository
             }
             return lstCardValue;
         }
+
+        public async Task<IncentivesCateThreeFieldPostPageNum> GetListPostToCategoryMasterCard(string id, string lang, int pageCurrent, int pageSize)
+        {
+            var lstPost = _context.CardDatas
+                .Where(x => x.Parent.Equals(id))
+                .Where(x => x.Status)
+                .Where(x => x.Lang.Equals(lang));
+            List<IncentivesCateThreeFieldPost> lstPostMasterCard = new List<IncentivesCateThreeFieldPost>();
+            foreach (var item in await lstPost.Skip(pageSize * pageCurrent).Take(pageSize).ToListAsync())
+            {
+                lstPostMasterCard.Add(JsonConvert.DeserializeObject<IncentivesCateThreeFieldPost>(Base64Helper.Base64Decode(item.Value)));
+            }
+            return new IncentivesCateThreeFieldPostPageNum()
+            {
+                Post = lstPostMasterCard,
+                PageNum = ComputePagination(await lstPost.CountAsync(), pageSize)
+            };
+        }
+
+        public async Task<IncentivesCateThreeDto> GetMasterCard(string lang)
+        {
+            var masterCard = await _context.CardDatas
+                .Where(x => x.Type.Equals("cardincentivescatethree"))
+                .Where(x => x.Lang.Equals(lang))
+                .SingleOrDefaultAsync();
+            var cardValue = JsonConvert.DeserializeObject<IncentivesCateThree>(Base64Helper.Base64Decode(masterCard.Value));
+            var data = new IncentivesCateThreeDto()
+            {
+                Id = masterCard.Id,
+                SiteMap = Base64Helper.Base64Decode(masterCard.SiteMap),
+                Lang = masterCard.Lang,
+                Status = masterCard.Status,
+                Description = cardValue.Description,
+                LinkBanner = cardValue.LinkBanner,
+                PathBanner = cardValue.PathBanner,
+                Url = masterCard.Url,
+                Name = cardValue.Name,
+                Priority = masterCard.Priority,
+                Couple = masterCard.Couple,
+                PathImage = cardValue.PathImage
+            };
+            return data;
+        }
+
+        public async Task<CardSupportPostView> GetCardSupport(string alias, string lang)
+        {
+            var cardSupport = await _context.CardDatas
+                .Where(x=>x.Url.Equals(alias))
+                .Where(x => x.Lang.Equals(lang))
+                .SingleOrDefaultAsync(x=>x.Status);
+            var cardSupportBanner = await _context.CardDatas
+                .Where(x => x.Type.Equals("cardsupportbanner"))
+                .Where(x => x.Lang.Equals(lang))
+                .SingleOrDefaultAsync(x => x.Status);
+            var banner = JsonConvert.DeserializeObject<CardSupportBanner>(Base64Helper.Base64Decode(cardSupportBanner.Value));
+            return new CardSupportPostView()
+            {
+                TitleBanner = banner.Title,
+                Path = banner.Path,
+                Description = banner.Description,
+                Title = cardSupport.Title,
+                SiteMap = Base64Helper.Base64Decode(cardSupport.SiteMap),
+                Content = JsonConvert.DeserializeObject<CardSupportPost>(Base64Helper.Base64Decode(cardSupport.Value)).Content,
+                Category = await SupportCategoryFormat(lang)
+            };
+        }
+
+        private async Task<List<SupportCategory>> SupportCategoryFormat(string lang)
+        {
+            var parent = _context.CardDatas
+                .Where(x=>x.Type.Equals("cardsupportcate"))
+                .Where(x => x.Lang.Equals(lang))
+                .OrderBy(x => x.Priority).ToList();
+            List<SupportCategory> categories = new List<SupportCategory>();
+            foreach (var item in parent)
+            {
+                var child = _context.CardDatas.Where(x=>x.Parent.Equals(item.Id)).ToListAsync();
+                if (child != null)
+                {
+                    List<SupportCategoryChild> cateChild = new List<SupportCategoryChild>();
+                    foreach (var i in await child)
+                    {
+                        cateChild.Add(new SupportCategoryChild()
+                        {
+                            Title = i.Title,
+                            Url = $"/{(await _context.VbMapUrls.SingleOrDefaultAsync(x=>x.CardId.Equals(i.Id))).UrlMap}"
+                        });
+                    }
+                    categories.Add(new SupportCategory()
+                    {
+                        Title = item.Title,
+                        Url = (await _context.VbMapUrls.SingleOrDefaultAsync(x => x.CardId.Equals(item.Id))).UrlMap,
+                        HasChild = JsonConvert.DeserializeObject<CardSupportCategory>(Base64Helper.Base64Decode(item.Value)).HasChild,
+                        Content = JsonConvert.DeserializeObject<CardSupportCategory>(Base64Helper.Base64Decode(item.Value)).Content,
+                        Child = cateChild
+                    });
+                }
+                else
+                {
+                    categories.Add(new SupportCategory()
+                    {
+                        Title = item.Title,
+                        Url = (await _context.VbMapUrls.SingleOrDefaultAsync(x => x.CardId.Equals(item.Id))).UrlMap
+                    });
+                }
+            }
+            return categories;
+        }
     }
 
     public interface ICardRepository
@@ -273,7 +381,10 @@ namespace VietbankWebsite.Repository
         Task<IncentivesCateTwoDto> GetCardPromotion(string lang);
         Task<IncentivesPostTwoPagination> GetPromotionPost(int pageCurrent, int pageSize,string lang);
         Task<IncentivesPostTwoDto> GetPromotionDetail(string alias,string lang);
+        Task<IncentivesCateThreeDto> GetMasterCard(string lang);
         Task<IEnumerable<IncentivesCateThreeFieldView>> GetCategoryMasterCard(string lang);
+        Task<IncentivesCateThreeFieldPostPageNum> GetListPostToCategoryMasterCard(string id,string lang, int pageCurrent, int pageSize);
+        Task<CardSupportPostView> GetCardSupport(string alias, string lang);
         Task<CardHome> FindById(string id);
 
     }

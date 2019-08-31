@@ -52,8 +52,8 @@ namespace VietbankWebsite
             services.AddTransient<IAboutVietbankService, AboutVietbankService>();
             services.AddTransient<IAboutVietbankRepository, AboutVietbankRepository>();
 
-            services.AddTransient<IPersonalService, PersonalService>();
-            services.AddTransient<IPersonalRepository, PersonalRepository>();
+            services.AddTransient<IProductService, ProductService>();
+            services.AddTransient<IProductRepository, ProductRepository>();
 
             services.AddTransient<ICardService, CardService>();
             services.AddTransient<ICardRepository, CardRepository>();

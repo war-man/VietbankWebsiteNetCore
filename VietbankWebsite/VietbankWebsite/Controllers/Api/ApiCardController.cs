@@ -41,5 +41,12 @@ namespace VietbankWebsite.Controllers.Api
             }
             return cardPromotionMaster;
         }
+
+        [HttpGet("getlistpostmastercard/{id}/{pageCurrent}/{pageSize}")]
+        public async Task<IncentivesCateThreeFieldPostPageNum> GetListPostToCategoryMasterCard(string id,int pageCurrent, int pageSize)
+        {
+            return await _cardService.GetListPostToCategoryMasterCard(id, GetLangCurrent(), pageCurrent, pageSize);
+        }
+
     }
 }

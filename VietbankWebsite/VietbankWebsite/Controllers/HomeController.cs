@@ -63,7 +63,12 @@ namespace VietbankWebsite.Controllers
         [Route("shareholders/{detail}")]
         public async Task<IActionResult> ShareholdersDetail(string detail)
         {
-            var shareholderDetail = await _shareholderService.ShareholderDetail("quan-he-co-dong", detail, GetLangCurrent());
+            ShareholderDetail shareholderDetail;
+            if (!_cache.TryGetValue($"_shareholderDetail-{detail}", out shareholderDetail))
+            {
+                shareholderDetail = await _shareholderService.ShareholderDetail("quan-he-co-dong", detail, GetLangCurrent());
+                _cache.Set($"_shareholderDetail-{detail}", shareholderDetail, cacheEntryOptions);
+            }
             if (shareholderDetail == null) return RedirectToAction(nameof(NotFoundPage));
             ViewData["Title"] = shareholderDetail.Title;
             return View(shareholderDetail);

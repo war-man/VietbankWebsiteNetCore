@@ -10,17 +10,17 @@ namespace VietbankWebsite.Controllers.Api
     [ApiController]
     public class ApiPersonalController : BaseApiController
     {
-        private readonly IPersonalService _personalService;
+        private readonly IProductService _productService;
         private readonly IStringLocalizer<ApiPersonalController> _localizer;
-        public ApiPersonalController(IPersonalService personalService, IStringLocalizer<ApiPersonalController> localizer)
+        public ApiPersonalController(IProductService productService, IStringLocalizer<ApiPersonalController> localizer)
         {
-            _personalService = personalService;
+            _productService = productService;
             _localizer = localizer;
         }
         [HttpGet("listproducttocategory/{alias}/{page}/{pageSize}")]
         public async Task<ProductShort> ListProductToCategory(string alias,int page,int pageSize)
         {
-            return await _personalService.ListProductShort(alias,$"{_localizer["ProductUrl"]}/{alias}",GetLangCurrent(), page, pageSize);
+            return await _productService.ListProductShort(5,alias,$"{_localizer["ProductUrl"]}/{alias}",GetLangCurrent(), page, pageSize);
         }
     }
 }

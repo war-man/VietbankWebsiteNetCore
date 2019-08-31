@@ -2,9 +2,17 @@
   {
     "outputFileName": "wwwroot/css/site.min.css",
     "inputFiles": [
-      "wwwroot/css/addon.css",
+      //"wwwroot/css/addons.css",
       "wwwroot/css/main.css",
       "wwwroot/css/site.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/site-card.min.css",
+    "inputFiles": [
+      "wwwroot/card/css/core.css",
+      "wwwroot/card/css/main.css",
+      "wwwroot/card/css/site-card.css"
     ]
   },
   {
@@ -13,8 +21,24 @@
       "wwwroot/js/jquery.3.1.1.min.js",
       "wwwroot/js/addons.js",
       "wwwroot/js/main.js",
-      "wwwroot/js/monment.js",
+      "wwwroot/js/moment.js",
+      "wwwroot/js/common.js",
       "wwwroot/js/site.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/js/site-card.min.js",
+    "inputFiles": [
+      "wwwroot/js/jquery.3.1.1.min.js",
+      "wwwroot/card/js/core.js",
+      "wwwroot/card/js/main.js",
+      "wwwroot/js/moment.js",
+      "wwwroot/js/common.js"
     ],
     "minify": {
       "enabled": true,

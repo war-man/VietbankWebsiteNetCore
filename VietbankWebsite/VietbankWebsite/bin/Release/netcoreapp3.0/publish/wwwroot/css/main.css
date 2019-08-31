@@ -11310,7 +11310,7 @@ header {
   border-top: 0;
   border-color: transparent transparent #fff transparent;
   position: absolute;
-  bottom: 0;
+  bottom: -4px;
   left: 50%;
   -webkit-transform: translateX(-50%);
   -khtml-transform: translateX(-50%);
@@ -16290,7 +16290,9 @@ ul.nav.nav-bld li a:hover:after, ul.nav.nav-bld li a.active:after {
   background-color: #fff;
   height: 100%;
 }
-
+.item-news h3 {
+    height:40px;
+}
 .item-news figure {
   margin: 0;
 }

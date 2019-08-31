@@ -121,6 +121,6 @@
     <value>Product</value>
   </data>
   <data name="ProductUrl" xml:space="preserve">
-    <value>/personal/product</value>
+    <value>/enterprise/product</value>
   </data>
 </root>

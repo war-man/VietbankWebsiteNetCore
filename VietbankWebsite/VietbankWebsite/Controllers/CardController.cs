@@ -68,11 +68,26 @@ namespace VietbankWebsite.Controllers
         }
 
         [HttpGet]
-        [Route("ho-tro/bieu-mau")]
-        [Route("support/forms")]
-        public IActionResult Forms()
+        [Route("ho-tro")]
+        [Route("support")]
+        [Route("ho-tro/{alias}")]
+        [Route("support/{alias}")]
+        [Route("ho-tro/nhung-cau-hoi-thuong-gap/{alias}")]
+        [Route("support/frequently-asked-questions/{alias}")]
+        public async Task<IActionResult> Forms(string alias)
         {
-            return View();
+            if (alias == null)
+            {
+                alias = GetLangCurrent() == "vi"?"bieu-mau":"forms";
+            }
+            CardSupportPostView cardSupport;
+            if (!_cache.TryGetValue($"_carSuport-{alias}", out cardSupport))
+            {
+                cardSupport = await _cardService.GetCardSupport(alias, GetLangCurrent());
+                _cache.Set($"_carSuport-{alias}", cardSupport, cacheEntryOptions);
+            }
+            ViewData["Title"] = cardSupport.TitleBanner;
+            return View(cardSupport);
         }
 
         [HttpGet]
@@ -110,9 +125,17 @@ namespace VietbankWebsite.Controllers
         [HttpGet]
         [Route("uu-dai/uu-dai-danh-cho-chu-the")]
         [Route("incentives/happy-day")]
-        public IActionResult HappyDay()
+        public async Task<IActionResult> HappyDay()
         {
-            return View();
+            var keyCardPromotionMaster = GetLangCurrent() == "vi" ? CacheKeys.CardPromotionMasterVi : CacheKeys.CardPromotionMasterEn;
+            IncentivesCateThreeDto incentivesCateThreeDto;
+            if (!_cache.TryGetValue(keyCardPromotionMaster, out incentivesCateThreeDto))
+            {
+                incentivesCateThreeDto = await _cardService.GetMasterCard(GetLangCurrent());
+                _cache.Set(keyCardPromotionMaster, incentivesCateThreeDto, cacheEntryOptions);
+            }
+            ViewData["Title"] = incentivesCateThreeDto.Name;
+            return View(incentivesCateThreeDto);
         }
     }
 }

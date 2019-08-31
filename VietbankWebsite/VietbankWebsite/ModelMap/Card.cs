@@ -624,4 +624,121 @@ namespace VietbankWebsite.ModelMap
         [DisplayName("District")]
         public string NameDistrict { get; set; }
     }
+
+    public class CardSupportCategory
+    {
+        public string Title { get; set; }
+        public string Url { get; set; }
+        public bool HasChild { get; set; }
+        public string Content { get; set; }
+    }
+
+    public class CardSupportCategoryDto
+    {
+        public string Id { get; set; }
+
+        [Required]
+        [DisplayName("Title")]
+        public string Title { get; set; }
+
+        [DisplayName("Url")]
+        public string Url { get; set; }
+
+        [DisplayName("Has category child")]
+        public bool HasChild { get; set; }
+
+        [DisplayName("Couple Id")]
+        public string Couple { get; set; }
+
+        [Required]
+        [DisplayName("Status")]
+        public bool Status { get; set; }
+
+        [Required]
+        [DisplayName("Priority")]
+        public int Priority { get; set; }
+
+        [Required]
+        [DisplayName("Language")]
+        public string Lang { get; set; }
+    }
+
+    public class CardSupportPost
+    {
+        public string Content { get; set; }
+    }
+
+    public class CardSupportBanner
+    {
+        [Required]
+        [DisplayName("Path banner")]
+        public string Path { get; set; }
+
+        [Required]
+        [DisplayName("Title")]
+        public string Title { get; set; }
+
+        [Required]
+        [DisplayName("Description")]
+        public string Description { get; set; }
+    }
+
+    public class CardSupportPostView
+    {
+        public string Path { get; set; }
+        public string TitleBanner { get; set; }
+        public string Description { get; set; }
+        public string Content { get; set; }
+        public string Title { get; set; }
+        public string SiteMap { get; set; }
+        public bool HasChild { get; set; }
+        public List<SupportCategory> Category { get; set; }
+    }
+
+    public class CardSupportPostDto
+    {
+        public string Id { get; set; }
+
+        [Required]
+        [DisplayName("Title")]
+        public string Title { get; set; }
+
+        [DisplayName("Url")]
+        public string Url { get; set; }
+
+        public string Content { get; set; }
+
+        [DisplayName("Couple Id")]
+        public string Couple { get; set; }
+
+        [Required]
+        [DisplayName("Status")]
+        public bool Status { get; set; }
+
+        [Required]
+        [DisplayName("Priority")]
+        public int Priority { get; set; }
+
+        [Required]
+        [DisplayName("Language")]
+        public string Lang { get; set; }
+
+        [Required]
+        public string Parent { get; set; }
+    }
+
+    public class SupportCategory
+    {
+        public string Title { get; set; }
+        public string Url { get; set; }
+        public bool HasChild { get; set; }
+        public string Content { get; set; }
+        public List<SupportCategoryChild> Child { get; set; }
+    }
+
+    public class SupportCategoryChild
+    {
+        public string Title { get; set; }
+        public string Url { get; set; }
+    }
 }

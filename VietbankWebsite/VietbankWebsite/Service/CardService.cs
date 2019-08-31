@@ -36,9 +36,24 @@ namespace VietbankWebsite.Service
             return await _unitOfWork.CardRepository.GetCardPromotion(lang);
         }
 
+        public async Task<CardSupportPostView> GetCardSupport(string alias, string lang)
+        {
+            return await _unitOfWork.CardRepository.GetCardSupport(alias,lang);
+        }
+
         public async Task<IEnumerable<IncentivesCateThreeFieldView>> GetCategoryMasterCard(string lang)
         {
             return await _unitOfWork.CardRepository.GetCategoryMasterCard(lang);
+        }
+
+        public async Task<IncentivesCateThreeFieldPostPageNum> GetListPostToCategoryMasterCard(string id, string lang, int pageCurrent, int pageSize)
+        {
+            return await _unitOfWork.CardRepository.GetListPostToCategoryMasterCard(id,lang,pageCurrent,pageSize);
+        }
+
+        public async Task<IncentivesCateThreeDto> GetMasterCard(string lang)
+        {
+            return await _unitOfWork.CardRepository.GetMasterCard(lang);
         }
 
         public async Task<IncentivesPostTwoDto> GetPromotionDetail(string alias, string lang)
@@ -60,6 +75,9 @@ namespace VietbankWebsite.Service
         Task<IncentivesCateTwoDto> GetCardPromotion(string lang);
         Task<IncentivesPostTwoPagination> GetPromotionPost(int pageCurrent, int pageSize, string lang);
         Task<IncentivesPostTwoDto> GetPromotionDetail(string alias, string lang);
+        Task<IncentivesCateThreeDto> GetMasterCard(string lang);
         Task<IEnumerable<IncentivesCateThreeFieldView>> GetCategoryMasterCard(string lang);
+        Task<IncentivesCateThreeFieldPostPageNum> GetListPostToCategoryMasterCard(string id, string lang, int pageCurrent, int pageSize);
+        Task<CardSupportPostView> GetCardSupport(string alias, string lang);
     }
 }

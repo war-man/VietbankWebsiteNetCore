@@ -10,12 +10,12 @@ namespace VietbankWebsite.Controllers
     [Route("personal")]
     public class PersonalController : BaseMvcController
     {
-        private readonly IPersonalService _personalService;
+        private readonly IProductService _productService;
         private readonly IStringLocalizer<PersonalController> _localizer;
-        public PersonalController(IStringLocalizer<PersonalController> localizer, IPersonalService personalService)
+        public PersonalController(IStringLocalizer<PersonalController> localizer, IProductService productService)
         {
             _localizer = localizer;
-            _personalService = personalService;
+            _productService = productService;
         }
         public IActionResult Index()
         {
@@ -107,7 +107,7 @@ namespace VietbankWebsite.Controllers
         [Route("product")]
         public async Task<IActionResult> Product()
         {
-            var result = await _personalService.ListCategoryProducts(5, _localizer["ProductUrl"],GetLangCurrent())??new CategoryProduct();
+            var result = await _productService.ListCategoryProducts(5, _localizer["ProductUrl"],GetLangCurrent())??new CategoryProduct();
             return View(result);
         }
 
@@ -116,16 +116,23 @@ namespace VietbankWebsite.Controllers
         [Route("product/{list}")]
         public async Task<IActionResult> ListProduct(string list)
         {
-            var result = await _personalService.ListCategoryProducts(list, $"{_localizer["ProductUrl"]}", GetLangCurrent()) ?? new CategoryProduct();
+            var result = await _productService.ListCategoryProducts(5,list, $"{_localizer["ProductUrl"]}", GetLangCurrent()) ?? new CategoryProduct();
             return View(result);
         }
 
         [HttpGet]
-        [Route("san-pham/{list}/{detail}")]
-        [Route("product/{list}/{detail}")]
-        public IActionResult ProductDetail(string list,string detail)
+        [Route("san-pham/{cate}/{detail}")]
+        [Route("product/{cate}/{detail}")]
+        public async Task<IActionResult> ProductDetail(string cate, string detail)
         {
-            return View();
+            var productDetail = await _productService.GetProductDetail(cate, _localizer["ProductUrl"], detail, GetLangCurrent());
+            if (productDetail == null) return NotFound();
+            ViewData["Title"] = productDetail.Title;
+            ViewBag.PersonalName = _localizer["PersonalName"];
+            ViewBag.PersonalUrl = _localizer["PersonalUrl"];
+            ViewBag.ProductName = _localizer["ProductName"];
+            ViewBag.ProductUrl = _localizer["ProductUrl"];
+            return View(productDetail);
         }
     }
 }

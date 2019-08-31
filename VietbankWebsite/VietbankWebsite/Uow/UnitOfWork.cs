@@ -10,12 +10,12 @@ namespace VietbankWebsite.Uow
         public IVbBannerRepository _vbBannerRepository;
         public IShareholderRepository _shareholderRepository;
         public IAboutVietbankRepository _aboutVietbankRepository;
-        public IPersonalRepository _personalRepository;
+        public IProductRepository _productRepository;
         public ICardRepository _cardRepository;
         public IVbBannerRepository VbBannerRepository => _vbBannerRepository = _vbBannerRepository ?? new VbBannerRepository(_context);
         public IShareholderRepository ShareholderRepository => _shareholderRepository = _shareholderRepository ?? new ShareholderRepository(_context);
         public IAboutVietbankRepository AboutVietbankRepository => _aboutVietbankRepository = _aboutVietbankRepository ?? new AboutVietbankRepository(_context);
-        public IPersonalRepository PersonalRepository => _personalRepository = _personalRepository ?? new PersonalRepository(_context);
+        public IProductRepository ProductRepository => _productRepository = _productRepository ?? new ProductRepository(_context);
         public ICardRepository CardRepository => _cardRepository = _cardRepository ?? new CardRepository(_context);
         public void Complete()
         {
@@ -53,7 +53,7 @@ namespace VietbankWebsite.Uow
         IAboutVietbankRepository AboutVietbankRepository { get; }
         IVbBannerRepository VbBannerRepository { get; }
         IShareholderRepository ShareholderRepository { get; }
-        IPersonalRepository PersonalRepository { get; }
+        IProductRepository ProductRepository { get; }
         ICardRepository CardRepository { get; }
         void Complete();
     }

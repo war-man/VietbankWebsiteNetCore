@@ -53,6 +53,14 @@ namespace VietbankWebsite.Entities
         public string Description { get; set; }
     }
 
+    public class ProductDetail : CategoryDetailShort
+    {
+        public string Description { get; set; }
+        public string Content { get; set; }
+        public string CategoryName { get; set; }
+        public string CategoryUrl { get; set; }
+    }
+
     public class CategoryProductShort
     {
         public string Title { get; set; }

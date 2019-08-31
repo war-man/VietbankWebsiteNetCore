@@ -1,7 +1,8 @@
-﻿
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@model VietbankWebsite.Entities.CategoryProduct
+@inject IViewLocalizer Localizer
 @{
-    ViewData["Title"] = "ListProduct";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_LayoutEnterprise.cshtml";
 }
 
 <section class="banner-wrap">
@@ -10,22 +11,22 @@
             <div class="row">
                 <div class="col-xs-12">
                     <ol class="breadcrumb mrt-10">
-                        <li><a href="index.html">Cá nhân</a></li>
-                        <li><a href="sanpham.html">Sản phẩm</a></li>
-                        <li class="active"><span>Tín dụng</span></li>
+                        <li><a href="@Localizer["EnterpriseUrl"]">@Localizer["EnterpriseName"]</a></li>
+                        <li><a href="@Localizer["ProductUrl"]">@Localizer["ProductName"]</a></li>
+                        <li class="active"><span style="color: #999;">@Model.Title</span></li>
                     </ol>
                 </div>
             </div>
         </div>
     </section>
     <section class="banner-page imageBanner">
-        <div style="background-image:url('/img/banner_page/banner_sanphamDS2.png')" class="imgBg"></div>
+        <div style="background-image:url('@Model.Thumbnail')" class="imgBg"></div>
         <div class="desc">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-5 col-lg-5 col-xl-5">
-                        <h1 class="title">Tín dụng</h1>
-                        <div class="content">Chúng tôi mang đến hàng loạt những sản phẩm đa dạng và tiện ích để phục vụ tốt hơn mong muốn của tất cả khách hàng.</div>
+                        <h1 class="title">@Model.Title</h1>
+                        <div class="content">@Model.Description</div>
                     </div>
                 </div>
             </div>
@@ -39,91 +40,29 @@
                 <div class="relative">
                     <a href="javascript:;" class="toggle-click"><i class="fa fa-bars"></i>Danh mục</a>
                     <div class="nav-toogle">
-                        <nav class="left-menu"><a href="#">Tiền gửi tiết kiệm</a><a href="#">Tiền gửi thanh toán</a><a href="#">Ngân hàng điện tử</a><a href="#">Sản phẩm và dịch vụ khác</a><a href="#" class="active">Tín dụng</a><a href="#">Chuyển tiền quốc tế</a></nav>
+                        <nav class="left-menu">
+                            @foreach (var item in Model.ListCategoryProduct)
+                            {
+                                <a href="@item.CategoryDetailShort.Url">@item.CategoryDetailShort.Title</a>
+                            }
+                        </nav>
                     </div>
                 </div>
                 <div class="banner-ads"><a href="#"><img src="/img/sanpham-ds2/ads_banner1.png" alt="Ads"></a></div>
             </div>
             <div class="col-xs-12 col-lg-9">
                 <section class="sanpham-ds2">
-                    <div class="row flex flex-wrap">
-                        <div class="col-xs-12 col-md-4 col-lg-4 item-wrap">
-                            <div class="item-sp2">
-                                <figure>
-                                    <a href="sanpham-ct.html" class="center-block"><img src="/img/sanpham-ds2/cho-vay-san-pham-kinh-doanh.png" alt="Products"></a>
-                                    <figcaption>
-                                        <h3><a href="sanpham-ct.html">Cho vay sản xuất kinh doanh</a></h3>
-                                        <div class="brief">Bạn có niềm đam mê gầy dựng một doanh nghiệp thành công. Vietbank luôn sát cánh tạo điều kiện tài chính thuận lợi để bạn có thể nắm bắt cơ hội thực hiện ước mơ của mình.</div>
-                                    </figcaption>
-                                </figure>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-md-4 col-lg-4 item-wrap">
-                            <div class="item-sp2">
-                                <figure>
-                                    <a href="sanpham-ct.html" class="center-block"><img src="/img/sanpham-ds2/cho-vay-mua-nha-dat.png" alt="Products"></a>
-                                    <figcaption>
-                                        <h3><a href="sanpham-ct.html">Cho vay mua nhà, đất</a></h3>
-                                        <div class="brief">An cư - Lập nghiệp” là giấc mơ không chỉ đối với những gia đình trẻ mà còn đối với cả những người độc thân trong thời đại hiện nay.</div>
-                                    </figcaption>
-                                </figure>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-md-4 col-lg-4 item-wrap">
-                            <div class="item-sp2">
-                                <figure>
-                                    <a href="sanpham-ct.html" class="center-block"><img src="/img/sanpham-ds2/cho-vay-xay-dung-sua-chua-nha.png" alt="Products"></a>
-                                    <figcaption>
-                                        <h3><a href="sanpham-ct.html">Cho vay xây dựng, sửa chữa nhà</a></h3>
-                                        <div class="brief">Ngân hàng Việt Nam Thương Tín (Vietbank) hân hạnh gửi tới Quý khách hàng sản phẩm Cho vay xây dựng, sửa chữa nhà với các tính năng nổi bật.</div>
-                                    </figcaption>
-                                </figure>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-md-4 col-lg-4 item-wrap">
-                            <div class="item-sp2">
-                                <figure>
-                                    <a href="sanpham-ct.html" class="center-block"><img src="/img/sanpham-ds2/cho-vay-mua-xe-oto.png" alt="Products"></a>
-                                    <figcaption>
-                                        <h3><a href="sanpham-ct.html">Cho vay mua xe ô tô</a></h3>
-                                        <div class="brief">Một trong những sản phẩm được cải tiến thêm các tính năng mới nhằm đáp ứng nhu cầu khách hàng chính là Vay mua ô tô siêu tốc trong 8h.</div>
-                                    </figcaption>
-                                </figure>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-md-4 col-lg-4 item-wrap">
-                            <div class="item-sp2">
-                                <figure>
-                                    <a href="sanpham-ct.html" class="center-block"><img src="/img/sanpham-ds2/cho-vay-tieu-dung-co-tsdb.png" alt="Products"></a>
-                                    <figcaption>
-                                        <h3><a href="sanpham-ct.html">Cho vay tiêu dùng có TSĐB (theo món hoặc hạn mức)</a></h3>
-                                        <div class="brief">Sản phẩm Cho vay tiêu dùng tín chấp của Vietbank là giải pháp nhanh chóng và an toàn cho bạn.</div>
-                                    </figcaption>
-                                </figure>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-md-4 col-lg-4 item-wrap">
-                            <div class="item-sp2">
-                                <figure>
-                                    <a href="sanpham-ct.html" class="center-block"><img src="/img/sanpham-ds2/cho-vay-cam-co-so-tiet-kiem.png" alt="Products"></a>
-                                    <figcaption>
-                                        <h3><a href="sanpham-ct.html">Cho vay cầm cố sổ tiết kiệm/số dư tài khoản/giấy tờ có giá</a></h3>
-                                        <div class="brief">Bạn sở hữu sổ tiết kiệm, giấy tờ có giá và đang có nhu cầu đột xuất về vốn để tiêu dùng hoặc kinh doanh.</div>
-                                    </figcaption>
-                                </figure>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="row flex flex-wrap" id="list-product"></div>
                 </section>
                 <div class="pages newspaper">
-                    <ul class="pagination">
-                        <li class="active"><span>1</span></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
+                    <ul class="pagination" id="pagination">
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 </main>
+@section Scripts{
 
+    <script src="~/page/enterprise-list-product.js"></script>
+}
