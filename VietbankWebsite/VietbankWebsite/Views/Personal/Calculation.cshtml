@@ -1,7 +1,7 @@
 ﻿
 @{
     ViewData["Title"] = "Calculation";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_LayoutPersonal.cshtml";
 }
 
 <section class="banner-wrap">
@@ -19,7 +19,7 @@
         </div>
     </section>
     <section class="banner-page imageBanner">
-        <div style="background-image:url('img/banner_page/banner_bieuphi.png')" class="imgBg"></div>
+        <div style="background-image:url('/img/banner_page/banner_bieuphi.png')" class="imgBg"></div>
         <div class="desc">
             <div class="container">
                 <div class="row">
@@ -36,52 +36,332 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-lg-3">
-                <a href="javascript:;" class="toggle-click"><i class="fa fa-bars"></i>Danh mục</a>
-                <div class="nav-toogle">
-                    <ul class="nav left-menusp">
-                        <li><a href="hoidap.html" class="active">Câu hỏi thường gặp</a></li>
-                        <li class="has-children active">
-                            <a href="#">Công cụ - Tiện ích</a>
-                            <ul style="display:block" class="sub-menu">
-                                <li><a href="tygia-ngoaite.html">Tỷ giá / Lãi suất</a></li>
-                                <li><a href="bieumau.html">Biểu mẫu / Biểu phí</a></li>
-                                <li><a href="#">Mạng lưới</a></li>
-                                <li><a href="congcu-tinhtoan.html" class="active">Công cụ tính toán</a></li>
-                                <li><a href="#">Xác thực bảo lãnh</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-children">
-                            <a href="#">Video hướng dẫn</a>
-                            <ul class="sub-menu">
-                                <li><a href="videohuongdan.html">Hướng dẫn thanh toán Online</a></li>
-                                <li><a href="#">Hướng dẫn bảo mật tài khoản</a></li>
-                                <li><a href="#">Hướng dẫn khác</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+                <partial name="~/Views/Partial/_ToolCalulationBar.cshtml" />
             </div>
             <div class="col-xs-12 col-lg-9">
                 <section class="hotro-ct">
-                    <h1 class="title">Công cụ tính toán</h1>
-                    <nav class="nav nav-sp"><a href="congcu-tinhtoan-vay.html" class="active">Tôi có thể vay bao nhiêu</a><a href="congcu-tinhtoan.html">Tính lịch trả nợ theo dư nợ giảm dần</a><a href="tinhlai-doanhnghiep.html">Tính lãi tiền gửi</a></nav>
-                    <div class="block-borrowTool">
-                        <div class="desc"><span>Đây chỉ là kết quả ước tính dự kiến .Mọi Chi tiết vui lòng liên hệ:</span><a href="tel:18001122"><i class="fa fa-phone"> </i>Call Center 1800 1122</a></div>
-                        <div class="form-group">
-                            <label>Số tiền bạn dự định trả nợ mỗi tháng:</label>
-                            <div class="group">
-                                <input class="form-control"><span class="unit">VND</span>
-                            </div>
-                            <input type="submit" value="Ước tính khoản vay">
+                    <h1 class="title">Công cụ tính toán                                                                                                                                                                                       </h1>
+                    <div class="" id="support-personal">
+                        <div class="tabs-support">
+                            <ul role="tablist" class="nav-jt-sp">
+                                <li class="nav-item">
+                                    <a href="#tab1" data-toggle="tab" role="tab" class="active" aria-expanded="true">Tôi có thể vay bao nhiêu</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#tab2" data-toggle="tab" role="tab" class="" aria-expanded="false">Tính lịch trả nợ theo dư nợ giảm dần</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#tab3" data-toggle="tab" role="tab" class="" aria-expanded="false">Tính lãi tiền gửi</a>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="result">
-                            <h3>Kết Quả</h3>
-                            <div class="row flex flex-wrap">
-                                <div class="col-xs-12 col-md-6">
-                                    <div class="item-result"><strong>Dự định trả nợ mỗi tháng: </strong><span>20,000,000 VND</span></div>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="thetindung tab-pane active" id="tab1" aria-expanded="true">
+                                <div class="block-borrowTool">
+                                    <div class="form-group">
+                                        <label>Số tiền bạn dự định trả nợ mỗi tháng (VND):</label>
+                                        <div class="group">
+                                            <input id="so-tien-tra-moi-thang" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Số tháng:</label>
+                                        <div class="group">
+                                            <input id="so-thang-vay" class="form-control"><span class="unit">tháng</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Lãi suất:</label>
+                                        <div class="group">
+                                            <input id="lai-suat-vay" class="form-control"><span class="unit">%</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input style="float: left;" id="submit-uoctinhkhoangvai" type="submit" value="Ước tính khoản vay">
+                                    </div>
+                                    <div class="result">
+                                        <h3>Kết Quả</h3>
+                                        <div class="row flex flex-wrap">
+                                            <div class="col-xs-12 col-md-6">
+                                                <div class="item-result"><strong>Dự định trả nợ mỗi tháng: </strong><span id="du-dinh-tra-no"></span></div>
+                                            </div>
+                                            <div class="col-xs-12 col-md-6">
+                                                <div class="item-result"><strong>Bạn sẽ vay tối đa: </strong><span id="so-tien-vay-toi-da"></span></div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-xs-12 col-md-6">
-                                    <div class="item-result"><strong>Bạn sẽ vay tối đa: </strong><span>200,000,000 VND</span></div>
+                            </div>
+                            <div role="tabpanel" class="thetindung tab-pane" id="tab2" aria-expanded="false">
+                                <div class="block-calculatorTool">
+                                    <div class="row flex flex-wrap">
+                                        <div class="col-xs-12 col-md-6">
+                                            <div class="form-group">
+                                                <label>Số tiền vay:</label>
+                                                <div class="group">
+                                                    <input id="sotienvay" value="" class="form-control"><span class="unit">VND</span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Thời gian vay:</label>
+                                                <div class="group">
+                                                    <input id="thoigianvay" value="" class="form-control"><span class="unit">tháng</span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Lãi suất:</label>
+                                                <div class="group">
+                                                    <input id="laisuat" value="" class="form-control"><span class="unit">%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xs-12">
+                                            <div class="form-group">
+                                                <input id="btn-tinhnogiamdan" type="submit" value="Ước tính">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="block-calculatorTool">
+                                    <div class="title-wrap">
+                                        <h3 class="title-tool">Tính theo dư nợ giảm dần</h3>
+                                        <div class="support-wrap">
+                                            <a onclick="jtExportToExcel();event.preventDefault();" href="#"><img src="/img/excel_icon.png"><span>Xuất Excel</span></a>
+                                            <a onclick="jtprinttygia(); event.preventDefault();" href="#"><img src="/img/print_icon.png"><span>In</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table id="kq-tinhdunobandau" class="table"></table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="thetindung tab-pane" id="tab3" aria-expanded="false">
+                                <div class="block-revive">
+                                    <div class="row flex flex-wrap">
+                                        <div class="col-xs-12 col-md-6">
+                                            <div class="form-group">
+                                                <label>Số tiền gửi:</label>
+                                                <div class="group">
+                                                    <input id="so-tien-goi-person" value="" class="form-control"><span class="unit">VND</span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Kỳ hạn gửi:</label>
+                                                <div id="ky-hang-gui-person" class="group">
+                                                    <input disabled="disabled" class="form-control"><span class="unit hidden"></span>
+                                                    <select style="position: absolute; width: 120px; top: 0px; right: 0px; z-index: 100; background-color: white; border-bottom-left-radius: inherit; border-top-left-radius: inherit;" id="ky-lanh-lai-person" class="form-control">
+                                                        <option value="">Vui lòng chọn</option>
+                                                        <option value="tuần">Tuần</option>
+                                                        <option value="tháng">Tháng</option>
+
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-6">
+
+                                            <div class="form-group">
+                                                <label>Lãi suất:</label>
+                                                <div class="group">
+                                                    <input id="lai-suat-person" class="form-control"><span class="unit">%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table" width="665" height="337">
+                                            <thead>
+                                                <tr>
+                                                    <th>Kỳ hạn</th>
+                                                    <th>Lãi cuối kỳ</th>
+                                                    <th>Lãi hàng quý</th>
+                                                    <th>Lãi hàng tháng</th>
+                                                    <th>Lãi trả trước</th>
+                                                    <th>USD/ AUD</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1 tuần</td>
+                                                    <td>0.30 %</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2 tuần</td>
+                                                    <td>0.30 %</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3 tuần</td>
+                                                    <td>0.60 %</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1 tháng (*)</td>
+                                                    <td>5.40%</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td><span>5.37%</span></td>
+                                                    <td><span>0.00%</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2 tháng (*)</td>
+                                                    <td><span>5.40%</span></td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>5.35 %</td>
+                                                    <td><span>0.00%</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3 tháng (*)</td>
+                                                    <td><span>5.50%</span></td>
+                                                    <td>-</td>
+                                                    <td>5.47%</td>
+                                                    <td>5.42%</td>
+                                                    <td><span>0.00%</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4 tháng</td>
+                                                    <td><span>5.</span><span>5</span><span>0%</span></td>
+                                                    <td></td>
+                                                    <td>5.46%</td>
+                                                    <td>5.40%</td>
+                                                    <td><span>0.00%</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5 tháng</td>
+                                                    <td>5.50 %</td>
+                                                    <td>-</td>
+                                                    <td>5.45%</td>
+                                                    <td>5.37%</td>
+                                                    <td><span>0.00%</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6 tháng</td>
+                                                    <td>7.00%</td>
+                                                    <td>6.94%</td>
+                                                    <td>6.90%</td>
+                                                    <td>6.67%</td>
+                                                    <td><span>0.00%</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>7 tháng</td>
+                                                    <td><span>7.00%</span></td>
+                                                    <td>-</td>
+                                                    <td>6.88%</td>
+                                                    <td>6.72%</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8 tháng</td>
+                                                    <td><span>7.00%</span></td>
+                                                    <td>-</td>
+                                                    <td>6.86%</td>
+                                                    <td>6.68%</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>9 tháng</td>
+                                                    <td>7.10%</td>
+                                                    <td>6.98%</td>
+                                                    <td>6.94%</td>
+                                                    <td>6.74%</td>
+                                                    <td><span>0.00%</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10 tháng</td>
+                                                    <td><span>7.10%</span></td>
+                                                    <td>-</td>
+                                                    <td>6.92%</td>
+                                                    <td>6.70%</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>11 tháng</td>
+                                                    <td><span>7.10%</span></td>
+                                                    <td>-</td>
+                                                    <td>6.90%</td>
+                                                    <td>6.66%</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>12 tháng</td>
+                                                    <td>7.10%</td>
+                                                    <td>6.92%</td>
+                                                    <td>6.88%</td>
+                                                    <td>6.62%</td>
+                                                    <td><span>0.00%</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>13 tháng (*)(**)</td>
+                                                    <td>7.90%</td>
+                                                    <td>7.66%</td>
+                                                    <td>7.60%</td>
+                                                    <td>7.27%</td>
+                                                    <td><span>0.00%</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>15 tháng</td>
+                                                    <td>7.30%</td>
+                                                    <td>7.04%</td>
+                                                    <td>7.00%</td>
+                                                    <td>-</td>
+                                                    <td><span>0.00%</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>18 tháng</td>
+                                                    <td>7.50%</td>
+                                                    <td>7.16%</td>
+                                                    <td>7.12%</td>
+                                                    <td>-</td>
+                                                    <td><span>0.00%</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>24 tháng</td>
+                                                    <td>7.80%</td>
+                                                    <td>7.30%</td>
+                                                    <td>7.26%</td>
+                                                    <td>-</td>
+                                                    <td><span>0.00%</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>36</span><span>&nbsp;tháng</span></td>
+                                                    <td><span mce-data-marked="1">7.90%</span></td>
+                                                    <td><span>7.13%</span></td>
+                                                    <td><span>7.08%</span></td>
+                                                    <td></td>
+                                                    <td><span>0.00%</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="6" style="text-align: justify;">(*) Áp dụng Tiết kiệm linh hoạt vốn lãnh lãi cuối kỳ và Tiết kiệm truyền thống.<br> (**) Áp dụng đối với Tiết kiệm và tiền gửi có kỳ hạn truyền thống, Tiết kiệm linh hoạt vốn lãnh lãi cuối kỳ mở mới với mức gửi từ 500 tỷ đồng trở lên. Đối với trường hợp tái tục, hoặc Tiết kiệm và tiền gửi có kỳ hạn truyền thống, Tiết kiệm linh hoạt vốn lãnh lãi cuối kỳ mở mới với mức gửi dưới 500 tỷ đồng, áp dụng theo lãi suất của kỳ hạn 12 tháng (lãi cuối kỳ, lãi hàng tháng, lãi hàng quý, lãi trả trước).</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>                                                <div class="form-group btn-result">
+                                        <input id="uoc-tinh-person" type="submit" value="Ước tính">
+                                    </div>
+                                    <div class="result">
+                                        <h3>Kết Quả</h3>
+                                        <div class="row flex flex-wrap">
+                                            <div class="col-xs-12 col-md-6">
+
+                                                <div class="item-result"><strong>Tổng tiền lãi: </strong><span class="tong-tien-lai"></span></div>
+                                            </div>
+                                            <div class="col-xs-12 col-md-6">
+                                                <div class="item-result"><strong>Tổng số tiền gốc và lãi: </strong><span class="tong-so-tien-nhan-duoc"></span></div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -92,3 +372,8 @@
     </div>
 </main>
 
+@section Scripts{
+
+    <script src="~/js/jquery.table2excel.js"></script>
+    <script src="~/page/tool-calulation.js"></script>
+}

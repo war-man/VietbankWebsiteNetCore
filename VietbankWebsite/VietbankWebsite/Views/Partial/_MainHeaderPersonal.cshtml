@@ -10,9 +10,20 @@
             <div class="menu-content">
                 <ul>
                     <li class="active"><a href="@Localizer["CaNhanUrl"]">@Localizer["CaNhan"]</a></li>
-                    <li><a href="@Localizer["DoanhNghiepUrl"]">@Localizer["DoanhNghiep"]</a></li>
-                    <li><a href="@Localizer["TheUrl"]">@Localizer["The"]</a></li>
-                    <li><a href="@Localizer["HoTroUrl"]">@Localizer["HoTro"]</a></li>
+                    <li><a href="@Localizer["TinKhuyenMaiUrl"]">@Localizer["TinKhuyenMaiName"]</a></li>
+                    <li class="dropdown">
+                        <a href="@Localizer["HoTroUrl"]" data-toggle="dropdown" class="dropdown-toggle">@Localizer["HoTro"]<span class="caret"><i class="fa fa-caret-down"></i></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="@Localizer["FaqsUrl"]">@Localizer["FaqsName"]</a></li>
+                            <li><a href="@Localizer["ForeignExchangeUrl"]">@Localizer["ForeignExchangeName"]</a></li>
+                            <li><a href="@Localizer["InterestRateUrl"]">@Localizer["InterestRateName"]</a></li>
+                            <li><a href="@Localizer["InterestRateBasisUrl"]">@Localizer["InterestRateBasisName"]</a></li>
+                            <li><a href="@Localizer["FormsUrl"]">@Localizer["FormsName"]</a></li>
+                            <li><a href="@Localizer["TariffUrl"]">@Localizer["TariffName"]</a></li>
+                            <li><a href="@Localizer["Tools&CalculatorsUrl"]">@Localizer["Tools&CalculatorsName"]</a></li>
+                            <li><a href="@Localizer["SavingAccountInquiryUrl"]">@Localizer["SavingAccountInquiryName"]</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
             <partial name="~/Views/Partial/_MenuMobile.cshtml" />

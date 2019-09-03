@@ -3,7 +3,7 @@
 })();
 
 function getCardPromotionPostDefault() {
-    requestAjaxGet('https://localhost:44339/api/ApiCard/getpromotionpost/0/6')
+    requestAjaxGet('/api/ApiCard/getpromotionpost/0/6')
         .done(function (data) {
             $('#sale-list').html(loopListPromotion(data.post));
             generatePagination(data.pageSize);
@@ -13,7 +13,7 @@ function getCardPromotionPostDefault() {
 }
 
 function getCardPromotionPost(pageCurrent) {
-    requestAjaxGet('https://localhost:44339/api/ApiCard/getpromotionpost/' + pageCurrent + '/6')
+    requestAjaxGet('/api/ApiCard/getpromotionpost/' + pageCurrent + '/6')
         .done(function (data) {
             $('#sale-list').html(loopListPromotion(data.post));
         }).fail(function (error) {

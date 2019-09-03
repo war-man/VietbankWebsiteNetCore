@@ -139,7 +139,7 @@
     <value>Contact</value>
   </data>
   <data name="LienHeUrl" xml:space="preserve">
-    <value>/contact</value>
+    <value>/about-vietbank/contact</value>
   </data>
   <data name="TyGia" xml:space="preserve">
     <value>Rate</value>

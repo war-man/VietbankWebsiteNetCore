@@ -16,5 +16,12 @@ namespace VietbankWebsite.Controllers
         {
             return Request.HttpContext.Features.Get<IRequestCultureFeature>().RequestCulture.Culture.Name;
         }
+
+        [HttpGet("NotFoundPage")]
+        public IActionResult NotFoundPage()
+        {
+            ViewData["Title"] = "Không tìm thấy trang";
+            return View();
+        }
     }
 }

@@ -117,6 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BranchName" xml:space="preserve">
+    <value>Chi nhánh Vietbank </value>
+  </data>
+  <data name="BranchUrl" xml:space="preserve">
+    <value>/chi-nhanh</value>
+  </data>
+  <data name="CareerOpportunity" xml:space="preserve">
+    <value>Cơ hội nghề nghiệp</value>
+  </data>
+  <data name="CareerOpportunityUrl" xml:space="preserve">
+    <value>/tuyen-dung/co-hoi-nghe-nghiep</value>
+  </data>
+  <data name="Careers" xml:space="preserve">
+    <value>Tuyển dụng</value>
+  </data>
+  <data name="CareersUrl" xml:space="preserve">
+    <value>/tuyen-dung</value>
+  </data>
   <data name="Home" xml:space="preserve">
     <value>VietBank - Ngân hàng TMCP Việt Nam Thương Tín</value>
   </data>

@@ -129,11 +129,41 @@
   <data name="DoanhNghiepUrl" xml:space="preserve">
     <value>/enterprise/product</value>
   </data>
+  <data name="FaqsName" xml:space="preserve">
+    <value>FAQ’s</value>
+  </data>
+  <data name="FaqsUrl" xml:space="preserve">
+    <value>/support/faq-s</value>
+  </data>
+  <data name="ForeignExchangeName" xml:space="preserve">
+    <value>Foreign exchange</value>
+  </data>
+  <data name="ForeignExchangeUrl" xml:space="preserve">
+    <value>/support/foreign-exchange</value>
+  </data>
+  <data name="FormsName" xml:space="preserve">
+    <value>Forms</value>
+  </data>
+  <data name="FormsUrl" xml:space="preserve">
+    <value>/support/forms</value>
+  </data>
   <data name="HoTro" xml:space="preserve">
     <value>Support</value>
   </data>
   <data name="HoTroUrl" xml:space="preserve">
     <value>/support</value>
+  </data>
+  <data name="InterestRateBasisName" xml:space="preserve">
+    <value>Interest rate basis</value>
+  </data>
+  <data name="InterestRateBasisUrl" xml:space="preserve">
+    <value>/support/interest-rate-basis</value>
+  </data>
+  <data name="InterestRateName" xml:space="preserve">
+    <value>Interest rate</value>
+  </data>
+  <data name="InterestRateUrl" xml:space="preserve">
+    <value>support/interest-rate</value>
   </data>
   <data name="NganHangTrucTuyen" xml:space="preserve">
     <value>Internet Banking</value>
@@ -141,10 +171,34 @@
   <data name="NganHangTrucTuyenUrl" xml:space="preserve">
     <value>https://online.vietbank.com.vn</value>
   </data>
+  <data name="SavingAccountInquiryName" xml:space="preserve">
+    <value>Saving Account Inquiry</value>
+  </data>
+  <data name="SavingAccountInquiryUrl" xml:space="preserve">
+    <value>/support/saving-account-inquiry</value>
+  </data>
+  <data name="TariffName" xml:space="preserve">
+    <value>Tariff</value>
+  </data>
+  <data name="TariffUrl" xml:space="preserve">
+    <value>/support/tariff</value>
+  </data>
   <data name="The" xml:space="preserve">
     <value>Card</value>
   </data>
   <data name="TheUrl" xml:space="preserve">
     <value>/card</value>
+  </data>
+  <data name="Tools&amp;CalculatorsName" xml:space="preserve">
+    <value>Tools &amp; Calculators</value>
+  </data>
+  <data name="Tools&amp;CalculatorsUrl" xml:space="preserve">
+    <value>/support/tools-calculators</value>
+  </data>
+  <data name="VideoName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="VideoUrl" xml:space="preserve">
+    <value />
   </data>
 </root>

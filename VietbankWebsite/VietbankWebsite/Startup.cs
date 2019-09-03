@@ -58,6 +58,15 @@ namespace VietbankWebsite
             services.AddTransient<ICardService, CardService>();
             services.AddTransient<ICardRepository, CardRepository>();
 
+            services.AddTransient<ICareersService, CareersService>();
+            services.AddTransient<ICareersRepository, CareersRepository>();
+
+            services.AddTransient<IBranchService, BranchService>();
+            services.AddTransient<IBranchRepository, BranchRepository>();
+
+            services.AddTransient<ISupportService, SupportService>();
+            services.AddTransient<ISupportRepository, SupportRepository>();
+
             services.AddTransient<IUnitOfWork, UnitOfWork>();
 
 

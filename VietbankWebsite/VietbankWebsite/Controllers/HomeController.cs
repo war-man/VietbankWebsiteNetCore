@@ -19,13 +19,15 @@ namespace VietbankWebsite.Controllers
         private IMemoryCache _cache;
         private readonly IVbBannerService _vbBannerService;
         private readonly IShareholderService _shareholderService;
+        private readonly ICareersService _careersService;
         private readonly IStringLocalizer<HomeController> _localizer;
-        public HomeController(IStringLocalizer<HomeController> localizer, IMemoryCache memoryCache, IVbBannerService vbBannerService, IShareholderService shareholderService)
+        public HomeController(IStringLocalizer<HomeController> localizer, IMemoryCache memoryCache, IVbBannerService vbBannerService, IShareholderService shareholderService, ICareersService careersService)
         {
             _cache = memoryCache;
             _localizer = localizer;
             _vbBannerService = vbBannerService;
             _shareholderService = shareholderService;
+            _careersService = careersService;
         }
 
         [HttpGet]
@@ -38,8 +40,61 @@ namespace VietbankWebsite.Controllers
                 banner = await _vbBannerService.GetBanner(GetLangCurrent());
                 _cache.Set(keyBanner, banner, cacheEntryOptions);
             }
+            if (banner == null) return RedirectToAction(nameof(NotFoundPage));
             ViewData["Title"] = _localizer["Home"];
             return View(banner);
+        }
+
+        [HttpGet]
+        [Route("tuyen-dung")]
+        [Route("tuyen-dung/co-hoi-nghe-nghiep")]
+        [Route("careers")]
+        [Route("careers/carrer-opportunity")]
+        public async Task<IActionResult> Careers()
+        {
+            var keyCareer = GetLangCurrent() == "vi" ? CacheKeys.CareerTemplateVi : CacheKeys.CareerTemplateEn;
+            Careers career;
+            if (!_cache.TryGetValue(keyCareer, out career))
+            {
+                career = await _careersService.GetCareerTemplate(23, _localizer["CareerOpportunityUrl"], GetLangCurrent());
+                _cache.Set(keyCareer, career, cacheEntryOptions);
+            }
+            if (career == null) return RedirectToAction(nameof(NotFoundPage));
+            ViewData["Title"] = career.Title;
+            return View(career);
+        }
+
+        [HttpGet]
+        [Route("tuyen-dung/co-hoi-nghe-nghiep/{career}")]
+        [Route("careers/carrer-opportunity/{career}")]
+        public async Task<IActionResult> CareerDetail(string career)
+        {
+            CareerDetail careerDetail;
+            if (!_cache.TryGetValue($"_careerDetail-{career}", out careerDetail))
+            {
+                careerDetail = await _careersService.GetCareerDetail(career, GetLangCurrent());
+                _cache.Set($"_careerDetail-{career}", careerDetail, cacheEntryOptions);
+            }
+            if (careerDetail == null) return RedirectToAction(nameof(NotFoundPage));
+            ViewData["Title"] = careerDetail.Title;
+            return View(careerDetail);
+        }
+
+        [HttpGet]
+        [Route("tuyen-dung/huong-dan-nop-ho-so")]
+        [Route("careers/guide")]
+        public async Task<IActionResult> CareerGuide()
+        {
+            var keyCareerGuide = GetLangCurrent() == "vi" ? CacheKeys.CareerGuideVi : CacheKeys.CareerGuideEn;
+            NewsDetail careerGuid;
+            if (!_cache.TryGetValue(keyCareerGuide, out careerGuid))
+            {
+                careerGuid = await _careersService.GetCareerGuide("huong-dan-nop-ho-so", GetLangCurrent());
+                _cache.Set(keyCareerGuide, careerGuid, cacheEntryOptions);
+            }
+            if (careerGuid == null) return RedirectToAction(nameof(NotFoundPage));
+            ViewData["Title"] = careerGuid.Title;
+            return View(careerGuid);
         }
 
         [HttpGet]
@@ -75,10 +130,11 @@ namespace VietbankWebsite.Controllers
         }
 
         [HttpGet]
-        [Route("cong-cu/chi-nhanh")]
-        [Route("tools/branch")]
-        public IActionResult Branch(string detail)
+        [Route("chi-nhanh")]
+        [Route("branches")]
+        public IActionResult Branch()
         {
+            ViewData["Title"] = _localizer["BranchName"];
             return View();
         }
 
@@ -104,12 +160,6 @@ namespace VietbankWebsite.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
-
-        public IActionResult NotFoundPage()
-        {
-            ViewData["Title"] = "Không tìm thấy trang";
-            return View();
         }
         #endregion
     }

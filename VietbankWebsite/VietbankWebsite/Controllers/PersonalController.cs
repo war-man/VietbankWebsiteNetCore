@@ -12,10 +12,12 @@ namespace VietbankWebsite.Controllers
     {
         private readonly IProductService _productService;
         private readonly IStringLocalizer<PersonalController> _localizer;
-        public PersonalController(IStringLocalizer<PersonalController> localizer, IProductService productService)
+        private readonly ISupportService _supportService;
+        public PersonalController(IStringLocalizer<PersonalController> localizer, IProductService productService, ISupportService supportService)
         {
             _localizer = localizer;
             _productService = productService;
+            _supportService = supportService;
         }
         public IActionResult Index()
         {
@@ -39,11 +41,13 @@ namespace VietbankWebsite.Controllers
         }
 
         [HttpGet]
-        [Route("cau-hoi-thuong-gap")]
-        [Route("faqs")]
-        public IActionResult Faqs()
+        [Route("ho-tro/cau-hoi-thuong-gap")]
+        [Route("support/faqs")]
+        public async Task<IActionResult> Faqs()
         {
-            return View();
+            var faqs = await _supportService.GetFaqs(42, GetLangCurrent());
+            ViewData["Title"] = faqs.Title;
+            return View(faqs);
         }
 
         [HttpGet]
@@ -55,40 +59,44 @@ namespace VietbankWebsite.Controllers
         }
 
         [HttpGet]
-        [Route("ho-tro/cong-cu-tien-ich/lai-suat")]
-        [Route("support/utility/interest-rate")]
-        public IActionResult Interest()
+        [Route("ho-tro/lai-suat")]
+        [Route("support/interest-rate")]
+        public async Task<IActionResult> Interest()
         {
-            return View();
+            var interestRate = await _supportService.GetInterestRate(56,GetLangCurrent());
+            return View(interestRate);
         }
 
         [HttpGet]
-        [Route("ho-tro/cong-cu-tien-ich/lai-suat-co-so")]
-        [Route("support/utility/interest-rate-basic")]
-        public IActionResult InterestBasic()
+        [Route("ho-tro/lai-suat-co-so")]
+        [Route("support/interest-rate-basic")]
+        public async Task<IActionResult> InterestBasic()
         {
-            return View();
+            var interestBasic = await _supportService.GetInterestRate(55, GetLangCurrent());
+            return View(interestBasic);
         }
 
         [HttpGet]
-        [Route("ho-tro/cong-cu-tien-ich/bieu-mau")]
-        [Route("support/utility/forms-tariff")]
-        public IActionResult FormTariff()
+        [Route("ho-tro/bieu-mau")]
+        [Route("support/forms-tariff")]
+        public async Task<IActionResult> FormTariff()
         {
-            return View();
+            var form = await _supportService.GetForm(45, GetLangCurrent());
+            return View(form);
         }
 
         [HttpGet]
-        [Route("ho-tro/cong-cu-tien-ich/bieu-phi")]
-        [Route("support/utility/tariff")]
-        public IActionResult Tariff()
+        [Route("ho-tro/bieu-phi")]
+        [Route("support/tariff")]
+        public async Task<IActionResult> Tariff()
         {
-            return View();
+            var tariff = await _supportService.GetForm(1040, GetLangCurrent());
+            return View(tariff);
         }
 
         [HttpGet]
-        [Route("ho-tro/cong-cu-tien-ich/cong-cu-tinh-toan")]
-        [Route("support/utility/tools-calculation")]
+        [Route("ho-tro/cong-cu-tinh-toan")]
+        [Route("support/tools-calculation")]
         public IActionResult Calculation()
         {
             return View();

@@ -36,5 +36,13 @@ namespace VietbankWebsite.Models
         public static string CardPromotionEn { get { return "_CardPromotionEn"; } }
         public static string CardPromotionMasterVi { get { return "_CardPromotionVi"; } }
         public static string CardPromotionMasterEn { get { return "_CardPromotionEn"; } }
+        public static string CareerTemplateVi { get { return "_CareerTemplateVi"; } }
+        public static string CareerTemplateEn { get { return "_CareerTemplateEn"; } }
+        public static string CareerGuideVi { get { return "_CareerGuideVi"; } }
+        public static string CareerGuideEn { get { return "_CareerGuideEn"; } }
+        public static string BranchProvinceVi { get { return "_BranchProvinceVi"; } }
+        public static string BranchProvinceEn { get { return "_BranchProvinceEn"; } }
+        public static string AllTransagencyVi { get { return "_AllTransagencyVi"; } }
+        public static string AllTransagencyEn { get { return "_AllTransagencyEn"; } }
     }
 }

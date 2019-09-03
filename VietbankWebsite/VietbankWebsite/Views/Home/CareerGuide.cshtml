@@ -1,0 +1,57 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@model VietbankWebsite.ModelMap.NewsDetail
+@inject IViewLocalizer Localizer
+@{
+    Layout = "~/Views/Shared/_LayoutCareers.cshtml";
+}
+
+<section class="banner-wrap">
+    <section class="breadcrumb-wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <ol class="breadcrumb mrt-10">
+                        <li><a href="gioithieu.html">Về Vietbank</a></li>
+                        <li><a href="tuyendung.html">Tuyển dụng</a></li>
+                        <li class="active"><span style="color:#999;">@Model.Title</span></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="banner-page imageBanner">
+        <div style="background-image:url('https://static.vietbank.com.vn/web/Banner/tuyen-dung.jpg')" class="imgBg"></div>
+        <div class="desc">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-5 col-lg-5 col-xl-5">
+                        <h1 class="title">@Model.Title</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+
+<main>
+
+    <section class="tuyendung-wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="search-items">
+                        <div class="job_content">
+                            <br />
+                            @Html.Raw(Model.Content)
+                            <br />
+                            <div class="content">
+                                <a href="https://static.vietbank.com.vn/web/Ve-VietBank/tuyen-dung/Mau_TTUV%20.doc" class="btn-ex"><i class="fa fa-download"></i><span>Tải mẫu hồ sơ</span></a>
+                                <p><em>Nơi nhận hồ sơ:  Số 62A CMT8, phường 6, Quận 3, TP.HCM hoặc email : tuyendung@vietbank.com.vn</em></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

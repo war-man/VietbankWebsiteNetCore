@@ -117,6 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BranchName" xml:space="preserve">
+    <value>Vietbank Branches</value>
+  </data>
+  <data name="BranchUrl" xml:space="preserve">
+    <value>/branches</value>
+  </data>
+  <data name="CareerOpportunity" xml:space="preserve">
+    <value>Career Opportunity</value>
+  </data>
+  <data name="CareerOpportunityUrl" xml:space="preserve">
+    <value>/careers/career-opportunity</value>
+  </data>
+  <data name="Careers" xml:space="preserve">
+    <value>Careers</value>
+  </data>
+  <data name="CareersUrl" xml:space="preserve">
+    <value>/careers</value>
+  </data>
   <data name="Home" xml:space="preserve">
     <value>Vietbank Thuong Tin Commercial Joint Stock Bank</value>
   </data>

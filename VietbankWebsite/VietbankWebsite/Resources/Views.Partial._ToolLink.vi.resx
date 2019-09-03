@@ -139,7 +139,7 @@
     <value>Liên Hệ</value>
   </data>
   <data name="LienHeUrl" xml:space="preserve">
-    <value>/lien-he</value>
+    <value>/ve-vietbank/lien-he</value>
   </data>
   <data name="TyGia" xml:space="preserve">
     <value>Tỷ Giá</value>

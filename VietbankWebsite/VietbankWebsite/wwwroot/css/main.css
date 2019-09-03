@@ -18386,7 +18386,7 @@ ul.nav.nav-bld li a:hover:after, ul.nav.nav-bld li a.active:after {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: transparent url("../image/arrow_select.png") no-repeat top right;
+  background: transparent url("/img/arrow_select.png") no-repeat top right;
   padding-right: 30px;
 }
 

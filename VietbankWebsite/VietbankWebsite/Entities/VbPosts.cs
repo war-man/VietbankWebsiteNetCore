@@ -14,6 +14,7 @@ namespace VietbankWebsite.Entities
         public string post_thumbnail { get; set; }
         public string ping_status { get; set; }
         public string guid { get; set; }
+        public int to_ping { get; set; }
         public DateTime post_date { get; set; }
     }
 }

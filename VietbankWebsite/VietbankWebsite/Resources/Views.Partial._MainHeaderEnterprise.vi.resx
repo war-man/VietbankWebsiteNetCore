@@ -129,22 +129,88 @@
   <data name="DoanhNghiepUrl" xml:space="preserve">
     <value>/doanh-nghiep/san-pham</value>
   </data>
+  <data name="FaqsName" xml:space="preserve">
+    <value>Câu hỏi thường gặp</value>
+  </data>
+  <data name="FaqsUrl" xml:space="preserve">
+    <value>/doanh-nghiep/ho-tro/cau-hoi-thuong-gap</value>
+  </data>
+  <data name="ForeignExchangeName" xml:space="preserve">
+    <value>Tỷ giá</value>
+  </data>
+  <data name="ForeignExchangeUrl" xml:space="preserve">
+    <value>/doanh-nghiep/ho-tro/ty-gia</value>
+  </data>
+  <data name="FormsName" xml:space="preserve">
+    <value>Biểu mẫu</value>
+  </data>
+  <data name="FormsUrl" xml:space="preserve">
+    <value>/doanh-nghiep/ho-tro/bieu-mau</value>
+  </data>
   <data name="HoTro" xml:space="preserve">
     <value>Hỗ Trợ</value>
   </data>
   <data name="HoTroUrl" xml:space="preserve">
     <value>/ho-tro</value>
   </data>
+  <data name="InterestRateBasisName" xml:space="preserve">
+    <value>Lãi suất cơ sở</value>
+  </data>
+  <data name="InterestRateBasisUrl" xml:space="preserve">
+    <value>/doanh-nghiep/ho-tro/lai-suat-co-so</value>
+  </data>
+  <data name="InterestRateName" xml:space="preserve">
+    <value>Lãi suất</value>
+  </data>
+  <data name="InterestRateUrl" xml:space="preserve">
+    <value>/doanh-nghiep/ho-tro/lai-suat</value>
+  </data>
   <data name="NganHangTrucTuyen" xml:space="preserve">
+    <value>Ngân hàng trực tuyến</value>
+  </data>
+  <data name="NganHangTrucTuyen1" xml:space="preserve">
     <value>Ngân hàng trực tuyến</value>
   </data>
   <data name="NganHangTrucTuyenUrl" xml:space="preserve">
     <value>https://online.vietbank.com.vn</value>
+  </data>
+  <data name="NganHangTrucTuyenUrl1" xml:space="preserve">
+    <value>https://online.vietbank.com.vn</value>
+  </data>
+  <data name="SavingAccountInquiryName" xml:space="preserve">
+    <value>Truy vấn sổ tiết kiệm</value>
+  </data>
+  <data name="SavingAccountInquiryUrl" xml:space="preserve">
+    <value>/doanh-nghiep/ho-tro/truy-van-so-tiet-kiem</value>
+  </data>
+  <data name="TariffName" xml:space="preserve">
+    <value>Biểu phí</value>
+  </data>
+  <data name="TariffUrl" xml:space="preserve">
+    <value>/doanh-nghiep/ho-tro/bieu-phi</value>
   </data>
   <data name="The" xml:space="preserve">
     <value>Thẻ</value>
   </data>
   <data name="TheUrl" xml:space="preserve">
     <value>/the</value>
+  </data>
+  <data name="TinKhuyenMaiName" xml:space="preserve">
+    <value>Tin Khuyễn Mãi</value>
+  </data>
+  <data name="TinKhuyenMaiUrl" xml:space="preserve">
+    <value>/doanh-nghiep/tin-khuyen-mai</value>
+  </data>
+  <data name="Tools&amp;CalculatorsName" xml:space="preserve">
+    <value>Công cụ tính toán</value>
+  </data>
+  <data name="Tools&amp;CalculatorsUrl" xml:space="preserve">
+    <value>/doanh-nghiep/ho-tro/cong-cu-tinh-toan</value>
+  </data>
+  <data name="VideoName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="VideoUrl" xml:space="preserve">
+    <value />
   </data>
 </root>

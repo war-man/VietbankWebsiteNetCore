@@ -17,8 +17,16 @@ namespace VietbankWebsite.Context
         public DbSet<VbPosts> VbPosts { get; set; }
         public DbSet<VbCategory> VbCategories { get; set; }
         public DbSet<VbPostCategory> VbPostCategories { get; set; }
+        public DbSet<VbPageCategory> VbPageCategories { get; set; }
         public DbSet<VbCategoryTranslate> VbCategoryTranslates { get; set; }
         public DbSet<CardHome> CardHomes { get; set; }
         public DbSet<CardData> CardDatas { get; set; }
+        public DbSet<VbCareerList> VbCareerLists { get; set; }
+        public DbSet<VbCareerCity> VbCareerCities { get; set; }
+        public DbSet<VbCareerJob> VbCareerJobs { get; set; }
+        public DbSet<VbCareerJobDetail> VbCareerJobDetails { get; set; }
+        public DbSet<VbMapProvince> VbMapProvinces { get; set; }
+        public DbSet<VbMapDistrict> VbMapDistricts { get; set; }
+        public DbSet<VbTransagencyMap> VbTransagencyMaps { get; set; }
     }
 }

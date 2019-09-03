@@ -1,0 +1,95 @@
+﻿@model VietbankWebsite.ModelMap.Careers
+@{
+    Layout = "~/Views/Shared/_LayoutCareers.cshtml";
+}
+
+<section class="banner-wrap">
+    <section class="breadcrumb-wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <ol class="breadcrumb mrt-10">
+                        <li><a href="gioithieu.html">Về Vietbank</a></li>
+                        <li><a href="tuyendung.html">Tuyển dụng</a></li>
+                        <li class="active"><span style="color:#999;">@Model.Title</span></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="banner-page imageBanner">
+        <div style="background-image:url('@Model.Image')" class="imgBg"></div>
+        <div class="desc">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-5 col-lg-5 col-xl-5">
+                        <h1 class="title">@Model.Title</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+<main>
+    <section class="tuyendung-wrap">
+        <br />
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="search-job">
+                        <input placeholder="Từ khóa" name="keyword" class="field">
+                        <select name="career" class="career">
+                            @foreach (var item in Model.VbCareerList)
+                            {
+                                <option value="@item.Id">@item.CareerName</option>
+                            }
+                        </select>
+                        <select name="address" class="address">
+                            @foreach (var item in Model.VbCareerCity)
+                            {
+                                <option value="@item.Id">@item.CityName</option>
+                            }
+                        </select>
+                        <button id="search-career" class="btn-filter">Tìm kiếm</button>
+                    </div>
+                    <div class="table-responsive">
+                        <div class="search-items">
+                            <div class="jobs-title">
+                                <div class="position">Vị trí tuyển dụng</div>
+                                <div class="employment">Nơi làm việc</div>
+                                <div class="date-posted">Ngày đăng</div>
+                            </div>
+                            <div id="list-career">
+                                @foreach (var item in Model.CareerJobList)
+                                {
+                                    <div class="jobs-item">
+                                        <div class="job_head">
+                                            <div class="job-title"><a href="@item.Url">@item.JobTitle</a></div>
+                                            <div class="job-place">@item.JobCity</div>
+                                            <div class="job-date">
+                                                @item.CreatedDate
+                                                @if (item.IsHot)
+                                                {
+                                                    <span class="status hot">Hot</span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="status new">New</span>
+                                                }
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+@section Scripts{ 
+    <script src="~/page/career-search.js"></script>
+}

@@ -1,7 +1,6 @@
-﻿
+﻿@model VietbankWebsite.ModelMap.Faqs
 @{
-    ViewData["Title"] = "Faqs";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_LayoutEnterprise.cshtml";
 }
 
 <section class="banner-wrap">
@@ -10,22 +9,21 @@
             <div class="row">
                 <div class="col-xs-12">
                     <ol class="breadcrumb mrt-10">
-                        <li><a href="index.html">Cá nhân</a></li>
+                        <li><a href="index.html">Doanh nghiệp</a></li>
                         <li><a href="hoidap.html">Hỗ trợ</a></li>
-                        <li class="active"><span>Câu hỏi thường gặp</span></li>
+                        <li class="active"><span style="color:#999;">@Model.Title</span></li>
                     </ol>
                 </div>
             </div>
         </div>
     </section>
     <section class="banner-page imageBanner">
-        <div style="background-image:url('/img/banner_page/banner_hoidap.png')" class="imgBg"></div>
+        <div style="background-image:url('@Model.Image')" class="imgBg"></div>
         <div class="desc">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-5 col-lg-5 col-xl-5">
-                        <h1 class="title">Câu hỏi thường gặp</h1>
-                        <div class="content">Đồng hành cùng nhu cầu của bạn mọi lúc mọi nơi</div>
+                        <h1 class="title">@Model.Title</h1>
                     </div>
                 </div>
             </div>
@@ -36,67 +34,63 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-lg-3">
-                <a href="javascript:;" class="toggle-click"><i class="fa fa-bars"></i>Danh mục</a>
-                <div class="nav-toogle">
-                    <ul class="nav left-menusp">
-                        <li><a href="hoidap.html" class="active">Câu hỏi thường gặp</a></li>
-                        <li class="has-children active">
-                            <a href="#">Công cụ - Tiện ích</a>
-                            <ul style="display:block" class="sub-menu">
-                                <li><a href="tygia-ngoaite.html">Tỷ giá / Lãi suất</a></li>
-                                <li><a href="bieumau.html">Biểu mẫu / Biểu phí</a></li>
-                                <li><a href="#">Mạng lưới</a></li>
-                                <li><a href="congcu-tinhtoan.html">Công cụ tính toán</a></li>
-                                <li><a href="#">Xác thực bảo lãnh</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-children">
-                            <a href="#">Video hướng dẫn</a>
-                            <ul class="sub-menu">
-                                <li><a href="videohuongdan.html">Hướng dẫn thanh toán Online</a></li>
-                                <li><a href="#">Hướng dẫn bảo mật tài khoản</a></li>
-                                <li><a href="#">Hướng dẫn khác</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+                <partial name="~/Views/Partial/_ToolCalulationBar.cshtml" />
             </div>
             <div class="col-xs-12 col-lg-9">
-                <section class="hotro-ct">
-                    <nav class="nav nav-sp"><a href="#" class="active">Thẻ tín dụng</a><a href="#">Biểu mẫu / Biểu phí</a><a href="#">Tỷ giá / Lãi suất</a><a href="#">Khác</a></nav>
-                    <div class="thetindung">
-                        <div class="panel-faqs">
-                            <div class="title"><span>Làm thế nào để đăng ký lại thẻ thay thế cho thẻ bị hư hỏng của tôi?</span></div>
-                            <div class="content">
-                                <p>Nếu thẻ của bạn bị hư hỏng, bạn có thể yêu cần một sự thay thế ở Vietbank hoặc liên hệ với chúng tôi.</p>
-                                <p>Một khi bạn đã yêu cầu một thẻ thay thế:</p>
-                                <p>• Số thẻ và số PIN sẽ không thay đổi và bạn có thể tiếp tục sử dụng thẻ hiện tại của bạn cho đến khi bạn nhận được một thẻ mới. <br></p>• Thẻ mới sẽ được gửi đến bạn trong vòng 7 ngày làm việc. <br>
-                                • Một khi thẻ mới đến, huỷ thẻ hiện tại của bạn và bắt đầu sử dụng một mới ngay lập tức.
-                                <div class="more"><span>Xem thêm </span><a href="#">Báo cáo thẻ của tôi như bị mất, bị đánh cắp hoặc bị hư hỏng.</a></div>
-                            </div>
-                        </div>
-                        <div class="panel-faqs">
-                            <div class="title"><span>Tôi phải làm gì nếu thẻ của tôi đã bị mất hoặc bị đánh cắp ở Việt Nam hay ở nước ngoài?</span></div>
-                            <div class="content"><span>Nội dung đang được cập nhật</span></div>
-                        </div>
-                        <div class="panel-faqs">
-                            <div class="title"><span>Làm thế nào để báo cáo thẻ của tôi như bị mất, bị đánh cắp hoặc bị hư hại?</span></div>
-                            <div class="content"><span>Nội dung đang được cập nhật</span></div>
-                        </div>
-                        <div class="panel-faqs">
-                            <div class="title"><span>Chức năng khóa tạm thời trên thẻ tín dụng của tôi sẽ ảnh hưởng đến các khoản ghi nợ trực tiếp?</span></div>
-                            <div class="content"><span>Nội dung đang được cập nhật</span></div>
-                        </div>
-                        <div class="panel-faqs">
-                            <div class="title"><span>Chức năng khóa tạm thời trên một thẻ tín dụng là gì?</span></div>
-                            <div class="content"><span>Nội dung đang được cập nhật</span></div>
-                        </div>
-                        <div class="panel-faqs">
-                            <div class="title"><span>Làm thế nào để tôi đặt chức năng khóa tạm thời trên thẻ tín dụng của tôi không?</span></div>
-                            <div class="content"><span>Nội dung đang được cập nhật</span></div>
-                        </div>
+                <section id="support-personal" class="hotro-ct">
+                    <div class="tabs-support">
+                        <ul role="tablist" class="nav-jt-sp">
+                            @foreach (var item in Model.FaqsCategories)
+                            {
+                                @if (Model.FaqsCategories.First() == item)
+                                {
+                                    <li class="nav-item">
+                                        <a href="#tab_@item.Id" data-toggle="tab" role="tab" class="active" aria-expanded="false">@item.Name</a>
+                                    </li>
+                                }
+                                else
+                                {
+                                    <li class="nav-item">
+                                        <a href="#tab_@item.Id" data-toggle="tab" role="tab" aria-expanded="false">@item.Name</a>
+                                    </li>
+                                }
+
+                            }
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        @foreach (var category in Model.FaqsCategories)
+                        {
+                            @if (Model.FaqsCategories.First() == category)
+                            {
+                                <div role="tabpanel" class="thetindung tab-pane active" id="tab_@category.Id" aria-expanded="false">
+                                    @foreach (var item in category.FaqsItems)
+                                    {
+                                        <div class="panel-faqs">
+                                            <div class="title"><span>@item.Question</span></div>
+                                            <div class="content"><span><p>@Html.Raw(item.Answer)</p></span></div>
+                                        </div>
+                                    }
+                                </div>
+                            }
+                            else
+                            {
+                                <div role="tabpanel" class="thetindung tab-pane" id="tab_@category.Id" aria-expanded="false">
+                                    @foreach (var item in category.FaqsItems)
+                                    {
+                                        <div class="panel-faqs">
+                                            <div class="title"><span>@item.Question</span></div>
+                                            <div class="content"><span><p>@Html.Raw(item.Answer)</p></span></div>
+                                        </div>
+                                    }
+                                </div>
+                            }
+
+                        }
+
                     </div>
                 </section>
+
             </div>
         </div>
     </div>

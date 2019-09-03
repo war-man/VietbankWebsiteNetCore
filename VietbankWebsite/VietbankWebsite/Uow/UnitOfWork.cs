@@ -12,11 +12,17 @@ namespace VietbankWebsite.Uow
         public IAboutVietbankRepository _aboutVietbankRepository;
         public IProductRepository _productRepository;
         public ICardRepository _cardRepository;
+        public ICareersRepository _careersRepository;
+        public IBranchRepository _branchRepository;
+        public ISupportRepository _supportRepository;
         public IVbBannerRepository VbBannerRepository => _vbBannerRepository = _vbBannerRepository ?? new VbBannerRepository(_context);
         public IShareholderRepository ShareholderRepository => _shareholderRepository = _shareholderRepository ?? new ShareholderRepository(_context);
         public IAboutVietbankRepository AboutVietbankRepository => _aboutVietbankRepository = _aboutVietbankRepository ?? new AboutVietbankRepository(_context);
         public IProductRepository ProductRepository => _productRepository = _productRepository ?? new ProductRepository(_context);
         public ICardRepository CardRepository => _cardRepository = _cardRepository ?? new CardRepository(_context);
+        public ICareersRepository CareersRepository => _careersRepository = _careersRepository ?? new CareersRepository(_context);
+        public IBranchRepository BranchRepository => _branchRepository = _branchRepository ?? new BranchRepository(_context);
+        public ISupportRepository SupportRepository => _supportRepository = _supportRepository ?? new SupportRepository(_context);
         public void Complete()
         {
             _context.SaveChanges();
@@ -55,6 +61,9 @@ namespace VietbankWebsite.Uow
         IShareholderRepository ShareholderRepository { get; }
         IProductRepository ProductRepository { get; }
         ICardRepository CardRepository { get; }
+        ICareersRepository CareersRepository { get; }
+        IBranchRepository BranchRepository { get; }
+        ISupportRepository SupportRepository { get; }
         void Complete();
     }
 }

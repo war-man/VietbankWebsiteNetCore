@@ -1,0 +1,121 @@
+﻿@model VietbankWebsite.ModelMap.Faqs
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="banner-wrap">
+    <section class="breadcrumb-wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <ol class="breadcrumb mrt-10">
+                        <li><a href="index.html">Cá nhân</a></li>
+                        <li><a href="hoidap.html">Hỗ trợ</a></li>
+                        <li class="active"><span style="color:#999;">@Model.Title</span></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="banner-page imageBanner">
+        <div style="background-image:url('@Model.Image')" class="imgBg"></div>
+        <div class="desc">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-5 col-lg-5 col-xl-5">
+                        <h1 class="title">@Model.Title</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-lg-3">
+                <a href="javascript:;" class="toggle-click"><i class="fa fa-bars"></i>Danh mục</a>
+                <div class="nav-toogle">
+                    <ul class="nav left-menusp">
+                        <li><a href="hoidap.html" class="active">Câu hỏi thường gặp</a></li>
+                        <li class="has-children">
+                            <a href="#">Công cụ - Tiện ích</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Tỷ giá / Lãi suất</a></li>
+                                <li><a href="bieumau-bieuphi.html">Biểu mẫu / Biểu phí</a></li>
+                                <li><a href="#">Mạng lưới</a></li>
+                                <li><a href="congcu-tienich.html">Công cụ tính toán</a></li>
+                                <li><a href="#">Xác thực bảo lãnh</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-children">
+                            <a href="#">Video hướng dẫn</a>
+                            <ul class="sub-menu">
+                                <li><a href="videohuongdan.html">Hướng dẫn thanh toán Online</a></li>
+                                <li><a href="#">Hướng dẫn bảo mật tài khoản</a></li>
+                                <li><a href="#">Hướng dẫn khác</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-12 col-lg-9">
+                <section id="support-personal" class="hotro-ct">
+                    <div class="tabs-support">
+                        <ul role="tablist" class="nav-jt-sp">
+                            @foreach (var item in Model.FaqsCategories)
+                            {
+                                @if (Model.FaqsCategories.First() == item)
+                                {
+                                    <li class="nav-item">
+                                        <a href="#tab_@item.Id" data-toggle="tab" role="tab" class="active" aria-expanded="false">@item.Name</a>
+                                    </li>
+                                }
+                                else
+                                {
+                                    <li class="nav-item">
+                                        <a href="#tab_@item.Id" data-toggle="tab" role="tab" aria-expanded="false">@item.Name</a>
+                                    </li>
+                                }
+
+                            }
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        @foreach (var category in Model.FaqsCategories)
+                        {
+                            @if (Model.FaqsCategories.First() == category)
+                            {
+                                <div role="tabpanel" class="thetindung tab-pane active" id="tab_@category.Id" aria-expanded="false">
+                                    @foreach (var item in category.FaqsItems)
+                                    {
+                                        <div class="panel-faqs">
+                                            <div class="title"><span>@item.Question</span></div>
+                                            <div class="content"><span><p>@Html.Raw(item.Answer)</p></span></div>
+                                        </div>
+                                    }
+                                </div>
+                            }
+                            else
+                            {
+                                <div role="tabpanel" class="thetindung tab-pane" id="tab_@category.Id" aria-expanded="false">
+                                    @foreach (var item in category.FaqsItems)
+                                    {
+                                        <div class="panel-faqs">
+                                            <div class="title"><span>@item.Question</span></div>
+                                            <div class="content"><span><p>@Html.Raw(item.Answer)</p></span></div>
+                                        </div>
+                                    }
+                                </div>
+                            }
+
+                        }
+
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+</main>
+
