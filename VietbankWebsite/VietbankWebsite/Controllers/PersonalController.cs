@@ -1,7 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Localization;
 using System.Threading.Tasks;
 using VietbankWebsite.Entities;
+using VietbankWebsite.ModelMap;
+using VietbankWebsite.Models;
 using VietbankWebsite.Service;
 
 namespace VietbankWebsite.Controllers
@@ -10,11 +13,13 @@ namespace VietbankWebsite.Controllers
     [Route("personal")]
     public class PersonalController : BaseMvcController
     {
+        private IMemoryCache _cache;
         private readonly IProductService _productService;
         private readonly IStringLocalizer<PersonalController> _localizer;
         private readonly ISupportService _supportService;
-        public PersonalController(IStringLocalizer<PersonalController> localizer, IProductService productService, ISupportService supportService)
+        public PersonalController(IStringLocalizer<PersonalController> localizer, IProductService productService, ISupportService supportService, IMemoryCache cache)
         {
+            _cache = cache;
             _localizer = localizer;
             _productService = productService;
             _supportService = supportService;
@@ -41,11 +46,19 @@ namespace VietbankWebsite.Controllers
         }
 
         [HttpGet]
+        [Route("ho-tro")]
+        [Route("support")]
         [Route("ho-tro/cau-hoi-thuong-gap")]
         [Route("support/faqs")]
         public async Task<IActionResult> Faqs()
         {
-            var faqs = await _supportService.GetFaqs(42, GetLangCurrent());
+            var keyPersonalFaqs = GetLangCurrent() == "vi" ? CacheKeys.PersonalFaqsEn : CacheKeys.PersonalFaqsEn;
+            Faqs faqs;
+            if (!_cache.TryGetValue(keyPersonalFaqs, out faqs))
+            {
+                faqs = await _supportService.GetFaqs(42, GetLangCurrent());
+                _cache.Set(keyPersonalFaqs, faqs, cacheEntryOptions);
+            }
             ViewData["Title"] = faqs.Title;
             return View(faqs);
         }
@@ -63,7 +76,14 @@ namespace VietbankWebsite.Controllers
         [Route("support/interest-rate")]
         public async Task<IActionResult> Interest()
         {
-            var interestRate = await _supportService.GetInterestRate(56,GetLangCurrent());
+            var keyPersonalInterest = GetLangCurrent() == "vi" ? CacheKeys.PersonalInterestVi : CacheKeys.PersonalInterestEn;
+            InterestRate interestRate;
+            if (!_cache.TryGetValue(keyPersonalInterest, out interestRate))
+            {
+                interestRate = await _supportService.GetInterestRate(56, GetLangCurrent());
+                _cache.Set(keyPersonalInterest, interestRate, cacheEntryOptions);
+            }
+            ViewData["Title"] = interestRate.Title;
             return View(interestRate);
         }
 
@@ -72,17 +92,31 @@ namespace VietbankWebsite.Controllers
         [Route("support/interest-rate-basic")]
         public async Task<IActionResult> InterestBasic()
         {
-            var interestBasic = await _supportService.GetInterestRate(55, GetLangCurrent());
-            return View(interestBasic);
+            var keyPersonalInterestBasic = GetLangCurrent() == "vi" ? CacheKeys.PersonalInterestBasicVi : CacheKeys.PersonalInterestBasicEn;
+            InterestRate interestRateBasic;
+            if (!_cache.TryGetValue(keyPersonalInterestBasic, out interestRateBasic))
+            {
+                interestRateBasic = await _supportService.GetInterestRate(55, GetLangCurrent());
+                _cache.Set(keyPersonalInterestBasic, interestRateBasic, cacheEntryOptions);
+            }
+            ViewData["Title"] = interestRateBasic.Title;
+            return View(interestRateBasic);
         }
 
         [HttpGet]
         [Route("ho-tro/bieu-mau")]
-        [Route("support/forms-tariff")]
+        [Route("support/forms")]
         public async Task<IActionResult> FormTariff()
         {
-            var form = await _supportService.GetForm(45, GetLangCurrent());
-            return View(form);
+            var keyPersonalFormTariff = GetLangCurrent() == "vi" ? CacheKeys.PersonalFormTariffVi : CacheKeys.PersonalFormTariffEn;
+            Form formTariff;
+            if (!_cache.TryGetValue(keyPersonalFormTariff, out formTariff))
+            {
+                formTariff = await _supportService.GetForm(45, GetLangCurrent());
+                _cache.Set(keyPersonalFormTariff, formTariff, cacheEntryOptions);
+            }
+            ViewData["Title"] = formTariff.Title;
+            return View(formTariff);
         }
 
         [HttpGet]
@@ -90,13 +124,20 @@ namespace VietbankWebsite.Controllers
         [Route("support/tariff")]
         public async Task<IActionResult> Tariff()
         {
-            var tariff = await _supportService.GetForm(1040, GetLangCurrent());
+            var keyPersonalTariff = GetLangCurrent() == "vi" ? CacheKeys.PersonalTariffVi : CacheKeys.PersonalTariffEn;
+            Form tariff;
+            if (!_cache.TryGetValue(keyPersonalTariff, out tariff))
+            {
+                tariff = await _supportService.GetForm(1040, GetLangCurrent());
+                _cache.Set(keyPersonalTariff, tariff, cacheEntryOptions);
+            }
+            ViewData["Title"] = tariff.Title;
             return View(tariff);
         }
 
         [HttpGet]
         [Route("ho-tro/cong-cu-tinh-toan")]
-        [Route("support/tools-calculation")]
+        [Route("support/tools-calculators")]
         public IActionResult Calculation()
         {
             return View();
@@ -107,17 +148,32 @@ namespace VietbankWebsite.Controllers
         [Route("support/saving-account-inquiry")]
         public async Task<IActionResult> AccountInquiry()
         {
-            var accountInquiry = await _supportService.GetForm(1066, GetLangCurrent());
+            var keyAccountInquiry = GetLangCurrent() == "vi" ? CacheKeys.PersonalAccountInquiryVi : CacheKeys.PersonalAccountInquiryEn;
+            Form accountInquiry;
+            if (!_cache.TryGetValue(keyAccountInquiry, out accountInquiry))
+            {
+                accountInquiry = await _supportService.GetForm(1066, GetLangCurrent());
+                _cache.Set(keyAccountInquiry, accountInquiry, cacheEntryOptions);
+            }
+            ViewData["Title"] = accountInquiry.Title;
             return View(accountInquiry);
         }
 
         [HttpGet]
+        [Route("")]
         [Route("san-pham")]
         [Route("product")]
         public async Task<IActionResult> Product()
         {
-            var result = await _productService.ListCategoryProducts(5, _localizer["ProductUrl"],GetLangCurrent())??new CategoryProduct();
-            return View(result);
+            var keyProduct = GetLangCurrent() == "vi" ? CacheKeys.PersonalProductVi : CacheKeys.PersonalProductEn;
+            CategoryProduct products;
+            if (!_cache.TryGetValue(keyProduct, out products))
+            {
+                products = await _productService.ListCategoryProducts(5, _localizer["ProductUrl"], GetLangCurrent()) ?? new CategoryProduct();
+                _cache.Set(keyProduct, products, cacheEntryOptions);
+            }
+            ViewData["Title"] = products.Title;
+            return View(products);
         }
 
         [HttpGet]
@@ -125,8 +181,15 @@ namespace VietbankWebsite.Controllers
         [Route("product/{list}")]
         public async Task<IActionResult> ListProduct(string list)
         {
-            var result = await _productService.ListCategoryProducts(5,list, $"{_localizer["ProductUrl"]}", GetLangCurrent()) ?? new CategoryProduct();
-            return View(result);
+            var keyListProduct = GetLangCurrent() == "vi" ? $"{CacheKeys.PersonalProductVi}-{list}" : $"{CacheKeys.PersonalProductEn}-{list}";
+            CategoryProduct categoryListProduct;
+            if (!_cache.TryGetValue(keyListProduct, out categoryListProduct))
+            {
+                categoryListProduct = await _productService.ListCategoryProducts(5, list, $"{_localizer["ProductUrl"]}", GetLangCurrent()) ?? new CategoryProduct();
+                _cache.Set(keyListProduct, categoryListProduct, cacheEntryOptions);
+            }
+            ViewData["Title"] = categoryListProduct.Title;
+            return View(categoryListProduct);
         }
 
         [HttpGet]

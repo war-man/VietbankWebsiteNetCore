@@ -133,7 +133,7 @@
     <value>FAQ’s</value>
   </data>
   <data name="FaqsUrl" xml:space="preserve">
-    <value>/personal/support/faq-s</value>
+    <value>/personal/support/faqs</value>
   </data>
   <data name="ForeignExchangeName" xml:space="preserve">
     <value>Foreign exchange</value>
@@ -157,7 +157,7 @@
     <value>Interest rate basis</value>
   </data>
   <data name="InterestRateBasisUrl" xml:space="preserve">
-    <value>/personal/support/interest-rate-basis</value>
+    <value>/personal/support/interest-rate-basic</value>
   </data>
   <data name="InterestRateName" xml:space="preserve">
     <value>Interest rate</value>

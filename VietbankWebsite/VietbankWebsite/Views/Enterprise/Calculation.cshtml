@@ -1,6 +1,7 @@
-﻿
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
 @{
-    ViewData["Title"] = "Calculation";
+    ViewData["Title"] = @Localizer["CalculationName"];
     Layout = "~/Views/Shared/_LayoutEnterprise.cshtml";
 }
 
@@ -10,9 +11,9 @@
             <div class="row">
                 <div class="col-xs-12">
                     <ol class="breadcrumb mrt-10">
-                        <li><a href="index.html">Cá nhân</a></li>
-                        <li><a href="hoidap.html">Hỗ trợ</a></li>
-                        <li class="active"><span>Câu hỏi thường gặp</span></li>
+                        <li><a href="@Localizer["EnterpriseUrl"]">@Localizer["EnterpriseName"]</a></li>
+                        <li><a href="@Localizer["SupportUrl"]">@Localizer["SupportName"]</a></li>
+                        <li class="active"><span>@Localizer["CalculationName"]</span></li>
                     </ol>
                 </div>
             </div>
@@ -24,8 +25,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-5 col-lg-5 col-xl-5">
-                        <h1 class="title">Câu hỏi thường gặp</h1>
-                        <div class="content">Đồng hành cùng nhu cầu của bạn mọi lúc mọi nơi</div>
+                        <h1 class="title">@Localizer["CalculationName"]</h1>
+                        <div class="content">@Localizer["CalculationDes"]</div>
                     </div>
                 </div>
             </div>
@@ -40,7 +41,7 @@
             </div>
             <div class="col-xs-12 col-lg-9">
                 <section class="hotro-ct">
-                    <h1 class="title">Công cụ tính toán                                                                                                                                                                                       </h1>
+                    <h1 class="title">@Localizer["CalculationName"]                                                                                                                                                                                       </h1>
                     <div id="support-enterprise">
 
                         <div class="tab-content">
@@ -48,25 +49,26 @@
                                 <div class="block-revive">
                                     <div class="row flex flex-wrap">
                                         <div class="col-xs-12 col-md-4">
-                                            <h3 class="title-deposits">Chọn Loại sản phẩm của bạn:</h3>
+                                            <h3 class="title-deposits">@Localizer["LabelOne"]</h3>
                                             <div class="box-deposits mCustomScrollbar">
 
                                                 <div class="checkbox">
                                                     <input checked="" type="radio" class="button-radio" name="kind" data-id="kind_1963" id="kind_1">
-                                                    <label for="kind_1">Tiền gửi có kỳ hạn truyền thống</label>
+                                                    <label for="kind_1">@Localizer["LabelTwo"]</label>
                                                 </div>
                                                 <div class="checkbox">
                                                     <input type="radio" class="button-radio" name="kind" data-id="kind_1964" id="kind_2">
-                                                    <label for="kind_2">Tiền gửi đầu tư linh hoạt</label>
+                                                    <label for="kind_2">@Localizer["LabelThree"]</label>
                                                 </div>
                                                 <div class="checkbox">
                                                     <input type="radio" class="button-radio" name="kind" data-id="kind_1965" id="kind_3">
-                                                    <label for="kind_3">Tiền gửi đa tiện ích</label>
+                                                    <label for="kind_3">@Localizer["LabelFour"]</label>
                                                 </div>
                                                 <div class="checkbox">
                                                     <input type="radio" class="button-radio" name="kind" data-id="kind_3996" id="kind_4">
-                                                    <label for="kind_4">Tiền gửi siêu linh hoạt</label>
-                                                </div>
+                                                    <label for="kind_4">@Localizer["LabelFive"]</label>
+
+</div>
                                             </div>
                                         </div>
                                         <div class="col-xs-12 col-md-8">
@@ -351,59 +353,59 @@
                                     <div class="row flex flex-wrap">
                                         <div class="col-xs-12 col-md-5">
                                             <div class="form-group">
-                                                <label>Số tiền gửi:</label>
+                                                <label>@Localizer["LabelSix"]</label>
                                                 <div class="group">
                                                     <input id="so-tien-goi-enterprise" value="" class="form-control"><span class="unit">VND</span>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label>Kỳ lãnh lãi:</label>
+                                                <label>@Localizer["LabelSeven"]</label>
                                                 <div class="group">
                                                     <select id="ky-lanh-lai-enterprise" class="form-control">
                                                         <option value=""></option>
-                                                        <option value="tuần">Tuần</option>
-                                                        <option value="quý">Quý</option>
-                                                        <option value="tháng">Tháng</option>
-                                                        <option value="năm">Năm</option>
+                                                        <option value="tuần">@Localizer["Tuan"]</option>
+                                                        <option value="quý">@Localizer["Quy"]</option>
+                                                        <option value="tháng">@Localizer["Thang"]</option>
+                                                        <option value="năm">@Localizer["Nam"]</option>
                                                     </select>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label>Kỳ hạn gửi:</label>
+                                                <label>@Localizer["LabelEight"]</label>
                                                 <div id="ky-hang-gui-enterprise" class="group">
                                                     <input disabled="disabled" class="form-control"><span class="unit"></span>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label>Lãi suất:</label>
+                                                <label>@Localizer["LabelNine"]</label>
                                                 <div class="group">
                                                     <input id="lai-suat-enterprise" value="" class="form-control"><span class="unit">%</span>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label>Cách tính:</label>
+                                                <label>@Localizer["LabelTen"]</label>
                                                 <div class="group">
                                                     <select id="cach-tinh-enterprise" class="form-control">
-                                                        <option value="0">Tiền lãi định kỳ</option>
-                                                        <option value="1">Tiền lãi cuối kỳ</option>
+                                                        <option value="0">@Localizer["LabelEleven"]</option>
+                                                        <option value="1">@Localizer["LabelTwelve"]</option>
                                                     </select>
                                                 </div>
                                             </div>
 
                                             <div class="form-group">
-                                                <input id="uoc-tinh-enterprise" type="submit" value="Ước tính">
+                                                <input id="uoc-tinh-enterprise" type="submit" value="@Localizer["LabelNineteen"]">
                                             </div>
                                             <div class="form-group">
-                                                <p style="font-size:0.8125rem;">(*) Quý khách hàng vui lòng tham khảo lãi suất (%/ năm) trên bảng để nhập.</p>
-                                                <p style="font-size:0.8125rem;">Bảng tính chỉ mang tính chất tham khảo</p>
+                                                <p style="font-size:0.8125rem;">@Localizer["LabelSeventeen"]</p>
+                                                <p style="font-size:0.8125rem;">@Localizer["LabelEighteen"]</p>
                                             </div>
                                         </div>
                                         <div class="col-xs-12 col-md-7">
                                             <div class="result">
-                                                <h3>Kết Quả</h3>
-                                                <div class="item-result"><strong>Tiền lãi định kỳ: </strong><span class="tien-lai-dinh-ky"></span></div>
-                                                <div class="item-result"><strong>Tổng tiền lãi: </strong><span class="tong-tien-lai"></span></div>
-                                                <div class="item-result"><strong>Tổng số tiền gốc và lãi: </strong><span class="tong-so-tien-nhan-duoc"></span></div>
+                                                <h3>@Localizer["LabelThirdteen"]</h3>
+                                                <div class="item-result"><strong>@Localizer["LabelFourteen"] </strong><span class="tien-lai-dinh-ky"></span></div>
+                                                <div class="item-result"><strong>@Localizer["LabelFiveteen"] </strong><span class="tong-tien-lai"></span></div>
+                                                <div class="item-result"><strong>@Localizer["LabelSixteen"] </strong><span class="tong-so-tien-nhan-duoc"></span></div>
                                             </div>
 
                                         </div>

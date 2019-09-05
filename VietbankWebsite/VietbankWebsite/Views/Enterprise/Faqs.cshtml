@@ -1,4 +1,6 @@
 ﻿@model VietbankWebsite.ModelMap.Faqs
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
 @{
     Layout = "~/Views/Shared/_LayoutEnterprise.cshtml";
 }
@@ -9,8 +11,8 @@
             <div class="row">
                 <div class="col-xs-12">
                     <ol class="breadcrumb mrt-10">
-                        <li><a href="index.html">Doanh nghiệp</a></li>
-                        <li><a href="hoidap.html">Hỗ trợ</a></li>
+                        <li><a href="@Localizer["EnterpriseUrl"]">@Localizer["EnterpriseName"]</a></li>
+                        <li><a href="@Localizer["SupportUrl"]">@Localizer["SupportName"]</a></li>
                         <li class="active"><span style="color:#999;">@Model.Title</span></li>
                     </ol>
                 </div>
@@ -24,6 +26,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-5 col-lg-5 col-xl-5">
                         <h1 class="title">@Model.Title</h1>
+                        <div class="content">@Localizer["FaqsDes"]</div>
                     </div>
                 </div>
             </div>

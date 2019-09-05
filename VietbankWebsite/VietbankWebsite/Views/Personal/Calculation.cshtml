@@ -1,5 +1,7 @@
-﻿
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
 @{
+    ViewData["Title"] = @Localizer["CalculationName"];
     Layout = "~/Views/Shared/_LayoutPersonal.cshtml";
 }
 
@@ -9,9 +11,9 @@
             <div class="row">
                 <div class="col-xs-12">
                     <ol class="breadcrumb mrt-10">
-                        <li><a href="index.html">Cá nhân</a></li>
-                        <li><a href="hoidap.html">Hỗ trợ</a></li>
-                        <li class="active"><span>Câu hỏi thường gặp</span></li>
+                        <li><a href="@Localizer["PersonalUrl"]">@Localizer["PersonalName"]</a></li>
+                        <li><a href="@Localizer["SupportUrl"]">@Localizer["SupportName"]</a></li>
+                        <li class="active"><span>@Localizer["CalculationName"]</span></li>
                     </ol>
                 </div>
             </div>
@@ -23,8 +25,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-5 col-lg-5 col-xl-5">
-                        <h1 class="title">Câu hỏi thường gặp</h1>
-                        <div class="content">Đồng hành cùng nhu cầu của bạn mọi lúc mọi nơi</div>
+                        <h1 class="title">@Localizer["CalculationName"]</h1>
+                        <div class="content">@Localizer["CalculationDes"]</div>
                     </div>
                 </div>
             </div>
@@ -39,18 +41,18 @@
             </div>
             <div class="col-xs-12 col-lg-9">
                 <section class="hotro-ct">
-                    <h1 class="title">Công cụ tính toán                                                                                                                                                                                       </h1>
+                    <h1 class="title">@Localizer["CalculationName"]                                                                                                                                                                                    </h1>
                     <div class="" id="support-personal">
                         <div class="tabs-support">
                             <ul role="tablist" class="nav-jt-sp">
                                 <li class="nav-item">
-                                    <a href="#tab1" data-toggle="tab" role="tab" class="active" aria-expanded="true">Tôi có thể vay bao nhiêu</a>
+                                    <a href="#tab1" data-toggle="tab" role="tab" class="active" aria-expanded="true">@Localizer["TabOneTitle"]</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#tab2" data-toggle="tab" role="tab" class="" aria-expanded="false">Tính lịch trả nợ theo dư nợ giảm dần</a>
+                                    <a href="#tab2" data-toggle="tab" role="tab" class="" aria-expanded="false">@Localizer["TabTwoTitle"]</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#tab3" data-toggle="tab" role="tab" class="" aria-expanded="false">Tính lãi tiền gửi</a>
+                                    <a href="#tab3" data-toggle="tab" role="tab" class="" aria-expanded="false">@Localizer["TabThreeTitle"]</a>
                                 </li>
                             </ul>
                         </div>
@@ -58,34 +60,34 @@
                             <div role="tabpanel" class="thetindung tab-pane active" id="tab1" aria-expanded="true">
                                 <div class="block-borrowTool">
                                     <div class="form-group">
-                                        <label>Số tiền bạn dự định trả nợ mỗi tháng (VND):</label>
+                                        <label>@Localizer["TabOneLabelOne"]</label>
                                         <div class="group">
                                             <input id="so-tien-tra-moi-thang" class="form-control">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label>Số tháng:</label>
+                                        <label>@Localizer["TabOneLabelTwo"]</label>
                                         <div class="group">
-                                            <input id="so-thang-vay" class="form-control"><span class="unit">tháng</span>
+                                            <input id="so-thang-vay" class="form-control"><span class="unit">@Localizer["TabOneLabelTwoUnit"]</span>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label>Lãi suất:</label>
+                                        <label>@Localizer["TabOneLabelThree"]</label>
                                         <div class="group">
                                             <input id="lai-suat-vay" class="form-control"><span class="unit">%</span>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <input style="float: left;" id="submit-uoctinhkhoangvai" type="submit" value="Ước tính khoản vay">
+                                        <input style="float: left;" id="submit-uoctinhkhoangvai" type="submit" value="@Localizer["TabOneLabelFour"]">
                                     </div>
                                     <div class="result">
-                                        <h3>Kết Quả</h3>
+                                        <h3>@Localizer["TabOneLabelFive"]</h3>
                                         <div class="row flex flex-wrap">
                                             <div class="col-xs-12 col-md-6">
-                                                <div class="item-result"><strong>Dự định trả nợ mỗi tháng: </strong><span id="du-dinh-tra-no"></span></div>
+                                                <div class="item-result"><strong>@Localizer["TabOneLabelSix"] </strong><span id="du-dinh-tra-no"></span></div>
                                             </div>
                                             <div class="col-xs-12 col-md-6">
-                                                <div class="item-result"><strong>Bạn sẽ vay tối đa: </strong><span id="so-tien-vay-toi-da"></span></div>
+                                                <div class="item-result"><strong>@Localizer["TabOneLabelSeven"] </strong><span id="so-tien-vay-toi-da"></span></div>
                                             </div>
                                         </div>
                                     </div>
@@ -96,19 +98,19 @@
                                     <div class="row flex flex-wrap">
                                         <div class="col-xs-12 col-md-6">
                                             <div class="form-group">
-                                                <label>Số tiền vay:</label>
+                                                <label>@Localizer["TabTwoLabelOne"]</label>
                                                 <div class="group">
                                                     <input id="sotienvay" value="" class="form-control"><span class="unit">VND</span>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label>Thời gian vay:</label>
+                                                <label>@Localizer["TabTwoLabelTwo"]</label>
                                                 <div class="group">
-                                                    <input id="thoigianvay" value="" class="form-control"><span class="unit">tháng</span>
+                                                    <input id="thoigianvay" value="" class="form-control"><span class="unit">@Localizer["TabOneLabelTwoUnit"]</span>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label>Lãi suất:</label>
+                                                <label>@Localizer["TabTwoLabelThree"]</label>
                                                 <div class="group">
                                                     <input id="laisuat" value="" class="form-control"><span class="unit">%</span>
                                                 </div>
@@ -117,17 +119,17 @@
 
                                         <div class="col-xs-12">
                                             <div class="form-group">
-                                                <input id="btn-tinhnogiamdan" type="submit" value="Ước tính">
+                                                <input id="btn-tinhnogiamdan" type="submit" value="@Localizer["TabTwoLabelFive"]">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="block-calculatorTool">
                                     <div class="title-wrap">
-                                        <h3 class="title-tool">Tính theo dư nợ giảm dần</h3>
+                                        <h3 class="title-tool">@Localizer["TabTwoLabelFour"]</h3>
                                         <div class="support-wrap">
-                                            <a onclick="jtExportToExcel();event.preventDefault();" href="#"><img src="/img/excel_icon.png"><span>Xuất Excel</span></a>
-                                            <a onclick="jtprinttygia(); event.preventDefault();" href="#"><img src="/img/print_icon.png"><span>In</span></a>
+                                            <a onclick="jtExportToExcel();event.preventDefault();" href="#"><img src="/img/excel_icon.png"><span>@Localizer["ExportExcel"]</span></a>
+                                            <a onclick="jtprinttygia(); event.preventDefault();" href="#"><img src="/img/print_icon.png"><span>@Localizer["Print"]</span></a>
                                         </div>
                                     </div>
                                     <div class="table-responsive">
@@ -140,19 +142,19 @@
                                     <div class="row flex flex-wrap">
                                         <div class="col-xs-12 col-md-6">
                                             <div class="form-group">
-                                                <label>Số tiền gửi:</label>
+                                                <label>@Localizer["TabThreeLabelOne"]</label>
                                                 <div class="group">
                                                     <input id="so-tien-goi-person" value="" class="form-control"><span class="unit">VND</span>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label>Kỳ hạn gửi:</label>
+                                                <label>@Localizer["TabThreeLabelTwo"]</label>
                                                 <div id="ky-hang-gui-person" class="group">
                                                     <input disabled="disabled" class="form-control"><span class="unit hidden"></span>
                                                     <select style="position: absolute; width: 120px; top: 0px; right: 0px; z-index: 100; background-color: white; border-bottom-left-radius: inherit; border-top-left-radius: inherit;" id="ky-lanh-lai-person" class="form-control">
-                                                        <option value="">Vui lòng chọn</option>
-                                                        <option value="tuần">Tuần</option>
-                                                        <option value="tháng">Tháng</option>
+                                                        <option value="">@Localizer["TabThreeLabelTwoOne"]</option>
+                                                        <option value="tuần">@Localizer["TabThreeLabelTwoTwo"]</option>
+                                                        <option value="tháng">@Localizer["TabThreeLabelTwoThree"]</option>
 
                                                     </select>
                                                 </div>
@@ -161,7 +163,7 @@
                                         <div class="col-xs-12 col-md-6">
 
                                             <div class="form-group">
-                                                <label>Lãi suất:</label>
+                                                <label>@Localizer["TabThreeLabelThree"]</label>
                                                 <div class="group">
                                                     <input id="lai-suat-person" class="form-control"><span class="unit">%</span>
                                                 </div>
@@ -347,17 +349,17 @@
                                             </tbody>
                                         </table>
                                     </div>                                                <div class="form-group btn-result">
-                                        <input id="uoc-tinh-person" type="submit" value="Ước tính">
+                                        <input id="uoc-tinh-person" type="submit" value="@Localizer["TabTwoLabelFive"]">
                                     </div>
                                     <div class="result">
-                                        <h3>Kết Quả</h3>
+                                        <h3>@Localizer["TabThreeLabelFour"]</h3>
                                         <div class="row flex flex-wrap">
                                             <div class="col-xs-12 col-md-6">
 
-                                                <div class="item-result"><strong>Tổng tiền lãi: </strong><span class="tong-tien-lai"></span></div>
+                                                <div class="item-result"><strong>@Localizer["TabThreeLabelFive"] </strong><span class="tong-tien-lai"></span></div>
                                             </div>
                                             <div class="col-xs-12 col-md-6">
-                                                <div class="item-result"><strong>Tổng số tiền gốc và lãi: </strong><span class="tong-so-tien-nhan-duoc"></span></div>
+                                                <div class="item-result"><strong>@Localizer["TabThreeLabelSix"] </strong><span class="tong-so-tien-nhan-duoc"></span></div>
                                             </div>
                                         </div>
                                     </div>

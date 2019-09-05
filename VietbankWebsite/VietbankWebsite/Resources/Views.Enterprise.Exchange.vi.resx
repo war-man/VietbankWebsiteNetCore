@@ -117,4 +117,97 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AmountConvert" xml:space="preserve">
+    <value>Tôi muốn chuyển đổi:</value>
+  </data>
+  <data name="BanCK" xml:space="preserve">
+    <value>Bán chuyển khoản</value>
+  </data>
+  <data name="BieuDo" xml:space="preserve">
+    <value>Biểu đồ</value>
+  </data>
+  <data name="CaNhanName" xml:space="preserve">
+    <value>Cá Nhân</value>
+  </data>
+  <data name="CaNhanUrl" xml:space="preserve">
+    <value>/ca-nhan</value>
+  </data>
+  <data name="ChuyenDoiNT" xml:space="preserve">
+    <value>Chuyển đổi ngoại tệ</value>
+  </data>
+  <data name="Convert" xml:space="preserve">
+    <value>Chuyển đổi</value>
+  </data>
+  <data name="CurrencyChart" xml:space="preserve">
+    <value>Biểu đồ tỷ giá</value>
+  </data>
+  <data name="CurrencyOne" xml:space="preserve">
+    <value>Ngoại tệ 1:</value>
+  </data>
+  <data name="CurrencyTwo" xml:space="preserve">
+    <value>Ngoại tệ 2:</value>
+  </data>
+  <data name="DesOne" xml:space="preserve">
+    <value>Tỷ giá mang tính chất tham khảo</value>
+  </data>
+  <data name="DesThree" xml:space="preserve">
+    <value>Quý khách vui lòng liên hệ các điểm giao dịch của VietBank để có tỷ giá cập nhật nhất</value>
+  </data>
+  <data name="DesTwo" xml:space="preserve">
+    <value>Tỷ giá mua tiền mặt USD chỉ áp dụng cho mệnh giá lớn 50-100 USD</value>
+  </data>
+  <data name="DsTyGia" xml:space="preserve">
+    <value>Danh sách tỷ giá</value>
+  </data>
+  <data name="FromDate" xml:space="preserve">
+    <value>Từ ngày:</value>
+  </data>
+  <data name="HoTroName" xml:space="preserve">
+    <value>Hỗ trợ</value>
+  </data>
+  <data name="HoTroUrl" xml:space="preserve">
+    <value>/ca-nhan/ho-tro</value>
+  </data>
+  <data name="MuaCK" xml:space="preserve">
+    <value>Mua chuyển khoản</value>
+  </data>
+  <data name="MuaTM" xml:space="preserve">
+    <value>Mua tiền mặt</value>
+  </data>
+  <data name="NgoaiTe" xml:space="preserve">
+    <value>Ngoại tệ</value>
+  </data>
+  <data name="ToDate" xml:space="preserve">
+    <value>Đến ngày:</value>
+  </data>
+  <data name="TyGiaChiaSe" xml:space="preserve">
+    <value>Chia sẻ</value>
+  </data>
+  <data name="TyGiaDes" xml:space="preserve">
+    <value>Ngân hàng Vietbank cung cấp bảng tỷ giá hối đoái, tỷ giá bình quân liên ngân hàng được cập nhật liên tục theo giờ trong ngày.</value>
+  </data>
+  <data name="TyGiaIn" xml:space="preserve">
+    <value>In</value>
+  </data>
+  <data name="TyGiaLan" xml:space="preserve">
+    <value>Lần</value>
+  </data>
+  <data name="TyGiaName" xml:space="preserve">
+    <value>Tỷ giá</value>
+  </data>
+  <data name="TyGiaNgay" xml:space="preserve">
+    <value>Tỷ giá ngày</value>
+  </data>
+  <data name="TyGiaXuat" xml:space="preserve">
+    <value>Xuất Excel</value>
+  </data>
+  <data name="TypeCurrency" xml:space="preserve">
+    <value>Loại tiền:</value>
+  </data>
+  <data name="ViewChart" xml:space="preserve">
+    <value>Xem biểu đồ</value>
+  </data>
+  <data name="XemTyGia" xml:space="preserve">
+    <value>Xem tỷ giá</value>
+  </data>
 </root>

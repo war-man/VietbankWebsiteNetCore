@@ -44,5 +44,34 @@ namespace VietbankWebsite.Models
         public static string BranchProvinceEn { get { return "_BranchProvinceEn"; } }
         public static string AllTransagencyVi { get { return "_AllTransagencyVi"; } }
         public static string AllTransagencyEn { get { return "_AllTransagencyEn"; } }
+        public static string PersonalFaqsVi { get { return "_PersonalFaqsVi"; } }
+        public static string PersonalFaqsEn { get { return "_PersonalFaqsEn"; } }
+        public static string PersonalInterestVi { get { return "_PersonalInterestVi"; } }
+        public static string PersonalInterestEn { get { return "_PersonalInterestEn"; } }
+        public static string PersonalInterestBasicVi { get { return "_PersonalInterestBasicVi"; } }
+        public static string PersonalInterestBasicEn { get { return "_PersonalInterestBasicEn"; } }
+        public static string PersonalFormTariffVi { get { return "_PersonalFormTariffVi"; } }
+        public static string PersonalFormTariffEn { get { return "_PersonalFormTariffEn"; } }
+        public static string PersonalTariffVi { get { return "_PersonalTariffVi"; } }
+        public static string PersonalTariffEn { get { return "_PersonalTariffEn"; } }
+        public static string PersonalAccountInquiryVi { get { return "_PersonalAccountInquiryVi"; } }
+        public static string PersonalAccountInquiryEn { get { return "_PersonalAccountInquiryEn"; } }
+        public static string PersonalProductVi { get { return "_PersonalProductVi"; } }
+        public static string PersonalProductEn { get { return "_PersonalProductEn"; } }
+
+        public static string EnterpriseFaqsVi { get { return "_EnterpriseFaqsVi"; } }
+        public static string EnterpriseFaqsEn { get { return "_EnterpriseFaqsEn"; } }
+        public static string EnterpriseInterestVi { get { return "_EnterpriseInterestVi"; } }
+        public static string EnterpriseInterestEn { get { return "_EnterpriseInterestEn"; } }
+        public static string EnterpriseInterestBasicVi { get { return "_EnterpriseInterestBasicVi"; } }
+        public static string EnterpriseInterestBasicEn { get { return "_EnterpriseInterestBasicEn"; } }
+        public static string EnterpriseFormTariffVi { get { return "_EnterpriseFormTariffVi"; } }
+        public static string EnterpriseFormTariffEn { get { return "_EnterpriseFormTariffEn"; } }
+        public static string EnterpriseTariffVi { get { return "_EnterpriseTariffVi"; } }
+        public static string EnterpriseTariffEn { get { return "_EnterpriseTariffEn"; } }
+        public static string EnterpriseAccountInquiryVi { get { return "_EnterpriseAccountInquiryVi"; } }
+        public static string EnterpriseAccountInquiryEn { get { return "_EnterpriseAccountInquiryEn"; } }
+        public static string EnterpriseProductVi { get { return "_EnterpriseProductVi"; } }
+        public static string EnterpriseProductEn { get { return "_EnterpriseProductEn"; } }
     }
 }
