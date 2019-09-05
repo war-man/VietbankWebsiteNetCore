@@ -1,31 +1,35 @@
-﻿
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
 @{
-    ViewData["Title"] = "Exchange";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_LayoutEnterprise.cshtml";
 }
+@section Styles{
 
+    <link href="~/css/bootstrap-datepicker.css" rel="stylesheet" />
+    <link href="~/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+}
 <section class="banner-wrap">
     <section class="breadcrumb-wrap">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
                     <ol class="breadcrumb mrt-10">
-                        <li><a href="index.html">Cá nhân</a></li>
-                        <li><a href="hoidap.html">Hỗ trợ</a></li>
-                        <li class="active"><span>Câu hỏi thường gặp</span></li>
+                        <li><a href="@Localizer["CaNhanUrl"]">@Localizer["CaNhanName"]</a></li>
+                        <li><a href="@Localizer["HoTroUrl"]">@Localizer["HoTroName"]</a></li>
+                        <li class="active"><span>@Localizer["TyGiaName"]</span></li>
                     </ol>
                 </div>
             </div>
         </div>
     </section>
     <section class="banner-page imageBanner">
-        <div style="background-image:url('img/banner_page/banner_bieuphi.png')" class="imgBg"></div>
+        <div style="background-image:url('/img/banner_page/banner_bieuphi.png')" class="imgBg"></div>
         <div class="desc">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-5 col-lg-5 col-xl-5">
-                        <h1 class="title">Câu hỏi thường gặp</h1>
-                        <div class="content">Đồng hành cùng nhu cầu của bạn mọi lúc mọi nơi</div>
+                        <h1 class="title">@Localizer["TyGiaName"]</h1>
+                        <div class="content">@Localizer["TyGiaDes"]</div>
                     </div>
                 </div>
             </div>
@@ -36,91 +40,201 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-lg-3">
-                <a href="javascript:;" class="toggle-click"><i class="fa fa-bars"></i>Danh mục</a>
-                <div class="nav-toogle">
-                    <ul class="nav left-menusp">
-                        <li><a href="hoidap.html" class="active">Câu hỏi thường gặp</a></li>
-                        <li class="has-children active">
-                            <a href="#">Công cụ - Tiện ích</a>
-                            <ul style="display:block" class="sub-menu">
-                                <li><a href="tygia-ngoaite.html" class="active">Tỷ giá / Lãi suất</a></li>
-                                <li><a href="bieumau.html">Biểu mẫu / Biểu phí</a></li>
-                                <li><a href="#">Mạng lưới</a></li>
-                                <li><a href="congcu-tinhtoan.html">Công cụ tính toán</a></li>
-                                <li><a href="#">Xác thực bảo lãnh</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-children">
-                            <a href="#">Video hướng dẫn</a>
-                            <ul class="sub-menu">
-                                <li><a href="videohuongdan.html">Hướng dẫn thanh toán Online</a></li>
-                                <li><a href="#">Hướng dẫn bảo mật tài khoản</a></li>
-                                <li><a href="#">Hướng dẫn khác</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+                <partial name="~/Views/Partial/_ToolCalulationBar.cshtml" />
             </div>
             <div class="col-xs-12 col-lg-9">
-                <section class="hotro-ct">
-                    <h1 class="title">Tỷ giá</h1>
+
+                <section id="hotro-ct-1" class="hotro-ct">
+                    <h1 class="title">@Localizer["TyGiaName"]</h1>
+                    <div class="block-exchangeRate">
+                        <div class="row flex flex-wrap">
+                            <div class="col-xs-12 col-md-6 col-lg-7">
+                                <div class="form-group width-full">
+                                    <label>@Localizer["TyGiaNgay"]</label>
+                                    <div class="group">
+                                        <input id="datecurrent" class="form-control" data-date-format="dd/mm/yyyy"><span class="icon"><i class="fa fa-calendar"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-3 col-lg-2">
+                                <div class="form-group">
+                                    <label>@Localizer["TyGiaLan"]</label>
+                                    <div id="count-update" class="group">
+                                        <select class="form-control"></select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-3 col-lg-3">
+                                <div class="form-group">
+                                    <input id="filter-currency" type="submit" value="@Localizer["XemTyGia"]">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress"></div>
+                    <div class="block-exchangeRate">
+                        <div class="title-wrap">
+                            <h3 class="title-rate">@Localizer["DsTyGia"]</h3>
+                            <div class="support-wrap">
+                                <a href="#" onclick="jtExportToExcel();event.preventDefault();"><img src="/img/excel_icon.png"><span>@Localizer["TyGiaXuat"]</span></a>
+                                <a href="#" onclick="jtprinttygia(); event.preventDefault();"><img src="/img/print_icon.png"><span>@Localizer["TyGiaIn"]</span></a>
+                                <a href="#" class="icon-share"><img src="/img/share_icon.png"><span>@Localizer["TyGiaChiaSe"]</span></a>
+                                <div class="social-list"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-google-plus"></i></a></div>
+                            </div>
+                        </div>
+                        <div class="table-responsive" id="frmtbltygia">
+                            <table class="table" id="tbltygia">
+                                <tbody>
+                                    <tr>
+                                        <th>@Localizer["NgoaiTe"]</th>
+                                        <th>@Localizer["MuaTM"]</th>
+                                        <th>@Localizer["MuaCK"]</th>
+                                        <th>@Localizer["BanCK"]</th>
+                                    </tr>
+                                </tbody>
+                                <tbody id="content-currency">
+                                </tbody>
+                            </table>
+                            <br>
+                            <p style="font-size:14px;">@Localizer["DesOne"]</p>
+                            <p style="font-size:14px;">@Localizer["DesTwo"]</p>
+                            <p style="font-size:14px;">@Localizer["DesThree"]</p>
+                            <br>
+                        </div>
+                        <div class="link-exchange">
+                            <ul class="nav">
+                                <li class="li-chart"><a href="#chart"><i class="fa fa-line-chart"></i><span>@Localizer["BieuDo"]</span></a></li>
+                                <li class="li-currency-converter"><a href="#currency-converter"><i class="fa fa-calculator"></i><span>@Localizer["ChuyenDoiNT"]</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="hotro-ct-2" class="hotro-ct hidden">
+                    <h1 class="title">@Localizer["TyGiaName"]</h1>
                     <div class="block-exchangeChart">
                         <div class="row flex flex-wrap">
                             <div class="col-xs-12 col-md-5 col-lg-4">
                                 <div class="form-group">
-                                    <label>Ngoại tệ 1:</label>
+                                    <label>@Localizer["CurrencyOne"]</label>
                                     <div class="btn-ex">
-                                        <a href="javascript:;" data-toggle="dropdown" class="dropdown-toggle"><img src="img/lang/us.png">USD</a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="#"><img src="img/lang/vn.png">VND</a></li>
-                                        </ul>
+                                        <select id="val-current1" class="form-control">
+                                            <option value="USD">USD</option>
+                                            <option value="EUR">EUR</option>
+                                            <option value="GBP">GBP</option>
+                                            <option value="JPY">JPY</option>
+                                            <option value="AUD">AUD</option>
+                                            <option value="CAD">CAD</option>
+                                            <option value="SGD">SGD</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label>Ngoại tệ 2:</label>
+                                    <label>@Localizer["CurrencyTwo"]</label>
                                     <div class="btn-ex">
-                                        <a href="javascript:;" data-toggle="dropdown" class="dropdown-toggle"><img src="img/lang/jp.png">JPY</a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="#"><img src="img/lang/vn.png">VND</a></li>
-                                        </ul>
+                                        <select id="val-current2" class="form-control">
+                                            <option value="USD">USD</option>
+                                            <option value="EUR">EUR</option>
+                                            <option value="GBP">GBP</option>
+                                            <option value="JPY">JPY</option>
+                                            <option value="AUD">AUD</option>
+                                            <option value="CAD">CAD</option>
+                                            <option value="SGD">SGD</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xs-12 col-md-7 col-lg-8">
                                 <div class="form-group">
-                                    <label>Từ ngày:</label>
+                                    <label>@Localizer["FromDate"]</label>
                                     <div class="group">
-                                        <input value="22/12/2016" class="form-control"><span class="icon"><i class="fa fa-calendar"></i></span>
+                                        <input class="form-control" id="fromdate" data-date-format="dd/mm/yyyy"><span class="icon"><i class="fa fa-calendar"></i></span>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label>Đến ngày:</label>
+                                    <label>@Localizer["ToDate"]</label>
                                     <div class="group">
-                                        <input value="22/12/2016" class="form-control"><span class="icon"><i class="fa fa-calendar"></i></span>
+                                        <input class="form-control" id="todate" data-date-format="dd/mm/yyyy"><span class="icon"><i class="fa fa-calendar"></i></span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <input type="submit" value="Xem biểu đồ">
+                            <input type="submit" value="@Localizer["ViewChart"]" onclick="getDataToViewChart();">
                         </div>
                     </div>
                     <div class="block-exchangeChart">
                         <div class="title-wrap">
-                            <h3 class="title-rate">Biểu đồ tỷ giá</h3>
+                            <h3 class="title-rate">@Localizer["CurrencyChart"]</h3>
                             <div class="support-wrap">
                                 <div class="note">
-                                    <div class="currency op-1"><span>Ngoại tệ 1: USD</span></div>
-                                    <div class="currency op-2"><span>Ngoại tệ 2: JPY</span></div>
-                                </div><a href="#" class="icon-share"><img src="img/share_icon.png"><span>Chia sẻ</span></a>
+
+                                </div><a href="#" class="icon-share"><img src="/img/share_icon.png"><span>@Localizer["TyGiaChiaSe"]</span></a>
                                 <div class="social-list"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-google-plus"></i></a></div>
                             </div>
                         </div>
-                        <div class="box-chart"><img src="img/chart.png"></div>
+                        <div class="box-chart" id="chart">
+                            <div id="container" style="width: 762px; height: 400px; margin: 0 auto; display:block"></div>
+                        </div>
                         <div class="link-exchange">
                             <ul class="nav">
-                                <li><a href="tygia-bieudo.html"><i class="fa fa-line-chart"></i><span>Biểu đồ</span></a></li>
-                                <li><a href="tygia-chuyendoi.html"><i class="fa fa-calculator"></i><span>Chuyển đổi ngoại tệ</span></a></li>
+                                <li class="li-chart"><a href="#chart"><i class="fa fa-line-chart"></i><span>@Localizer["BieuDo"]</span></a></li>
+                                <li class="li-currency-converter"><a href="#currency-converter"><i class="fa fa-calculator"></i><span>@Localizer["ChuyenDoiNT"]</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="hotro-ct-3" class="hotro-ct hidden">
+                    <h1 class="title">@Localizer["TyGiaName"]</h1>
+                    <div class="block-exchangeMoney">
+                        <div class="row flex flex-wrap">
+                            <div class="col-xs-12 col-md-6">
+                                <div class="form-group width-full">
+                                    <label>@Localizer["AmountConvert"] </label>
+                                    <input id="val-curreny" value="" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-3">
+                                <div class="form-group">
+                                    <label>@Localizer["TypeCurrency"] </label>
+                                    <div class="btn-ex">
+                                        <select id="val-effcode" class="form-control selectpicker">
+                                            <option value="USD" data-thumbnail="/img/lang/USD.png">USD</option>
+                                            <option value="EUR">EUR</option>
+                                            <option value="GBP">GBP</option>
+                                            <option value="JPY">JPY</option>
+                                            <option value="AUD">AUD</option>
+                                            <option value="CAD">CAD</option>
+                                            <option value="SGD">SGD</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-3">
+                                <div class="form-group">
+                                    <input id="btn-convert" type="submit" value="@Localizer["Convert"]">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block-exchangeMoney">
+                        <div class="title-wrap">
+                            <h3 class="title-exchange" id="last-date-update"></h3>
+                            <div class="support-wrap">
+                                <a href="#" class="icon-share"><img src="/img/share_icon.png"><span>@Localizer["TyGiaChiaSe"]</span></a>
+                                <div class="social-list"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-google-plus"></i></a></div>
+                            </div>
+                        </div>
+                        <div class="exchange-list">
+                            <div class="row">
+
+                            </div>
+                        </div>
+                        <div class="link-exchange">
+                            <ul class="nav">
+                                <li class="li-chart"><a href="#chart"><i class="fa fa-line-chart"></i><span>@Localizer["BieuDo"]</span></a></li>
+                                <li class="li-currency-converter"><a href="#currency-converter"><i class="fa fa-calculator"></i><span>@Localizer["ChuyenDoiNT"]</span></a></li>
                             </ul>
                         </div>
                     </div>
@@ -130,3 +244,10 @@
     </div>
 </main>
 
+@section Scripts{
+    <script src="~/js/jquery.table2excel.js"></script>
+    <script src="~/js/highcharts.js"></script>
+    <script src="~/js/bootstrap-datepicker.js"></script>
+    <script src="~/js/moment.js"></script>
+    <script src="~/page/personal-currency.js"></script>
+}

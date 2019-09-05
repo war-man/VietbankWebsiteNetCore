@@ -147,6 +147,12 @@
   <data name="FormsUrl" xml:space="preserve">
     <value>/doanh-nghiep/ho-tro/bieu-mau</value>
   </data>
+  <data name="GuaranteeLetterName" xml:space="preserve">
+    <value>Xác thực thư bão lãnh</value>
+  </data>
+  <data name="GuaranteeLetterUrl" xml:space="preserve">
+    <value>/doanh-nghiep/ho-tro/xac-thuc-thu-bao-lanh</value>
+  </data>
   <data name="HoTro" xml:space="preserve">
     <value>Hỗ Trợ</value>
   </data>

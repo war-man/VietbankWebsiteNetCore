@@ -1,0 +1,101 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@{
+    Layout = "~/Views/Shared/_LayoutEnterprise.cshtml";
+}
+<section class="banner-wrap">
+    <section class="breadcrumb-wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <ol class="breadcrumb mrt-10">
+                        <li><a href="@Localizer["DoanhNghiepUrl"]">@Localizer["DoanhNghiepName"]</a></li>
+                        <li><a href="@Localizer["HoTroUrl"]">@Localizer["HoTroName"]</a></li>
+                        <li style="color: #999;"><strong>@Localizer["DoanhNghiepName"]</strong></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="banner-page imageBanner">
+        <div style="background-image:url('/img/banner_page/VietBank-bg.jpg')" class="imgBg"></div>
+        <div class="desc">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-5 col-lg-5 col-xl-5">
+                        <h1 class="title">@Localizer["GuaranteeLetterName"]</h1>
+                        <div class="content">@Localizer["XacThucThuBaoLanhDes"]</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+<main>
+    <section class="contact">
+        <div class="container">
+            <div class="row">
+                <form action="/SendContact" id="myForm" method="post" name="myForm" novalidate="novalidate">
+                    <input name="__RequestVerificationToken" type="hidden" value="sa42yY0fRd7VKa9BDa82oqvVaGqQtVOXJhgtQv_yEMDytGNrqR7_bDDSI-sj9zIVhJusnKy2AqHfyjJvR3KZd6-HjIHyoL_ZuY6p8vjHR8I1">                                <div class="col-md-12 col-lg-12">
+                        <div class="block-form">
+
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <label>
+                                        @Localizer["SoTK"]
+                                        (<span class="red">*</span>):
+                                    </label>
+                                    <input class="text-box single-line" data-val="true" data-val-length="Vượt chiều dài tối đa" data-val-length-max="200" data-val-length-min="3" data-val-required="Vui lòng nhập Số tài khoản " id="GuaranteeAcct" name="GuaranteeAcct" type="text" value="">
+                                    <span class="field-validation-valid text-danger" data-valmsg-for="GuaranteeAcct" data-valmsg-replace="true"></span>
+                                </div>
+                                <div class="row">
+                                    <label>
+                                        @Localizer["SoSeriTK"]
+                                        (<span class="red">*</span>):
+                                    </label>
+                                    <input class="text-box single-line" data-val="true" data-val-length="Vượt chiều dài tối đa" data-val-length-max="200" data-val-length-min="3" data-val-required="Vui lòng nhập Số seri thư bảo lãnh" id="GuaranteeCode" name="GuaranteeCode" type="text" value="">
+                                    <span class="field-validation-valid text-danger" data-valmsg-for="GuaranteeCode" data-valmsg-replace="true"></span>
+                                </div>
+                                <div class="row">
+                                    <label>
+                                        @Localizer["MaXacThuc"]
+                                        (<span class="red">*</span>):
+                                    </label>
+                                    <div class="captcha-box clearfix">
+                                        <img id="imgCaptcha" alt="Captcha" src="/ShowCaptchaImage">
+                                        <a id="urlcapt" href="#" onclick="event.preventDefault();"><i class="fa fa-refresh"></i></a>
+                                        <input class="text-box single-line" data-val="true" data-val-length="Vượt chiều dài tối đa" data-val-length-max="7" data-val-length-min="3" data-val-required="Vui lòng nhập Mã xác thực" id="CaptchaText" name="CaptchaText" type="text" value="">
+                                        <span id="spanCatpcha" class="field-validation-valid text-danger" style="display:none;">Mã xác thực không hợp lệ</span>
+
+                                    </div>
+                                </div>
+                                <div class="row"><button type="button" id="btn-verify" class="btn confirm">@Localizer["XacThuc"]</button></div>
+                            </div>
+                            <div class="col-md-6">
+                                <div style="padding-left:20px;" class="row">
+                                    <div style="color:red;padding-bottom:10px;">(*) @Localizer["ThongTinOne"]</div>
+                                    <div>
+                                        @Localizer["ThongTinTwo"]<br>
+                                        @Localizer["ThongTinThree"]<br>
+                                        @Localizer["ThongTinFour"]<br>
+                                        @Localizer["ThongTinFive"]
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row" id="infoGuarantee" style="padding-top:20px">
+            </div>
+        </div>
+    </section>
+</main>
+
+@section Scripts{
+
+    <script src="~/page/enterprise-guarantee-letter.js"></script>
+}

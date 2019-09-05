@@ -49,8 +49,8 @@ namespace VietbankWebsite.Controllers
         }
 
         [HttpGet]
-        [Route("ho-tro/cong-cu-tien-ich/ty-gia")]
-        [Route("support/utility/foreign-exchange")]
+        [Route("ho-tro/ty-gia")]
+        [Route("support/foreign-exchange")]
         public IActionResult Exchange()
         {
             return View();
@@ -104,6 +104,14 @@ namespace VietbankWebsite.Controllers
         [Route("ho-tro/cong-cu-tien-ich/truy-van-so-tiet-kiem")]
         [Route("support/utility/saving-account-inquiry")]
         public IActionResult AccountInquiry()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        [Route("ho-tro/xac-thuc-thu-bao-lanh")]
+        [Route("support/guarantee-letter")]
+        public IActionResult GuaranteeLetter()
         {
             return View();
         }

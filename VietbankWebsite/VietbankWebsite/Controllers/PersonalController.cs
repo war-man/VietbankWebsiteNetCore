@@ -51,8 +51,8 @@ namespace VietbankWebsite.Controllers
         }
 
         [HttpGet]
-        [Route("ho-tro/cong-cu-tien-ich/ty-gia")]
-        [Route("support/utility/foreign-exchange")]
+        [Route("ho-tro/ty-gia")]
+        [Route("support/foreign-exchange")]
         public IActionResult Exchange()
         {
             return View();
@@ -103,11 +103,12 @@ namespace VietbankWebsite.Controllers
         }
 
         [HttpGet]
-        [Route("ho-tro/cong-cu-tien-ich/truy-van-so-tiet-kiem")]
-        [Route("support/utility/saving-account-inquiry")]
-        public IActionResult AccountInquiry()
+        [Route("ho-tro/truy-van-so-tiet-kiem")]
+        [Route("support/saving-account-inquiry")]
+        public async Task<IActionResult> AccountInquiry()
         {
-            return View();
+            var accountInquiry = await _supportService.GetForm(1066, GetLangCurrent());
+            return View(accountInquiry);
         }
 
         [HttpGet]

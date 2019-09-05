@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -44,4 +45,28 @@ namespace VietbankWebsite.ModelMap
     }
 
     public class Form:InterestRate {}
+
+    public class ThuBaoLanhModel
+    {
+        public string GuaranteeAcct { get; set; }
+        public string GuaranteeCode { get; set; }
+        public string CaptchaText { get; set; }
+
+        public DateTime TUNGAY { get; set; }
+        public DateTime DENNGAY { get; set; }
+        public string CURRACCTSTATCD { get; set; }
+        public string HOTEN { get; set; }
+        public double CURRENTBALANCE { get; set; }
+        public string SERIES { get; set; }
+        public DateTime DATELASTMAINT { get; set; }
+        public Int32 ACCTNBR { get; set; }
+        public DateTime DATE_EFF { get; set; }
+        public string STATUS { get; set; }
+        public string ISVALID { get; set; }
+        public int PRINTED { get; set; }
+        public string DIACHI { get; set; }
+        public string FILESCAN { get; set; }
+        public string FILESCANURL { get; set; }
+
+    }
 }

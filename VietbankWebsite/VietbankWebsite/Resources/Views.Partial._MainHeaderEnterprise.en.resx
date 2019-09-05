@@ -147,6 +147,12 @@
   <data name="FormsUrl" xml:space="preserve">
     <value>/enterprise/support/forms</value>
   </data>
+  <data name="GuaranteeLetterName" xml:space="preserve">
+    <value>Guarantee Letter</value>
+  </data>
+  <data name="GuaranteeLetterUrl" xml:space="preserve">
+    <value>/enterprise/support/guarantee-letter</value>
+  </data>
   <data name="HoTro" xml:space="preserve">
     <value>Support</value>
   </data>

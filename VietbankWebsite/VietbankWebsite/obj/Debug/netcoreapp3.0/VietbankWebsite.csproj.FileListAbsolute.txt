@@ -410,3 +410,13 @@ T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netco
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\Razor\Views\Partial\_TopHeaderMap.cshtml.g.cs
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\Razor\Views\Support\Index.cshtml.g.cs
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\Razor\Views\Partial\_ToolCalulationBar.cshtml.g.cs
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netcoreapp3.0\Dapper.dll
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.Resources.Controllers.Api.ApiSupportController.en.resources
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.Resources.Controllers.Api.ApiSupportController.vi.resources
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.Resources.Views.Enterprise.Exchange.en.resources
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.Resources.Views.Enterprise.Exchange.vi.resources
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.Resources.Views.Personal.Exchange.en.resources
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.Resources.Views.Personal.Exchange.vi.resources
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\Razor\Views\Enterprise\GuaranteeLetter.cshtml.g.cs
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.Resources.Views.Enterprise.GuaranteeLetter.en.resources
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.Resources.Views.Enterprise.GuaranteeLetter.vi.resources
