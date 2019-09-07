@@ -121,7 +121,7 @@
     <value>Biểu Mẫu</value>
   </data>
   <data name="BieuMauUrl" xml:space="preserve">
-    <value>/bieu-mau</value>
+    <value>/ca-nhan/ho-tro/bieu-mau</value>
   </data>
   <data name="ChiNhanh" xml:space="preserve">
     <value>Chi Nhánh</value>
@@ -133,7 +133,7 @@
     <value>Khuyến Mãi</value>
   </data>
   <data name="KhuyenMaiUrl" xml:space="preserve">
-    <value>/khuyen-mai</value>
+    <value>/ve-vietbank/tin-tuc/tin-khuyen-mai</value>
   </data>
   <data name="LienHe" xml:space="preserve">
     <value>Liên Hệ</value>
@@ -145,6 +145,6 @@
     <value>Tỷ Giá</value>
   </data>
   <data name="TyGiaUrl" xml:space="preserve">
-    <value>/ty-gia</value>
+    <value>/ca-nhan/ho-tro/ty-gia</value>
   </data>
 </root>

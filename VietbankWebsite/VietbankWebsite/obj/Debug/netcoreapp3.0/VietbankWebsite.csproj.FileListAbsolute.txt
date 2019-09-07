@@ -405,7 +405,6 @@ T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netco
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.Resources.Views.Partial._TopHeaderMap.vi.resources
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\Razor\Views\Partial\_TopHeaderMap.cshtml.g.cs
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\Razor\Views\Support\Index.cshtml.g.cs
-T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\Razor\Views\Partial\_ToolCalulationBar.cshtml.g.cs
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netcoreapp3.0\Dapper.dll
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.Resources.Controllers.Api.ApiSupportController.en.resources
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.Resources.Controllers.Api.ApiSupportController.vi.resources
@@ -446,3 +445,19 @@ T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netco
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.Resources.Views.Enterprise.Calculation.vi.resources
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.Resources.Views.About.Contact.en.resources
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.Resources.Views.About.Contact.vi.resources
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.Resources.Views.Partial._ToolCalulationEnterpriseBar.en.resources
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.Resources.Views.Partial._ToolCalulationEnterpriseBar.vi.resources
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.Resources.Views.Partial._ToolCalulationPersonalBar.en.resources
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.Resources.Views.Partial._ToolCalulationPersonalBar.vi.resources
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\Razor\Views\Partial\_ToolCalulationEnterpriseBar.cshtml.g.cs
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\Razor\Views\Partial\_ToolCalulationPersonalBar.cshtml.g.cs
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.Resources.Views.About.BankAgent.en.resources
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.Resources.Views.About.BankAgent.vi.resources
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.Resources.Views.Partial._MenuMobile.en.resources
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.Resources.Views.Partial._MenuMobile.vi.resources
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.Resources.Views.Partial._ToolLinkMobile.en.resources
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.Resources.Views.Partial._ToolLinkMobile.vi.resources
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\Razor\Views\Partial\_ToolLinkMobile.cshtml.g.cs
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netcoreapp3.0\Microsoft.Extensions.DependencyInjection.dll
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netcoreapp3.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\Razor\Views\Partial\_SearchInfor.cshtml.g.cs

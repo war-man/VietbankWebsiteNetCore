@@ -73,5 +73,13 @@ namespace VietbankWebsite.Models
         public static string EnterpriseAccountInquiryEn { get { return "_EnterpriseAccountInquiryEn"; } }
         public static string EnterpriseProductVi { get { return "_EnterpriseProductVi"; } }
         public static string EnterpriseProductEn { get { return "_EnterpriseProductEn"; } }
+        public static string AboutBankCodeVi { get { return "_AboutBankCodeVi"; } }
+        public static string AboutBankCodeEn { get { return "_AboutBankCodeEn"; } }
+        public static string VietbankNewsVi { get { return "_VietbankNewsVi"; } }
+        public static string VietbankNewsEn { get { return "_VietbankNewsEn"; } }
+        public static string VietbankPromotionNewsVi { get { return "_VietbankPromotionNewsVi"; } }
+        public static string VietbankPromotionNewsEn { get { return "_VietbankPromotionNewsEn"; } }
+        public static string VietbankTvVi { get { return "_VietbankTvVi"; } }
+        public static string VietbankTvEn { get { return "_VietbankTvEn"; } }
     }
 }

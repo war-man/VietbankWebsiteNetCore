@@ -138,6 +138,9 @@
   <data name="NewsUrl" xml:space="preserve">
     <value>/about-vietbank/news</value>
   </data>
+  <data name="OtherNews" xml:space="preserve">
+    <value>Other news</value>
+  </data>
   <data name="PromotionNewsName" xml:space="preserve">
     <value>Tin khuyến mãi</value>
   </data>

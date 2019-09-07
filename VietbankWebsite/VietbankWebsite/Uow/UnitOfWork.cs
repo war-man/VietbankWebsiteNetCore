@@ -7,7 +7,7 @@ namespace VietbankWebsite.Uow
     public class UnitOfWork : IUnitOfWork
     {
         private readonly VietbankContext _context;
-        public IVbBannerRepository _vbBannerRepository;
+        public IHomeRepository _homeRepository;
         public IShareholderRepository _shareholderRepository;
         public IAboutVietbankRepository _aboutVietbankRepository;
         public IProductRepository _productRepository;
@@ -15,7 +15,7 @@ namespace VietbankWebsite.Uow
         public ICareersRepository _careersRepository;
         public IBranchRepository _branchRepository;
         public ISupportRepository _supportRepository;
-        public IVbBannerRepository VbBannerRepository => _vbBannerRepository = _vbBannerRepository ?? new VbBannerRepository(_context);
+        public IHomeRepository HomeRepository => _homeRepository = _homeRepository ?? new HomeRepository(_context);
         public IShareholderRepository ShareholderRepository => _shareholderRepository = _shareholderRepository ?? new ShareholderRepository(_context);
         public IAboutVietbankRepository AboutVietbankRepository => _aboutVietbankRepository = _aboutVietbankRepository ?? new AboutVietbankRepository(_context);
         public IProductRepository ProductRepository => _productRepository = _productRepository ?? new ProductRepository(_context);
@@ -57,7 +57,7 @@ namespace VietbankWebsite.Uow
     public interface IUnitOfWork : IDisposable
     {
         IAboutVietbankRepository AboutVietbankRepository { get; }
-        IVbBannerRepository VbBannerRepository { get; }
+        IHomeRepository HomeRepository { get; }
         IShareholderRepository ShareholderRepository { get; }
         IProductRepository ProductRepository { get; }
         ICardRepository CardRepository { get; }

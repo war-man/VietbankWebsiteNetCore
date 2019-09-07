@@ -12499,7 +12499,7 @@ footer {
   display: block;
   width: 50px;
   height: 50px;
-  /*background: url(../image/up.png) no-repeat center center;*/
+  background: url(../img/up.png) no-repeat center center;
   position: fixed;
   right: 30px;
   bottom: 0;
@@ -16055,6 +16055,22 @@ ul.nav.nav-bld li a:hover:after, ul.nav.nav-bld li a.active:after {
   background-color: #ffce47;
 }
 
+.block-form button.confirm {
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background-color: #ffc114;
+    display: inline-block;
+    color: #fff;
+    border-radius: 35px;
+    text-decoration: none;
+    padding: 0 1.5rem;
+}
+
+    .block-form button.confirm:hover, .block-form button.confirm:focus {
+        background-color: #ffce47;
+    }
+
 .captcha-box {
   margin: 0 0 30px;
 }
@@ -18386,7 +18402,7 @@ ul.nav.nav-bld li a:hover:after, ul.nav.nav-bld li a.active:after {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: transparent url("../image/arrow_select.png") no-repeat top right;
+  background: transparent url("/img/arrow_select.png") no-repeat top right;
   padding-right: 30px;
 }
 

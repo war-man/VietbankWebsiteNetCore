@@ -123,6 +123,9 @@
   <data name="AboutUrl" xml:space="preserve">
     <value>/about-vietbank</value>
   </data>
+  <data name="BankAgent" xml:space="preserve">
+    <value>List of Correspondent Banks</value>
+  </data>
   <data name="LeadershipName" xml:space="preserve">
     <value>Leadership</value>
   </data>

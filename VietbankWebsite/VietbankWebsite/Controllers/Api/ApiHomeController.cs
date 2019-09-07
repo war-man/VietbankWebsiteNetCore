@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using VietbankWebsite.Entities;
+using VietbankWebsite.ModelMap;
 using VietbankWebsite.Models;
 using VietbankWebsite.Service;
 
@@ -14,11 +15,11 @@ namespace VietbankWebsite.Controllers.Api
     public class ApiHomeController : BaseApiController
     {
         private IMemoryCache _cache;
-        private readonly IVbBannerService _vbBannerService;
-        public ApiHomeController(IMemoryCache memoryCache,IVbBannerService vbBannerService)
+        private readonly IHomeService _homeService;
+        public ApiHomeController(IMemoryCache memoryCache,IHomeService homeService)
         {
             _cache = memoryCache;
-            _vbBannerService = vbBannerService;
+            _homeService = homeService;
         }
 
         [HttpGet("getbanner")]
@@ -28,10 +29,16 @@ namespace VietbankWebsite.Controllers.Api
             IEnumerable<VbBanner> banner;
             if (!_cache.TryGetValue(keyBanner, out banner))
             {
-                banner = await _vbBannerService.GetBanner(GetLangCurrent());
+                banner = await _homeService.GetBanner(GetLangCurrent());
                 _cache.Set(keyBanner, banner, cacheEntryOptions);
             }
             return banner;
+        }
+
+        [HttpGet("search")]
+        public async Task<IEnumerable<SearchInfor>> Search(string key)
+        {
+            return await _homeService.GetSearchInfors(key);
         }
     }
 }

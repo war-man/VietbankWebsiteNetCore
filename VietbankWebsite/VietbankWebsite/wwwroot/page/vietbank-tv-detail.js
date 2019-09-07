@@ -8,7 +8,7 @@ function getListRandomVietbankTv() {
     }).fail();
 }
 
-function getListRandomVietbankTv(news) {
+function generateListRandomVietbankNews(news) {
     var lstNews = '';
     for (var i = 0; i < news.length; i++) {
         lstNews += '<div class="item-newsOther">' +

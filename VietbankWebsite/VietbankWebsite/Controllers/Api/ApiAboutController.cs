@@ -4,8 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Localization;
+using VietbankWebsite.Entities;
 using VietbankWebsite.ModelMap;
+using VietbankWebsite.Models;
 using VietbankWebsite.Service;
 
 namespace VietbankWebsite.Controllers.Api
@@ -14,10 +17,12 @@ namespace VietbankWebsite.Controllers.Api
     [ApiController]
     public class ApiAboutController : BaseApiController
     {
+        private IMemoryCache _cache;
         private readonly IAboutVietbankService _aboutVietbankService;
         private readonly IStringLocalizer<ApiAboutController> _localizer;
-        public ApiAboutController(IAboutVietbankService aboutVietbankService, IStringLocalizer<ApiAboutController> localizer)
+        public ApiAboutController(IAboutVietbankService aboutVietbankService, IStringLocalizer<ApiAboutController> localizer, IMemoryCache cache)
         {
+            _cache = cache;
             _aboutVietbankService = aboutVietbankService;
             _localizer = localizer;
         }
@@ -56,6 +61,19 @@ namespace VietbankWebsite.Controllers.Api
         public async Task<IEnumerable<RandomNewsVietbank>> RandomVietbankTv()
         {
             return await _aboutVietbankService.GetRamdomNewsToCategory(1069, _localizer["VietbankTvUrl"], GetLangCurrent());
+        }
+
+        [HttpGet("getbankcode")]
+        public async Task<BankCodeDataTable> GetVbBankCode()
+        {
+            var keyBankCode = GetLangCurrent() == "vi" ? CacheKeys.AboutBankCodeVi : CacheKeys.AboutBankCodeEn;
+            BankCodeDataTable bankCode;
+            if (!_cache.TryGetValue(keyBankCode, out bankCode))
+            {
+                bankCode = await _aboutVietbankService.GetVbBankCodes();
+                _cache.Set(keyBankCode, bankCode, cacheEntryOptions);
+            }
+            return bankCode;
         }
     }
 }

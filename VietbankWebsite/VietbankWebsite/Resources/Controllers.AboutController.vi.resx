@@ -126,6 +126,9 @@
   <data name="AllNewsName" xml:space="preserve">
     <value>Tất cả</value>
   </data>
+  <data name="BankAgent" xml:space="preserve">
+    <value>Ngân hàng đại lý</value>
+  </data>
   <data name="LeadershipName" xml:space="preserve">
     <value>Ban lãnh đạo</value>
   </data>

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Localization;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using VietbankWebsite.ModelMap;
 using VietbankWebsite.Models;
@@ -121,6 +122,7 @@ namespace VietbankWebsite.Controllers
         {
             ViewBag.AboutName = _localizer["AboutName"];
             ViewBag.AboutUrl = _localizer["AboutUrl"];
+            ViewData["Title"] = _localizer["BankAgent"];
             return View();
         }
 
@@ -147,8 +149,9 @@ namespace VietbankWebsite.Controllers
         [Route("leadership/director-board/{detail}")]
         public async Task<IActionResult> DirectorDetail(string detail)
         {
-            
-            return View(await _aboutVietbankService.LeadershipDetail(detail, GetLangCurrent()));
+            var directorDetail = await _aboutVietbankService.LeadershipDetail(detail, GetLangCurrent());
+            ViewData["Title"] = directorDetail.Title;
+            return View(directorDetail);
         }
 
         [HttpGet]
@@ -172,8 +175,9 @@ namespace VietbankWebsite.Controllers
         [Route("leadership/supervisory-board/{detail}")]
         public async Task<IActionResult> SupervisoryDetail(string detail)
         {
-
-            return View(await _aboutVietbankService.LeadershipDetail(detail, GetLangCurrent()));
+            var supervisoryDetail = await _aboutVietbankService.LeadershipDetail(detail, GetLangCurrent());
+            ViewData["Title"] = supervisoryDetail.Title;
+            return View(supervisoryDetail);
         }
 
         [HttpGet]
@@ -198,24 +202,35 @@ namespace VietbankWebsite.Controllers
         [Route("leadership/executive-board/{detail}")]
         public async Task<IActionResult> ManagementDetail(string detail)
         {
-
-            return View(await _aboutVietbankService.LeadershipDetail(detail, GetLangCurrent()));
+            var managementDetail = await _aboutVietbankService.LeadershipDetail(detail, GetLangCurrent());
+            ViewData["Title"] = managementDetail.Title;
+            return View(managementDetail);
         }
+
+        //[HttpGet]
+        //[Route("tin-tuc")]
+        //[Route("news")]
+        //public async Task<IActionResult> News()
+        //{
+        //    return View(await _aboutVietbankService.TopThreeNewsToCate(0,_localizer["NewsUrl"],GetLangCurrent()));
+        //}
 
         [HttpGet]
         [Route("tin-tuc")]
         [Route("news")]
-        public async Task<IActionResult> News()
-        {
-            return View(await _aboutVietbankService.TopThreeNewsToCate(0,_localizer["NewsUrl"],GetLangCurrent()));
-        }
-
-        [HttpGet]
         [Route("tin-tuc/tin-vietbank")]
         [Route("news/vietbank-news")]
         public async Task<IActionResult> VietbankNews()
         {
-            return View(await _aboutVietbankService.TopThreeNewsToCate(17, _localizer["VietbankNewsUrl"], GetLangCurrent()));
+            var keyVietbankNews = GetLangCurrent() == "vi" ? CacheKeys.VietbankNewsVi : CacheKeys.VietbankNewsEn;
+            IEnumerable<TopThreeNewsToCate> topThreeNewsToCates;
+            if (!_cache.TryGetValue(keyVietbankNews, out topThreeNewsToCates))
+            {
+                topThreeNewsToCates = await _aboutVietbankService.TopThreeNewsToCate(17, _localizer["VietbankNewsUrl"], GetLangCurrent());
+                _cache.Set(keyVietbankNews, topThreeNewsToCates, cacheEntryOptions);
+            }
+            ViewData["Title"] = _localizer["VietbankNewsName"];
+            return View(topThreeNewsToCates);
         }
 
         [HttpGet]
@@ -223,6 +238,7 @@ namespace VietbankWebsite.Controllers
         [Route("news/market-news")]
         public async Task<IActionResult> MarketNews()
         {
+            ViewData["Title"] = _localizer["MarketNewsName"];
             return View(await _aboutVietbankService.TopThreeNewsToCate(18, _localizer["MarketNewsUrl"], GetLangCurrent()));
         }
 
@@ -231,7 +247,16 @@ namespace VietbankWebsite.Controllers
         [Route("news/promotion-news")]
         public async Task<IActionResult> PromotionNews()
         {
-            return View(await _aboutVietbankService.TopThreeNewsToCate(19, _localizer["PromotionNewsUrl"], GetLangCurrent()));
+            var keyVietbankPromotionNews = GetLangCurrent() == "vi" ? CacheKeys.VietbankPromotionNewsVi : CacheKeys.VietbankPromotionNewsEn;
+            IEnumerable<TopThreeNewsToCate> topThreeNewsToCates;
+            if (!_cache.TryGetValue(keyVietbankPromotionNews, out topThreeNewsToCates))
+            {
+                topThreeNewsToCates = await _aboutVietbankService.TopThreeNewsToCate(19, _localizer["PromotionNewsUrl"], GetLangCurrent());
+                _cache.Set(keyVietbankPromotionNews, topThreeNewsToCates, cacheEntryOptions);
+            }
+            ViewData["Title"] = _localizer["VietbankNewsName"];
+            ViewData["Title"] = _localizer["PromotionNewsName"];
+            return View(topThreeNewsToCates);
         }
 
         [HttpGet]
@@ -239,7 +264,15 @@ namespace VietbankWebsite.Controllers
         [Route("news/vietbank-tv")]
         public async Task<IActionResult> VietbankTv()
         {
-            return View(await _aboutVietbankService.TopThreeNewsToCate(1069, _localizer["VietbannkTvUrl"], GetLangCurrent()));
+            var keyVietbankTv = GetLangCurrent() == "vi" ? CacheKeys.VietbankTvVi : CacheKeys.VietbankTvEn;
+            IEnumerable<TopThreeNewsToCate> topThreeNewsToCates;
+            if (!_cache.TryGetValue(keyVietbankTv, out topThreeNewsToCates))
+            {
+                topThreeNewsToCates = await _aboutVietbankService.TopThreeNewsToCate(1069, _localizer["VietbannkTvUrl"], GetLangCurrent());
+                _cache.Set(keyVietbankTv, topThreeNewsToCates, cacheEntryOptions);
+            }
+            ViewData["Title"] = _localizer["VietbannkTvName"];
+            return View(topThreeNewsToCates);
         }
 
         [HttpGet]

@@ -38,7 +38,8 @@
       "wwwroot/card/js/core.js",
       "wwwroot/card/js/main.js",
       "wwwroot/js/moment.js",
-      "wwwroot/js/common.js"
+      "wwwroot/js/common.js",
+      "wwwroot/js/site.js"
     ],
     "minify": {
       "enabled": true,

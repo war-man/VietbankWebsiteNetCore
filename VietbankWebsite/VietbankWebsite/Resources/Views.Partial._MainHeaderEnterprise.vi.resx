@@ -157,7 +157,7 @@
     <value>Hỗ Trợ</value>
   </data>
   <data name="HoTroUrl" xml:space="preserve">
-    <value>/ho-tro</value>
+    <value>/doanh-nghiep/ho-tro</value>
   </data>
   <data name="InterestRateBasisName" xml:space="preserve">
     <value>Lãi suất cơ sở</value>

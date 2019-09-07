@@ -121,7 +121,7 @@
     <value>Personal</value>
   </data>
   <data name="CaNhanUrl" xml:space="preserve">
-    <value>/personal/product</value>
+    <value>/enterprise/product</value>
   </data>
   <data name="DoanhNghiep" xml:space="preserve">
     <value>Enterprise</value>
@@ -157,7 +157,7 @@
     <value>Support</value>
   </data>
   <data name="HoTroUrl" xml:space="preserve">
-    <value>/support</value>
+    <value>/enterprise/support</value>
   </data>
   <data name="InterestRateBasisName" xml:space="preserve">
     <value>Interest rate basis</value>

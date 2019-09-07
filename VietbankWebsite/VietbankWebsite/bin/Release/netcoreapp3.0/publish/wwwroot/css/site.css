@@ -939,7 +939,7 @@ body {
     }
 
 .navbar-fixed-left {
-    width: 450px;
+    max-width: 450px;
     position: fixed;
     border-radius: 5px;
     background-color:white;
@@ -947,7 +947,7 @@ body {
 }
 
 .navbar-fixed-right {
-    width: 350px;
+    max-width: 350px;
     position: fixed;
     border-radius: 5px;
     background-color: white;
@@ -1009,4 +1009,8 @@ body {
     font-size: 12px;
     line-height: 1.5;
     border-radius: 3px;
+}
+#tbltygia {
+    margin-bottom: 0px;
+    height: 317px;
 }

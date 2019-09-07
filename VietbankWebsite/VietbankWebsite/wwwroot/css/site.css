@@ -1,6 +1,8 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
-
+main{
+    font-style:initial !important;
+}
 a.navbar-brand {
   white-space: normal;
   text-align: center;
@@ -1014,3 +1016,34 @@ body {
     margin-bottom: 0px;
     height: 317px;
 }
+.left-menusp {
+    background-color: #e5e5e5;
+    margin: 20px 0 30px;
+    padding: 0 15px;
+}
+
+#bank-agent tbody{
+    max-height:unset !important;
+}
+/*BEGIN SEARCH*/
+#search-results {
+    position: absolute;
+    max-width: 400px;
+    word-wrap: break-word;
+    margin-top: 8px;
+    z-index: 10;
+    right: 0px;
+    font-size: .9em;
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
+    #search-results a.list-group-item:nth-of-type(odd) {
+        background-color: #f5f5f5;
+    }
+
+    #search-results .list-group-item {
+        border: 0px;
+        border-top: 1px dashed #ddd;
+    }
+/*END SEARCH*/

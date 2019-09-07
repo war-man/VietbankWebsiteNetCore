@@ -17,15 +17,15 @@ namespace VietbankWebsite.Controllers
     public class HomeController : BaseMvcController
     {
         private IMemoryCache _cache;
-        private readonly IVbBannerService _vbBannerService;
+        private readonly IHomeService _homeService;
         private readonly IShareholderService _shareholderService;
         private readonly ICareersService _careersService;
         private readonly IStringLocalizer<HomeController> _localizer;
-        public HomeController(IStringLocalizer<HomeController> localizer, IMemoryCache memoryCache, IVbBannerService vbBannerService, IShareholderService shareholderService, ICareersService careersService)
+        public HomeController(IStringLocalizer<HomeController> localizer, IMemoryCache memoryCache, IHomeService homeService, IShareholderService shareholderService, ICareersService careersService)
         {
             _cache = memoryCache;
             _localizer = localizer;
-            _vbBannerService = vbBannerService;
+            _homeService = homeService;
             _shareholderService = shareholderService;
             _careersService = careersService;
         }
@@ -37,7 +37,7 @@ namespace VietbankWebsite.Controllers
             IEnumerable<VbBanner> banner;
             if (!_cache.TryGetValue(keyBanner, out banner))
             {
-                banner = await _vbBannerService.GetBanner(GetLangCurrent());
+                banner = await _homeService.GetBanner(GetLangCurrent());
                 _cache.Set(keyBanner, banner, cacheEntryOptions);
             }
             if (banner == null) return RedirectToAction(nameof(NotFoundPage));

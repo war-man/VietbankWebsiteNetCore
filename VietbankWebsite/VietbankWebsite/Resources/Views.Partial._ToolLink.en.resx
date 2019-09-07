@@ -121,7 +121,7 @@
     <value>Form</value>
   </data>
   <data name="BieuMauUrl" xml:space="preserve">
-    <value>/form</value>
+    <value>/personal/support/forms</value>
   </data>
   <data name="ChiNhanh" xml:space="preserve">
     <value>Branches</value>
@@ -133,7 +133,7 @@
     <value>Promotions</value>
   </data>
   <data name="KhuyenMaiUrl" xml:space="preserve">
-    <value>/promotions</value>
+    <value>/about-vietbank/news/promotion-news</value>
   </data>
   <data name="LienHe" xml:space="preserve">
     <value>Contact</value>
@@ -145,6 +145,6 @@
     <value>Rate</value>
   </data>
   <data name="TyGiaUrl" xml:space="preserve">
-    <value>/rate</value>
+    <value>/personal/support/interest-rate</value>
   </data>
 </root>

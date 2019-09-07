@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using VietbankWebsite.Entities;
 using VietbankWebsite.ModelMap;
 using VietbankWebsite.Uow;
 
@@ -28,6 +29,11 @@ namespace VietbankWebsite.Service
         public async Task<IEnumerable<RandomNewsVietbank>> GetRamdomNewsToCategory(int idCate, string aliasCate, string lang)
         {
             return await _unitOfWork.AboutVietbankRepository.GetRamdomNewsToCategory(idCate,aliasCate,lang);
+        }
+
+        public async Task<BankCodeDataTable> GetVbBankCodes()
+        {
+            return await _unitOfWork.AboutVietbankRepository.GetVbBankCodes();
         }
 
         public async Task<IntroduceDetail> IntroduceDetail(int postId, string lang)
@@ -60,5 +66,6 @@ namespace VietbankWebsite.Service
         Task<ListNews> GetListNews(int idCate, string cateName, string aliasCate, string lang, int page, int pageSize);
         Task<NewsDetail> GetNewsDetail(string alias, string lang);
         Task<IEnumerable<RandomNewsVietbank>> GetRamdomNewsToCategory(int idCate, string aliasCate, string lang);
+        Task<BankCodeDataTable> GetVbBankCodes();
     }
 }

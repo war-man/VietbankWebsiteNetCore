@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using VietbankWebsite.Context;
+using VietbankWebsite.Entities;
 using VietbankWebsite.ModelMap;
 
 namespace VietbankWebsite.Repository
@@ -175,19 +176,58 @@ namespace VietbankWebsite.Repository
 
         public async Task<IEnumerable<RandomNewsVietbank>> GetRamdomNewsToCategory(int idCate, string aliasCate, string lang)
         {
-            var listRandom = await (from a in _context.VbPosts
-                                    join b in _context.VbPostCategories on a.Id equals b.post_ID
-                                    join c in _context.VbPostTranslates on b.post_ID equals c.post_ID
-                                    where b.category_ID.Equals(idCate)
-                                    where c.language.Equals(lang)
-                                    orderby a.Id descending
-                                    select new RandomNewsVietbank()
-                                    {
-                                        Title = c.post_title,
-                                        Url = $"{aliasCate}/{c.post_url}",
-                                        PublishedDate = a.post_date.ToString("dd/MM/yyyy")
-                                    }).Take(5).ToListAsync();
-            return listRandom;
+            try
+            {
+                var r = new Random();
+                var lstPost = await _context.VbPostCategories.Where(x => x.category_ID.Equals(idCate)).Select(x => x.post_ID).ToArrayAsync();
+                int[] result = new int[8];
+                for (int i = 0; i < 8; i++)
+                {
+                    var elementRand = r.Next(0, lstPost.Count() - 1);
+                    result[i] = lstPost.ElementAt(elementRand);
+                }
+
+                var listRandom = await (from a in _context.VbPosts
+                                        join b in _context.VbPostCategories on a.Id equals b.post_ID
+                                        join c in _context.VbPostTranslates on b.post_ID equals c.post_ID
+                                        where b.category_ID.Equals(idCate)
+                                        where c.language.Equals(lang)
+                                        where result.Distinct().Contains(b.post_ID)
+                                        where a.post_status.Equals(4)
+                                        orderby a.Id descending
+                                        select new RandomNewsVietbank()
+                                        {
+                                            Title = c.post_title,
+                                            Url = $"{aliasCate}/{c.post_url}",
+                                            PublishedDate = a.post_date.ToString("dd/MM/yyyy")
+                                        }).Take(5).ToListAsync();
+                return listRandom;
+            }
+            catch (Exception ex)
+            {
+                return new List<RandomNewsVietbank>();
+            }
+            
+        }
+
+        private async Task<int[]> ListPostRandomNewsToCategory(int idCate, VietbankContext vietbankContext)
+        {
+            var r = new Random();
+            var lstPost = await vietbankContext.VbPostCategories.Where(x => x.category_ID.Equals(idCate)).Select(x => x.post_ID).ToArrayAsync();
+            int[] result = new int[5];
+            for (int i = 0; i < 5; i++)
+            {
+                result[0] = lstPost.Where(x => !result.Contains(x)).ElementAt(r.Next(1, lstPost.Count()));
+            }
+            return result;
+        }
+
+        public async Task<BankCodeDataTable> GetVbBankCodes()
+        {
+            return new BankCodeDataTable()
+            {
+                Data = await _context.VbBankCodes.Where(x => x.IsInsert.Equals(0)).Where(x => x.IsUpdate.Equals(0)).ToListAsync()
+            };
         }
     }
 
@@ -201,5 +241,6 @@ namespace VietbankWebsite.Repository
 
         Task<NewsDetail> GetNewsDetail(string alias,string lang);
         Task<IEnumerable<RandomNewsVietbank>> GetRamdomNewsToCategory(int idCate, string aliasCate, string lang);
+        Task<BankCodeDataTable> GetVbBankCodes();
     }
 }

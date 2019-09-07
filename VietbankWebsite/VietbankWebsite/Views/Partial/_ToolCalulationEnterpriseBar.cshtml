@@ -1,0 +1,20 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+<a href="javascript:;" class="toggle-click"><i class="fa fa-bars"></i>@Localizer["Category"]</a>
+<div class="nav-toogle">
+    <ul class="nav left-menusp">
+        <li><a href="@Localizer["FaqsUrl"]" class="active">@Localizer["FaqsName"]</a></li>
+        <li class="has-children">
+            <a href="#">@Localizer["UnityToolsName"]</a>
+            <ul class="sub-menu">
+                <li><a href="@Localizer["ForeignExchangeUrl"]">@Localizer["ForeignExchangeName"]</a></li>
+                <li><a href="@Localizer["InterestRateUrl"]">@Localizer["InterestRateName"]</a></li>
+                <li><a href="@Localizer["InterestRateBasisUrl"]">@Localizer["InterestRateBasisName"]</a></li>
+                <li><a href="@Localizer["FormsUrl"]">@Localizer["FormsName"]</a></li>
+                <li><a href="@Localizer["TariffUrl"]">@Localizer["TariffName"]</a></li>
+                <li><a href="@Localizer["FormsUrl"]">@Localizer["FormsName"]</a></li>
+                <li><a href="@Localizer["GuaranteeLetterUrl"]">@Localizer["GuaranteeLetterName"]</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>

@@ -138,6 +138,9 @@
   <data name="NewsUrl" xml:space="preserve">
     <value>/ve-vietbank/tin-tuc</value>
   </data>
+  <data name="OtherNews" xml:space="preserve">
+    <value>Tin khác</value>
+  </data>
   <data name="PromotionNewsName" xml:space="preserve">
     <value>Tin khuyến mãi</value>
   </data>

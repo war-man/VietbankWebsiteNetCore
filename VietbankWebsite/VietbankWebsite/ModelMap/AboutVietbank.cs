@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using VietbankWebsite.Entities;
 
 namespace VietbankWebsite.ModelMap
 {
@@ -63,5 +64,10 @@ namespace VietbankWebsite.ModelMap
         public string page_excerpt { get; set; }
         public string page_thumbnail { get; set; }
         public string page_url { get; set; }
+    }
+
+    public class BankCodeDataTable
+    {
+        public IEnumerable<VbBankCode> Data { get; set; }
     }
 }

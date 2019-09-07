@@ -43,8 +43,8 @@ namespace VietbankWebsite
         {
             LoadInstalledModules();
             services.AddMemoryCache();
-            services.AddTransient<IVbBannerRepository, VbBannerRepository>();
-            services.AddTransient<IVbBannerService, VbBannerService>();
+            services.AddTransient<IHomeRepository, HomeRepository>();
+            services.AddTransient<IHomeService, HomeService>();
 
             services.AddTransient<IShareholderService, ShareholderService>();
             services.AddTransient<IShareholderRepository, ShareholderRepository>();
