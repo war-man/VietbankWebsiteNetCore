@@ -1,0 +1,67 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+<nav class="mobile-menu">
+    <ul id="main-nav">
+        <li class="active dropdown">
+            <a href="@Localizer["SanPhamUrl"]" title="@Localizer["SanPham"]" class="dropdown-toggle">@Localizer["SanPham"]<span class="caret"><i class="fa fa-angle-down"></i></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="@Localizer["CaNhanUrl"]">@Localizer["CaNhan"]</a></li>
+                <li><a href="@Localizer["TinKhuyenMaiPersonalUrl"]">@Localizer["TinKhuyenMaiPersonalName"]</a></li>
+                <li class="dropdown">
+                    <a href="@Localizer["HoTroUrl"]" class="dropdown-toggle">@Localizer["HoTro"]<span class="caret"><i class="fa fa-angle-down"></i></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="@Localizer["FaqsUrl"]">@Localizer["FaqsName"]</a></li>
+                        <li><a href="@Localizer["ForeignExchangeUrl"]">@Localizer["ForeignExchangeName"]</a></li>
+                        <li><a href="@Localizer["InterestRateUrl"]">@Localizer["InterestRateName"]</a></li>
+                        <li><a href="@Localizer["InterestRateBasisUrl"]">@Localizer["InterestRateBasisName"]</a></li>
+                        <li><a href="@Localizer["FormsUrl"]">@Localizer["FormsName"]</a></li>
+                        <li><a href="@Localizer["TariffUrl"]">@Localizer["TariffName"]</a></li>
+                        <li><a href="@Localizer["Tools&CalculatorsUrl"]">@Localizer["Tools&CalculatorsName"]</a></li>
+                        <li><a href="@Localizer["SavingAccountInquiryUrl"]">@Localizer["SavingAccountInquiryName"]</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="@Localizer["QuanHeCoDongUrl"]" title="@Localizer["QuanHeCoDong"]">@Localizer["QuanHeCoDong"]</a></li>
+        <li class="active dropdown">
+            <a href="@Localizer["TuyenDungUrl"]" title="@Localizer["TuyenDung"]" class="dropdown-toggle">@Localizer["TuyenDung"]<span class="caret"><i class="fa fa-angle-down"></i></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="@Localizer["CoHoiNgheNghiepUrl"]">@Localizer["CoHoiNgheNghiep"]</a></li>
+                <li><a href="@Localizer["HuongDanNopHoSoUrl"]">@Localizer["HuongDanNopHoSo"]</a></li>
+            </ul>
+        </li>
+        <li class="active dropdown">
+            <a href="@Localizer["VeVietBankUrl"]" title="@Localizer["VeVietBank"]" class="dropdown-toggle">@Localizer["VeVietBank"]<span class="caret"><i class="fa fa-angle-down"></i></span></a>
+            <ul class="dropdown-menu">
+                <li class="dropdown">
+                    <a href="@Localizer["GioiThieuUrl"]" class="dropdown-toggle">@Localizer["GioiThieuName"]<span class="caret"><i class="fa fa-angle-down"></i></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="@Localizer["QuaTrinhPhatTrienUrl"]">@Localizer["QuaTrinhPhatTrienName"]</a></li>
+                        <li><a href="@Localizer["TamNhinSuMenhUrl"]">@Localizer["TamNhinSuMenhName"]</a></li>
+                        <li><a href="@Localizer["ThuNgoUrl"]">@Localizer["ThuNgoName"]</a></li>
+                        <li><a href="@Localizer["ChatLuongUrl"]">@Localizer["ChatLuongName"]</a></li>
+                        <li><a href="@Localizer["TuanThuUrl"]">@Localizer["TuanThuName"]</a></li>
+                        <li><a href="@Localizer["NganHangDaiLyUrl"]">@Localizer["NganHangDaiLyName"]</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="@Localizer["BanLanhDaoUrl"]" class="dropdown-toggle">@Localizer["BanLanhDaoName"]<span class="caret"><i class="fa fa-angle-down"></i></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="@Localizer["HoiDongQuanTriUrl"]">@Localizer["HoiDongQuanTriName"]</a></li>
+                        <li><a href="@Localizer["BanKiemSoatUrl"]">@Localizer["BanKiemSoatName"]</a></li>
+                        <li><a href="@Localizer["BanDieuHanhUrl"]">@Localizer["BanDieuHanhName"]</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="@Localizer["TinTucUrl"]" class="dropdown-toggle">@Localizer["TinTucName"]<span class="caret"><i class="fa fa-angle-down"></i></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="@Localizer["TinVietbankUrl"]">@Localizer["TinVietbankName"]</a></li>
+                        <li><a href="@Localizer["TinKhuyenMaiUrl"]">@Localizer["TinKhuyenMaiName"]</a></li>
+                        <li><a href="@Localizer["VietbankTvUrl"]">@Localizer["VietbankTvName"]</a></li>
+                    </ul>
+                </li>
+                <li><a href="@Localizer["LienHeUrl"]">@Localizer["LienHeName"]</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>

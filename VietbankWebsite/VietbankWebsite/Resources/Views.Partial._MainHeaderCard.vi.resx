@@ -118,55 +118,55 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="MasterCardName" xml:space="preserve">
-    <value>Ưu đãi dành cho chủ thẻ</value>
+    <value>ƯU ĐÃI DÀNH CHO CHỦ THẺ</value>
   </data>
   <data name="MasterCardUrl" xml:space="preserve">
     <value>/the/uu-dai/uu-dai-danh-cho-chu-the</value>
   </data>
   <data name="NganHangTrucTuyen" xml:space="preserve">
-    <value>Ngân hàng trực tuyến</value>
+    <value>NGÂN HÀNG TRỰC TUYẾN</value>
   </data>
   <data name="NganHangTrucTuyenUrl" xml:space="preserve">
     <value>https://online.vietbank.com.vn</value>
   </data>
   <data name="OfferName" xml:space="preserve">
-    <value>Ưu đãi</value>
+    <value>ƯU ĐÃI</value>
   </data>
   <data name="OfferUrl" xml:space="preserve">
-    <value>/the/uu-dai</value>
+    <value>/the/uu-dai/chuong-trinh-khuyen-mai</value>
   </data>
   <data name="ProductName" xml:space="preserve">
-    <value>Sản phẩm</value>
+    <value>SẢN PHẨM</value>
   </data>
   <data name="ProductUrl" xml:space="preserve">
     <value>/the/san-pham</value>
   </data>
   <data name="PromotionName" xml:space="preserve">
-    <value>Chương trình khuyến mãi</value>
+    <value>CHƯƠNG TRÌNH KHUYẾN MÃI</value>
   </data>
   <data name="PromotionUrl" xml:space="preserve">
     <value>/the/uu-dai/chuong-trinh-khuyen-mai</value>
   </data>
   <data name="SupportName" xml:space="preserve">
-    <value>Hỗ trợ</value>
+    <value>HỖ TRỢ</value>
   </data>
   <data name="SupportUrl" xml:space="preserve">
-    <value>/ho-tro</value>
+    <value>/the/ho-tro</value>
   </data>
   <data name="VietabankMyStyleName" xml:space="preserve">
-    <value>Thẻ tín dụng Vietbank My Style</value>
+    <value>THẺ TÍN DỤNG VIETBANK MY STYLE</value>
   </data>
   <data name="VietabankMyStyleUrl" xml:space="preserve">
     <value>/the/san-pham/the-tin-dung-vietbank-my-style</value>
   </data>
   <data name="VietbankLuxuryPlataniumName" xml:space="preserve">
-    <value>Thẻ tín dụng Vietbank Luxury Platinum</value>
+    <value>THẺ TÍN DỤNG VIETBANK LUXURY PLATINUM</value>
   </data>
   <data name="VietbankLuxuryPlataniumUrl" xml:space="preserve">
     <value>/the/san-pham/the-tin-dung-vietbank-luxury-platinum</value>
   </data>
   <data name="VietbankPlataniumName" xml:space="preserve">
-    <value>Thẻ tín dụng Vietbank Platinum</value>
+    <value>THẺ TÍN DỤNG VIETBANK PLATINUM</value>
   </data>
   <data name="VietbankPlataniumUrl" xml:space="preserve">
     <value>/the/san-pham/the-tin-dung-vietbank-platinum</value>
