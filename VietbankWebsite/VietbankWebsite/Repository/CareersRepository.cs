@@ -143,7 +143,7 @@ namespace VietbankWebsite.Repository
             var marjorSearch = await _context.VbCareerLists.FindAsync(major);
             var careerSearch = from a in _context.VbCareerJobs
                                join b in _context.VbCareerJobDetails on a.Id equals b.Job_Id
-                               //where convertToUnSign2(b.JobTitle).Contains(convertToUnSign2(key))
+                               where b.Url.Contains(convertToUnSign2(key.Replace(" ","-")))
                                where a.CareerID.Contains(marjorSearch.ViCareerName)
                                where a.CityID.Contains(citySearch.ViCityName)
                                where a.Status

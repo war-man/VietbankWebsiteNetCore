@@ -11,41 +11,55 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#nullable restore
 #line 1 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite;
 
 #line default
 #line hidden
+#nullable disable
+#nullable restore
 #line 2 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite.Models;
 
 #line default
 #line hidden
+#nullable disable
+#nullable restore
 #line 1 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_SelectLanguagePartial.cshtml"
 using System.Threading.Tasks;
 
 #line default
 #line hidden
+#nullable disable
+#nullable restore
 #line 2 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_SelectLanguagePartial.cshtml"
 using Microsoft.AspNetCore.Builder;
 
 #line default
 #line hidden
+#nullable disable
+#nullable restore
 #line 3 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_SelectLanguagePartial.cshtml"
 using Microsoft.AspNetCore.Localization;
 
 #line default
 #line hidden
+#nullable disable
+#nullable restore
 #line 4 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_SelectLanguagePartial.cshtml"
 using Microsoft.AspNetCore.Mvc.Localization;
 
 #line default
 #line hidden
+#nullable disable
+#nullable restore
 #line 5 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_SelectLanguagePartial.cshtml"
 using Microsoft.Extensions.Options;
 
 #line default
 #line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"21176022059529db5212d293cce8191b62e21146", @"/Views/Partial/_SelectLanguagePartial.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"226e66e476153809e3942cb65fb4710596043976", @"/Views/_ViewImports.cshtml")]
     public class Views_Partial__SelectLanguagePartial : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
@@ -82,6 +96,7 @@ using Microsoft.Extensions.Options;
         {
             WriteLiteral("\r\n");
             WriteLiteral("\r\n");
+#nullable restore
 #line 10 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_SelectLanguagePartial.cshtml"
   
     var requestCulture = Context.Features.Get<IRequestCultureFeature>();
@@ -91,16 +106,20 @@ using Microsoft.Extensions.Options;
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("<div class=\"language\">\r\n    <div class=\"dropdown\">\r\n        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "21176022059529db5212d293cce8191b62e211466321", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "21176022059529db5212d293cce8191b62e211466625", async() => {
                 WriteLiteral("\r\n");
+#nullable restore
 #line 19 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_SelectLanguagePartial.cshtml"
              if (@requestCulture.RequestCulture.UICulture.Name.Equals("vi"))
             {
 
 #line default
 #line hidden
+#nullable disable
                 WriteLiteral("                <input class=\"hidden\" name=\"culture\" value=\"en\" />\r\n                <button style=\"border:none;\" type=\"submit\" class=\"dropdown-toggle\">English</button>\r\n");
+#nullable restore
 #line 23 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_SelectLanguagePartial.cshtml"
             }
             else
@@ -108,12 +127,15 @@ using Microsoft.Extensions.Options;
 
 #line default
 #line hidden
+#nullable disable
                 WriteLiteral("                <input class=\"hidden\" name=\"culture\" value=\"vi\" />\r\n                <button style=\"border:none;\" type=\"submit\" class=\"dropdown-toggle\">Tiếng Việt</button>\r\n");
+#nullable restore
 #line 28 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_SelectLanguagePartial.cshtml"
             }
 
 #line default
 #line hidden
+#nullable disable
                 WriteLiteral("        ");
             }
             );
@@ -130,11 +152,13 @@ using Microsoft.Extensions.Options;
                 throw new InvalidOperationException(InvalidTagHelperIndexerAssignment("asp-route-returnUrl", "Microsoft.AspNetCore.Mvc.TagHelpers.FormTagHelper", "RouteValues"));
             }
             BeginWriteTagHelperAttribute();
+#nullable restore
 #line 18 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_SelectLanguagePartial.cshtml"
                                                                       WriteLiteral(Context.Request.Path);
 
 #line default
 #line hidden
+#nullable disable
             __tagHelperStringValueBuffer = EndWriteTagHelperAttribute();
             __Microsoft_AspNetCore_Mvc_TagHelpers_FormTagHelper.RouteValues["returnUrl"] = __tagHelperStringValueBuffer;
             __tagHelperExecutionContext.AddTagHelperAttribute("asp-route-returnUrl", __Microsoft_AspNetCore_Mvc_TagHelpers_FormTagHelper.RouteValues["returnUrl"], global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);

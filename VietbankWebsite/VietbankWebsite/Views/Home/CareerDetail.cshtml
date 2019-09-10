@@ -1,4 +1,6 @@
-﻿@model VietbankWebsite.ModelMap.CareerDetail
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@model VietbankWebsite.ModelMap.CareerDetail
 @{
     Layout = "~/Views/Shared/_LayoutCareers.cshtml";
 }
@@ -8,8 +10,8 @@
             <div class="row">
                 <div class="col-xs-12">
                     <ol class="breadcrumb mrt-10">
-                        <li><a href="tuyendung.html">Tuyển dụng</a></li>
-                        <li><a href="tuyendung.html">Cơ hội nghề nghiệp</a></li>
+                        <li><a href="@Localizer["TuyenDungUrl"]">@Localizer["TuyenDungName"]</a></li>
+                        <li><a href="@Localizer["CoHoiNgheNghiepUrl"]">@Localizer["CoHoiNgheNghiepName"]</a></li>
                         <li class="active"><span style="color:#999;">@Model.Title</span></li>
                     </ol>
                 </div>
@@ -34,15 +36,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
-                    <ul class="nav nav-bld">
-                        <li><a href="#">Chương trình tuyển dụng</a></li>
-                        <li><a href="tuyendung.html" class="active">Cơ hội nghề nghiệp</a></li>
-                        <li><a href="#">Hướng dẫn nộp hồ sơ</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12">
+                    <br />
                     @Html.Raw(Model.Content)
                     <br />
                     <div class="content">

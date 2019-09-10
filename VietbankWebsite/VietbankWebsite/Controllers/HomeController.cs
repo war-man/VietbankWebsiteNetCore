@@ -21,13 +21,15 @@ namespace VietbankWebsite.Controllers
         private readonly IShareholderService _shareholderService;
         private readonly ICareersService _careersService;
         private readonly IStringLocalizer<HomeController> _localizer;
-        public HomeController(IStringLocalizer<HomeController> localizer, IMemoryCache memoryCache, IHomeService homeService, IShareholderService shareholderService, ICareersService careersService)
+        private IRecaptchaService _recaptcha;
+        public HomeController(IStringLocalizer<HomeController> localizer, IMemoryCache memoryCache, IHomeService homeService, IShareholderService shareholderService, ICareersService careersService, IRecaptchaService recaptcha)
         {
             _cache = memoryCache;
             _localizer = localizer;
             _homeService = homeService;
             _shareholderService = shareholderService;
             _careersService = careersService;
+            _recaptcha = recaptcha;
         }
 
         [HttpGet]
@@ -65,6 +67,8 @@ namespace VietbankWebsite.Controllers
         }
 
         [HttpGet]
+        [Route("ve-vietbank/tuyen-dung/{career}")]
+        [Route("about-vietbank/careers/{career}")]
         [Route("tuyen-dung/co-hoi-nghe-nghiep/{career}")]
         [Route("careers/carrer-opportunity/{career}")]
         public async Task<IActionResult> CareerDetail(string career)
@@ -151,8 +155,18 @@ namespace VietbankWebsite.Controllers
             return LocalRedirect("/");
         }
 
+        [HttpGet]
         public IActionResult Privacy()
         {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Privacy(ContactModel model)
+        {
+            var recaptcha = await _recaptcha.Validate(Request);
+            if (!recaptcha.success)
+                ModelState.AddModelError("", "There was an error validating recatpcha. Please try again!");
             return View();
         }
 

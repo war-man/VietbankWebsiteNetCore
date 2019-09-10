@@ -14,13 +14,15 @@ namespace VietbankWebsite.Controllers
     public class AboutController : BaseMvcController
     {
         private IMemoryCache _cache;
+        private IRecaptchaService _recaptcha;
         private readonly IAboutVietbankService _aboutVietbankService;
         private readonly IStringLocalizer<AboutController> _localizer;
-        public AboutController(IStringLocalizer<AboutController> localizer, IMemoryCache memoryCache,IAboutVietbankService aboutVietbankService)
+        public AboutController(IStringLocalizer<AboutController> localizer, IMemoryCache memoryCache,IAboutVietbankService aboutVietbankService, IRecaptchaService recaptcha)
         {
             _cache = memoryCache;
             _aboutVietbankService = aboutVietbankService;
             _localizer = localizer;
+            _recaptcha = recaptcha;
         }
         [Route("")]
         [Route("gioi-thieu")]
@@ -313,18 +315,26 @@ namespace VietbankWebsite.Controllers
             return View();
         }
 
-        [HttpGet]
-        [Route("tuyen-dung/{recruitment}")]
-        [Route("recruitment/{recruitment}")]
-        public IActionResult RecruitmentDetail(string recruitment)
-        {
-            return View();
-        }
+        //[HttpGet]
+        //[Route("tuyen-dung/{recruitment}")]
+        //[Route("recruitment/{recruitment}")]
+        //public IActionResult RecruitmentDetail(string recruitment)
+        //{
+        //    return View();
+        //}
 
         [HttpGet]
         [Route("lien-he")]
         [Route("contact")]
         public IActionResult Contact(string recruitment)
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [Route("lien-he")]
+        [Route("contact")]
+        public IActionResult Contact()
         {
             return View();
         }

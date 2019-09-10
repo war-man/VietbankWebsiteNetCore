@@ -12,21 +12,27 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#nullable restore
 #line 1 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite;
 
 #line default
 #line hidden
+#nullable disable
+#nullable restore
 #line 2 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite.Models;
 
 #line default
 #line hidden
+#nullable disable
+#nullable restore
 #line 2 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Recruitment.cshtml"
 using Microsoft.AspNetCore.Mvc.Localization;
 
 #line default
 #line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7a305da1cdc760351ffb2f323824a95a4772eb6e", @"/Views/About/Recruitment.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"226e66e476153809e3942cb65fb4710596043976", @"/Views/_ViewImports.cshtml")]
     public class Views_About_Recruitment : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
@@ -56,12 +62,14 @@ using Microsoft.AspNetCore.Mvc.Localization;
         #pragma warning disable 1998
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
+#nullable restore
 #line 4 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Recruitment.cshtml"
   
     Layout = "~/Views/Shared/_LayoutAbout.cshtml";
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"<section class=""banner-wrap"">
     <section class=""breadcrumb-wrap"">
         <div class=""container"">
@@ -108,7 +116,7 @@ using Microsoft.AspNetCore.Mvc.Localization;
                         <input placeholder=""Từ khóa"" class=""field"">
                         <select name=""career"" class=""career"">
                             ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7a305da1cdc760351ffb2f323824a95a4772eb6e5683", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7a305da1cdc760351ffb2f323824a95a4772eb6e5835", async() => {
                 WriteLiteral("Ngành nghề");
             }
             );
@@ -124,7 +132,7 @@ using Microsoft.AspNetCore.Mvc.Localization;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                        </select>\r\n                        <select name=\"address\" class=\"address\">\r\n                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7a305da1cdc760351ffb2f323824a95a4772eb6e6982", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7a305da1cdc760351ffb2f323824a95a4772eb6e7134", async() => {
                 WriteLiteral("Nơi làm việc");
             }
             );

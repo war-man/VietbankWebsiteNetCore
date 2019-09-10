@@ -69,4 +69,16 @@ namespace VietbankWebsite.ModelMap
         public string FILESCANURL { get; set; }
 
     }
+
+    public class GuaranteelLetter
+    {
+        [Required(ErrorMessage = "Vui lòng nhập Số tài khoản!")]
+        [MaxLength(20,ErrorMessage = "Vượt chiều dài tối đa 20 ký tự")]
+        [MinLength(3, ErrorMessage = "Chiều dài tối thiểu 3 ký tự")]
+        public string acctNbr { get; set; }
+        [Required(ErrorMessage = "Vui lòng nhập Số seri thư bảo lãnh!")]
+        [MaxLength(20, ErrorMessage = "Vượt chiều dài tối đa 20 ký tự")]
+        [MinLength(3, ErrorMessage = "Chiều dài tối thiểu 3 ký tự")]
+        public string seriesNo { get; set; }
+    }
 }

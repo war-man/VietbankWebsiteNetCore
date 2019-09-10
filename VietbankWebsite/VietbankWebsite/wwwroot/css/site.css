@@ -1047,3 +1047,22 @@ body {
         border-top: 1px dashed #ddd;
     }
 /*END SEARCH*/
+.content a.btn-ex {
+    font-size: 0.875rem;
+    font-weight: 500;
+    display: inline-block;
+    padding: 6px 15px;
+    color: #fff;
+    background-color: #66bae2;
+    margin: 0 0 10px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.content a.btn-ex:hover {
+    background-color: #51b0de;
+}
+
+.content a.btn-ex .fa {
+    margin-right: 5px;
+}

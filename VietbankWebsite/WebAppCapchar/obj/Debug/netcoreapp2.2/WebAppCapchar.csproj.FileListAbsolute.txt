@@ -1,0 +1,3 @@
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\WebAppCapchar\obj\Debug\netcoreapp2.2\WebAppCapchar.csprojAssemblyReference.cache
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\WebAppCapchar\obj\Debug\netcoreapp2.2\WebAppCapchar.AssemblyInfoInputs.cache
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\WebAppCapchar\obj\Debug\netcoreapp2.2\WebAppCapchar.AssemblyInfo.cs

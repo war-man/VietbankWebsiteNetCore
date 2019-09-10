@@ -12,16 +12,20 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#nullable restore
 #line 1 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite;
 
 #line default
 #line hidden
+#nullable disable
+#nullable restore
 #line 2 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite.Models;
 
 #line default
 #line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b4b37121d2ba207ae2e3cdcb3bd2bca4fbb1a98a", @"/Views/Home/ShareholdersDetail.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"226e66e476153809e3942cb65fb4710596043976", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_ShareholdersDetail : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<VietbankWebsite.ModelMap.ShareholderDetail>
@@ -29,12 +33,14 @@ using VietbankWebsite.Models;
         #pragma warning disable 1998
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
+#nullable restore
 #line 2 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Home\ShareholdersDetail.cshtml"
   
     Layout = "~/Views/Shared/_LayoutShareholder.cshtml";
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"
     <section class=""banner-wrap"">
         <section class=""breadcrumb-wrap brown"">
@@ -44,19 +50,23 @@ using VietbankWebsite.Models;
                         <ol class=""breadcrumb mrt-10"">
                             <li><a href=""/quan-he-co-dong"">Quan hệ cổ đông</a></li>
                             <li class=""active""><strong>");
+#nullable restore
 #line 13 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Home\ShareholdersDetail.cshtml"
                                                   Write(Model.Title);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</strong></li>\r\n                        </ol>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </section>\r\n        <section class=\"banner-page imageBanner\">\r\n            <div");
             BeginWriteAttribute("style", " style=\"", 733, "\"", 781, 3);
             WriteAttributeValue("", 741, "background-image:url(\'", 741, 22, true);
+#nullable restore
 #line 20 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Home\ShareholdersDetail.cshtml"
 WriteAttributeValue("", 763, Model.Thumbnail, 763, 16, false);
 
 #line default
 #line hidden
+#nullable disable
             WriteAttributeValue("", 779, "\')", 779, 2, true);
             EndWriteAttribute();
             WriteLiteral(@" class=""imgBg""></div>
@@ -68,17 +78,21 @@ WriteAttributeValue("", 763, Model.Thumbnail, 763, 16, false);
                             <h1 class=""title"">Đại hội đồng cổ đông</h1>
                             <div class=""content"">
                                 ");
+#nullable restore
 #line 28 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Home\ShareholdersDetail.cshtml"
                            Write(Html.Raw(Model.Description));
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </section>\r\n    </section>\r\n    <main style=\"background-color: white;\">\r\n        ");
+#nullable restore
 #line 37 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Home\ShareholdersDetail.cshtml"
    Write(Html.Raw(Model.Content));
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("\r\n    </main>\r\n\r\n");
         }
         #pragma warning restore 1998

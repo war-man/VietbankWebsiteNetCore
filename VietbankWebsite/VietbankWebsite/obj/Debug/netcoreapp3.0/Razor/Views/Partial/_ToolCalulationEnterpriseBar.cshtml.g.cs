@@ -12,21 +12,27 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#nullable restore
 #line 1 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite;
 
 #line default
 #line hidden
+#nullable disable
+#nullable restore
 #line 2 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite.Models;
 
 #line default
 #line hidden
+#nullable disable
+#nullable restore
 #line 1 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_ToolCalulationEnterpriseBar.cshtml"
 using Microsoft.AspNetCore.Mvc.Localization;
 
 #line default
 #line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c9f71e6a096c6bbe502576ee51242dfb4210f865", @"/Views/Partial/_ToolCalulationEnterpriseBar.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"226e66e476153809e3942cb65fb4710596043976", @"/Views/_ViewImports.cshtml")]
     public class Views_Partial__ToolCalulationEnterpriseBar : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
@@ -35,129 +41,165 @@ using Microsoft.AspNetCore.Mvc.Localization;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("<a href=\"javascript:;\" class=\"toggle-click\"><i class=\"fa fa-bars\"></i>");
+#nullable restore
 #line 3 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_ToolCalulationEnterpriseBar.cshtml"
                                                                  Write(Localizer["Category"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a>\r\n<div class=\"nav-toogle\">\r\n    <ul class=\"nav left-menusp\">\r\n        <li><a");
             BeginWriteAttribute("href", " href=\"", 252, "\"", 280, 1);
+#nullable restore
 #line 6 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_ToolCalulationEnterpriseBar.cshtml"
 WriteAttributeValue("", 259, Localizer["FaqsUrl"], 259, 21, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(" class=\"active\">");
+#nullable restore
 #line 6 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_ToolCalulationEnterpriseBar.cshtml"
                                                       Write(Localizer["FaqsName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n        <li class=\"has-children\">\r\n            <a href=\"#\">");
+#nullable restore
 #line 8 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_ToolCalulationEnterpriseBar.cshtml"
                    Write(Localizer["UnityToolsName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a>\r\n            <ul class=\"sub-menu\">\r\n                <li><a");
             BeginWriteAttribute("href", " href=\"", 480, "\"", 519, 1);
+#nullable restore
 #line 10 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_ToolCalulationEnterpriseBar.cshtml"
 WriteAttributeValue("", 487, Localizer["ForeignExchangeUrl"], 487, 32, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 10 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_ToolCalulationEnterpriseBar.cshtml"
                                                           Write(Localizer["ForeignExchangeName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                <li><a");
             BeginWriteAttribute("href", " href=\"", 587, "\"", 623, 1);
+#nullable restore
 #line 11 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_ToolCalulationEnterpriseBar.cshtml"
 WriteAttributeValue("", 594, Localizer["InterestRateUrl"], 594, 29, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 11 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_ToolCalulationEnterpriseBar.cshtml"
                                                        Write(Localizer["InterestRateName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                <li><a");
             BeginWriteAttribute("href", " href=\"", 688, "\"", 729, 1);
+#nullable restore
 #line 12 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_ToolCalulationEnterpriseBar.cshtml"
 WriteAttributeValue("", 695, Localizer["InterestRateBasisUrl"], 695, 34, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 12 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_ToolCalulationEnterpriseBar.cshtml"
                                                             Write(Localizer["InterestRateBasisName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                <li><a");
             BeginWriteAttribute("href", " href=\"", 799, "\"", 828, 1);
+#nullable restore
 #line 13 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_ToolCalulationEnterpriseBar.cshtml"
 WriteAttributeValue("", 806, Localizer["FormsUrl"], 806, 22, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 13 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_ToolCalulationEnterpriseBar.cshtml"
                                                 Write(Localizer["FormsName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                <li><a");
             BeginWriteAttribute("href", " href=\"", 886, "\"", 916, 1);
+#nullable restore
 #line 14 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_ToolCalulationEnterpriseBar.cshtml"
 WriteAttributeValue("", 893, Localizer["TariffUrl"], 893, 23, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 14 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_ToolCalulationEnterpriseBar.cshtml"
                                                  Write(Localizer["TariffName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                <li><a");
             BeginWriteAttribute("href", " href=\"", 975, "\"", 1004, 1);
+#nullable restore
 #line 15 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_ToolCalulationEnterpriseBar.cshtml"
 WriteAttributeValue("", 982, Localizer["FormsUrl"], 982, 22, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 15 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_ToolCalulationEnterpriseBar.cshtml"
                                                 Write(Localizer["FormsName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                <li><a");
             BeginWriteAttribute("href", " href=\"", 1062, "\"", 1101, 1);
+#nullable restore
 #line 16 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_ToolCalulationEnterpriseBar.cshtml"
 WriteAttributeValue("", 1069, Localizer["GuaranteeLetterUrl"], 1069, 32, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 16 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_ToolCalulationEnterpriseBar.cshtml"
                                                           Write(Localizer["GuaranteeLetterName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n            </ul>\r\n        </li>\r\n    </ul>\r\n</div>\r\n");
         }
         #pragma warning restore 1998

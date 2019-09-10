@@ -12,16 +12,20 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#nullable restore
 #line 1 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite;
 
 #line default
 #line hidden
+#nullable disable
+#nullable restore
 #line 2 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite.Models;
 
 #line default
 #line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"de3d3760d485fa716613220c426219ddcf968186", @"/Views/Card/Forms.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"226e66e476153809e3942cb65fb4710596043976", @"/Views/_ViewImports.cshtml")]
     public class Views_Card_Forms : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<VietbankWebsite.ModelMap.CardSupportPostView>
@@ -29,6 +33,7 @@ using VietbankWebsite.Models;
         #pragma warning disable 1998
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
+#nullable restore
 #line 2 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Forms.cshtml"
   
     ViewData["Title"] = "Forms";
@@ -36,34 +41,43 @@ using VietbankWebsite.Models;
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("\r\n<main>\r\n    <section class=\"breadcrumb-wrap\">\r\n        <div class=\"breadcrumb-content\">\r\n            <div class=\"container\">\r\n                ");
+#nullable restore
 #line 11 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Forms.cshtml"
            Write(Html.Raw(Model.SiteMap));
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("\r\n            </div>\r\n        </div>\r\n        <div class=\"page-banner\">\r\n            <div class=\"banner-img\"><img");
             BeginWriteAttribute("src", " src=\"", 426, "\"", 443, 1);
+#nullable restore
 #line 15 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Forms.cshtml"
 WriteAttributeValue("", 432, Model.Path, 432, 11, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             BeginWriteAttribute("alt", " alt=\"", 444, "\"", 450, 0);
             EndWriteAttribute();
             WriteLiteral("></div>\r\n            <div class=\"container\">\r\n                <div class=\"banner-caption\">\r\n                    <div class=\"big\">");
+#nullable restore
 #line 18 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Forms.cshtml"
                                 Write(Model.TitleBanner);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</div>\r\n                    <div class=\"des\">");
+#nullable restore
 #line 19 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Forms.cshtml"
                                 Write(Model.Description);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"</div>
                 </div>
             </div>
@@ -75,6 +89,7 @@ WriteAttributeValue("", 432, Model.Path, 432, 11, false);
                 <nav class=""sidebar-category"">
                     <ul class=""cate-link"">
 ");
+#nullable restore
 #line 29 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Forms.cshtml"
                          foreach (var item in Model.Category)
                         {
@@ -83,22 +98,28 @@ WriteAttributeValue("", 432, Model.Path, 432, 11, false);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("                                <li><a");
             BeginWriteAttribute("href", " href=\"", 1144, "\"", 1161, 2);
             WriteAttributeValue("", 1151, "/", 1151, 1, true);
+#nullable restore
 #line 33 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Forms.cshtml"
 WriteAttributeValue("", 1152, item.Url, 1152, 9, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 33 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Forms.cshtml"
                                                     Write(item.Title);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n");
+#nullable restore
 #line 34 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Forms.cshtml"
                             }
                             else
@@ -106,13 +127,17 @@ WriteAttributeValue("", 1152, item.Url, 1152, 9, false);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("                                <li>\r\n                                    <a href=\"#\">");
+#nullable restore
 #line 38 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Forms.cshtml"
                                            Write(item.Title);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a>\r\n                                    <div class=\"btn-showsub\"></div>\r\n                                    <div class=\"sub\">\r\n                                        <ul>\r\n");
+#nullable restore
 #line 42 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Forms.cshtml"
                                              if (item.Child != null)
                                             {
@@ -121,40 +146,51 @@ WriteAttributeValue("", 1152, item.Url, 1152, 9, false);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("                                                    <li>\r\n                                                        <a");
             BeginWriteAttribute("href", " href=\"", 1921, "\"", 1938, 1);
+#nullable restore
 #line 47 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Forms.cshtml"
 WriteAttributeValue("", 1928, child.Url, 1928, 10, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 47 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Forms.cshtml"
                                                                         Write(child.Title);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a>\r\n                                                    </li>\r\n");
+#nullable restore
 #line 49 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Forms.cshtml"
                                                 }
                                             }
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("                                        </ul>\r\n                                    </div>\r\n                                </li>\r\n");
+#nullable restore
 #line 54 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Forms.cshtml"
                             }
                         }
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("                    </ul>\r\n                </nav>\r\n            </div>\r\n            <div class=\"col-12 col-lg-9\">\r\n                ");
+#nullable restore
 #line 60 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Forms.cshtml"
            Write(Html.Raw(Model.Content));
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("\r\n            </div>\r\n        </div>\r\n    </div>\r\n</main>\r\n\r\n");
         }
         #pragma warning restore 1998

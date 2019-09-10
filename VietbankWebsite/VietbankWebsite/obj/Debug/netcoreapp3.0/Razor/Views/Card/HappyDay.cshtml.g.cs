@@ -12,16 +12,20 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#nullable restore
 #line 1 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite;
 
 #line default
 #line hidden
+#nullable disable
+#nullable restore
 #line 2 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite.Models;
 
 #line default
 #line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7eaac8fa8541b7c7d2e3575398f2f38109c59049", @"/Views/Card/HappyDay.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"226e66e476153809e3942cb65fb4710596043976", @"/Views/_ViewImports.cshtml")]
     public class Views_Card_HappyDay : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<VietbankWebsite.ModelMap.IncentivesCateThreeDto>
@@ -51,6 +55,7 @@ using VietbankWebsite.Models;
         #pragma warning disable 1998
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
+#nullable restore
 #line 2 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\HappyDay.cshtml"
   
     ViewData["Title"] = "HappyDay";
@@ -58,52 +63,65 @@ using VietbankWebsite.Models;
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("\r\n<section class=\"breadcrumb-wrap\">\r\n    <div class=\"breadcrumb-content\">\r\n        <div class=\"container\">\r\n            ");
+#nullable restore
 #line 10 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\HappyDay.cshtml"
        Write(Html.Raw(Model.SiteMap));
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("\r\n        </div>\r\n    </div>\r\n</section>\r\n<section class=\"banner-wrap\">\r\n    <div class=\"banner home-banner\">\r\n        <div class=\"item\"><a class=\"banner-img\"");
             BeginWriteAttribute("href", " href=\"", 453, "\"", 477, 1);
+#nullable restore
 #line 16 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\HappyDay.cshtml"
 WriteAttributeValue("", 460, Model.LinkBanner, 460, 17, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral("><img");
             BeginWriteAttribute("src", " src=\"", 483, "\"", 506, 1);
+#nullable restore
 #line 16 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\HappyDay.cshtml"
 WriteAttributeValue("", 489, Model.PathBanner, 489, 17, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             BeginWriteAttribute("alt", " alt=\"", 507, "\"", 513, 0);
             EndWriteAttribute();
             WriteLiteral("></a></div>\r\n    </div>\r\n</section>\r\n<section class=\"promotion-page s2\">\r\n    <div class=\"container\">\r\n        <h1 class=\"d-none\">");
+#nullable restore
 #line 21 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\HappyDay.cshtml"
                       Write(Model.Name);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</h1>\r\n        <div class=\"ht-title img text-center mb-3\"><img");
             BeginWriteAttribute("src", " src=\"", 717, "\"", 739, 1);
+#nullable restore
 #line 22 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\HappyDay.cshtml"
 WriteAttributeValue("", 723, Model.PathImage, 723, 16, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             BeginWriteAttribute("alt", " alt=\"", 740, "\"", 746, 0);
             EndWriteAttribute();
             WriteLiteral("></div>\r\n        <div class=\"home-content text-center\" style=\"max-width: 530px\">\r\n            <div class=\"content\">\r\n                <p>");
+#nullable restore
 #line 25 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\HappyDay.cshtml"
               Write(Model.Description);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"</p>
             </div>
         </div>
@@ -125,7 +143,7 @@ WriteAttributeValue("", 723, Model.PathImage, 723, 16, false);
 ");
             DefineSection("Scripts", async() => {
                 WriteLiteral(" \r\n    ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7eaac8fa8541b7c7d2e3575398f2f38109c590496736", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7eaac8fa8541b7c7d2e3575398f2f38109c590497078", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

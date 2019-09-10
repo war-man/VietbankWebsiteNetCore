@@ -12,16 +12,20 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#nullable restore
 #line 1 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite;
 
 #line default
 #line hidden
+#nullable disable
+#nullable restore
 #line 2 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite.Models;
 
 #line default
 #line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8317fae5d421b82bfc0055e09405f3085a5d8a54", @"/Views/Personal/ProductDetail.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"226e66e476153809e3942cb65fb4710596043976", @"/Views/_ViewImports.cshtml")]
     public class Views_Personal_ProductDetail : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<VietbankWebsite.Entities.ProductDetail>
@@ -29,12 +33,14 @@ using VietbankWebsite.Models;
         #pragma warning disable 1998
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
+#nullable restore
 #line 2 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Personal\ProductDetail.cshtml"
   
     Layout = "~/Views/Shared/_Layout.cshtml";
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"<section class=""banner-wrap"">
     <section class=""breadcrumb-wrap"">
         <div class=""container"">
@@ -43,80 +49,102 @@ using VietbankWebsite.Models;
                     <ol class=""breadcrumb mrt-10"">
                         <li><a");
             BeginWriteAttribute("href", " href=\"", 358, "\"", 385, 1);
+#nullable restore
 #line 11 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Personal\ProductDetail.cshtml"
 WriteAttributeValue("", 365, ViewBag.PersonalUrl, 365, 20, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 11 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Personal\ProductDetail.cshtml"
                                                       Write(ViewBag.PersonalName);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                        <li><a");
             BeginWriteAttribute("href", " href=\"", 449, "\"", 475, 1);
+#nullable restore
 #line 12 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Personal\ProductDetail.cshtml"
 WriteAttributeValue("", 456, ViewBag.ProductUrl, 456, 19, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 12 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Personal\ProductDetail.cshtml"
                                                      Write(ViewBag.ProductName);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                        <li><a");
             BeginWriteAttribute("href", " href=\"", 538, "\"", 563, 1);
+#nullable restore
 #line 13 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Personal\ProductDetail.cshtml"
 WriteAttributeValue("", 545, Model.CategoryUrl, 545, 18, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 13 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Personal\ProductDetail.cshtml"
                                                     Write(Model.CategoryName);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                        <li class=\"active\"><span style=\"color:#999;\">");
+#nullable restore
 #line 14 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Personal\ProductDetail.cshtml"
                                                                 Write(Model.Title);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</span></li>\r\n                    </ol>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </section>\r\n    <section class=\"banner-page imageBanner\">\r\n        <div");
             BeginWriteAttribute("style", " style=\"", 852, "\"", 900, 3);
             WriteAttributeValue("", 860, "background-image:url(\'", 860, 22, true);
+#nullable restore
 #line 21 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Personal\ProductDetail.cshtml"
 WriteAttributeValue("", 882, Model.Thumbnail, 882, 16, false);
 
 #line default
 #line hidden
+#nullable disable
             WriteAttributeValue("", 898, "\')", 898, 2, true);
             EndWriteAttribute();
             WriteLiteral(" class=\"imgBg\"></div>\r\n        <div class=\"desc\">\r\n            <div class=\"container\">\r\n                <div class=\"row\">\r\n                    <div class=\"col-xs-12 col-sm-5 col-lg-5 col-xl-5\">\r\n                        <h1 class=\"title\">");
+#nullable restore
 #line 26 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Personal\ProductDetail.cshtml"
                                      Write(Model.Title);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</h1>\r\n                        <div class=\"content\">");
+#nullable restore
 #line 27 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Personal\ProductDetail.cshtml"
                                         Write(Html.Raw(Model.Description));
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </section>\r\n</section>\r\n<main>\r\n    ");
+#nullable restore
 #line 35 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Personal\ProductDetail.cshtml"
 Write(Html.Raw(Model.Content));
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"
     <section class=""pagination-prd"">
         <div class=""container"">
@@ -127,18 +155,22 @@ Write(Html.Raw(Model.Content));
                 <div class=""col-xs-12 col-md-4"">
                     <div class=""prd-list""><a");
             BeginWriteAttribute("href", " href=\"", 1835, "\"", 1860, 1);
+#nullable restore
 #line 43 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Personal\ProductDetail.cshtml"
 WriteAttributeValue("", 1842, Model.CategoryUrl, 1842, 18, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral("><i class=\"fa fa-bars\" aria-hidden=\"true\"></i><span>");
+#nullable restore
 #line 43 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Personal\ProductDetail.cshtml"
                                                                                                                      Write(Model.CategoryName);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"</span></a></div>
                 </div>
                 <div class=""col-xs-12 col-md-4"">

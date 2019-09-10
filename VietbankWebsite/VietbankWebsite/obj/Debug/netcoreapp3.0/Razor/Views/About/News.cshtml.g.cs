@@ -12,21 +12,27 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#nullable restore
 #line 1 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite;
 
 #line default
 #line hidden
+#nullable disable
+#nullable restore
 #line 2 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite.Models;
 
 #line default
 #line hidden
+#nullable disable
+#nullable restore
 #line 2 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\News.cshtml"
 using Microsoft.AspNetCore.Mvc.Localization;
 
 #line default
 #line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"40a8064480113faf681709b2b4dff313a958c0fa", @"/Views/About/News.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"226e66e476153809e3942cb65fb4710596043976", @"/Views/_ViewImports.cshtml")]
     public class Views_About_News : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<VietbankWebsite.ModelMap.TopThreeNewsToCate>>
@@ -34,12 +40,14 @@ using Microsoft.AspNetCore.Mvc.Localization;
         #pragma warning disable 1998
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
+#nullable restore
 #line 4 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\News.cshtml"
   
     Layout = "~/Views/Shared/_LayoutAbout.cshtml";
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"<section class=""banner-wrap"">
     <section class=""breadcrumb-wrap brown"">
         <div class=""container"">
@@ -48,24 +56,30 @@ using Microsoft.AspNetCore.Mvc.Localization;
                     <ol class=""breadcrumb mrt-10"">
                         <li><a");
             BeginWriteAttribute("href", " href=\"", 467, "\"", 496, 1);
+#nullable restore
 #line 13 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\News.cshtml"
 WriteAttributeValue("", 474, Localizer["AboutUrl"], 474, 22, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 13 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\News.cshtml"
                                                         Write(Localizer["AboutName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                        <li style=\"color: #999;\" class=\"active\"><strong>");
+#nullable restore
 #line 14 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\News.cshtml"
                                                                    Write(Localizer["NewsName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"</strong></li>
                     </ol>
                 </div>
@@ -77,11 +91,13 @@ WriteAttributeValue("", 474, Localizer["AboutUrl"], 474, 22, false);
             <div class=""row"">
                 <div class=""col-xs-12"">
                     <h1 class=""blue"">");
+#nullable restore
 #line 24 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\News.cshtml"
                                 Write(Localizer["NewsName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"                                                                                                                                                                                            </h1>
                 </div>
             </div>
@@ -93,34 +109,42 @@ WriteAttributeValue("", 474, Localizer["AboutUrl"], 474, 22, false);
         <div class=""slider"">
             <div class=""owl-carousel"">
 ");
+#nullable restore
 #line 34 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\News.cshtml"
                  foreach (var news in Model)
                 {
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("                    <div class=\"item-newspecial\">\r\n                        <div class=\"row\">\r\n                            <div class=\"col-xs-12 col-md-8\">\r\n                                <div class=\"thumb\">\r\n                                    <a");
             BeginWriteAttribute("href", " href=\"", 1670, "\"", 1686, 1);
+#nullable restore
 #line 40 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\News.cshtml"
 WriteAttributeValue("", 1677, news.Url, 1677, 9, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">\r\n                                        <img");
             BeginWriteAttribute("src", " src=\"", 1734, "\"", 1755, 1);
+#nullable restore
 #line 41 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\News.cshtml"
 WriteAttributeValue("", 1740, news.Thumbnail, 1740, 15, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             BeginWriteAttribute("alt", " alt=\"", 1756, "\"", 1773, 1);
+#nullable restore
 #line 41 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\News.cshtml"
 WriteAttributeValue("", 1762, news.Title, 1762, 11, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(@">
                                     </a>
@@ -130,37 +154,47 @@ WriteAttributeValue("", 1762, news.Title, 1762, 11, false);
                                 <div class=""title-news"">
                                     <h4>Tin mới nhất</h4>
                                     <time>");
+#nullable restore
 #line 48 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\News.cshtml"
                                      Write(news.PublishDate.ToString("dd/MM/yyyy"));
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</time>\r\n                                </div>\r\n                                <h1 class=\"title\"><a");
             BeginWriteAttribute("href", " href=\"", 2257, "\"", 2273, 1);
+#nullable restore
 #line 50 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\News.cshtml"
 WriteAttributeValue("", 2264, news.Url, 2264, 9, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 50 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\News.cshtml"
                                                                  Write(news.Title);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></h1>\r\n                                <div class=\"brief\">");
+#nullable restore
 #line 51 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\News.cshtml"
                                               Write(news.Description);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</div>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n");
+#nullable restore
 #line 55 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\News.cshtml"
                 }
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"            </div>
         </div>
     </div>
@@ -173,60 +207,76 @@ WriteAttributeValue("", 2264, news.Url, 2264, 9, false);
                     <ul class=""nav nav-bld"">
                         <li><a");
             BeginWriteAttribute("href", " href=\"", 2770, "\"", 2798, 1);
+#nullable restore
 #line 66 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\News.cshtml"
 WriteAttributeValue("", 2777, Localizer["NewsUrl"], 2777, 21, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(" class=\"active\">");
+#nullable restore
 #line 66 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\News.cshtml"
                                                                       Write(Localizer["AllNewsName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                        <li><a");
             BeginWriteAttribute("href", " href=\"", 2881, "\"", 2917, 1);
+#nullable restore
 #line 67 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\News.cshtml"
 WriteAttributeValue("", 2888, Localizer["VietbankNewsUrl"], 2888, 29, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 67 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\News.cshtml"
                                                                Write(Localizer["VietbankNewsName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                        <li><a");
             BeginWriteAttribute("href", " href=\"", 2990, "\"", 3027, 1);
+#nullable restore
 #line 68 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\News.cshtml"
 WriteAttributeValue("", 2997, Localizer["PromotionNewsUrl"], 2997, 30, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 68 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\News.cshtml"
                                                                 Write(Localizer["PromotionNewsName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                        <li><a");
             BeginWriteAttribute("href", " href=\"", 3101, "\"", 3136, 1);
+#nullable restore
 #line 69 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\News.cshtml"
 WriteAttributeValue("", 3108, Localizer["VietbannkTvUrl"], 3108, 28, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 69 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\News.cshtml"
                                                               Write(Localizer["VietbannkTvName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"</a></li>
                     </ul>
                 </div>

@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
+using reCAPTCHA.AspNetCore;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -106,6 +107,12 @@ namespace VietbankWebsite
                     moduleInitializer.Init(services);
                 }
             }
+            var recaptcha = Configuration.GetSection("RecaptchaSettings");
+            if (!recaptcha.Exists())
+                throw new ArgumentException("Missing RecaptchaSettings in configuration.");
+
+            services.Configure<RecaptchaSettings>(recaptcha);
+            services.AddTransient<IRecaptchaService, RecaptchaService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

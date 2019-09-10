@@ -17,15 +17,17 @@ namespace VietbankWebsite.Controllers
     public class EnterpriseController : BaseMvcController
     {
         private IMemoryCache _cache;
+        private IRecaptchaService _recaptcha;
         private readonly IProductService _productService;
         private readonly IStringLocalizer<EnterpriseController> _localizer;
         private readonly ISupportService _supportService;
-        public EnterpriseController(IProductService productService, IStringLocalizer<EnterpriseController> localizer, ISupportService supportService, IMemoryCache cache)
+        public EnterpriseController(IProductService productService, IStringLocalizer<EnterpriseController> localizer, ISupportService supportService, IMemoryCache cache, IRecaptchaService recaptcha)
         {
             _cache = cache;
             _productService = productService;
             _localizer = localizer;
             _supportService = supportService;
+            _recaptcha = recaptcha;
         }
         [HttpGet]
         [Route("ban-can")]
@@ -155,6 +157,45 @@ namespace VietbankWebsite.Controllers
         public IActionResult GuaranteeLetter()
         {
             return View();
+        }
+
+        [HttpPost]
+        [Route("ho-tro/xac-thuc-thu-bao-lanh")]
+        [Route("support/guarantee-letter")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> GuaranteeLetter(GuaranteelLetter model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+            var recaptcha = await _recaptcha.Validate(Request);
+            if (!recaptcha.success)
+            {
+                ModelState.AddModelError("", "Mã xác thực không đúng, Vui lòng thử lại");
+                return View(model);
+            }
+            ViewBag.GuaranteelLetter = GenerateTableGuaranteeLetter(await _supportService.GetGuaranteeLetter(model.acctNbr,model.seriesNo));
+            return RedirectToAction(nameof(GuaranteeLetter));
+        }
+
+        private string GenerateTableGuaranteeLetter(ThuBaoLanhModel thuBaoLanh)
+        {
+            thuBaoLanh.ISVALID = (thuBaoLanh.CURRACCTSTATCD == "ACT" && (thuBaoLanh.DENNGAY.AddDays(1) > DateTime.Now)) ? _localizer["ThuBaoLanhActivedResult"] : _localizer["ThuBaoLanhExpriedResult"];
+            thuBaoLanh.FILESCANURL = string.IsNullOrEmpty(thuBaoLanh.FILESCAN) ? "" : $"<a href='http://www.vietBank.com.vn/uploadFolder/file/scan/{thuBaoLanh.FILESCAN}' target='_blank'>{_localizer["ThuBaoLanhViewLetter"]}</a>";
+            string guaranteeLetter = $"<table class='table table-hover' style='padding-bottom: 14px;'>" +
+                    $"<thead><tr><th colspan='3'>{_localizer["ThuBaoLanhName"]}</th></tr></thead>" +
+                    "<tbody>" +
+                        $"<tr><td>{_localizer["ThuBaoLanhSTK"]}</td><td>{thuBaoLanh.ACCTNBR}</td></tr>" +
+                        $"<tr><td>{_localizer["ThuBaoLanhSeri"]}</td><td>{thuBaoLanh.SERIES}</td></tr>" +
+                        $"<tr><td>{_localizer["ThuBaoLanhPublish"]}</td><td>{thuBaoLanh.DATE_EFF.ToString("dd/MM/yyyy")}</td></tr>" +
+                        $"<tr><td>{_localizer["ThuBaoLanhValue"]}</td><td>{thuBaoLanh.CURRENTBALANCE} VND</td></tr>" +
+                        $"<tr><td>{_localizer["ThuBaoLanhCompany"]}</td><td>{thuBaoLanh.HOTEN}</td></tr>" +
+                        $"<tr><td>{_localizer["ThuBaoLanhActive"]}</td><td>{thuBaoLanh.ISVALID}</td></tr>" +
+                        $"<tr><td>{_localizer["ThuBaoLanhContent"]}</td><td>{thuBaoLanh.FILESCANURL}</td></tr>" +
+                    "</tbody>" +
+                "</table>";
+            return guaranteeLetter;
         }
 
         [HttpGet]

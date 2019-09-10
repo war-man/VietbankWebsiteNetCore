@@ -1,4 +1,6 @@
-﻿@model VietbankWebsite.ModelMap.Careers
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@model VietbankWebsite.ModelMap.Careers
 @{
     Layout = "~/Views/Shared/_LayoutCareers.cshtml";
 }
@@ -9,8 +11,8 @@
             <div class="row">
                 <div class="col-xs-12">
                     <ol class="breadcrumb mrt-10">
-                        <li><a href="gioithieu.html">Về Vietbank</a></li>
-                        <li><a href="tuyendung.html">Tuyển dụng</a></li>
+                        <li><a href="@Localizer["TuyenDungUrl"]">@Localizer["TuyenDungName"]</a></li>
+                        <li><a href="@Localizer["CoHoiNgheNghiepUrl"]">@Localizer["CoHoiNgheNghiepName"]</a></li>
                         <li class="active"><span style="color:#999;">@Model.Title</span></li>
                     </ol>
                 </div>
@@ -90,6 +92,6 @@
     </section>
 </main>
 
-@section Scripts{ 
+@section Scripts{
     <script src="~/page/career-search.js"></script>
 }

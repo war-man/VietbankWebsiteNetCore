@@ -12,16 +12,20 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#nullable restore
 #line 1 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite;
 
 #line default
 #line hidden
+#nullable disable
+#nullable restore
 #line 2 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite.Models;
 
 #line default
 #line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"12d6f7ef7aba75b4b52f01cdc9473fe01ef83300", @"/Views/Card/PromotionDetail.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"226e66e476153809e3942cb65fb4710596043976", @"/Views/_ViewImports.cshtml")]
     public class Views_Card_PromotionDetail : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<VietbankWebsite.ModelMap.IncentivesPostTwoDto>
@@ -29,30 +33,38 @@ using VietbankWebsite.Models;
         #pragma warning disable 1998
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
+#nullable restore
 #line 2 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\PromotionDetail.cshtml"
   
     Layout = "~/Views/Shared/_LayoutCard.cshtml";
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("<section class=\"breadcrumb-wrap\">\r\n    <div class=\"breadcrumb-content\">\r\n        <div class=\"container\">\r\n            ");
+#nullable restore
 #line 8 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\PromotionDetail.cshtml"
        Write(Html.Raw(Model.SiteMap));
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("\r\n        </div>\r\n    </div>\r\n</section>\r\n<!--<section class=\"banner-section\">\r\n    <div class=\"banner owl-carousel\" style=\"background: #005baa\">\r\n        <div class=\"item\"><a class=\"banner-img\" href=\"#!\"><img src=\"");
+#nullable restore
 #line 14 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\PromotionDetail.cshtml"
                                                                Write(Model.PathBanner);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("\" alt=\"\"></a></div>\r\n    </div>\r\n</section>-->\r\n");
+#nullable restore
 #line 17 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\PromotionDetail.cshtml"
 Write(Html.Raw(Model.Content));
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("\r\n\r\n");
         }
         #pragma warning restore 1998

@@ -467,7 +467,6 @@ T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\net
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\Razor\Views\Partial\_TopHeaderCareers.cshtml.g.cs
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\Razor\Views\Shared\_LayoutCareers.cshtml.g.cs
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\Razor\Views\Shared\_LayoutEnterprise.cshtml.g.cs
-T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\VietbankWebsite.Resources.Views.Partial._MainHeaderdfd.en.resources
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\VietbankWebsite.Resources.Views.Partial._MainHeaderMap.en.resources
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\VietbankWebsite.Resources.Views.Partial._MainHeaderMap.vi.resources
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\VietbankWebsite.Resources.Views.Partial._TopHeaderMap.en.resources
@@ -529,3 +528,19 @@ T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\net
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\Razor\Views\Partial\_ToolCalulationEnterpriseBar.cshtml.g.cs
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\Razor\Views\Partial\_ToolCalulationPersonalBar.cshtml.g.cs
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\Razor\Views\Partial\_ToolLinkMobile.cshtml.g.cs
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\VietbankWebsite.Resources.Views.Partial._MenuCardMobile.en.resources
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\VietbankWebsite.Resources.Views.Partial._MenuCardMobile.vi.resources
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\VietbankWebsite.Resources.Views.Partial._MenuEnterpriseMobile.en.resources
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\VietbankWebsite.Resources.Views.Partial._MenuEnterpriseMobile.vi.resources
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\VietbankWebsite.Resources.Views.Partial._MenuPersonalMobile.en.resources
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\VietbankWebsite.Resources.Views.Partial._MenuPersonalMobile.vi.resources
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\Razor\Views\Partial\_MenuCardMobile.cshtml.g.cs
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\Razor\Views\Partial\_MenuEnterpriseMobile.cshtml.g.cs
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\Razor\Views\Partial\_MenuPersonalMobile.cshtml.g.cs
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Release\netcoreapp3.0\reCAPTCHA.AspNetCore.dll
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\VietbankWebsite.Resources.Views.Home.CareerDetail.en.resources
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\VietbankWebsite.Resources.Views.Home.CareerDetail.vi.resources
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\VietbankWebsite.Resources.Views.Home.CareerGuide.en.resources
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\VietbankWebsite.Resources.Views.Home.CareerGuide.vi.resources
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\VietbankWebsite.Resources.Views.Home.Careers.en.resources
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\VietbankWebsite.Resources.Views.Home.Careers.vi.resources

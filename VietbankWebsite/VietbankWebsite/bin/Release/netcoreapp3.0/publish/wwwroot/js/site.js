@@ -1,5 +1,6 @@
 ﻿(function () {
     initialSearchInforChange();    
+    initialDivToUpClick();
 })();
 var delay = (function () {
     var timer = 0;
@@ -37,4 +38,10 @@ function generateResultSearch(result) {
         listResult += '<a class="list-group-item" href="' + result[i].url + '"> <i class="zmdi zmdi-file-text"></i><span>' + result[i].title+'</span></a>';
     }
     $('#search-results').html(listResult);
+}
+
+function initialDivToUpClick() {
+    $('div.up').click(function () {
+        $(window).scrollTop(0);
+    });
 }

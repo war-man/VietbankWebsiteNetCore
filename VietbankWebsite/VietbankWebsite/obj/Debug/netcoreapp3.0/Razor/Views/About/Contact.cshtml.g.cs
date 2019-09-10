@@ -12,21 +12,27 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#nullable restore
 #line 1 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite;
 
 #line default
 #line hidden
+#nullable disable
+#nullable restore
 #line 2 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite.Models;
 
 #line default
 #line hidden
+#nullable disable
+#nullable restore
 #line 1 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Contact.cshtml"
 using Microsoft.AspNetCore.Mvc.Localization;
 
 #line default
 #line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"575eaf78f6c0c1cf62d6b0e51337c52b3594d02e", @"/Views/About/Contact.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"226e66e476153809e3942cb65fb4710596043976", @"/Views/_ViewImports.cshtml")]
     public class Views_About_Contact : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
@@ -34,6 +40,7 @@ using Microsoft.AspNetCore.Mvc.Localization;
         #pragma warning disable 1998
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
+#nullable restore
 #line 3 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Contact.cshtml"
   
     ViewData["Title"] = @Localizer["LienHeName"];
@@ -41,6 +48,7 @@ using Microsoft.AspNetCore.Mvc.Localization;
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"
 <section class=""banner-wrap"">
     <section class=""breadcrumb-wrap"">
@@ -50,24 +58,30 @@ using Microsoft.AspNetCore.Mvc.Localization;
                     <ol class=""breadcrumb mrt-10"">
                         <li><a");
             BeginWriteAttribute("href", " href=\"", 449, "\"", 483, 1);
+#nullable restore
 #line 14 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Contact.cshtml"
 WriteAttributeValue("", 456, Localizer["VeVietbankUrl"], 456, 27, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 14 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Contact.cshtml"
                                                              Write(Localizer["VeVietbankName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                        <li class=\"active\"><span>");
+#nullable restore
 #line 15 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Contact.cshtml"
                                             Write(Localizer["LienHeName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"</span></li>
                     </ol>
                 </div>
@@ -81,17 +95,21 @@ WriteAttributeValue("", 456, Localizer["VeVietbankUrl"], 456, 27, false);
                 <div class=""row"">
                     <div class=""col-xs-12 col-sm-5 col-lg-5 col-xl-5"">
                         <h1 class=""title"">");
+#nullable restore
 #line 27 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Contact.cshtml"
                                      Write(Localizer["LienHeName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</h1>\r\n                        <div class=\"content\">");
+#nullable restore
 #line 28 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Contact.cshtml"
                                         Write(Localizer["LienHeDes"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"</div>
                     </div>
                 </div>
@@ -107,131 +125,173 @@ WriteAttributeValue("", 456, Localizer["VeVietbankUrl"], 456, 27, false);
                     <div class=""block-info-wrap"">
                         <div class=""block-addr"">
                             <h1>");
+#nullable restore
 #line 42 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Contact.cshtml"
                            Write(Localizer["String1"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</h1>\r\n                            <p><strong>");
+#nullable restore
 #line 43 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Contact.cshtml"
                                   Write(Localizer["String2"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(" </strong>");
+#nullable restore
 #line 43 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Contact.cshtml"
                                                                  Write(Localizer["String3"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</p>\r\n                            <p><strong>");
+#nullable restore
 #line 44 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Contact.cshtml"
                                   Write(Localizer["String4"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(" </strong>");
+#nullable restore
 #line 44 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Contact.cshtml"
                                                                  Write(Localizer["String5"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</p>\r\n                            <p class=\"addr\"><strong>");
+#nullable restore
 #line 45 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Contact.cshtml"
                                                Write(Localizer["String6"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(" </strong>");
+#nullable restore
 #line 45 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Contact.cshtml"
                                                                               Write(Localizer["String7"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</p>\r\n                            <h1>");
+#nullable restore
 #line 46 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Contact.cshtml"
                            Write(Localizer["String8"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</h1>\r\n                            <p><strong>");
+#nullable restore
 #line 47 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Contact.cshtml"
                                   Write(Localizer["String9"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(": </strong>");
+#nullable restore
 #line 47 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Contact.cshtml"
                                                                   Write(Localizer["String10"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</p>\r\n                            <p><strong>");
+#nullable restore
 #line 48 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Contact.cshtml"
                                   Write(Localizer["String11"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(" </strong>");
+#nullable restore
 #line 48 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Contact.cshtml"
                                                                   Write(Localizer["String12"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</p>\r\n                            <p class=\"addr\"><strong>");
+#nullable restore
 #line 49 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Contact.cshtml"
                                                Write(Localizer["String13"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(" </strong>");
+#nullable restore
 #line 49 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Contact.cshtml"
                                                                                Write(Localizer["String14"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</p>\r\n                            <p><strong>");
+#nullable restore
 #line 50 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Contact.cshtml"
                                   Write(Localizer["String15"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(" </strong>");
+#nullable restore
 #line 50 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Contact.cshtml"
                                                                   Write(Localizer["String16"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</p>\r\n                            <p><strong>");
+#nullable restore
 #line 51 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Contact.cshtml"
                                   Write(Localizer["String17"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</strong> ");
+#nullable restore
 #line 51 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Contact.cshtml"
                                                                   Write(Localizer["String18"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</p>\r\n                        </div>\r\n                        <div class=\"block-atmLink\">\r\n                            <h2>");
+#nullable restore
 #line 54 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Contact.cshtml"
                            Write(Localizer["String19"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</h2>\r\n                            <div class=\"row\">\r\n                                <div class=\"col-md-6\">\r\n                                    <div class=\"text\">");
+#nullable restore
 #line 57 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Contact.cshtml"
                                                  Write(Localizer["String20"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</div><a href=\"#\">\r\n                                        <i class=\"fa fa-angle-right\"></i>\r\n                                        ");
+#nullable restore
 #line 59 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Contact.cshtml"
                                    Write(Localizer["String21"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"
                                     </a>
                                 </div>
@@ -243,17 +303,21 @@ WriteAttributeValue("", 456, Localizer["VeVietbankUrl"], 456, 27, false);
                 <div class=""col-md-7 col-lg-8"">
                     <div class=""block-form"">
                         <p class=""title"">");
+#nullable restore
 #line 69 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Contact.cshtml"
                                     Write(Localizer["String22"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</p>\r\n                        <div class=\"row\">\r\n                            <div class=\"col-md-6\">\r\n                                <label>\r\n                                    ");
+#nullable restore
 #line 73 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Contact.cshtml"
                                Write(Localizer["String23"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"
                                     (<span class=""red"">*</span>):
                                 </label>
@@ -261,11 +325,13 @@ WriteAttributeValue("", 456, Localizer["VeVietbankUrl"], 456, 27, false);
                             </div>
                             <div class=""col-md-6"">
                                 <label>");
+#nullable restore
 #line 79 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Contact.cshtml"
                                   Write(Localizer["String24"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"</label>
                                 <input name=""phone"">
                             </div>
@@ -273,17 +339,21 @@ WriteAttributeValue("", 456, Localizer["VeVietbankUrl"], 456, 27, false);
                         <div class=""row"">
                             <div class=""col-md-6"">
                                 <label>");
+#nullable restore
 #line 85 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Contact.cshtml"
                                   Write(Localizer["String25"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</label>\r\n                                <input name=\"name\">\r\n                            </div>\r\n                            <div class=\"col-md-6\">\r\n                                <label>\r\n                                    ");
+#nullable restore
 #line 90 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Contact.cshtml"
                                Write(Localizer["String26"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"
                                     (<span class=""red"">*</span>):
                                 </label>
@@ -293,17 +363,21 @@ WriteAttributeValue("", 456, Localizer["VeVietbankUrl"], 456, 27, false);
                         <div class=""row"">
                             <div class=""col-md-6"">
                                 <label>");
+#nullable restore
 #line 98 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Contact.cshtml"
                                   Write(Localizer["String27"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</label>\r\n                                <input name=\"name\">\r\n                            </div>\r\n                            <div class=\"col-md-6\">\r\n                                <label>\r\n                                    ");
+#nullable restore
 #line 103 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Contact.cshtml"
                                Write(Localizer["String28"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"
                                     (<span class=""red"">*</span>):
                                 </label>
@@ -314,11 +388,13 @@ WriteAttributeValue("", 456, Localizer["VeVietbankUrl"], 456, 27, false);
                             <div class=""col-md-12"">
                                 <label>
                                     ");
+#nullable restore
 #line 112 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Contact.cshtml"
                                Write(Localizer["String29"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"
                                     (<span class=""red"">*</span>):
                                 </label>
@@ -329,11 +405,13 @@ WriteAttributeValue("", 456, Localizer["VeVietbankUrl"], 456, 27, false);
                             <div class=""col-md-12"">
                                 <label>
                                     ");
+#nullable restore
 #line 121 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Contact.cshtml"
                                Write(Localizer["String30"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"
                                     (<span class=""red"">*</span>):
                                 </label>
@@ -345,11 +423,13 @@ WriteAttributeValue("", 456, Localizer["VeVietbankUrl"], 456, 27, false);
                         </div>
                         <div class=""row mrt-30"">
                             <div class=""col-sm-12""><a href=""#"" class=""confirm"">");
+#nullable restore
 #line 131 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Contact.cshtml"
                                                                           Write(Localizer["String31"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </section>\r\n</main>\r\n\r\n");
         }
         #pragma warning restore 1998
