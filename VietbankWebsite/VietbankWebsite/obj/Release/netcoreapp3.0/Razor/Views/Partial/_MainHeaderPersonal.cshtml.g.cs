@@ -12,21 +12,27 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#nullable restore
 #line 1 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite;
 
 #line default
 #line hidden
+#nullable disable
+#nullable restore
 #line 2 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite.Models;
 
 #line default
 #line hidden
+#nullable disable
+#nullable restore
 #line 1 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MainHeaderPersonal.cshtml"
 using Microsoft.AspNetCore.Mvc.Localization;
 
 #line default
 #line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"813ec4b7ffbd85179072f09f850535974041a31a", @"/Views/Partial/_MainHeaderPersonal.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"226e66e476153809e3942cb65fb4710596043976", @"/Views/_ViewImports.cshtml")]
     public class Views_Partial__MainHeaderPersonal : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
@@ -69,160 +75,204 @@ using Microsoft.AspNetCore.Mvc.Localization;
                 <ul>
                     <li class=""active""><a");
             BeginWriteAttribute("href", " href=\"", 512, "\"", 542, 1);
+#nullable restore
 #line 12 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MainHeaderPersonal.cshtml"
 WriteAttributeValue("", 519, Localizer["CaNhanUrl"], 519, 23, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 12 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MainHeaderPersonal.cshtml"
                                                                     Write(Localizer["CaNhan"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                    <li><a");
             BeginWriteAttribute("href", " href=\"", 601, "\"", 637, 1);
+#nullable restore
 #line 13 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MainHeaderPersonal.cshtml"
 WriteAttributeValue("", 608, Localizer["TinKhuyenMaiUrl"], 608, 29, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 13 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MainHeaderPersonal.cshtml"
                                                            Write(Localizer["TinKhuyenMaiName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                    <li class=\"dropdown\">\r\n                        <a");
             BeginWriteAttribute("href", " href=\"", 749, "\"", 778, 1);
+#nullable restore
 #line 15 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MainHeaderPersonal.cshtml"
 WriteAttributeValue("", 756, Localizer["HoTroUrl"], 756, 22, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(" data-toggle=\"dropdown\" class=\"dropdown-toggle\">");
+#nullable restore
 #line 15 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MainHeaderPersonal.cshtml"
                                                                                                    Write(Localizer["HoTro"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("<span class=\"caret\"><i class=\"fa fa-caret-down\"></i></span></a>\r\n                        <ul class=\"dropdown-menu\">\r\n                            <li><a");
             BeginWriteAttribute("href", " href=\"", 997, "\"", 1025, 1);
+#nullable restore
 #line 17 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MainHeaderPersonal.cshtml"
 WriteAttributeValue("", 1004, Localizer["FaqsUrl"], 1004, 21, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 17 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MainHeaderPersonal.cshtml"
                                                            Write(Localizer["FaqsName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                            <li><a");
             BeginWriteAttribute("href", " href=\"", 1094, "\"", 1133, 1);
+#nullable restore
 #line 18 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MainHeaderPersonal.cshtml"
 WriteAttributeValue("", 1101, Localizer["ForeignExchangeUrl"], 1101, 32, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 18 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MainHeaderPersonal.cshtml"
                                                                       Write(Localizer["ForeignExchangeName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                            <li><a");
             BeginWriteAttribute("href", " href=\"", 1213, "\"", 1249, 1);
+#nullable restore
 #line 19 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MainHeaderPersonal.cshtml"
 WriteAttributeValue("", 1220, Localizer["InterestRateUrl"], 1220, 29, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 19 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MainHeaderPersonal.cshtml"
                                                                    Write(Localizer["InterestRateName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                            <li><a");
             BeginWriteAttribute("href", " href=\"", 1326, "\"", 1367, 1);
+#nullable restore
 #line 20 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MainHeaderPersonal.cshtml"
 WriteAttributeValue("", 1333, Localizer["InterestRateBasisUrl"], 1333, 34, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 20 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MainHeaderPersonal.cshtml"
                                                                         Write(Localizer["InterestRateBasisName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                            <li><a");
             BeginWriteAttribute("href", " href=\"", 1449, "\"", 1478, 1);
+#nullable restore
 #line 21 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MainHeaderPersonal.cshtml"
 WriteAttributeValue("", 1456, Localizer["FormsUrl"], 1456, 22, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 21 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MainHeaderPersonal.cshtml"
                                                             Write(Localizer["FormsName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                            <li><a");
             BeginWriteAttribute("href", " href=\"", 1548, "\"", 1578, 1);
+#nullable restore
 #line 22 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MainHeaderPersonal.cshtml"
 WriteAttributeValue("", 1555, Localizer["TariffUrl"], 1555, 23, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 22 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MainHeaderPersonal.cshtml"
                                                              Write(Localizer["TariffName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                            <li><a");
             BeginWriteAttribute("href", " href=\"", 1649, "\"", 1690, 1);
+#nullable restore
 #line 23 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MainHeaderPersonal.cshtml"
 WriteAttributeValue("", 1656, Localizer["Tools&CalculatorsUrl"], 1656, 34, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 23 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MainHeaderPersonal.cshtml"
                                                                         Write(Localizer["Tools&CalculatorsName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                            <li><a");
             BeginWriteAttribute("href", " href=\"", 1772, "\"", 1816, 1);
+#nullable restore
 #line 24 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MainHeaderPersonal.cshtml"
 WriteAttributeValue("", 1779, Localizer["SavingAccountInquiryUrl"], 1779, 37, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 24 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MainHeaderPersonal.cshtml"
                                                                            Write(Localizer["SavingAccountInquiryName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                        </ul>\r\n                    </li>\r\n                </ul>\r\n            </div>\r\n            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "813ec4b7ffbd85179072f09f850535974041a31a12536", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "813ec4b7ffbd85179072f09f850535974041a31a13486", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();
@@ -237,7 +287,7 @@ WriteAttributeValue("", 1779, Localizer["SavingAccountInquiryUrl"], 1779, 37, fa
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "813ec4b7ffbd85179072f09f850535974041a31a13665", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "813ec4b7ffbd85179072f09f850535974041a31a14615", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();

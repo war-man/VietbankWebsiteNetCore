@@ -12,21 +12,27 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#nullable restore
 #line 1 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite;
 
 #line default
 #line hidden
+#nullable disable
+#nullable restore
 #line 2 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite.Models;
 
 #line default
 #line hidden
+#nullable disable
+#nullable restore
 #line 1 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_TopHeader.cshtml"
 using Microsoft.AspNetCore.Mvc.Localization;
 
 #line default
 #line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3096d28d9ac5f16037ae2db4fc87d17d8a3cd4bb", @"/Views/Partial/_TopHeader.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"226e66e476153809e3942cb65fb4710596043976", @"/Views/_ViewImports.cshtml")]
     public class Views_Partial__TopHeader : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
@@ -65,88 +71,112 @@ using Microsoft.AspNetCore.Mvc.Localization;
                     <ul>
                         <li class=""active""><a");
             BeginWriteAttribute("href", " href=\"", 349, "\"", 380, 1);
+#nullable restore
 #line 9 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_TopHeader.cshtml"
 WriteAttributeValue("", 356, Localizer["SanPhamUrl"], 356, 24, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             BeginWriteAttribute("title", " title=\"", 381, "\"", 410, 1);
+#nullable restore
 #line 9 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_TopHeader.cshtml"
 WriteAttributeValue("", 389, Localizer["SanPham"], 389, 21, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 9 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_TopHeader.cshtml"
                                                                                                        Write(Localizer["SanPham"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                        <li> <a");
             BeginWriteAttribute("href", " href=\"", 475, "\"", 511, 1);
+#nullable restore
 #line 10 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_TopHeader.cshtml"
 WriteAttributeValue("", 482, Localizer["QuanHeCoDongUrl"], 482, 29, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             BeginWriteAttribute("title", " title=\"", 512, "\"", 546, 1);
+#nullable restore
 #line 10 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_TopHeader.cshtml"
 WriteAttributeValue("", 520, Localizer["QuanHeCoDong"], 520, 26, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 10 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_TopHeader.cshtml"
                                                                                                    Write(Localizer["QuanHeCoDong"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                        <li> <a");
             BeginWriteAttribute("href", " href=\"", 616, "\"", 649, 1);
+#nullable restore
 #line 11 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_TopHeader.cshtml"
 WriteAttributeValue("", 623, Localizer["TuyenDungUrl"], 623, 26, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             BeginWriteAttribute("title", " title=\"", 650, "\"", 681, 1);
+#nullable restore
 #line 11 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_TopHeader.cshtml"
 WriteAttributeValue("", 658, Localizer["TuyenDung"], 658, 23, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 11 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_TopHeader.cshtml"
                                                                                              Write(Localizer["TuyenDung"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                        <li> <a");
             BeginWriteAttribute("href", " href=\"", 748, "\"", 782, 1);
+#nullable restore
 #line 12 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_TopHeader.cshtml"
 WriteAttributeValue("", 755, Localizer["VeVietBankUrl"], 755, 27, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             BeginWriteAttribute("title", " title=\"", 783, "\"", 815, 1);
+#nullable restore
 #line 12 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_TopHeader.cshtml"
 WriteAttributeValue("", 791, Localizer["VeVietBank"], 791, 24, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 12 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_TopHeader.cshtml"
                                                                                                Write(Localizer["VeVietBank"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"</a></li>
                     </ul>
                 </section>
@@ -158,18 +188,22 @@ WriteAttributeValue("", 791, Localizer["VeVietBank"], 791, 24, false);
                             <i class=""fa fa-map-marker""> </i>
                             <p><a");
             BeginWriteAttribute("href", " href=\"", 1237, "\"", 1269, 1);
+#nullable restore
 #line 21 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_TopHeader.cshtml"
 WriteAttributeValue("", 1244, Localizer["ChiNhanhUrl"], 1244, 25, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">ATM &amp; ");
+#nullable restore
 #line 21 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_TopHeader.cshtml"
                                                                         Write(Localizer["ChiNhanh"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"</a></p>
                         </div>
                         <div class=""phone"">
@@ -178,7 +212,7 @@ WriteAttributeValue("", 1244, Localizer["ChiNhanhUrl"], 1244, 25, false);
                         </div>
                     </div>
                     ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "3096d28d9ac5f16037ae2db4fc87d17d8a3cd4bb9601", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "3096d28d9ac5f16037ae2db4fc87d17d8a3cd4bb10247", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();
@@ -193,7 +227,7 @@ WriteAttributeValue("", 1244, Localizer["ChiNhanhUrl"], 1244, 25, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "3096d28d9ac5f16037ae2db4fc87d17d8a3cd4bb10737", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "3096d28d9ac5f16037ae2db4fc87d17d8a3cd4bb11384", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();

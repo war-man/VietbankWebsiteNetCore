@@ -129,6 +129,39 @@
   <data name="ProductUrl" xml:space="preserve">
     <value>/doanh-nghiep/san-pham</value>
   </data>
+  <data name="ThuBaoLanhActive" xml:space="preserve">
+    <value>Hiệu lực thư bảo lãnh</value>
+  </data>
+  <data name="ThuBaoLanhActivedResult" xml:space="preserve">
+    <value>Còn hiệu lực</value>
+  </data>
+  <data name="ThuBaoLanhCompany" xml:space="preserve">
+    <value>Bên được bảo lãnh</value>
+  </data>
+  <data name="ThuBaoLanhContent" xml:space="preserve">
+    <value>Nội dung</value>
+  </data>
+  <data name="ThuBaoLanhExpriedResult" xml:space="preserve">
+    <value>Hết hiệu lực</value>
+  </data>
+  <data name="ThuBaoLanhName" xml:space="preserve">
+    <value>Thư bảo lãnh được phát hành bởi VietBank.</value>
+  </data>
+  <data name="ThuBaoLanhPublish" xml:space="preserve">
+    <value>Ngày phát hành</value>
+  </data>
+  <data name="ThuBaoLanhSeri" xml:space="preserve">
+    <value>Số seri thư bảo lãnh</value>
+  </data>
+  <data name="ThuBaoLanhSTK" xml:space="preserve">
+    <value>Số tài khoản</value>
+  </data>
+  <data name="ThuBaoLanhValue" xml:space="preserve">
+    <value>Giá trị</value>
+  </data>
+  <data name="ThuBaoLanhViewLetter" xml:space="preserve">
+    <value>Xem nội dung</value>
+  </data>
   <data name="ViewAllName" xml:space="preserve">
     <value>Xem tất cả</value>
   </data>

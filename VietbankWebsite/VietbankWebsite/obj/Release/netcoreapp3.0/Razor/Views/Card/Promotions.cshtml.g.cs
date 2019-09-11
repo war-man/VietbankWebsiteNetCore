@@ -12,16 +12,20 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#nullable restore
 #line 1 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite;
 
 #line default
 #line hidden
+#nullable disable
+#nullable restore
 #line 2 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite.Models;
 
 #line default
 #line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"435c6dce5ac55fd0bd964c32d6412e89cefc423c", @"/Views/Card/Promotions.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"226e66e476153809e3942cb65fb4710596043976", @"/Views/_ViewImports.cshtml")]
     public class Views_Card_Promotions : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<VietbankWebsite.ModelMap.IncentivesCateTwoDto>
@@ -51,48 +55,60 @@ using VietbankWebsite.Models;
         #pragma warning disable 1998
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
+#nullable restore
 #line 2 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Promotions.cshtml"
   
     Layout = "~/Views/Shared/_LayoutCard.cshtml";
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("\r\n<section class=\"breadcrumb-wrap\">\r\n    <div class=\"breadcrumb-content\">\r\n        <div class=\"container\">\r\n            ");
+#nullable restore
 #line 9 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Promotions.cshtml"
        Write(Html.Raw(Model.SiteMap));
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("\r\n        </div>\r\n    </div>\r\n</section>\r\n<section class=\"banner-wrap\">\r\n    <div class=\"banner home-banner\">\r\n        <div class=\"item\"><a class=\"banner-img\"");
             BeginWriteAttribute("href", " href=\"", 414, "\"", 438, 1);
+#nullable restore
 #line 15 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Promotions.cshtml"
 WriteAttributeValue("", 421, Model.LinkBanner, 421, 17, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral("><img");
             BeginWriteAttribute("src", " src=\"", 444, "\"", 467, 1);
+#nullable restore
 #line 15 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Promotions.cshtml"
 WriteAttributeValue("", 450, Model.PathBanner, 450, 17, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             BeginWriteAttribute("alt", " alt=\"", 468, "\"", 474, 0);
             EndWriteAttribute();
             WriteLiteral("></a></div>\r\n    </div>\r\n</section>\r\n<section class=\"promotion-page s2\">\r\n    <div class=\"container\">\r\n        <h1 class=\"home-title text-center mb-2\">");
+#nullable restore
 #line 20 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Promotions.cshtml"
                                            Write(Model.Title);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</h1>\r\n        <div class=\"home-content text-center\" style=\"max-width: 550px\">\r\n            <div class=\"content\">\r\n                <p>");
+#nullable restore
 #line 23 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Promotions.cshtml"
               Write(Model.Description);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"</p>
             </div>
         </div>
@@ -114,7 +130,7 @@ WriteAttributeValue("", 450, Model.PathBanner, 450, 17, false);
 ");
             DefineSection("Scripts", async() => {
                 WriteLiteral("\r\n\r\n    ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "435c6dce5ac55fd0bd964c32d6412e89cefc423c6295", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "435c6dce5ac55fd0bd964c32d6412e89cefc423c6599", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

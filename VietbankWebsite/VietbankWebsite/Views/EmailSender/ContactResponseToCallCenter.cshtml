@@ -1,0 +1,12 @@
+﻿@model VietbankWebsite.ModelMap.ContactResponseToCallCenter
+@{
+    Layout = "~/Views/Shared/_EmailLayout.cshtml";
+}
+
+    <ul>
+        <li><strong>Họ tên: </strong>@Model.FullName</li>
+        <li><strong>Số điện thoại:</strong>@Model.Phone</li>
+        <li><strong>Ngành nghề:</strong>@Model.Work</li>
+        <li><strong>Địa chỉ:</strong>@Model.Address</li>
+        <li><strong>Lời nhắn:</strong>@Model.Message</li>
+    </ul>

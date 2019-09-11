@@ -12,21 +12,27 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#nullable restore
 #line 1 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite;
 
 #line default
 #line hidden
+#nullable disable
+#nullable restore
 #line 2 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite.Models;
 
 #line default
 #line hidden
+#nullable disable
+#nullable restore
 #line 1 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Enterprise\Calculation.cshtml"
 using Microsoft.AspNetCore.Mvc.Localization;
 
 #line default
 #line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"bf1edbfbbe58c578857ce8dceede1e19e3014426", @"/Views/Enterprise/Calculation.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"226e66e476153809e3942cb65fb4710596043976", @"/Views/_ViewImports.cshtml")]
     public class Views_Enterprise_Calculation : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
@@ -67,6 +73,7 @@ using Microsoft.AspNetCore.Mvc.Localization;
         #pragma warning disable 1998
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
+#nullable restore
 #line 3 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Enterprise\Calculation.cshtml"
   
     ViewData["Title"] = @Localizer["CalculationName"];
@@ -74,6 +81,7 @@ using Microsoft.AspNetCore.Mvc.Localization;
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"
 <section class=""banner-wrap"">
     <section class=""breadcrumb-wrap"">
@@ -83,38 +91,48 @@ using Microsoft.AspNetCore.Mvc.Localization;
                     <ol class=""breadcrumb mrt-10"">
                         <li><a");
             BeginWriteAttribute("href", " href=\"", 459, "\"", 493, 1);
+#nullable restore
 #line 14 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Enterprise\Calculation.cshtml"
 WriteAttributeValue("", 466, Localizer["EnterpriseUrl"], 466, 27, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 14 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Enterprise\Calculation.cshtml"
                                                              Write(Localizer["EnterpriseName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                        <li><a");
             BeginWriteAttribute("href", " href=\"", 564, "\"", 595, 1);
+#nullable restore
 #line 15 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Enterprise\Calculation.cshtml"
 WriteAttributeValue("", 571, Localizer["SupportUrl"], 571, 24, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 15 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Enterprise\Calculation.cshtml"
                                                           Write(Localizer["SupportName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                        <li class=\"active\"><span>");
+#nullable restore
 #line 16 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Enterprise\Calculation.cshtml"
                                             Write(Localizer["CalculationName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"</span></li>
                     </ol>
                 </div>
@@ -128,19 +146,23 @@ WriteAttributeValue("", 571, Localizer["SupportUrl"], 571, 24, false);
                 <div class=""row"">
                     <div class=""col-xs-12 col-sm-5 col-lg-5 col-xl-5"">
                         <h1 class=""title"">");
+#nullable restore
 #line 28 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Enterprise\Calculation.cshtml"
                                      Write(Localizer["CalculationName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</h1>\r\n                        <div class=\"content\">");
+#nullable restore
 #line 29 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Enterprise\Calculation.cshtml"
                                         Write(Localizer["CalculationDes"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </section>\r\n</section>\r\n<main>\r\n    <div class=\"container\">\r\n        <div class=\"row\">\r\n            <div class=\"col-xs-12 col-lg-3\">\r\n                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "bf1edbfbbe58c578857ce8dceede1e19e301442610173", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "bf1edbfbbe58c578857ce8dceede1e19e301442610591", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();
@@ -155,11 +177,13 @@ WriteAttributeValue("", 571, Localizer["SupportUrl"], 571, 24, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n            </div>\r\n            <div class=\"col-xs-12 col-lg-9\">\r\n                <section class=\"hotro-ct\">\r\n                    <h1 class=\"title\">");
+#nullable restore
 #line 44 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Enterprise\Calculation.cshtml"
                                  Write(Localizer["CalculationName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"                                                                                                                                                                                       </h1>
                     <div id=""support-enterprise"">
 
@@ -169,50 +193,60 @@ WriteAttributeValue("", 571, Localizer["SupportUrl"], 571, 24, false);
                                     <div class=""row flex flex-wrap"">
                                         <div class=""col-xs-12 col-md-4"">
                                             <h3 class=""title-deposits"">");
+#nullable restore
 #line 52 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Enterprise\Calculation.cshtml"
                                                                   Write(Localizer["LabelOne"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</h3>\r\n                                            <div class=\"box-deposits mCustomScrollbar\">\r\n\r\n                                                <div class=\"checkbox\">\r\n                                                    <input");
             BeginWriteAttribute("checked", " checked=\"", 2726, "\"", 2736, 0);
             EndWriteAttribute();
             WriteLiteral(" type=\"radio\" class=\"button-radio\" name=\"kind\" data-id=\"kind_1963\" id=\"kind_1\">\r\n                                                    <label for=\"kind_1\">");
+#nullable restore
 #line 57 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Enterprise\Calculation.cshtml"
                                                                    Write(Localizer["LabelTwo"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"</label>
                                                 </div>
                                                 <div class=""checkbox"">
                                                     <input type=""radio"" class=""button-radio"" name=""kind"" data-id=""kind_1964"" id=""kind_2"">
                                                     <label for=""kind_2"">");
+#nullable restore
 #line 61 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Enterprise\Calculation.cshtml"
                                                                    Write(Localizer["LabelThree"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"</label>
                                                 </div>
                                                 <div class=""checkbox"">
                                                     <input type=""radio"" class=""button-radio"" name=""kind"" data-id=""kind_1965"" id=""kind_3"">
                                                     <label for=""kind_3"">");
+#nullable restore
 #line 65 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Enterprise\Calculation.cshtml"
                                                                    Write(Localizer["LabelFour"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"</label>
                                                 </div>
                                                 <div class=""checkbox"">
                                                     <input type=""radio"" class=""button-radio"" name=""kind"" data-id=""kind_3996"" id=""kind_4"">
                                                     <label for=""kind_4"">");
+#nullable restore
 #line 69 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Enterprise\Calculation.cshtml"
                                                                    Write(Localizer["LabelFive"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"</label>
 
 </div>
@@ -522,11 +556,13 @@ WriteAttributeValue("", 571, Localizer["SupportUrl"], 571, 24, false);
                                         <div class=""col-xs-12 col-md-5"">
                                             <div class=""form-group"">
                                                 <label>");
+#nullable restore
 #line 356 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Enterprise\Calculation.cshtml"
                                                   Write(Localizer["LabelSix"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</label>\r\n                                                <div class=\"group\">\r\n                                                    <input id=\"so-tien-goi-enterprise\"");
             BeginWriteAttribute("value", " value=\"", 26365, "\"", 26373, 0);
             EndWriteAttribute();
@@ -535,13 +571,15 @@ WriteAttributeValue("", 571, Localizer["SupportUrl"], 571, 24, false);
                                             </div>
                                             <div class=""form-group"">
                                                 <label>");
+#nullable restore
 #line 362 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Enterprise\Calculation.cshtml"
                                                   Write(Localizer["LabelSeven"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</label>\r\n                                                <div class=\"group\">\r\n                                                    <select id=\"ky-lanh-lai-enterprise\" class=\"form-control\">\r\n                                                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bf1edbfbbe58c578857ce8dceede1e19e301442639708", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bf1edbfbbe58c578857ce8dceede1e19e301442640430", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_OptionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.OptionTagHelper>();
@@ -556,12 +594,14 @@ WriteAttributeValue("", 571, Localizer["SupportUrl"], 571, 24, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                                                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bf1edbfbbe58c578857ce8dceede1e19e301442640883", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bf1edbfbbe58c578857ce8dceede1e19e301442641605", async() => {
+#nullable restore
 #line 366 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Enterprise\Calculation.cshtml"
                                                                         Write(Localizer["Tuan"]);
 
 #line default
 #line hidden
+#nullable disable
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_OptionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.OptionTagHelper>();
@@ -576,12 +616,14 @@ WriteAttributeValue("", 571, Localizer["SupportUrl"], 571, 24, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                                                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bf1edbfbbe58c578857ce8dceede1e19e301442642302", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bf1edbfbbe58c578857ce8dceede1e19e301442643062", async() => {
+#nullable restore
 #line 367 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Enterprise\Calculation.cshtml"
                                                                        Write(Localizer["Quy"]);
 
 #line default
 #line hidden
+#nullable disable
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_OptionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.OptionTagHelper>();
@@ -596,12 +638,14 @@ WriteAttributeValue("", 571, Localizer["SupportUrl"], 571, 24, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                                                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bf1edbfbbe58c578857ce8dceede1e19e301442643719", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bf1edbfbbe58c578857ce8dceede1e19e301442644517", async() => {
+#nullable restore
 #line 368 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Enterprise\Calculation.cshtml"
                                                                          Write(Localizer["Thang"]);
 
 #line default
 #line hidden
+#nullable disable
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_OptionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.OptionTagHelper>();
@@ -616,12 +660,14 @@ WriteAttributeValue("", 571, Localizer["SupportUrl"], 571, 24, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                                                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bf1edbfbbe58c578857ce8dceede1e19e301442645140", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bf1edbfbbe58c578857ce8dceede1e19e301442645976", async() => {
+#nullable restore
 #line 369 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Enterprise\Calculation.cshtml"
                                                                        Write(Localizer["Nam"]);
 
 #line default
 #line hidden
+#nullable disable
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_OptionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.OptionTagHelper>();
@@ -641,11 +687,13 @@ WriteAttributeValue("", 571, Localizer["SupportUrl"], 571, 24, false);
                                             </div>
                                             <div class=""form-group"">
                                                 <label>");
+#nullable restore
 #line 374 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Enterprise\Calculation.cshtml"
                                                   Write(Localizer["LabelEight"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"</label>
                                                 <div id=""ky-hang-gui-enterprise"" class=""group"">
                                                     <input disabled=""disabled"" class=""form-control""><span class=""unit""></span>
@@ -653,11 +701,13 @@ WriteAttributeValue("", 571, Localizer["SupportUrl"], 571, 24, false);
                                             </div>
                                             <div class=""form-group"">
                                                 <label>");
+#nullable restore
 #line 380 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Enterprise\Calculation.cshtml"
                                                   Write(Localizer["LabelNine"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</label>\r\n                                                <div class=\"group\">\r\n                                                    <input id=\"lai-suat-enterprise\"");
             BeginWriteAttribute("value", " value=\"", 28353, "\"", 28361, 0);
             EndWriteAttribute();
@@ -666,18 +716,22 @@ WriteAttributeValue("", 571, Localizer["SupportUrl"], 571, 24, false);
                                             </div>
                                             <div class=""form-group"">
                                                 <label>");
+#nullable restore
 #line 386 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Enterprise\Calculation.cshtml"
                                                   Write(Localizer["LabelTen"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</label>\r\n                                                <div class=\"group\">\r\n                                                    <select id=\"cach-tinh-enterprise\" class=\"form-control\">\r\n                                                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bf1edbfbbe58c578857ce8dceede1e19e301442648914", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bf1edbfbbe58c578857ce8dceede1e19e301442649902", async() => {
+#nullable restore
 #line 389 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Enterprise\Calculation.cshtml"
                                                                      Write(Localizer["LabelEleven"]);
 
 #line default
 #line hidden
+#nullable disable
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_OptionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.OptionTagHelper>();
@@ -692,12 +746,14 @@ WriteAttributeValue("", 571, Localizer["SupportUrl"], 571, 24, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                                                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bf1edbfbbe58c578857ce8dceede1e19e301442650337", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bf1edbfbbe58c578857ce8dceede1e19e301442651363", async() => {
+#nullable restore
 #line 390 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Enterprise\Calculation.cshtml"
                                                                      Write(Localizer["LabelTwelve"]);
 
 #line default
 #line hidden
+#nullable disable
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_OptionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.OptionTagHelper>();
@@ -719,53 +775,67 @@ WriteAttributeValue("", 571, Localizer["SupportUrl"], 571, 24, false);
                                             <div class=""form-group"">
                                                 <input id=""uoc-tinh-enterprise"" type=""submit""");
             BeginWriteAttribute("value", " value=\"", 29412, "\"", 29447, 1);
+#nullable restore
 #line 396 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Enterprise\Calculation.cshtml"
 WriteAttributeValue("", 29420, Localizer["LabelNineteen"], 29420, 27, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">\r\n                                            </div>\r\n                                            <div class=\"form-group\">\r\n                                                <p style=\"font-size:0.8125rem;\">");
+#nullable restore
 #line 399 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Enterprise\Calculation.cshtml"
                                                                            Write(Localizer["LabelSeventeen"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</p>\r\n                                                <p style=\"font-size:0.8125rem;\">");
+#nullable restore
 #line 400 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Enterprise\Calculation.cshtml"
                                                                            Write(Localizer["LabelEighteen"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"</p>
                                             </div>
                                         </div>
                                         <div class=""col-xs-12 col-md-7"">
                                             <div class=""result"">
                                                 <h3>");
+#nullable restore
 #line 405 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Enterprise\Calculation.cshtml"
                                                Write(Localizer["LabelThirdteen"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</h3>\r\n                                                <div class=\"item-result\"><strong>");
+#nullable restore
 #line 406 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Enterprise\Calculation.cshtml"
                                                                             Write(Localizer["LabelFourteen"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(" </strong><span class=\"tien-lai-dinh-ky\"></span></div>\r\n                                                <div class=\"item-result\"><strong>");
+#nullable restore
 #line 407 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Enterprise\Calculation.cshtml"
                                                                             Write(Localizer["LabelFiveteen"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(" </strong><span class=\"tong-tien-lai\"></span></div>\r\n                                                <div class=\"item-result\"><strong>");
+#nullable restore
 #line 408 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Enterprise\Calculation.cshtml"
                                                                             Write(Localizer["LabelSixteen"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@" </strong><span class=""tong-so-tien-nhan-duoc""></span></div>
                                             </div>
 
@@ -784,7 +854,7 @@ WriteAttributeValue("", 29420, Localizer["LabelNineteen"], 29420, 27, false);
 ");
             DefineSection("Scripts", async() => {
                 WriteLiteral("\r\n    ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bf1edbfbbe58c578857ce8dceede1e19e301442655626", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bf1edbfbbe58c578857ce8dceede1e19e301442656956", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -798,7 +868,7 @@ WriteAttributeValue("", 29420, Localizer["LabelNineteen"], 29420, 27, false);
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n    ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bf1edbfbbe58c578857ce8dceede1e19e301442656726", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bf1edbfbbe58c578857ce8dceede1e19e301442658056", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

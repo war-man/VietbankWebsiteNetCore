@@ -12,21 +12,27 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#nullable restore
 #line 1 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite;
 
 #line default
 #line hidden
+#nullable disable
+#nullable restore
 #line 2 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite.Models;
 
 #line default
 #line hidden
+#nullable disable
+#nullable restore
 #line 1 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
 using Microsoft.AspNetCore.Mvc.Localization;
 
 #line default
 #line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d4759536eec3ca690599d4826901499b3eec03d2", @"/Views/Partial/_MenuPersonalMobile.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"226e66e476153809e3942cb65fb4710596043976", @"/Views/_ViewImports.cshtml")]
     public class Views_Partial__MenuPersonalMobile : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
@@ -36,494 +42,634 @@ using Microsoft.AspNetCore.Mvc.Localization;
         {
             WriteLiteral("<nav class=\"mobile-menu\">\r\n    <ul id=\"main-nav\">\r\n        <li class=\"active dropdown\">\r\n            <a");
             BeginWriteAttribute("href", " href=\"", 183, "\"", 214, 1);
+#nullable restore
 #line 6 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
 WriteAttributeValue("", 190, Localizer["SanPhamUrl"], 190, 24, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             BeginWriteAttribute("title", " title=\"", 215, "\"", 244, 1);
+#nullable restore
 #line 6 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
 WriteAttributeValue("", 223, Localizer["SanPham"], 223, 21, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(" class=\"dropdown-toggle\">");
+#nullable restore
 #line 6 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
                                                                                                 Write(Localizer["SanPham"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("<span class=\"caret\"><i class=\"fa fa-angle-down\"></i></span></a>\r\n            <ul class=\"dropdown-menu\">\r\n                <li><a");
             BeginWriteAttribute("href", " href=\"", 418, "\"", 448, 1);
+#nullable restore
 #line 8 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
 WriteAttributeValue("", 425, Localizer["CaNhanUrl"], 425, 23, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 8 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
                                                  Write(Localizer["CaNhan"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                <li><a");
             BeginWriteAttribute("href", " href=\"", 503, "\"", 547, 1);
+#nullable restore
 #line 9 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
 WriteAttributeValue("", 510, Localizer["TinKhuyenMaiPersonalUrl"], 510, 37, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 9 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
                                                                Write(Localizer["TinKhuyenMaiPersonalName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                <li class=\"dropdown\">\r\n                    <a");
             BeginWriteAttribute("href", " href=\"", 659, "\"", 688, 1);
+#nullable restore
 #line 11 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
 WriteAttributeValue("", 666, Localizer["HoTroUrl"], 666, 22, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(" class=\"dropdown-toggle\">");
+#nullable restore
 #line 11 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
                                                                         Write(Localizer["HoTro"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("<span class=\"caret\"><i class=\"fa fa-angle-down\"></i></span></a>\r\n                    <ul class=\"dropdown-menu\">\r\n                        <li><a");
             BeginWriteAttribute("href", " href=\"", 876, "\"", 904, 1);
+#nullable restore
 #line 13 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
 WriteAttributeValue("", 883, Localizer["FaqsUrl"], 883, 21, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 13 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
                                                        Write(Localizer["FaqsName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                        <li><a");
             BeginWriteAttribute("href", " href=\"", 969, "\"", 1008, 1);
+#nullable restore
 #line 14 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
 WriteAttributeValue("", 976, Localizer["ForeignExchangeUrl"], 976, 32, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 14 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
                                                                   Write(Localizer["ForeignExchangeName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                        <li><a");
             BeginWriteAttribute("href", " href=\"", 1084, "\"", 1120, 1);
+#nullable restore
 #line 15 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
 WriteAttributeValue("", 1091, Localizer["InterestRateUrl"], 1091, 29, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 15 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
                                                                Write(Localizer["InterestRateName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                        <li><a");
             BeginWriteAttribute("href", " href=\"", 1193, "\"", 1234, 1);
+#nullable restore
 #line 16 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
 WriteAttributeValue("", 1200, Localizer["InterestRateBasisUrl"], 1200, 34, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 16 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
                                                                     Write(Localizer["InterestRateBasisName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                        <li><a");
             BeginWriteAttribute("href", " href=\"", 1312, "\"", 1341, 1);
+#nullable restore
 #line 17 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
 WriteAttributeValue("", 1319, Localizer["FormsUrl"], 1319, 22, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 17 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
                                                         Write(Localizer["FormsName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                        <li><a");
             BeginWriteAttribute("href", " href=\"", 1407, "\"", 1437, 1);
+#nullable restore
 #line 18 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
 WriteAttributeValue("", 1414, Localizer["TariffUrl"], 1414, 23, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 18 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
                                                          Write(Localizer["TariffName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                        <li><a");
             BeginWriteAttribute("href", " href=\"", 1504, "\"", 1545, 1);
+#nullable restore
 #line 19 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
 WriteAttributeValue("", 1511, Localizer["Tools&CalculatorsUrl"], 1511, 34, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 19 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
                                                                     Write(Localizer["Tools&CalculatorsName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                        <li><a");
             BeginWriteAttribute("href", " href=\"", 1623, "\"", 1667, 1);
+#nullable restore
 #line 20 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
 WriteAttributeValue("", 1630, Localizer["SavingAccountInquiryUrl"], 1630, 37, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 20 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
                                                                        Write(Localizer["SavingAccountInquiryName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                    </ul>\r\n                </li>\r\n            </ul>\r\n        </li>\r\n        <li><a");
             BeginWriteAttribute("href", " href=\"", 1816, "\"", 1852, 1);
+#nullable restore
 #line 25 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
 WriteAttributeValue("", 1823, Localizer["QuanHeCoDongUrl"], 1823, 29, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             BeginWriteAttribute("title", " title=\"", 1853, "\"", 1887, 1);
+#nullable restore
 #line 25 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
 WriteAttributeValue("", 1861, Localizer["QuanHeCoDong"], 1861, 26, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 25 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
                                                                                   Write(Localizer["QuanHeCoDong"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n        <li class=\"active dropdown\">\r\n            <a");
             BeginWriteAttribute("href", " href=\"", 1978, "\"", 2011, 1);
+#nullable restore
 #line 27 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
 WriteAttributeValue("", 1985, Localizer["TuyenDungUrl"], 1985, 26, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             BeginWriteAttribute("title", " title=\"", 2012, "\"", 2043, 1);
+#nullable restore
 #line 27 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
 WriteAttributeValue("", 2020, Localizer["TuyenDung"], 2020, 23, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(" class=\"dropdown-toggle\">");
+#nullable restore
 #line 27 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
                                                                                                     Write(Localizer["TuyenDung"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("<span class=\"caret\"><i class=\"fa fa-angle-down\"></i></span></a>\r\n            <ul class=\"dropdown-menu\">\r\n                <li><a");
             BeginWriteAttribute("href", " href=\"", 2219, "\"", 2258, 1);
+#nullable restore
 #line 29 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
 WriteAttributeValue("", 2226, Localizer["CoHoiNgheNghiepUrl"], 2226, 32, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 29 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
                                                           Write(Localizer["CoHoiNgheNghiep"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                <li><a");
             BeginWriteAttribute("href", " href=\"", 2322, "\"", 2361, 1);
+#nullable restore
 #line 30 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
 WriteAttributeValue("", 2329, Localizer["HuongDanNopHoSoUrl"], 2329, 32, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 30 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
                                                           Write(Localizer["HuongDanNopHoSo"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n            </ul>\r\n        </li>\r\n        <li class=\"active dropdown\">\r\n            <a");
             BeginWriteAttribute("href", " href=\"", 2489, "\"", 2523, 1);
+#nullable restore
 #line 34 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
 WriteAttributeValue("", 2496, Localizer["VeVietBankUrl"], 2496, 27, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             BeginWriteAttribute("title", " title=\"", 2524, "\"", 2556, 1);
+#nullable restore
 #line 34 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
 WriteAttributeValue("", 2532, Localizer["VeVietBank"], 2532, 24, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(" class=\"dropdown-toggle\">");
+#nullable restore
 #line 34 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
                                                                                                       Write(Localizer["VeVietBank"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("<span class=\"caret\"><i class=\"fa fa-angle-down\"></i></span></a>\r\n            <ul class=\"dropdown-menu\">\r\n                <li class=\"dropdown\">\r\n                    <a");
             BeginWriteAttribute("href", " href=\"", 2772, "\"", 2805, 1);
+#nullable restore
 #line 37 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
 WriteAttributeValue("", 2779, Localizer["GioiThieuUrl"], 2779, 26, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(" class=\"dropdown-toggle\">");
+#nullable restore
 #line 37 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
                                                                             Write(Localizer["GioiThieuName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("<span class=\"caret\"><i class=\"fa fa-angle-down\"></i></span></a>\r\n                    <ul class=\"dropdown-menu\">\r\n                        <li><a");
             BeginWriteAttribute("href", " href=\"", 3001, "\"", 3042, 1);
+#nullable restore
 #line 39 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
 WriteAttributeValue("", 3008, Localizer["QuaTrinhPhatTrienUrl"], 3008, 34, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 39 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
                                                                     Write(Localizer["QuaTrinhPhatTrienName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                        <li><a");
             BeginWriteAttribute("href", " href=\"", 3120, "\"", 3157, 1);
+#nullable restore
 #line 40 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
 WriteAttributeValue("", 3127, Localizer["TamNhinSuMenhUrl"], 3127, 30, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 40 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
                                                                 Write(Localizer["TamNhinSuMenhName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                        <li><a");
             BeginWriteAttribute("href", " href=\"", 3231, "\"", 3261, 1);
+#nullable restore
 #line 41 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
 WriteAttributeValue("", 3238, Localizer["ThuNgoUrl"], 3238, 23, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 41 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
                                                          Write(Localizer["ThuNgoName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                        <li><a");
             BeginWriteAttribute("href", " href=\"", 3328, "\"", 3361, 1);
+#nullable restore
 #line 42 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
 WriteAttributeValue("", 3335, Localizer["ChatLuongUrl"], 3335, 26, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 42 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
                                                             Write(Localizer["ChatLuongName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                        <li><a");
             BeginWriteAttribute("href", " href=\"", 3431, "\"", 3462, 1);
+#nullable restore
 #line 43 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
 WriteAttributeValue("", 3438, Localizer["TuanThuUrl"], 3438, 24, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 43 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
                                                           Write(Localizer["TuanThuName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                        <li><a");
             BeginWriteAttribute("href", " href=\"", 3530, "\"", 3567, 1);
+#nullable restore
 #line 44 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
 WriteAttributeValue("", 3537, Localizer["NganHangDaiLyUrl"], 3537, 30, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 44 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
                                                                 Write(Localizer["NganHangDaiLyName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                    </ul>\r\n                </li>\r\n                <li class=\"dropdown\">\r\n                    <a");
             BeginWriteAttribute("href", " href=\"", 3722, "\"", 3756, 1);
+#nullable restore
 #line 48 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
 WriteAttributeValue("", 3729, Localizer["BanLanhDaoUrl"], 3729, 27, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(" class=\"dropdown-toggle\">");
+#nullable restore
 #line 48 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
                                                                              Write(Localizer["BanLanhDaoName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("<span class=\"caret\"><i class=\"fa fa-angle-down\"></i></span></a>\r\n                    <ul class=\"dropdown-menu\">\r\n                        <li><a");
             BeginWriteAttribute("href", " href=\"", 3953, "\"", 3991, 1);
+#nullable restore
 #line 50 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
 WriteAttributeValue("", 3960, Localizer["HoiDongQuanTriUrl"], 3960, 31, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 50 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
                                                                  Write(Localizer["HoiDongQuanTriName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                        <li><a");
             BeginWriteAttribute("href", " href=\"", 4066, "\"", 4101, 1);
+#nullable restore
 #line 51 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
 WriteAttributeValue("", 4073, Localizer["BanKiemSoatUrl"], 4073, 28, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 51 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
                                                               Write(Localizer["BanKiemSoatName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                        <li><a");
             BeginWriteAttribute("href", " href=\"", 4173, "\"", 4208, 1);
+#nullable restore
 #line 52 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
 WriteAttributeValue("", 4180, Localizer["BanDieuHanhUrl"], 4180, 28, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 52 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
                                                               Write(Localizer["BanDieuHanhName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                    </ul>\r\n                </li>\r\n                <li class=\"dropdown\">\r\n                    <a");
             BeginWriteAttribute("href", " href=\"", 4361, "\"", 4391, 1);
+#nullable restore
 #line 56 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
 WriteAttributeValue("", 4368, Localizer["TinTucUrl"], 4368, 23, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(" class=\"dropdown-toggle\">");
+#nullable restore
 #line 56 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
                                                                          Write(Localizer["TinTucName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("<span class=\"caret\"><i class=\"fa fa-angle-down\"></i></span></a>\r\n                    <ul class=\"dropdown-menu\">\r\n                        <li><a");
             BeginWriteAttribute("href", " href=\"", 4584, "\"", 4619, 1);
+#nullable restore
 #line 58 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
 WriteAttributeValue("", 4591, Localizer["TinVietbankUrl"], 4591, 28, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 58 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
                                                               Write(Localizer["TinVietbankName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                        <li><a");
             BeginWriteAttribute("href", " href=\"", 4691, "\"", 4727, 1);
+#nullable restore
 #line 59 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
 WriteAttributeValue("", 4698, Localizer["TinKhuyenMaiUrl"], 4698, 29, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 59 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
                                                                Write(Localizer["TinKhuyenMaiName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                        <li><a");
             BeginWriteAttribute("href", " href=\"", 4800, "\"", 4834, 1);
+#nullable restore
 #line 60 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
 WriteAttributeValue("", 4807, Localizer["VietbankTvUrl"], 4807, 27, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 60 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
                                                              Write(Localizer["VietbankTvName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n                    </ul>\r\n                </li>\r\n                <li><a");
             BeginWriteAttribute("href", " href=\"", 4947, "\"", 4977, 1);
+#nullable restore
 #line 63 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
 WriteAttributeValue("", 4954, Localizer["LienHeUrl"], 4954, 23, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 63 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_MenuPersonalMobile.cshtml"
                                                  Write(Localizer["LienHeName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n            </ul>\r\n        </li>\r\n    </ul>\r\n</nav>");
         }
         #pragma warning restore 1998

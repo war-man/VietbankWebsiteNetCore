@@ -12,21 +12,27 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#nullable restore
 #line 1 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite;
 
 #line default
 #line hidden
+#nullable disable
+#nullable restore
 #line 2 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite.Models;
 
 #line default
 #line hidden
+#nullable disable
+#nullable restore
 #line 1 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Index.cshtml"
 using Microsoft.AspNetCore.Mvc.Localization;
 
 #line default
 #line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0f0d33baaa7e8d69d8ed11d2427b9d90e0b04601", @"/Views/About/Index.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"226e66e476153809e3942cb65fb4710596043976", @"/Views/_ViewImports.cshtml")]
     public class Views_About_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
@@ -34,6 +40,7 @@ using Microsoft.AspNetCore.Mvc.Localization;
         #pragma warning disable 1998
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
+#nullable restore
 #line 3 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Index.cshtml"
   
     ViewData["Title"] = Localizer["Title"];
@@ -41,6 +48,7 @@ using Microsoft.AspNetCore.Mvc.Localization;
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"<section class=""banner-wrap"">
     <section class=""breadcrumb-wrap brown"">
         <div class=""container"">
@@ -59,11 +67,13 @@ using Microsoft.AspNetCore.Mvc.Localization;
                 <div class=""row"">
                     <div class=""col-xs-12 col-sm-5 col-lg-5 col-xl-5"">
                         <h1 class=""title"">");
+#nullable restore
 #line 24 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Index.cshtml"
                                      Write(Localizer["Title"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"                                                                                                                                                                                             </h1>
                     </div>
                 </div>
@@ -82,38 +92,48 @@ using Microsoft.AspNetCore.Mvc.Localization;
                             <div class=""col-xs-12 col-md-5 col-lg-4"">
                                 <div class=""thumb""><img src=""https://static.vietbank.com.vn/web/Ve-VietBank/Gioi-thieu/tamnhin-sumenh.png""");
             BeginWriteAttribute("alt", " alt=\"", 1694, "\"", 1725, 1);
+#nullable restore
 #line 40 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Index.cshtml"
 WriteAttributeValue("", 1700, Localizer["MissionName"], 1700, 25, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral("></div>\r\n                            </div>\r\n                            <div class=\"col-xs-12 col-md-7 col-lg-8\">\r\n                                <div class=\"content\">\r\n                                    <h1 class=\"title\">");
+#nullable restore
 #line 44 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Index.cshtml"
                                                  Write(Localizer["MissionName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</h1>\r\n                                    <div class=\"desc\"><p>");
+#nullable restore
 #line 45 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Index.cshtml"
                                                     Write(Localizer["MissionDescription"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</p></div>\r\n                                    <a");
             BeginWriteAttribute("href", " href=\"", 2122, "\"", 2153, 1);
+#nullable restore
 #line 46 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Index.cshtml"
 WriteAttributeValue("", 2129, Localizer["MissionUrl"], 2129, 24, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(" class=\"btn-more\">");
+#nullable restore
 #line 46 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Index.cshtml"
                                                                                    Write(Localizer["ReadMore"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"...</a>
                                 </div>
                             </div>
@@ -124,42 +144,52 @@ WriteAttributeValue("", 2129, Localizer["MissionUrl"], 2129, 24, false);
                             <div class=""col-xs-12 col-md-7 col-lg-8"">
                                 <div class=""content"">
                                     <h1 class=""title"">");
+#nullable restore
 #line 55 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Index.cshtml"
                                                  Write(Localizer["MessageName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</h1>\r\n                                    <div class=\"desc\"><p>");
+#nullable restore
 #line 56 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Index.cshtml"
                                                     Write(Localizer["MessageDescription"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</p></div>\r\n                                    <a");
             BeginWriteAttribute("href", " href=\"", 2791, "\"", 2822, 1);
+#nullable restore
 #line 57 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Index.cshtml"
 WriteAttributeValue("", 2798, Localizer["MessageUrl"], 2798, 24, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(" class=\"btn-more\">");
+#nullable restore
 #line 57 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Index.cshtml"
                                                                                    Write(Localizer["ReadMore"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"...</a>
                                 </div>
                             </div>
                             <div class=""col-xs-12 col-md-5 col-lg-4"">
                                 <div class=""thumb""><img src=""https://static.vietbank.com.vn/web/Ve-VietBank/Gioi-thieu/thungo.png""");
             BeginWriteAttribute("alt", " alt=\"", 3149, "\"", 3180, 1);
+#nullable restore
 #line 61 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Index.cshtml"
 WriteAttributeValue("", 3155, Localizer["MessageName"], 3155, 25, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(@"></div>
                             </div>
@@ -170,38 +200,48 @@ WriteAttributeValue("", 3155, Localizer["MessageName"], 3155, 25, false);
                             <div class=""col-xs-12 col-md-5 col-lg-4"">
                                 <div class=""thumb""><img src=""https://static.vietbank.com.vn/web/Ve-VietBank/Gioi-thieu/chinhsachchatluong.png""");
             BeginWriteAttribute("alt", " alt=\"", 3600, "\"", 3631, 1);
+#nullable restore
 #line 68 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Index.cshtml"
 WriteAttributeValue("", 3606, Localizer["QualityName"], 3606, 25, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral("></div>\r\n                            </div>\r\n                            <div class=\"col-xs-12 col-md-7 col-lg-8\">\r\n                                <div class=\"content\">\r\n                                    <h1 class=\"title\">");
+#nullable restore
 #line 72 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Index.cshtml"
                                                  Write(Localizer["QualityName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</h1>\r\n                                    <div class=\"desc\"><p>");
+#nullable restore
 #line 73 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Index.cshtml"
                                                     Write(Localizer["QualityDescription"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</p></div>\r\n                                    <a");
             BeginWriteAttribute("href", " href=\"", 4028, "\"", 4059, 1);
+#nullable restore
 #line 74 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Index.cshtml"
 WriteAttributeValue("", 4035, Localizer["QualityUrl"], 4035, 24, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(" class=\"btn-more\">");
+#nullable restore
 #line 74 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Index.cshtml"
                                                                                    Write(Localizer["ReadMore"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"...</a>
                                 </div>
                             </div>
@@ -212,42 +252,52 @@ WriteAttributeValue("", 4035, Localizer["QualityUrl"], 4035, 24, false);
                             <div class=""col-xs-12 col-md-7 col-lg-8"">
                                 <div class=""content"">
                                     <h1 class=""title"">");
+#nullable restore
 #line 83 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Index.cshtml"
                                                  Write(Localizer["MilestonesName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</h1>\r\n                                    <div class=\"desc\"><p>");
+#nullable restore
 #line 84 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Index.cshtml"
                                                     Write(Localizer["MilestonesDescription"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</p></div>\r\n                                    <a");
             BeginWriteAttribute("href", " href=\"", 4703, "\"", 4737, 1);
+#nullable restore
 #line 85 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Index.cshtml"
 WriteAttributeValue("", 4710, Localizer["MilestonesUrl"], 4710, 27, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(" class=\"btn-more\">");
+#nullable restore
 #line 85 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Index.cshtml"
                                                                                       Write(Localizer["ReadMore"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"...</a>
                                 </div>
                             </div>
                             <div class=""col-xs-12 col-md-5 col-lg-4"">
                                 <div class=""thumb""><img src=""https://static.vietbank.com.vn/web/Ve-VietBank/Gioi-thieu/quatrinhphattrien.png""");
             BeginWriteAttribute("alt", " alt=\"", 5075, "\"", 5109, 1);
+#nullable restore
 #line 89 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Index.cshtml"
 WriteAttributeValue("", 5081, Localizer["MilestonesName"], 5081, 28, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(@"></div>
                             </div>
@@ -258,38 +308,48 @@ WriteAttributeValue("", 5081, Localizer["MilestonesName"], 5081, 28, false);
                             <div class=""col-xs-12 col-md-5 col-lg-4"">
                                 <div class=""thumb""><img src=""https://static.vietbank.com.vn/web/Ve-VietBank/chinhsachtuanthu/chinh-sach-tuan-thu.jpg""");
             BeginWriteAttribute("alt", " alt=\"", 5536, "\"", 5566, 1);
+#nullable restore
 #line 96 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Index.cshtml"
 WriteAttributeValue("", 5542, Localizer["PolicyName"], 5542, 24, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral("></div>\r\n                            </div>\r\n                            <div class=\"col-xs-12 col-md-7 col-lg-8\">\r\n                                <div class=\"content\">\r\n                                    <h1 class=\"title\">");
+#nullable restore
 #line 100 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Index.cshtml"
                                                  Write(Localizer["PolicyName"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</h1>\r\n                                    <div class=\"desc\"><p>");
+#nullable restore
 #line 101 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Index.cshtml"
                                                     Write(Localizer["PolicyDescription"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</p></div>\r\n                                    <a");
             BeginWriteAttribute("href", " href=\"", 5961, "\"", 5991, 1);
+#nullable restore
 #line 102 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Index.cshtml"
 WriteAttributeValue("", 5968, Localizer["PolicyUrl"], 5968, 23, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(" class=\"btn-more\">");
+#nullable restore
 #line 102 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\About\Index.cshtml"
                                                                                   Write(Localizer["ReadMore"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("...</a>\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </section>\r\n\r\n</main>\r\n");
         }
         #pragma warning restore 1998

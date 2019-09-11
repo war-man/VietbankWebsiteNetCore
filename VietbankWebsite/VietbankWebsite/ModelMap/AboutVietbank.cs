@@ -70,4 +70,20 @@ namespace VietbankWebsite.ModelMap
     {
         public IEnumerable<VbBankCode> Data { get; set; }
     }
+
+    public class Contact
+    {
+        [Required(ErrorMessage = "Vui lòng nhập họ tên!")]
+        public string FullName { get; set; }
+        public string Phone { get; set; }
+        [EmailAddress(ErrorMessage = "Email không đúng định dạng")]
+        public string Email { get; set; }
+        [Required(ErrorMessage = "Vui lòng nhập địa chỉ!")]
+        public string Address { get; set; }
+        public string Title { get; set; }
+        [Required(ErrorMessage = "Vui lòng nhập ngành nghề của bạn!")]
+        public string Career { get; set; }
+        [Required(ErrorMessage = "Vui lòng nhập nội dung cần hỗ trợ!")]
+        public string Message { get; set; }
+    }
 }

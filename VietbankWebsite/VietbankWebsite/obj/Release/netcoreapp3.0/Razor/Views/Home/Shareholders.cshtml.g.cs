@@ -12,16 +12,20 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#nullable restore
 #line 1 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite;
 
 #line default
 #line hidden
+#nullable disable
+#nullable restore
 #line 2 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite.Models;
 
 #line default
 #line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8a33d041372ec5caccbbbfb975d54d3a6625440a", @"/Views/Home/Shareholders.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"226e66e476153809e3942cb65fb4710596043976", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Shareholders : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<VietbankWebsite.ModelMap.ShareholderCategory>
@@ -29,12 +33,14 @@ using VietbankWebsite.Models;
         #pragma warning disable 1998
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
+#nullable restore
 #line 2 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Home\Shareholders.cshtml"
   
     Layout = "~/Views/Shared/_LayoutShareholder.cshtml";
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"<section class=""banner-wrap"">
     <section class=""breadcrumb-wrap brown"">
         <div class=""container"">
@@ -50,19 +56,23 @@ using VietbankWebsite.Models;
         <div");
             BeginWriteAttribute("style", " style=\"", 513, "\"", 577, 3);
             WriteAttributeValue("", 521, "background-image:url(\'", 521, 22, true);
+#nullable restore
 #line 17 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Home\Shareholders.cshtml"
 WriteAttributeValue("", 543, Model.ShareholderInfo.Thumbnail, 543, 32, false);
 
 #line default
 #line hidden
+#nullable disable
             WriteAttributeValue("", 575, "\')", 575, 2, true);
             EndWriteAttribute();
             WriteLiteral(" class=\"imgBg\"></div>\r\n        <div class=\"desc\">\r\n            <div class=\"container\">\r\n                <div class=\"row\">\r\n                    <div class=\"col-xs-12 col-sm-5 col-lg-5 col-xl-5\">\r\n                        <h1 class=\"title\">");
+#nullable restore
 #line 22 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Home\Shareholders.cshtml"
                                      Write(Model.ShareholderInfo.Title);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"                                                                                                                                                                                     </h1>
                         <div class=""content""></div>
                     </div>
@@ -78,6 +88,7 @@ WriteAttributeValue("", 543, Model.ShareholderInfo.Thumbnail, 543, 32, false);
         <div class=""container"">
             <div class=""row flex flex-wrap"">
 ");
+#nullable restore
 #line 36 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Home\Shareholders.cshtml"
                  foreach (var item in Model.shareholderItems.Select((value, i) => new { i, value }))
                 {
@@ -86,55 +97,69 @@ WriteAttributeValue("", 543, Model.ShareholderInfo.Thumbnail, 543, 32, false);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("                        <div class=\"col-xs-12 col-md-6 col-lg-3 item-bcWrap\">\r\n                            <div");
             BeginWriteAttribute("class", " class=\"", 1627, "\"", 1657, 3);
             WriteAttributeValue("", 1635, "item-bc", 1635, 7, true);
             WriteAttributeValue(" ", 1642, "op-", 1643, 4, true);
+#nullable restore
 #line 41 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Home\Shareholders.cshtml"
 WriteAttributeValue("", 1646, item.i+1, 1646, 11, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">\r\n                                <div class=\"thumb\"><a");
             BeginWriteAttribute("href", " href=\"", 1714, "\"", 1736, 1);
+#nullable restore
 #line 42 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Home\Shareholders.cshtml"
 WriteAttributeValue("", 1721, item.value.Url, 1721, 15, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral("><img");
             BeginWriteAttribute("src", " src=\"", 1742, "\"", 1769, 1);
+#nullable restore
 #line 42 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Home\Shareholders.cshtml"
 WriteAttributeValue("", 1748, item.value.Thumbnail, 1748, 21, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             BeginWriteAttribute("alt", " alt=\"", 1770, "\"", 1776, 0);
             EndWriteAttribute();
             WriteLiteral("></a></div>\r\n                                <div class=\"caption\">\r\n                                    <h4><a");
             BeginWriteAttribute("href", " href=\"", 1887, "\"", 1909, 1);
+#nullable restore
 #line 44 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Home\Shareholders.cshtml"
 WriteAttributeValue("", 1894, item.value.Url, 1894, 15, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 44 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Home\Shareholders.cshtml"
                                                              Write(item.value.Title);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></h4>\r\n                                    <div class=\"desc\">\r\n                                        ");
+#nullable restore
 #line 46 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Home\Shareholders.cshtml"
                                    Write(Html.Raw(item.value.Description));
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("\r\n                                    </div>\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n");
+#nullable restore
 #line 51 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Home\Shareholders.cshtml"
                     }
                     else
@@ -142,55 +167,69 @@ WriteAttributeValue("", 1894, item.value.Url, 1894, 15, false);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("                        <div class=\"col-xs-12 col-md-6 col-lg-3 item-bcWrap\">\r\n                            <div");
             BeginWriteAttribute("class", " class=\"", 2405, "\"", 2435, 3);
             WriteAttributeValue("", 2413, "item-bc", 2413, 7, true);
             WriteAttributeValue(" ", 2420, "op-", 2421, 4, true);
+#nullable restore
 #line 55 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Home\Shareholders.cshtml"
 WriteAttributeValue("", 2424, item.i+1, 2424, 11, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">\r\n                                <div class=\"caption\">\r\n                                    <h4><a");
             BeginWriteAttribute("href", " href=\"", 2536, "\"", 2558, 1);
+#nullable restore
 #line 57 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Home\Shareholders.cshtml"
 WriteAttributeValue("", 2543, item.value.Url, 2543, 15, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 57 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Home\Shareholders.cshtml"
                                                              Write(item.value.Title);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></h4>\r\n                                    <div class=\"desc\">\r\n                                        ");
+#nullable restore
 #line 59 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Home\Shareholders.cshtml"
                                    Write(Html.Raw(item.value.Description));
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("\r\n                                    </div>\r\n                                </div>\r\n                                <div class=\"thumb\"><a");
             BeginWriteAttribute("href", " href=\"", 2856, "\"", 2878, 1);
+#nullable restore
 #line 62 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Home\Shareholders.cshtml"
 WriteAttributeValue("", 2863, item.value.Url, 2863, 15, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral("><img");
             BeginWriteAttribute("src", " src=\"", 2884, "\"", 2911, 1);
+#nullable restore
 #line 62 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Home\Shareholders.cshtml"
 WriteAttributeValue("", 2890, item.value.Thumbnail, 2890, 21, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             BeginWriteAttribute("alt", " alt=\"", 2912, "\"", 2918, 0);
             EndWriteAttribute();
             WriteLiteral("></a></div>\r\n                            </div>\r\n                        </div>\r\n");
+#nullable restore
 #line 65 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Home\Shareholders.cshtml"
                     }
 
@@ -198,6 +237,7 @@ WriteAttributeValue("", 2890, item.value.Thumbnail, 2890, 21, false);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("            </div>\r\n        </div>\r\n    </section>\r\n</main>\r\n\r\n");
         }
         #pragma warning restore 1998

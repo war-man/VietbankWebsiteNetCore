@@ -12,16 +12,20 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#nullable restore
 #line 1 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite;
 
 #line default
 #line hidden
+#nullable disable
+#nullable restore
 #line 2 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite.Models;
 
 #line default
 #line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b179a4d65334296564cd95742ce0367275053d9c", @"/Views/Card/Index.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"226e66e476153809e3942cb65fb4710596043976", @"/Views/_ViewImports.cshtml")]
     public class Views_Card_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<VietbankWebsite.Entities.CardHomeTemplate>
@@ -52,70 +56,86 @@ using VietbankWebsite.Models;
         #pragma warning disable 1998
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
+#nullable restore
 #line 2 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Index.cshtml"
   
     Layout = "~/Views/Shared/_LayoutCard.cshtml";
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("\r\n<section class=\"banner-wrap\">\r\n    <div class=\"banner home-banner\">\r\n");
+#nullable restore
 #line 8 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Index.cshtml"
          foreach (var item in Model.BoxOne)
         {
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("            <div class=\"item\"><a");
             BeginWriteAttribute("href", " href=\"", 267, "\"", 283, 1);
+#nullable restore
 #line 10 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Index.cshtml"
 WriteAttributeValue("", 274, item.Url, 274, 9, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral("><img");
             BeginWriteAttribute("src", " src=\"", 289, "\"", 305, 1);
+#nullable restore
 #line 10 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Index.cshtml"
 WriteAttributeValue("", 295, item.Path, 295, 10, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             BeginWriteAttribute("alt", " alt=\"", 306, "\"", 312, 0);
             EndWriteAttribute();
             WriteLiteral("></a></div>\r\n");
+#nullable restore
 #line 11 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Index.cshtml"
         }
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("    </div>\r\n</section>\r\n<main>\r\n    <section class=\"home-card\">\r\n        <div class=\"container\">\r\n            <div class=\"card-slick\">\r\n");
+#nullable restore
 #line 18 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Index.cshtml"
                  foreach (var item in Model.BoxTwo)
                 {
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("                    <div class=\"item\">\r\n                        <a class=\"card-item\"");
             BeginWriteAttribute("href", " href=\"", 629, "\"", 650, 1);
+#nullable restore
 #line 21 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Index.cshtml"
 WriteAttributeValue("", 636, item.UrlTitle, 636, 14, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">\r\n                            <figure>\r\n                                <div class=\"card-img\">\r\n                                    <img");
             BeginWriteAttribute("src", " src=\"", 788, "\"", 808, 1);
+#nullable restore
 #line 24 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Index.cshtml"
 WriteAttributeValue("", 794, item.UrlImage, 794, 14, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             BeginWriteAttribute("alt", " alt=\"", 809, "\"", 815, 0);
             EndWriteAttribute();
             WriteLiteral(">\r\n                                </div>\r\n                                <figcaption>\r\n                                    <div class=\"card-logo\">\r\n                                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "b179a4d65334296564cd95742ce0367275053d9c6845", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "b179a4d65334296564cd95742ce0367275053d9c7225", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -130,79 +150,101 @@ WriteAttributeValue("", 794, item.UrlImage, 794, 14, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                                    </div>\r\n                                    <div class=\"card-name\">");
+#nullable restore
 #line 30 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Index.cshtml"
                                                       Write(item.Title);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</div>\r\n                                    <div class=\"card-des\">");
+#nullable restore
 #line 31 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Index.cshtml"
                                                      Write(item.Description);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</div>\r\n                                </figcaption>\r\n                            </figure>\r\n                        </a>\r\n                    </div>\r\n");
+#nullable restore
 #line 36 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Index.cshtml"
                 }
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("            </div>\r\n        </div>\r\n    </section>\r\n    <section class=\"home-intro\">\r\n        <div class=\"container\">\r\n            <h1 class=\"home-title text-center\">");
+#nullable restore
 #line 42 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Index.cshtml"
                                           Write(Model.BoxThree.TitleOne);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</h1>\r\n            <div class=\"home-des text-center\">");
+#nullable restore
 #line 43 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Index.cshtml"
                                          Write(Model.BoxThree.TitleTwo);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</div>\r\n            <div class=\"home-content text-center\" style=\"max-width: 770px\">\r\n                <div class=\"content\">\r\n                    <p>");
+#nullable restore
 #line 46 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Index.cshtml"
                   Write(Model.BoxThree.Description);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</p>\r\n                </div>\r\n            </div>\r\n            <div class=\"intro-img text-center\"><img");
             BeginWriteAttribute("src", " src=\"", 1961, "\"", 1986, 1);
+#nullable restore
 #line 49 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Index.cshtml"
 WriteAttributeValue("", 1967, Model.BoxThree.Url, 1967, 19, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             BeginWriteAttribute("alt", " alt=\"", 1987, "\"", 1993, 0);
             EndWriteAttribute();
             WriteLiteral("></div>\r\n        </div>\r\n    </section>\r\n    <section class=\"home-promotion s2\">\r\n        <div class=\"container\">\r\n            <div class=\"row\">\r\n                <div class=\"col-12 col-md-6\">\r\n                    <div class=\"img text-center\"><img");
             BeginWriteAttribute("src", " src=\"", 2240, "\"", 2264, 1);
+#nullable restore
 #line 56 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Index.cshtml"
 WriteAttributeValue("", 2246, Model.BoxFour.Url, 2246, 18, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             BeginWriteAttribute("alt", " alt=\"", 2265, "\"", 2271, 0);
             EndWriteAttribute();
             WriteLiteral("></div>\r\n                </div>\r\n                <div class=\"col-12 col-md-6\">\r\n                    <div class=\"promotion-content text-center\">\r\n                        <h2 class=\"home-title\">");
+#nullable restore
 #line 60 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Index.cshtml"
                                           Write(Model.BoxFour.TitleOne);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</h2>\r\n                        <div class=\"home-des\">");
+#nullable restore
 #line 61 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Index.cshtml"
                                          Write(Model.BoxFour.TitleTwo);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</div>\r\n                        <div class=\"home-content\" style=\"max-width:350px\">\r\n                            <div class=\"content\">\r\n                                <p>");
+#nullable restore
 #line 64 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Index.cshtml"
                               Write(Model.BoxFour.Description);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"</p>
                             </div>
                         </div>
@@ -217,85 +259,109 @@ WriteAttributeValue("", 2246, Model.BoxFour.Url, 2246, 18, false);
                 <div class=""col-12 col-md-6"">
                     <div class=""promotion-content text-center"">
                         <h2 class=""home-title"">");
+#nullable restore
 #line 77 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Index.cshtml"
                                           Write(Model.BoxFive.TitleOne);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</h2>\r\n                        <div class=\"home-des\">");
+#nullable restore
 #line 78 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Index.cshtml"
                                          Write(Model.BoxFive.TitleTwo);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</div>\r\n                        <div class=\"home-content\" style=\"max-width:350px\">\r\n                            <div class=\"content\">\r\n                                <p>");
+#nullable restore
 #line 81 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Index.cshtml"
                               Write(Model.BoxFive.Description);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</p>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <div class=\"col-12 col-md-6\">\r\n                    <div class=\"img text-center\"><img");
             BeginWriteAttribute("src", " src=\"", 3719, "\"", 3743, 1);
+#nullable restore
 #line 87 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Index.cshtml"
 WriteAttributeValue("", 3725, Model.BoxFive.Url, 3725, 18, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             BeginWriteAttribute("alt", " alt=\"", 3744, "\"", 3750, 0);
             EndWriteAttribute();
             WriteLiteral("></div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </section>\r\n    <section class=\"home-feature s2\">\r\n        <div class=\"container\">\r\n            <h2 class=\"home-title text-center\">");
+#nullable restore
 #line 94 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Index.cshtml"
                                           Write(Model.BoxSix.TitleOne);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</h2>\r\n            <div class=\"home-des text-center\">");
+#nullable restore
 #line 95 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Index.cshtml"
                                          Write(Model.BoxSix.TitleTwo);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</div>\r\n            <div class=\"home-content text-center\" style=\"max-width:460px\">\r\n                <div class=\"content\">\r\n                    <p>");
+#nullable restore
 #line 98 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Index.cshtml"
                   Write(Model.BoxSix.Description);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</p>\r\n                </div>\r\n            </div>\r\n            ");
+#nullable restore
 #line 101 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Index.cshtml"
        Write(Html.Raw(Model.BoxSix.ListBox));
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("\r\n        </div>\r\n    </section>\r\n    <section class=\"home-promotion\">\r\n        <div class=\"container\">\r\n            <div class=\"row\">\r\n                <div class=\"col-12 col-md-6\">\r\n                    <div class=\"img text-center\"><img");
             BeginWriteAttribute("src", " src=\"", 4552, "\"", 4577, 1);
+#nullable restore
 #line 108 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Index.cshtml"
 WriteAttributeValue("", 4558, Model.BoxSeven.Url, 4558, 19, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             BeginWriteAttribute("alt", " alt=\"", 4578, "\"", 4584, 0);
             EndWriteAttribute();
             WriteLiteral("></div>\r\n                </div>\r\n                <div class=\"col-12 col-md-6\">\r\n                    <div class=\"promotion-content text-center\">\r\n                        <h2 class=\"home-title\">");
+#nullable restore
 #line 112 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Index.cshtml"
                                           Write(Model.BoxSeven.TitleOne);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</h2>\r\n                        <div class=\"home-des\">");
+#nullable restore
 #line 113 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Index.cshtml"
                                          Write(Model.BoxSeven.TitleTwo);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</div>\r\n                        <div class=\"home-content\" style=\"max-width:350px\">\r\n                            <div class=\"content\">\r\n                                <p>");
+#nullable restore
 #line 116 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\Index.cshtml"
                               Write(Model.BoxSeven.Description);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</p>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </section>\r\n</main>\r\n\r\n");
         }
         #pragma warning restore 1998

@@ -12,16 +12,20 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#nullable restore
 #line 1 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite;
 
 #line default
 #line hidden
+#nullable disable
+#nullable restore
 #line 2 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite.Models;
 
 #line default
 #line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9db6705ef3ab889ff8da0950384a524a4df65b29", @"/Views/Enterprise/YouNeed.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"226e66e476153809e3942cb65fb4710596043976", @"/Views/_ViewImports.cshtml")]
     public class Views_Enterprise_YouNeed : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
@@ -54,6 +58,7 @@ using VietbankWebsite.Models;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("\r\n");
+#nullable restore
 #line 2 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Enterprise\YouNeed.cshtml"
   
     ViewData["Title"] = "YouNeed";
@@ -61,6 +66,7 @@ using VietbankWebsite.Models;
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"<section class=""banner-wrap"">
     <section class=""breadcrumb-wrap"">
         <div class=""container"">
@@ -88,7 +94,7 @@ using VietbankWebsite.Models;
         </div>
  ");
             WriteLiteral("   </section>\r\n    <section class=\"choose-need\">\r\n        <div class=\"container\">\r\n            <select name=\"gender\">\r\n                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9db6705ef3ab889ff8da0950384a524a4df65b295438", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9db6705ef3ab889ff8da0950384a524a4df65b295552", async() => {
                 WriteLiteral("Chọn các nhu cầu bạn cần tìm...");
             }
             );
@@ -104,7 +110,7 @@ using VietbankWebsite.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9db6705ef3ab889ff8da0950384a524a4df65b296638", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9db6705ef3ab889ff8da0950384a524a4df65b296752", async() => {
                 WriteLiteral("Nhu cầu vay mua nhà");
             }
             );
@@ -120,7 +126,7 @@ using VietbankWebsite.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9db6705ef3ab889ff8da0950384a524a4df65b297826", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9db6705ef3ab889ff8da0950384a524a4df65b297940", async() => {
                 WriteLiteral("Nhu cầu vậy mua ");
             }
             );

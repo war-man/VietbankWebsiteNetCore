@@ -175,8 +175,8 @@ namespace VietbankWebsite.Controllers
                 ModelState.AddModelError("", "Mã xác thực không đúng, Vui lòng thử lại");
                 return View(model);
             }
-            ViewBag.GuaranteelLetter = GenerateTableGuaranteeLetter(await _supportService.GetGuaranteeLetter(model.acctNbr,model.seriesNo));
-            return RedirectToAction(nameof(GuaranteeLetter));
+            ViewData["GuaranteeLetter"] = GenerateTableGuaranteeLetter(await _supportService.GetGuaranteeLetter(model.acctNbr,model.seriesNo));
+            return View(model);
         }
 
         private string GenerateTableGuaranteeLetter(ThuBaoLanhModel thuBaoLanh)

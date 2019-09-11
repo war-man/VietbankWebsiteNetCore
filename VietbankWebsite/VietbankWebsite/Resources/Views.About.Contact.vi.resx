@@ -126,6 +126,9 @@
   <data name="LienHeUrl" xml:space="preserve">
     <value>/ve-vietbank/lien-he</value>
   </data>
+  <data name="MessageSuccess" xml:space="preserve">
+    <value>Bạn đã gửi yêu cầu thành công!</value>
+  </data>
   <data name="String1" xml:space="preserve">
     <value>Hội sở Vietbank</value>
   </data>

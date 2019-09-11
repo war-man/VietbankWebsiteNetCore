@@ -19,6 +19,7 @@ using System.Runtime.Loader;
 using Vietbank.Core;
 using VietbankWebsite.Context;
 using VietbankWebsite.Extensions;
+using VietbankWebsite.Models;
 using VietbankWebsite.Repository;
 using VietbankWebsite.Service;
 using VietbankWebsite.Uow;
@@ -68,6 +69,9 @@ namespace VietbankWebsite
             services.AddTransient<ISupportService, SupportService>();
             services.AddTransient<ISupportRepository, SupportRepository>();
 
+            services.AddTransient<IEmailSenderRepository, EmailSenderRepository>();
+            services.AddTransient<IRazorViewToStringRenderer, RazorViewToStringRenderer>();
+
             services.AddTransient<IUnitOfWork, UnitOfWork>();
 
 
@@ -113,6 +117,7 @@ namespace VietbankWebsite
 
             services.Configure<RecaptchaSettings>(recaptcha);
             services.AddTransient<IRecaptchaService, RecaptchaService>();
+            services.Configure<EmailSender>(Configuration.GetSection("EmailSender"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

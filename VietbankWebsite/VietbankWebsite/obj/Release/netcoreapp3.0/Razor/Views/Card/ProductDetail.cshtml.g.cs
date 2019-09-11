@@ -12,16 +12,20 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#nullable restore
 #line 1 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite;
 
 #line default
 #line hidden
+#nullable disable
+#nullable restore
 #line 2 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite.Models;
 
 #line default
 #line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4b8466503ce2af93e48cc72efc53fbc36922f98b", @"/Views/Card/ProductDetail.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"226e66e476153809e3942cb65fb4710596043976", @"/Views/_ViewImports.cshtml")]
     public class Views_Card_ProductDetail : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<VietbankWebsite.ModelMap.CardProductDetailDto>
@@ -53,55 +57,67 @@ using VietbankWebsite.Models;
         #pragma warning disable 1998
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
+#nullable restore
 #line 2 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\ProductDetail.cshtml"
   
     Layout = "~/Views/Shared/_LayoutCard.cshtml";
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("\r\n<section class=\"breadcrumb-wrap\">\r\n    <div class=\"breadcrumb-content\">\r\n        <div class=\"container\">\r\n            ");
+#nullable restore
 #line 9 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\ProductDetail.cshtml"
        Write(Html.Raw(Model.SiteMap));
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("\r\n        </div>\r\n    </div>\r\n    <div class=\"page-banner\">\r\n        <div class=\"banner-img\"><img");
             BeginWriteAttribute("src", " src=\"", 353, "\"", 372, 1);
+#nullable restore
 #line 13 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\ProductDetail.cshtml"
 WriteAttributeValue("", 359, Model.Banner, 359, 13, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             BeginWriteAttribute("alt", " alt=\"", 373, "\"", 379, 0);
             EndWriteAttribute();
             WriteLiteral("></div>\r\n    </div>\r\n</section>\r\n<section class=\"home-card\">\r\n    <div class=\"container\">\r\n        <div class=\"card-slick\">\r\n");
+#nullable restore
 #line 19 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\ProductDetail.cshtml"
              foreach (var item in Model.BoxTwo)
             {
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("                <div class=\"item\">\r\n                    <a class=\"card-item\"");
             BeginWriteAttribute("href", " href=\"", 645, "\"", 666, 1);
+#nullable restore
 #line 22 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\ProductDetail.cshtml"
 WriteAttributeValue("", 652, item.UrlTitle, 652, 14, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">\r\n                        <figure>\r\n                            <div class=\"card-img\">\r\n                                <img");
             BeginWriteAttribute("src", " src=\"", 792, "\"", 812, 1);
+#nullable restore
 #line 25 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\ProductDetail.cshtml"
 WriteAttributeValue("", 798, item.UrlImage, 798, 14, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             BeginWriteAttribute("alt", " alt=\"", 813, "\"", 819, 0);
             EndWriteAttribute();
             WriteLiteral(">\r\n                            </div>\r\n                            <figcaption>\r\n                                <div class=\"card-logo\">\r\n                                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "4b8466503ce2af93e48cc72efc53fbc36922f98b6858", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "4b8466503ce2af93e48cc72efc53fbc36922f98b7162", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -116,85 +132,107 @@ WriteAttributeValue("", 798, item.UrlImage, 798, 14, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                                </div>\r\n                                <div class=\"card-name\">");
+#nullable restore
 #line 31 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\ProductDetail.cshtml"
                                                   Write(item.Title);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</div>\r\n                                <div class=\"card-des\">");
+#nullable restore
 #line 32 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\ProductDetail.cshtml"
                                                  Write(item.Description);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</div>\r\n                            </figcaption>\r\n                        </figure>\r\n                    </a>\r\n                </div>\r\n");
+#nullable restore
 #line 37 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\ProductDetail.cshtml"
             }
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("        </div>\r\n    </div>\r\n</section>\r\n<section class=\"product-page\">\r\n    <div class=\"product-detail\">\r\n        <div class=\"product-bg\"><img");
             BeginWriteAttribute("src", " src=\"", 1525, "\"", 1558, 1);
+#nullable restore
 #line 43 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\ProductDetail.cshtml"
 WriteAttributeValue("", 1531, Model.PathBackgroundBoxOne, 1531, 27, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             BeginWriteAttribute("alt", " alt=\"", 1559, "\"", 1565, 0);
             EndWriteAttribute();
             WriteLiteral("></div>\r\n        <div class=\"container\">\r\n            <h2 class=\"product-cate home-des text-center\">");
+#nullable restore
 #line 45 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\ProductDetail.cshtml"
                                                      Write(Model.TitleOneBoxOne);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</h2>\r\n            <h1 class=\"product-name home-title text-center\">");
+#nullable restore
 #line 46 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\ProductDetail.cshtml"
                                                        Write(Model.TitleTwoBoxOne);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(" </h1>\r\n            <div class=\"product-img text-center\"><img");
             BeginWriteAttribute("src", " src=\"", 1836, "\"", 1863, 1);
+#nullable restore
 #line 47 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\ProductDetail.cshtml"
 WriteAttributeValue("", 1842, Model.PathCardBoxOne, 1842, 21, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             BeginWriteAttribute("alt", " alt=\"", 1864, "\"", 1870, 0);
             EndWriteAttribute();
             WriteLiteral("></div>\r\n        </div>\r\n    </div>\r\n    <div class=\"product-feature\">\r\n        ");
+#nullable restore
 #line 51 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\ProductDetail.cshtml"
    Write(Html.Raw(Model.ContentBoxTwo));
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("\r\n    </div>\r\n    <div class=\"product-limit\">\r\n        <div class=\"product-img\"><img");
             BeginWriteAttribute("src", " src=\"", 2065, "\"", 2100, 1);
+#nullable restore
 #line 54 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\ProductDetail.cshtml"
 WriteAttributeValue("", 2071, Model.PathBackgroundBoxThree, 2071, 29, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             BeginWriteAttribute("alt", " alt=\"", 2101, "\"", 2107, 0);
             EndWriteAttribute();
             WriteLiteral("></div>\r\n        <div class=\"container\">\r\n            <div class=\"limit-content\">\r\n                <div class=\"product-title\">");
+#nullable restore
 #line 57 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\ProductDetail.cshtml"
                                       Write(Model.TitleBoxThree);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</div>\r\n                <div class=\"content\">\r\n                    <p>");
+#nullable restore
 #line 59 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\ProductDetail.cshtml"
                   Write(Model.DescriptionBoxThree);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</p>\r\n                </div>\r\n                <div class=\"img\">");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "4b8466503ce2af93e48cc72efc53fbc36922f98b12392", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "4b8466503ce2af93e48cc72efc53fbc36922f98b13114", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -209,17 +247,21 @@ WriteAttributeValue("", 2071, Model.PathBackgroundBoxThree, 2071, 29, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("</div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"product-promotion\">\r\n        <div class=\"container\">\r\n            <h2 class=\"product-title text-center\">");
+#nullable restore
 #line 67 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\ProductDetail.cshtml"
                                              Write(Model.TitleBoxFour);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</h2>\r\n            ");
+#nullable restore
 #line 68 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Card\ProductDetail.cshtml"
        Write(Html.Raw(Model.ContentBoxFour));
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("\r\n        </div>\r\n    </div>\r\n</section>\r\n\r\n");
         }
         #pragma warning restore 1998

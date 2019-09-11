@@ -1,10 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Localization;
+using Microsoft.Extensions.Options;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using VietbankWebsite.ModelMap;
 using VietbankWebsite.Models;
+using VietbankWebsite.Repository;
 using VietbankWebsite.Service;
 
 namespace VietbankWebsite.Controllers
@@ -17,12 +19,26 @@ namespace VietbankWebsite.Controllers
         private IRecaptchaService _recaptcha;
         private readonly IAboutVietbankService _aboutVietbankService;
         private readonly IStringLocalizer<AboutController> _localizer;
-        public AboutController(IStringLocalizer<AboutController> localizer, IMemoryCache memoryCache,IAboutVietbankService aboutVietbankService, IRecaptchaService recaptcha)
+        private readonly IEmailSenderRepository _emailSenderRepository;
+        private readonly IRazorViewToStringRenderer _razorViewToStringRenderer;
+        private readonly EmailSender _emailSender;
+        public AboutController(
+            IStringLocalizer<AboutController> localizer, 
+            IMemoryCache memoryCache,
+            IAboutVietbankService aboutVietbankService, 
+            IRecaptchaService recaptcha, 
+            IEmailSenderRepository emailSenderRepository, 
+            IRazorViewToStringRenderer razorViewToStringRenderer,
+            IOptions<EmailSender> emailSender
+        )
         {
             _cache = memoryCache;
             _aboutVietbankService = aboutVietbankService;
             _localizer = localizer;
             _recaptcha = recaptcha;
+            _emailSenderRepository = emailSenderRepository;
+            _razorViewToStringRenderer = razorViewToStringRenderer;
+            _emailSender = emailSender.Value;
         }
         [Route("")]
         [Route("gioi-thieu")]
@@ -326,7 +342,7 @@ namespace VietbankWebsite.Controllers
         [HttpGet]
         [Route("lien-he")]
         [Route("contact")]
-        public IActionResult Contact(string recruitment)
+        public IActionResult Contact()
         {
             return View();
         }
@@ -334,9 +350,30 @@ namespace VietbankWebsite.Controllers
         [HttpPost]
         [Route("lien-he")]
         [Route("contact")]
-        public IActionResult Contact()
+        public async Task<IActionResult> Contact(Contact model)
         {
-            return View();
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+            var recaptcha = await _recaptcha.Validate(Request);
+            if (!recaptcha.success)
+            {
+                ModelState.AddModelError("", "Mã xác thực không đúng, Vui lòng thử lại");
+                return View(model);
+            }
+            _emailSenderRepository.SendMail(model.Email, model.Title, await _razorViewToStringRenderer.RenderViewToStringAsync("/Views/EmailSender/ContactResponseToUser.cshtml", new ContactResponseToUser() { 
+                Message = "Vietbank đã nhận được lời nhắn của bạn, chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất!"
+            }));
+            _emailSenderRepository.SendMail(_emailSender.CallCenter, model.Title, await _razorViewToStringRenderer.RenderViewToStringAsync("/Views/EmailSender/ContactResponseToCallCenter.cshtml", new ContactResponseToCallCenter() { 
+                FullName = model.FullName,
+                Address = model.Address,
+                Message = model.Message,
+                Phone = model.Phone,
+                Work = model.Career
+            }));
+            TempData["success"] = true;
+            return RedirectToAction(nameof(Contact));
         }
     }
 }

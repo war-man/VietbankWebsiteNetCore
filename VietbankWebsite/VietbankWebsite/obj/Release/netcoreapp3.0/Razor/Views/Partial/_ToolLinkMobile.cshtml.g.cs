@@ -12,21 +12,27 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#nullable restore
 #line 1 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite;
 
 #line default
 #line hidden
+#nullable disable
+#nullable restore
 #line 2 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\_ViewImports.cshtml"
 using VietbankWebsite.Models;
 
 #line default
 #line hidden
+#nullable disable
+#nullable restore
 #line 1 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_ToolLinkMobile.cshtml"
 using Microsoft.AspNetCore.Mvc.Localization;
 
 #line default
 #line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2d673f58724ceb15a64a2d91447cf544d7059c00", @"/Views/Partial/_ToolLinkMobile.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"226e66e476153809e3942cb65fb4710596043976", @"/Views/_ViewImports.cshtml")]
     public class Views_Partial__ToolLinkMobile : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
@@ -36,27 +42,33 @@ using Microsoft.AspNetCore.Mvc.Localization;
         {
             WriteLiteral("<a");
             BeginWriteAttribute("href", " href=\"", 82, "\"", 123, 1);
+#nullable restore
 #line 3 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_ToolLinkMobile.cshtml"
 WriteAttributeValue("", 89, Localizer["NganHangTrucTuyenUrl"], 89, 34, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(" class=\"btn-ibanking\"><i class=\"fa fa-unlock-alt\"></i><span>");
+#nullable restore
 #line 3 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_ToolLinkMobile.cshtml"
                                                                                                    Write(Localizer["NganHangTrucTuyen"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</span></a>\r\n<div class=\"top-contact\">\r\n    <div class=\"location\">\r\n        <i class=\"fa fa-map-marker\"> </i>\r\n        <p><a");
             BeginWriteAttribute("href", " href=\"", 339, "\"", 346, 0);
             EndWriteAttribute();
             WriteLiteral(">ATM &amp; ");
+#nullable restore
 #line 7 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_ToolLinkMobile.cshtml"
                            Write(Localizer["ChiNhanh"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral(@"</a></p>
     </div>
     <div class=""phone"">
@@ -68,102 +80,130 @@ WriteAttributeValue("", 89, Localizer["NganHangTrucTuyenUrl"], 89, 34, false);
     <ul>
         <li> <i class=""fa fa-usd""></i><a");
             BeginWriteAttribute("href", " href=\"", 651, "\"", 680, 1);
+#nullable restore
 #line 16 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_ToolLinkMobile.cshtml"
 WriteAttributeValue("", 658, Localizer["TyGiaUrl"], 658, 22, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             BeginWriteAttribute("title", " title=\"", 681, "\"", 708, 1);
+#nullable restore
 #line 16 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_ToolLinkMobile.cshtml"
 WriteAttributeValue("", 689, Localizer["TyGia"], 689, 19, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 16 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_ToolLinkMobile.cshtml"
                                                                                               Write(Localizer["TyGia"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n        <li> <i class=\"fa fa-map-marker\"></i><a");
             BeginWriteAttribute("href", " href=\"", 787, "\"", 819, 1);
+#nullable restore
 #line 17 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_ToolLinkMobile.cshtml"
 WriteAttributeValue("", 794, Localizer["ChiNhanhUrl"], 794, 25, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             BeginWriteAttribute("title", " title=\"", 820, "\"", 850, 1);
+#nullable restore
 #line 17 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_ToolLinkMobile.cshtml"
 WriteAttributeValue("", 828, Localizer["ChiNhanh"], 828, 22, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 17 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_ToolLinkMobile.cshtml"
                                                                                                            Write(Localizer["ChiNhanh"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n        <li> <i class=\"fa fa-file-text-o\"></i><a");
             BeginWriteAttribute("href", " href=\"", 933, "\"", 964, 1);
+#nullable restore
 #line 18 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_ToolLinkMobile.cshtml"
 WriteAttributeValue("", 940, Localizer["BieuMauUrl"], 940, 24, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(" title=\"title\">");
+#nullable restore
 #line 18 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_ToolLinkMobile.cshtml"
                                                                                           Write(Localizer["BieuMau"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n        <li> <i class=\"fa fa-gift\"></i><a");
             BeginWriteAttribute("href", " href=\"", 1053, "\"", 1086, 1);
+#nullable restore
 #line 19 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_ToolLinkMobile.cshtml"
 WriteAttributeValue("", 1060, Localizer["KhuyenMaiUrl"], 1060, 26, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             BeginWriteAttribute("title", " title=\"", 1087, "\"", 1118, 1);
+#nullable restore
 #line 19 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_ToolLinkMobile.cshtml"
 WriteAttributeValue("", 1095, Localizer["KhuyenMai"], 1095, 23, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 19 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_ToolLinkMobile.cshtml"
                                                                                                        Write(Localizer["KhuyenMai"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n        <li> <i class=\"fa fa-phone\"></i><a");
             BeginWriteAttribute("href", " href=\"", 1196, "\"", 1226, 1);
+#nullable restore
 #line 20 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_ToolLinkMobile.cshtml"
 WriteAttributeValue("", 1203, Localizer["LienHeUrl"], 1203, 23, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             BeginWriteAttribute("title", " title=\"", 1227, "\"", 1255, 1);
+#nullable restore
 #line 20 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_ToolLinkMobile.cshtml"
 WriteAttributeValue("", 1235, Localizer["LienHe"], 1235, 20, false);
 
 #line default
 #line hidden
+#nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
+#nullable restore
 #line 20 "T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\Views\Partial\_ToolLinkMobile.cshtml"
                                                                                                   Write(Localizer["LienHe"]);
 
 #line default
 #line hidden
+#nullable disable
             WriteLiteral("</a></li>\r\n    </ul>\r\n</nav>");
         }
         #pragma warning restore 1998

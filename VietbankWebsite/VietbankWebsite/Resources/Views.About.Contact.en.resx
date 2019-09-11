@@ -123,6 +123,9 @@
   <data name="LienHeUrl" xml:space="preserve">
     <value>/about-vietbank/contact</value>
   </data>
+  <data name="MessageSuccess" xml:space="preserve">
+    <value>We have been received your message successful!</value>
+  </data>
   <data name="String1" xml:space="preserve">
     <value>Vietbank Head Office</value>
   </data>

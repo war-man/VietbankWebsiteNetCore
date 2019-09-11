@@ -90,9 +90,9 @@
         </div>
         <div class="container">
             <div class="row" id="infoGuarantee" style="padding-top:20px">
-                @if(ViewBag.GuaranteelLetter != null)
+                @if (ViewData["GuaranteeLetter"] != null)
                 {
-                    @Html.Raw(ViewBag.GuaranteelLetter);
+                    @Html.Raw(ViewData["GuaranteeLetter"])
                 }
             </div>
         </div>
