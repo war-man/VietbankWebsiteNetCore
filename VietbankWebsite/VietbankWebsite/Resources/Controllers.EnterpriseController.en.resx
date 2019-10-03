@@ -129,6 +129,9 @@
   <data name="ProductUrl" xml:space="preserve">
     <value>/enterprise/product</value>
   </data>
+  <data name="PromotionNewsUrl" xml:space="preserve">
+    <value>/doanh-nghiep/promotion-news</value>
+  </data>
   <data name="ThuBaoLanhActive" xml:space="preserve">
     <value>The guarantee validity</value>
   </data>

@@ -120,7 +120,139 @@
   <data name="Address" xml:space="preserve">
     <value>47 Tran Hung Dao St., Soc Trang City, Soc Trang Province.</value>
   </data>
+  <data name="BanLanhDaoLink" xml:space="preserve">
+    <value>/about-vietbank/leadership/board-of-directors</value>
+  </data>
+  <data name="BanLanhDaoTitle" xml:space="preserve">
+    <value>Leadership</value>
+  </data>
+  <data name="CaNhanHeadTitle" xml:space="preserve">
+    <value>Personal</value>
+  </data>
+  <data name="ChoVayDNLink" xml:space="preserve">
+    <value>/enterprise/product/lending</value>
+  </data>
+  <data name="ChoVayDNTitle" xml:space="preserve">
+    <value>Lending</value>
+  </data>
+  <data name="ChoVayLink" xml:space="preserve">
+    <value>/personal/product/lending</value>
+  </data>
+  <data name="ChoVayTitle" xml:space="preserve">
+    <value>Lending</value>
+  </data>
+  <data name="ChuyenTienQuocTeDNLink" xml:space="preserve">
+    <value>/enterprise/product/international-remittance-services</value>
+  </data>
+  <data name="ChuyenTienQuocTeDNTitle" xml:space="preserve">
+    <value>International remittance</value>
+  </data>
+  <data name="DangKy" xml:space="preserve">
+    <value>Newsletter</value>
+  </data>
+  <data name="DesDangKy" xml:space="preserve">
+    <value>Subscribe to the Vietbank newsletter</value>
+  </data>
+  <data name="DichVuLink" xml:space="preserve">
+    <value>/personal/product/services</value>
+  </data>
+  <data name="DichVuQuanLyDongTienDNLink" xml:space="preserve">
+    <value>/enterprise/product/cash-management-services</value>
+  </data>
+  <data name="DichVuQuanLyDongTienDNTitle" xml:space="preserve">
+    <value>Cash Management Services</value>
+  </data>
+  <data name="DichVuThuNganSachNhaNuocDNLink" xml:space="preserve">
+    <value>/enterprise/product/payment-to-the-state-budget</value>
+  </data>
+  <data name="DichVuThuNganSachNhaNuocDNTitle" xml:space="preserve">
+    <value>Payment to the State Budget</value>
+  </data>
+  <data name="DichVuTitle" xml:space="preserve">
+    <value>Products and services</value>
+  </data>
+  <data name="DoanhNghiepHeadTitle" xml:space="preserve">
+    <value>Business</value>
+  </data>
+  <data name="GioiThieuHeadTitle" xml:space="preserve">
+    <value>Introduce</value>
+  </data>
+  <data name="GioiThieuLink" xml:space="preserve">
+    <value>/about-vietbank/introduce</value>
+  </data>
+  <data name="GioiThieuTitle" xml:space="preserve">
+    <value>Introduce</value>
+  </data>
   <data name="Legal" xml:space="preserve">
     <value>License No. 135 / GP-CBC dated 07/04/2008 - SWIFT Code: VNTTVNVX</value>
+  </data>
+  <data name="NganHangDaiLyLink" xml:space="preserve">
+    <value>/about-vietbank/introduce/correspondent-bank-agent</value>
+  </data>
+  <data name="NganHangDaiLyTitle" xml:space="preserve">
+    <value>List of Correspondent Banks</value>
+  </data>
+  <data name="NganHangTrucTuyenDNLink" xml:space="preserve">
+    <value>/enterprise/product/online-banking</value>
+  </data>
+  <data name="NganHangTrucTuyenDNTitle" xml:space="preserve">
+    <value>Online Banking</value>
+  </data>
+  <data name="NganHangTrucTuyenLink" xml:space="preserve">
+    <value>/personal/product/online-banking</value>
+  </data>
+  <data name="NganHangTrucTuyenTitle" xml:space="preserve">
+    <value>Online Banking</value>
+  </data>
+  <data name="TaiTroThuongMaiDNLink" xml:space="preserve">
+    <value>/enterprise/product/trade-finance</value>
+  </data>
+  <data name="TaiTroThuongMaiDNTitle" xml:space="preserve">
+    <value>Trade finance</value>
+  </data>
+  <data name="TienGuiDNLink" xml:space="preserve">
+    <value>/enterprise/product/deposit</value>
+  </data>
+  <data name="TienGuiDNTitle" xml:space="preserve">
+    <value>Deposit</value>
+  </data>
+  <data name="TienGuiThanhToanLink" xml:space="preserve">
+    <value>/personal/product/deposit-payment</value>
+  </data>
+  <data name="TienGuiThanhToanTitle" xml:space="preserve">
+    <value>Deposit payment</value>
+  </data>
+  <data name="TienGuiTietKiemLink" xml:space="preserve">
+    <value>/personal/product/saved-money</value>
+  </data>
+  <data name="TienGuiTietKiemTitle" xml:space="preserve">
+    <value>Saved money</value>
+  </data>
+  <data name="TinKhuyenMaiLink" xml:space="preserve">
+    <value>/about-vietbank/news/promotion-news</value>
+  </data>
+  <data name="TinKhuyenMaiTitle" xml:space="preserve">
+    <value>Promotion News</value>
+  </data>
+  <data name="TinTucHeadTitle" xml:space="preserve">
+    <value>News</value>
+  </data>
+  <data name="TinTucLink" xml:space="preserve">
+    <value>/about-vietbank/news</value>
+  </data>
+  <data name="TinTucTitle" xml:space="preserve">
+    <value>News</value>
+  </data>
+  <data name="TinVietbankLink" xml:space="preserve">
+    <value>/about-vietbank/news/vietbank-news</value>
+  </data>
+  <data name="TinVietbankTitle" xml:space="preserve">
+    <value>Vietbank News</value>
+  </data>
+  <data name="TuyenDungLink" xml:space="preserve">
+    <value>/careers</value>
+  </data>
+  <data name="TuyenDungTitle" xml:space="preserve">
+    <value>Recruitment</value>
   </data>
 </root>

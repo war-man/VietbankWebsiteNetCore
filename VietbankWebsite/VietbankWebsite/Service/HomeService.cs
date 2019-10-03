@@ -20,6 +20,11 @@ namespace VietbankWebsite.Service
             return await _unitOfWork.HomeRepository.GetBanner(lang);
         }
 
+        public async Task<IEnumerable<BannerIndexView>> GetBoxContainer(string type, string lang)
+        {
+            return await _unitOfWork.HomeRepository.GetBoxContainer(type,lang);
+        }
+
         public async Task<IEnumerable<SearchInfor>> GetSearchInfors(string key)
         {
             return await _unitOfWork.HomeRepository.GetSearchInfors(key);
@@ -30,5 +35,6 @@ namespace VietbankWebsite.Service
     {
         Task<IEnumerable<VbBanner>> GetBanner(string lang);
         Task<IEnumerable<SearchInfor>> GetSearchInfors(string key);
+        Task<IEnumerable<BannerIndexView>> GetBoxContainer(string type, string lang);
     }
 }

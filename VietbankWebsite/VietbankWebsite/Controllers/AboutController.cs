@@ -42,6 +42,7 @@ namespace VietbankWebsite.Controllers
         }
         [Route("")]
         [Route("gioi-thieu")]
+        [Route("introduce")]
         public IActionResult Index()
         {
             return View();

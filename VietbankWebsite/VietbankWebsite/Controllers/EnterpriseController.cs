@@ -21,13 +21,22 @@ namespace VietbankWebsite.Controllers
         private readonly IProductService _productService;
         private readonly IStringLocalizer<EnterpriseController> _localizer;
         private readonly ISupportService _supportService;
-        public EnterpriseController(IProductService productService, IStringLocalizer<EnterpriseController> localizer, ISupportService supportService, IMemoryCache cache, IRecaptchaService recaptcha)
+        private readonly IAboutVietbankService _aboutVietbankService;
+        public EnterpriseController(
+            IProductService productService, 
+            IStringLocalizer<EnterpriseController> localizer, 
+            ISupportService supportService, 
+            IMemoryCache cache, 
+            IRecaptchaService recaptcha,
+            IAboutVietbankService aboutVietbankService
+        )
         {
             _cache = cache;
             _productService = productService;
             _localizer = localizer;
             _supportService = supportService;
             _recaptcha = recaptcha;
+            _aboutVietbankService = aboutVietbankService;
         }
         [HttpGet]
         [Route("ban-can")]
@@ -43,6 +52,21 @@ namespace VietbankWebsite.Controllers
         public IActionResult YouNeedDetail(string youneed)
         {
             return View();
+        }
+
+        [HttpGet]
+        [Route("tin-khuyen-mai")]
+        [Route("promotions-news")]
+        public async Task<IActionResult> PromotionNews()
+        {
+            var keyPromotionNews = GetLangCurrent() == "vi" ? CacheKeys.EnterprisePromotionNewsVi : CacheKeys.EnterprisePromotionNewsEn;
+            IEnumerable<TopThreeNewsToCate> topThreeNewsToCates;
+            if (!_cache.TryGetValue(keyPromotionNews, out topThreeNewsToCates))
+            {
+                topThreeNewsToCates = await _aboutVietbankService.TopThreeNewsToCate(1074, _localizer["PromotionNewsUrl"], GetLangCurrent());
+                _cache.Set(keyPromotionNews, topThreeNewsToCates, cacheEntryOptions);
+            }
+            return View(topThreeNewsToCates);
         }
 
         [HttpGet]

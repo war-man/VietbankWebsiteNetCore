@@ -120,7 +120,139 @@
   <data name="Address" xml:space="preserve">
     <value>47 Trần Hưng Đạo, Tp. Sóc Trăng, Tỉnh Sóc Trăng.</value>
   </data>
+  <data name="BanLanhDaoLink" xml:space="preserve">
+    <value>/ve-vietbank/ban-lanh-dao/hoi-dong-quan-tri</value>
+  </data>
+  <data name="BanLanhDaoTitle" xml:space="preserve">
+    <value>Ban lãnh đạo</value>
+  </data>
+  <data name="CaNhanHeadTitle" xml:space="preserve">
+    <value>Cá Nhân</value>
+  </data>
+  <data name="ChoVayDNLink" xml:space="preserve">
+    <value>/doanh-nghiep/san-pham/cho-vay</value>
+  </data>
+  <data name="ChoVayDNTitle" xml:space="preserve">
+    <value>Cho vay</value>
+  </data>
+  <data name="ChoVayLink" xml:space="preserve">
+    <value>/ca-nhan/san-pham/cho-vay</value>
+  </data>
+  <data name="ChoVayTitle" xml:space="preserve">
+    <value>Cho vay</value>
+  </data>
+  <data name="ChuyenTienQuocTeDNLink" xml:space="preserve">
+    <value>/doanh-nghiep/san-pham/chuyen-tien-quoc-te</value>
+  </data>
+  <data name="ChuyenTienQuocTeDNTitle" xml:space="preserve">
+    <value>Chuyển tiền quốc tế</value>
+  </data>
+  <data name="DangKy" xml:space="preserve">
+    <value>Đăng ký nhận bản tin</value>
+  </data>
+  <data name="DesDangKy" xml:space="preserve">
+    <value>Kết nối với chúng tôi để theo dõi thông tin mới nhất</value>
+  </data>
+  <data name="DichVuLink" xml:space="preserve">
+    <value>/ca-nhan/san-pham/dich-vu</value>
+  </data>
+  <data name="DichVuQuanLyDongTienDNLink" xml:space="preserve">
+    <value>/doanh-nghiep/san-pham/dich-vu-quan-ly-dong-tien</value>
+  </data>
+  <data name="DichVuQuanLyDongTienDNTitle" xml:space="preserve">
+    <value>Dịch vụ quản lý dòng tiền</value>
+  </data>
+  <data name="DichVuThuNganSachNhaNuocDNLink" xml:space="preserve">
+    <value>/doanh-nghiep/san-pham/dich-vu-thu-ngan-sach-nha-nuoc</value>
+  </data>
+  <data name="DichVuThuNganSachNhaNuocDNTitle" xml:space="preserve">
+    <value>Dịch vụ thu ngân sách nhà nước</value>
+  </data>
+  <data name="DichVuTitle" xml:space="preserve">
+    <value>Dịch vụ</value>
+  </data>
+  <data name="DoanhNghiepHeadTitle" xml:space="preserve">
+    <value>Doanh Nghiệp</value>
+  </data>
+  <data name="GioiThieuHeadTitle" xml:space="preserve">
+    <value>Giới thiệu</value>
+  </data>
+  <data name="GioiThieuLink" xml:space="preserve">
+    <value>/ve-vietbank/gioi-thieu</value>
+  </data>
+  <data name="GioiThieuTitle" xml:space="preserve">
+    <value>Giới thiệu</value>
+  </data>
   <data name="Legal" xml:space="preserve">
     <value>SWIFT Code: VNTTVNVX</value>
+  </data>
+  <data name="NganHangDaiLyLink" xml:space="preserve">
+    <value>/ve-vietbank/gioi-thieu/ngan-hang-dai-ly</value>
+  </data>
+  <data name="NganHangDaiLyTitle" xml:space="preserve">
+    <value>Ngân hàng đại lý</value>
+  </data>
+  <data name="NganHangTrucTuyenDNLink" xml:space="preserve">
+    <value>/doanh-nghiep/san-pham/ngan-hang-truc-tuyen</value>
+  </data>
+  <data name="NganHangTrucTuyenDNTitle" xml:space="preserve">
+    <value>Ngân hàng trực tuyến</value>
+  </data>
+  <data name="NganHangTrucTuyenLink" xml:space="preserve">
+    <value>/ca-nhan/san-pham/ngan-hang-truc-tuyen</value>
+  </data>
+  <data name="NganHangTrucTuyenTitle" xml:space="preserve">
+    <value>Ngân hàng trực tuyến</value>
+  </data>
+  <data name="TaiTroThuongMaiDNLink" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TaiTroThuongMaiDNTitle" xml:space="preserve">
+    <value>Tài trợ thương mại</value>
+  </data>
+  <data name="TienGuiDNLink" xml:space="preserve">
+    <value>/doanh-nghiep/san-pham/tien-gui</value>
+  </data>
+  <data name="TienGuiDNTitle" xml:space="preserve">
+    <value>Tiền gửi</value>
+  </data>
+  <data name="TienGuiThanhToanLink" xml:space="preserve">
+    <value>/ca-nhan/san-pham/tien-gui-thanh-toan</value>
+  </data>
+  <data name="TienGuiThanhToanTitle" xml:space="preserve">
+    <value>Tiền gửi thanh toán</value>
+  </data>
+  <data name="TienGuiTietKiemLink" xml:space="preserve">
+    <value>/ca-nhan/san-pham/tien-gui-tiet-kiem</value>
+  </data>
+  <data name="TienGuiTietKiemTitle" xml:space="preserve">
+    <value>Tiền gửi tiết kiệm</value>
+  </data>
+  <data name="TinKhuyenMaiLink" xml:space="preserve">
+    <value>/ve-vietbank/tin-tuc/tin-khuyen-mai</value>
+  </data>
+  <data name="TinKhuyenMaiTitle" xml:space="preserve">
+    <value>Tin khuyến mãi</value>
+  </data>
+  <data name="TinTucHeadTitle" xml:space="preserve">
+    <value>Tin Tức</value>
+  </data>
+  <data name="TinTucLink" xml:space="preserve">
+    <value>/ve-vietbank/tin-tuc</value>
+  </data>
+  <data name="TinTucTitle" xml:space="preserve">
+    <value>Tin tức</value>
+  </data>
+  <data name="TinVietbankLink" xml:space="preserve">
+    <value>/ve-vietbank/tin-tuc/tin-vietbank</value>
+  </data>
+  <data name="TinVietbankTitle" xml:space="preserve">
+    <value>Tin Vietbank</value>
+  </data>
+  <data name="TuyenDungLink" xml:space="preserve">
+    <value>/tuyen-dung</value>
+  </data>
+  <data name="TuyenDungTitle" xml:space="preserve">
+    <value>Tuyển dụng</value>
   </data>
 </root>

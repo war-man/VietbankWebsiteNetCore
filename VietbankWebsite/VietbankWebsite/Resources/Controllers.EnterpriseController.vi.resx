@@ -129,6 +129,9 @@
   <data name="ProductUrl" xml:space="preserve">
     <value>/doanh-nghiep/san-pham</value>
   </data>
+  <data name="PromotionNewsUrl" xml:space="preserve">
+    <value>/doanh-nghiep/tin-khuyen-mai</value>
+  </data>
   <data name="ThuBaoLanhActive" xml:space="preserve">
     <value>Hiệu lực thư bảo lãnh</value>
   </data>

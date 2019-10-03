@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -53,11 +54,21 @@ namespace VietbankWebsite.Repository
             sb = sb.Replace('đ', 'd');
             return (sb.ToString().Normalize(NormalizationForm.FormD)).Replace(" ", "-").ToLower();
         }
+
+        public async Task<IEnumerable<BannerIndexView>> GetBoxContainer(string type, string lang)
+        {
+            var p = new DynamicParameters();
+            p.Add("@type", type);
+            p.Add("@lang", lang);
+            var boxContainer = await _context.Database.GetDbConnection().QueryAsync<BannerIndexView>("[dbo].[vb_fe_get_filter_banner_lang]", p, null, null, commandType: CommandType.StoredProcedure);
+            return boxContainer;
+        }
     }
 
     public interface IHomeRepository
     {
         Task<IEnumerable<VbBanner>> GetBanner(string lang);
         Task<IEnumerable<SearchInfor>> GetSearchInfors(string key);
+        Task<IEnumerable<BannerIndexView>> GetBoxContainer(string type,string lang);
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Localization;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using VietbankWebsite.Entities;
 using VietbankWebsite.ModelMap;
@@ -17,12 +18,20 @@ namespace VietbankWebsite.Controllers
         private readonly IProductService _productService;
         private readonly IStringLocalizer<PersonalController> _localizer;
         private readonly ISupportService _supportService;
-        public PersonalController(IStringLocalizer<PersonalController> localizer, IProductService productService, ISupportService supportService, IMemoryCache cache)
+        private readonly IAboutVietbankService _aboutVietbankService;
+        public PersonalController(
+            IStringLocalizer<PersonalController> localizer, 
+            IProductService productService, 
+            ISupportService supportService, 
+            IMemoryCache cache, 
+            IAboutVietbankService aboutVietbankService
+        )
         {
             _cache = cache;
             _localizer = localizer;
             _productService = productService;
             _supportService = supportService;
+            _aboutVietbankService = aboutVietbankService;
         }
         public IActionResult Index()
         {
@@ -43,6 +52,21 @@ namespace VietbankWebsite.Controllers
         public IActionResult YouNeedDetail(string youneed)
         {
             return View();
+        }
+
+        [HttpGet]
+        [Route("tin-khuyen-mai")]
+        [Route("promotion-new")]
+        public async Task<IActionResult> PromotionNews()
+        {
+            var keyPromotionNews = GetLangCurrent() == "vi" ? CacheKeys.PersonalPromotionNewsVi : CacheKeys.PersonalPromotionNewsEn;
+            IEnumerable<TopThreeNewsToCate> topThreeNewsToCates;
+            if (!_cache.TryGetValue(keyPromotionNews, out topThreeNewsToCates))
+            {
+                topThreeNewsToCates = await _aboutVietbankService.TopThreeNewsToCate(1073, _localizer["PromotionNewsUrl"], GetLangCurrent());
+                _cache.Set(keyPromotionNews, topThreeNewsToCates, cacheEntryOptions);
+            }
+            return View(topThreeNewsToCates);
         }
 
         [HttpGet]

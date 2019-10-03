@@ -543,3 +543,12 @@ T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\net
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\VietbankWebsite.Resources.Views.Home.Careers.en.resources
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\VietbankWebsite.Resources.Views.Home.Careers.vi.resources
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Release\netcoreapp3.0\Properties\launchSettings.json
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\Razor\Views\EmailSender\ContactResponseToCallCenter.cshtml.g.cs
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\Razor\Views\EmailSender\ContactResponseToUser.cshtml.g.cs
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\Razor\Views\Shared\_EmailLayout.cshtml.g.cs
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\VietbankWebsite.Resources.Views.Enterprise.PromotionNews.en.resources
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\VietbankWebsite.Resources.Views.Enterprise.PromotionNews.vi.resources
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\VietbankWebsite.Resources.Views.Personal.PromotionNews.en.resources
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\VietbankWebsite.Resources.Views.Personal.PromotionNews.vi.resources
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\Razor\Views\Enterprise\PromotionNews.cshtml.g.cs
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\Razor\Views\Personal\PromotionNews.cshtml.g.cs

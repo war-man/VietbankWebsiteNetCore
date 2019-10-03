@@ -124,6 +124,12 @@
     <value>Product</value>
   </data>
   <data name="ProductUrl" xml:space="preserve">
-    <value>/enterprise/product</value>
+    <value>/personal/product</value>
+  </data>
+  <data name="PromotionNewsName" xml:space="preserve">
+    <value>PROMOTIONS NEWS</value>
+  </data>
+  <data name="PromotionNewsUrl" xml:space="preserve">
+    <value>/personal/promotions-news</value>
   </data>
 </root>

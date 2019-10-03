@@ -81,5 +81,9 @@ namespace VietbankWebsite.Models
         public static string VietbankPromotionNewsEn { get { return "_VietbankPromotionNewsEn"; } }
         public static string VietbankTvVi { get { return "_VietbankTvVi"; } }
         public static string VietbankTvEn { get { return "_VietbankTvEn"; } }
+        public static string EnterprisePromotionNewsVi { get { return "_EnterprisePromotionNewsVi"; } }
+        public static string EnterprisePromotionNewsEn { get { return "_EnterprisePromotionNewsEn"; } }
+        public static string PersonalPromotionNewsVi { get { return "_PersonalPromotionNewsVi"; } }
+        public static string PersonalPromotionNewsEn { get { return "_PersonalPromotionNewsEn"; } }
     }
 }

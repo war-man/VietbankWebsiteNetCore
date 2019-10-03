@@ -1,11 +1,11 @@
-﻿@model IEnumerable<VietbankWebsite.Entities.VbBanner>
+﻿@model VietbankWebsite.Entities.BoxContainerHomePage
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <main>
     <section class="banner-section">
         <div id="banner-carousel" class="banner owl-carousel">
-            @foreach (var banner in Model)
+            @foreach (var banner in Model.Banner)
             {
                 <div class="item">
                     <img src="@banner.Image" alt="">
@@ -14,8 +14,6 @@
                             <div class="row">
                                 <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 col-xl-5">
                                     <h4>@banner.Title</h4>
-                                    <h3>VAY DỄ DÀNG – LÃI HẤP DẪN</h3>
-                                    <h5>Vay ô tô siêu tốc trong 8h, Vay tiêu dùng được cấp hạn mức, Vay mua BĐS, xây dựng và sửa chữa nhà</h5>
                                 </div>
                             </div>
                         </div>
@@ -24,4 +22,97 @@
             }
         </div>
     </section>
+    <div class="container">
+        <section class="home-service">
+            <div class="service owl-carousel">
+                @foreach (var item in Model.Box)
+                {
+                    <div class="item">
+                        <figure>
+                            <a href="@item.link"><img src="@item.image" alt="alt"></a>
+
+                        </figure>
+                        <section>
+                            <br />
+                            <p style="font-style:italic;">@item.category</p>
+                            <p class="service-name"><a href="@item.link">@item.title</a></p>
+
+                            <p>@item.description</p>
+                        </section>
+
+                    </div>
+                }
+            </div>
+        </section>
+        <section class="home-promotion">
+            <div class="promotion owl-carousel">
+                @foreach (var item in Model.Between)
+                {
+                    <div class="item"><a href="@item.link"><img src="@item.image" alt=""></a></div>
+                }
+            </div>
+        </section>
+        <section class="home-news clearfix">
+            @foreach (var item in Model.News.Select((value, i) => new { i, value }))
+            {
+                switch (item.i)
+                {
+                    case 0:
+                        <div class="news-col news-col1">
+                            <figure>
+                                <a href="@item.value.link">
+                                    <img src="@item.value.image" alt="alt">
+                                    <div class="img-overlay"></div>
+                                    <figcaption>
+                                        <div class="promo">NEW</div>
+                                        <h3 class="news-name">@item.value.title</h3>
+                                    </figcaption>
+                                </a>
+                            </figure>
+                        </div>
+                        break;
+                    case 1:
+                        <div class="news-col news-col2">
+                            <figure>
+                                <a href="@item.value.link">
+                                    <img src="@item.value.image" alt="alt">
+                                    <div class="img-overlay"></div>
+                                    <figcaption>
+                                        <div class="promo">NEW</div>
+                                        <h3 class="news-name">@item.value.title" </h3>
+                                    </figcaption>
+                                </a>
+                            </figure>
+                        </div>
+                        break;
+                    case 2:
+                        <div class="news-col news-col3 news-col31">
+                            <figure>
+                                <a href="@item.value.link">
+                                    <img src="@item.value.image" alt="alt">
+                                    <div class="img-overlay"></div>
+                                    <figcaption>
+                                        <h3 class="news-name">@item.value.title</h3>
+                                    </figcaption>
+                                </a>
+                            </figure>
+                        </div>
+                        break;
+                    case 3:
+                        <div class="news-col news-col3 news-col32">
+                            <figure>
+                                <a href="@item.value.link">
+                                    <img src="@item.value.image" alt="alt">
+                                    <div class="img-overlay"></div>
+                                    <figcaption>
+                                        <h3 class="news-name">@item.value.title</h3>
+                                    </figcaption>
+                                </a>
+                            </figure>
+                        </div>
+                        break;
+                }
+            }
+        </section>
+    </div>
 </main>

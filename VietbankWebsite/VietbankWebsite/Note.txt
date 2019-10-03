@@ -1,2 +1,9 @@
 ﻿--vb_posts_translate
 	convert type bitInt of post_ID column to int
+
+--Store vb_fe_SearchData
+	Update store
+--vb_category
+	Add 
+		1073	Tin khuyến mãi	tin-khuyen-mai	_PostDetail.cshtml	1	1	_News.cshtml
+		1074	Tin khuyến mãi	tin-khuyen-mai	_PostDetail.cshtml	2	1	_News.cshtml

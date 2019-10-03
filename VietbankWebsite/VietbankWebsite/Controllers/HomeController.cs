@@ -36,15 +36,20 @@ namespace VietbankWebsite.Controllers
         public async Task<IActionResult> Index()
         {
             var keyBanner = GetLangCurrent() == "vi" ? CacheKeys.BannerVi : CacheKeys.BannerEn;
-            IEnumerable<VbBanner> banner;
-            if (!_cache.TryGetValue(keyBanner, out banner))
+            BoxContainerHomePage boxContainer;
+            if (!_cache.TryGetValue(keyBanner, out boxContainer))
             {
-                banner = await _homeService.GetBanner(GetLangCurrent());
-                _cache.Set(keyBanner, banner, cacheEntryOptions);
+                boxContainer = new BoxContainerHomePage() { 
+                    Banner = await _homeService.GetBanner(GetLangCurrent()),
+                    Box = await _homeService.GetBoxContainer("box",GetLangCurrent()),
+                    Between = await _homeService.GetBoxContainer("between", GetLangCurrent()),
+                    News = await _homeService.GetBoxContainer("news", GetLangCurrent())
+                };
+                _cache.Set(keyBanner, boxContainer, cacheEntryOptions);
             }
-            if (banner == null) return RedirectToAction(nameof(NotFoundPage));
+            if (boxContainer == null) return RedirectToAction(nameof(NotFoundPage));
             ViewData["Title"] = _localizer["Home"];
-            return View(banner);
+            return View(boxContainer);
         }
 
         [HttpGet]
