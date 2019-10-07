@@ -10,7 +10,7 @@
         </div>
     </div>
     <div class="page-banner">
-        <div class="banner-img"><img src="@Model.Banner" alt=""></div>
+        <div class="banner-img"><img class="lazyload" data-src="@Model.Banner" src="@Model.Banner" alt=""></div>
     </div>
 </section>
 <section class="home-card">
@@ -22,11 +22,11 @@
                     <a class="card-item" href="@item.UrlTitle">
                         <figure>
                             <div class="card-img">
-                                <img src="@item.UrlImage" alt="">
+                                <img class="lazyload" data-src="@item.UrlImage" src="@item.UrlImage" alt="">
                             </div>
                             <figcaption>
                                 <div class="card-logo">
-                                    <img src="~/Content/card/img/home/visa.png" alt="">
+                                    <img class="lazyload" data-src="~/Content/card/img/home/visa.png" src="~/Content/card/img/home/visa.png" alt="">
                                 </div>
                                 <div class="card-name">@item.Title</div>
                                 <div class="card-des">@item.Description</div>
@@ -40,25 +40,25 @@
 </section>
 <section class="product-page">
     <div class="product-detail">
-        <div class="product-bg"><img src="@Model.PathBackgroundBoxOne" alt=""></div>
+        <div class="product-bg"><img class="lazyload" data-src="@Model.PathBackgroundBoxOne" src="@Model.PathBackgroundBoxOne" alt=""></div>
         <div class="container">
             <h2 class="product-cate home-des text-center">@Model.TitleOneBoxOne</h2>
             <h1 class="product-name home-title text-center">@Model.TitleTwoBoxOne </h1>
-            <div class="product-img text-center"><img src="@Model.PathCardBoxOne" alt=""></div>
+            <div class="product-img text-center"><img class="lazyload" data-src="@Model.PathCardBoxOne" src="@Model.PathCardBoxOne" alt=""></div>
         </div>
     </div>
     <div class="product-feature">
         @Html.Raw(Model.ContentBoxTwo)
     </div>
     <div class="product-limit">
-        <div class="product-img"><img src="@Model.PathBackgroundBoxThree" alt=""></div>
+        <div class="product-img"><img class="lazyload" data-src="@Model.PathBackgroundBoxThree" src="@Model.PathBackgroundBoxThree" alt=""></div>
         <div class="container">
             <div class="limit-content">
                 <div class="product-title">@Model.TitleBoxThree</div>
                 <div class="content">
                     <p>@Model.DescriptionBoxThree</p>
                 </div>
-                <div class="img"><img src="~/Content/card/img/product/img3.png" alt=""></div>
+                <div class="img"><img class="lazyload" data-src="~/Content/card/img/product/img3.png" src="~/Content/card/img/product/img3.png" alt=""></div>
             </div>
         </div>
     </div>

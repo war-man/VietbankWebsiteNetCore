@@ -39,7 +39,7 @@
                     {
                         <div class="col-xs-12 col-md-6 col-lg-3 item-bcWrap">
                             <div class="item-bc op-@(item.i+1)">
-                                <div class="thumb"><a href="@item.value.Url"><img src="@item.value.Thumbnail" alt=""></a></div>
+                                <div class="thumb"><a href="@item.value.Url"><img class="lazyload" data-src="@item.value.Thumbnail" src="@item.value.Thumbnail" alt=""></a></div>
                                 <div class="caption">
                                     <h4><a href="@item.value.Url">@item.value.Title</a></h4>
                                     <div class="desc">
@@ -59,7 +59,7 @@
                                         @Html.Raw(item.value.Description)
                                     </div>
                                 </div>
-                                <div class="thumb"><a href="@item.value.Url"><img src="@item.value.Thumbnail" alt=""></a></div>
+                                <div class="thumb"><a href="@item.value.Url"><img class="lazyload" data-src="@item.value.Thumbnail" src="@item.value.Thumbnail" alt=""></a></div>
                             </div>
                         </div>
                     }

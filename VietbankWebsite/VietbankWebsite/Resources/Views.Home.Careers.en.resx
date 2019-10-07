@@ -123,10 +123,25 @@
   <data name="CoHoiNgheNghiepUrl" xml:space="preserve">
     <value>/careers/carrer-opportunity</value>
   </data>
+  <data name="NgayDang" xml:space="preserve">
+    <value>Date posted</value>
+  </data>
+  <data name="NoiLamViec" xml:space="preserve">
+    <value>Workplace</value>
+  </data>
+  <data name="TimKiem" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="TuKhoa" xml:space="preserve">
+    <value>Keyword</value>
+  </data>
   <data name="TuyenDungName" xml:space="preserve">
     <value>Careers</value>
   </data>
   <data name="TuyenDungUrl" xml:space="preserve">
     <value>/careers</value>
+  </data>
+  <data name="ViTriTuyenDung" xml:space="preserve">
+    <value>Vacancies</value>
   </data>
 </root>

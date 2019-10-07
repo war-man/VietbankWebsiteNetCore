@@ -126,12 +126,6 @@
   <data name="BieuDo" xml:space="preserve">
     <value>Biểu đồ</value>
   </data>
-  <data name="CaNhanName" xml:space="preserve">
-    <value>Cá Nhân</value>
-  </data>
-  <data name="CaNhanUrl" xml:space="preserve">
-    <value>/ca-nhan</value>
-  </data>
   <data name="ChuyenDoiNT" xml:space="preserve">
     <value>Chuyển đổi ngoại tệ</value>
   </data>
@@ -156,6 +150,12 @@
   <data name="DesTwo" xml:space="preserve">
     <value>Tỷ giá mua tiền mặt USD chỉ áp dụng cho mệnh giá lớn 50-100 USD</value>
   </data>
+  <data name="DoanhNghiepName" xml:space="preserve">
+    <value>Doanh nghiệp</value>
+  </data>
+  <data name="DoanhNghiepUrl" xml:space="preserve">
+    <value>/doanh-nghiep</value>
+  </data>
   <data name="DsTyGia" xml:space="preserve">
     <value>Danh sách tỷ giá</value>
   </data>
@@ -166,7 +166,7 @@
     <value>Hỗ trợ</value>
   </data>
   <data name="HoTroUrl" xml:space="preserve">
-    <value>/ca-nhan/ho-tro</value>
+    <value>/doanh-nghiep/ho-tro/cau-hoi-thuong-gap</value>
   </data>
   <data name="MuaCK" xml:space="preserve">
     <value>Mua chuyển khoản</value>

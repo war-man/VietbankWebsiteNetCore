@@ -42,7 +42,7 @@ function generateItem(product) {
     var item = '<div class="col-xs-12 col-md-4 col-lg-4 item-wrap">'+
                     '<div class="item-sp2">'+
                     '<figure>' +
-                    '<a href="' + product.url + '" class="center-block"><img src="' + product.thumbnail + '" alt="' + product.title + '"></a>' +
+        '<a href="' + product.url + '" class="center-block"><img class="lazyload" data-src="' + product.thumbnail + '" src="' + product.thumbnail + '" alt="' + product.title + '"></a>' +
                     '<figcaption>' +
                     '<h3><a href="' + product.url + '">' + product.title + '</a></h3>' +
                     '<div class="brief">' + product.description + '</div>' +

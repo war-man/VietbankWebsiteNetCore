@@ -31,7 +31,7 @@ function loopListPromotion(list) {
 
 function generatePostItem(promotion) {
     var post = '<div class="sale">' +
-        '<figure><a class="sale-img" href="' + promotion.url + '"><img src="' + promotion.pathThumbNail + '" alt=""></a>' +
+        '<figure><a class="sale-img" href="' + promotion.url + '"><img class="lazyload" data-src="' + promotion.pathThumbNail + '" src="' + promotion.pathThumbNail + '" alt=""></a>' +
         '<figcaption>' +
         '<h2 class="sale-name"> <a href="' + promotion.url + '">' + promotion.title + '</a></h2>' +
         '<div class="sale-des">' + promotion.description + '</div>' +

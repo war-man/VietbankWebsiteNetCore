@@ -8,7 +8,7 @@
             @foreach (var banner in Model.Banner)
             {
                 <div class="item">
-                    <img src="@banner.Image" alt="">
+                    <img class="lazyload" data-src="@banner.Image" src="@banner.Image" alt="@banner.Title">
                     <div class="caption">
                         <div class="container">
                             <div class="row">
@@ -29,13 +29,13 @@
                 {
                     <div class="item">
                         <figure>
-                            <a href="@item.link"><img src="@item.image" alt="alt"></a>
+                            <a href="@item.link"><img class="lazyload" data-src="@item.image" src="@item.image" alt="@item.title"></a>
 
                         </figure>
                         <section>
                             <br />
                             <p style="font-style:italic;">@item.category</p>
-                            <p class="service-name"><a href="@item.link">@item.title</a></p>
+                            <h3 class="service-name"><a href="@item.link">@item.title</a></h3>
 
                             <p>@item.description</p>
                         </section>
@@ -48,7 +48,7 @@
             <div class="promotion owl-carousel">
                 @foreach (var item in Model.Between)
                 {
-                    <div class="item"><a href="@item.link"><img src="@item.image" alt=""></a></div>
+                    <div class="item"><a href="@item.link"><img class="lazyload" data-src="@item.image" src="@item.image" alt=""></a></div>
                 }
             </div>
         </section>
@@ -61,7 +61,7 @@
                         <div class="news-col news-col1">
                             <figure>
                                 <a href="@item.value.link">
-                                    <img src="@item.value.image" alt="alt">
+                                    <img class="lazyload" data-src="@item.value.image" src="@item.value.image" alt="alt">
                                     <div class="img-overlay"></div>
                                     <figcaption>
                                         <div class="promo">NEW</div>
@@ -75,7 +75,7 @@
                         <div class="news-col news-col2">
                             <figure>
                                 <a href="@item.value.link">
-                                    <img src="@item.value.image" alt="alt">
+                                    <img class="lazyload" data-src="@item.value.image" src="@item.value.image" alt="alt">
                                     <div class="img-overlay"></div>
                                     <figcaption>
                                         <div class="promo">NEW</div>
@@ -89,7 +89,7 @@
                         <div class="news-col news-col3 news-col31">
                             <figure>
                                 <a href="@item.value.link">
-                                    <img src="@item.value.image" alt="alt">
+                                    <img class="lazyload" data-src="@item.value.image" src="@item.value.image" alt="alt">
                                     <div class="img-overlay"></div>
                                     <figcaption>
                                         <h3 class="news-name">@item.value.title</h3>
@@ -102,7 +102,7 @@
                         <div class="news-col news-col3 news-col32">
                             <figure>
                                 <a href="@item.value.link">
-                                    <img src="@item.value.image" alt="alt">
+                                    <img class="lazyload" data-src="@item.value.image" src="@item.value.image" alt="alt">
                                     <div class="img-overlay"></div>
                                     <figcaption>
                                         <h3 class="news-name">@item.value.title</h3>

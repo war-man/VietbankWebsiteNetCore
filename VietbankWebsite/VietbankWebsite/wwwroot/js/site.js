@@ -1,6 +1,8 @@
 ﻿(function () {
     initialSearchInforChange();    
     initialDivToUpClick();
+    initOnclickTagPreventDefault();
+    initLazyLoad();
 })();
 var delay = (function () {
     var timer = 0;
@@ -43,5 +45,14 @@ function generateResultSearch(result) {
 function initialDivToUpClick() {
     $('div.up').click(function () {
         $(window).scrollTop(0);
+    });
+}
+function initLazyLoad() {
+    $("img.lazyload").lazyload();
+}
+
+function initOnclickTagPreventDefault() {
+    $('li.dropdown a.dropdown-toggle').click(function (event) {
+        event.preventDefault();
     });
 }

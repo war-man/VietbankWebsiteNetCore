@@ -76,7 +76,7 @@ function initialPaginationClick() {
 function generateItemMasterCard(item) {
     var masterCard = '<div class="col-12 col-md-6">'+
         '<div class="place">' +
-        '<figure><a class="place-img" href="' + item.url + '"><img src="' + item.thumbNail + '" alt="">' +
+        '<figure><a class="place-img" href="' + item.url + '"><img class="lazyload" data-src="' + item.thumbNail + '" src="' + item.thumbNail + '" alt="">' +
                 '<div class="caption">'+
                     '<div class="text">'+
                         '<p>Áp dụng tất cả hệ thống trên toàn quốc</p>'+

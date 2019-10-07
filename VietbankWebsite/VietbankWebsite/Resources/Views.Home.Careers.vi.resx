@@ -123,10 +123,25 @@
   <data name="CoHoiNgheNghiepUrl" xml:space="preserve">
     <value>/tuyen-dung/co-hoi-nghe-nghiep</value>
   </data>
+  <data name="NgayDang" xml:space="preserve">
+    <value>Ngày đăng</value>
+  </data>
+  <data name="NoiLamViec" xml:space="preserve">
+    <value>Nơi làm việc</value>
+  </data>
+  <data name="TimKiem" xml:space="preserve">
+    <value>Tìm Kiếm</value>
+  </data>
+  <data name="TuKhoa" xml:space="preserve">
+    <value>Từ khóa</value>
+  </data>
   <data name="TuyenDungName" xml:space="preserve">
     <value>Tuyển dụng</value>
   </data>
   <data name="TuyenDungUrl" xml:space="preserve">
     <value>/tuyen-dung</value>
+  </data>
+  <data name="ViTriTuyenDung" xml:space="preserve">
+    <value>Vị trí tuyển dụng</value>
   </data>
 </root>

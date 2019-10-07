@@ -11,6 +11,21 @@
     </environment>
     <environment exclude="Development">
         <link href="~/css/site-card.min.css" rel="stylesheet" />
+        <script type="application/ld+json">
+            {
+            "@@context":
+            "https://schema.org",
+            "@@type": "Corporation",
+            "url":
+            "https://www.vietbank.com.vn/",
+            "logo":
+            "https://www.vietbank.com.vn/Content/user/image/logo.png",
+            "contactPoint": [
+            { "@@type": "ContactPoint",
+            "telephone": "1800 1122",
+            "contactType": "customer service"
+            } ] }
+        </script>
     </environment>
 
 </head>
@@ -40,6 +55,7 @@
 
     <environment include="Development">
         <script src="~/js/jquery.3.1.1.min.js"></script>
+        <script src="~/js/lazyload.js"></script>
         <script src="~/card/js/core.js"></script>
         <script src="~/card/js/main.js"></script>
         <script src="~/js/common.js"></script>

@@ -126,12 +126,6 @@
   <data name="BieuDo" xml:space="preserve">
     <value>Chart</value>
   </data>
-  <data name="CaNhanName" xml:space="preserve">
-    <value>Personal</value>
-  </data>
-  <data name="CaNhanUrl" xml:space="preserve">
-    <value>/personal</value>
-  </data>
   <data name="ChuyenDoiNT" xml:space="preserve">
     <value>Currency Converter</value>
   </data>
@@ -156,6 +150,12 @@
   <data name="DesTwo" xml:space="preserve">
     <value>The exchange rates in cash are use for 50-100 USD notes only</value>
   </data>
+  <data name="DoanhNghiepName" xml:space="preserve">
+    <value>Enterprise</value>
+  </data>
+  <data name="DoanhNghiepUrl" xml:space="preserve">
+    <value>/enterprise</value>
+  </data>
   <data name="DsTyGia" xml:space="preserve">
     <value>List of rates</value>
   </data>
@@ -166,7 +166,7 @@
     <value>Support</value>
   </data>
   <data name="HoTroUrl" xml:space="preserve">
-    <value>/personal/support</value>
+    <value>/enterprise/support/faqs</value>
   </data>
   <data name="MuaCK" xml:space="preserve">
     <value>Buy transfer</value>

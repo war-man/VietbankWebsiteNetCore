@@ -7,7 +7,7 @@
     <div class="banner home-banner">
         @foreach (var item in Model.BoxOne)
         {
-            <div class="item"><a href="@item.Url"><img src="@item.Path" alt=""></a></div>
+            <div class="item"><a href="@item.Url"><img class="lazyload" data-src="@item.Path" src="@item.Path" alt=""></a></div>
         }
     </div>
 </section>
@@ -21,11 +21,11 @@
                         <a class="card-item" href="@item.UrlTitle">
                             <figure>
                                 <div class="card-img">
-                                    <img src="@item.UrlImage" alt="">
+                                    <img class="lazyload" data-src="@item.UrlImage" src="@item.UrlImage" alt="">
                                 </div>
                                 <figcaption>
                                     <div class="card-logo">
-                                        <img src="~/card/img/home/visa.png" alt="">
+                                        <img class="lazyload" data-src="~/card/img/home/visa.png" src="~/card/img/home/visa.png" alt="">
                                     </div>
                                     <div class="card-name">@item.Title</div>
                                     <div class="card-des">@item.Description</div>
@@ -46,14 +46,14 @@
                     <p>@Model.BoxThree.Description</p>
                 </div>
             </div>
-            <div class="intro-img text-center"><img src="@Model.BoxThree.Url" alt=""></div>
+            <div class="intro-img text-center"><img class="lazyload" data-src="@Model.BoxThree.Url" src="@Model.BoxThree.Url" alt=""></div>
         </div>
     </section>
     <section class="home-promotion s2">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-6">
-                    <div class="img text-center"><img src="@Model.BoxFour.Url" alt=""></div>
+                    <div class="img text-center"><img class="lazyload" data-src="@Model.BoxFour.Url" src="@Model.BoxFour.Url" alt=""></div>
                 </div>
                 <div class="col-12 col-md-6">
                     <div class="promotion-content text-center">
@@ -84,7 +84,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-6">
-                    <div class="img text-center"><img src="@Model.BoxFive.Url" alt=""></div>
+                    <div class="img text-center"><img class="lazyload" data-src="@Model.BoxFive.Url" src="@Model.BoxFive.Url" alt=""></div>
                 </div>
             </div>
         </div>
@@ -105,7 +105,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-6">
-                    <div class="img text-center"><img src="@Model.BoxSeven.Url" alt=""></div>
+                    <div class="img text-center"><img class="lazyload" data-src="@Model.BoxSeven.Url" src="@Model.BoxSeven.Url" alt=""></div>
                 </div>
                 <div class="col-12 col-md-6">
                     <div class="promotion-content text-center">

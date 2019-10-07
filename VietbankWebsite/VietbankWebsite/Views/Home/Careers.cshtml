@@ -39,7 +39,7 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="search-job">
-                        <input placeholder="Từ khóa" name="keyword" class="field">
+                        <input placeholder="@Localizer["TuKhoa"]" name="keyword" class="field">
                         <select name="career" class="career">
                             @foreach (var item in Model.VbCareerList)
                             {
@@ -52,14 +52,14 @@
                                 <option value="@item.Id">@item.CityName</option>
                             }
                         </select>
-                        <button id="search-career" class="btn-filter">Tìm kiếm</button>
+                        <button id="search-career" class="btn-filter">@Localizer["TimKiem"]</button>
                     </div>
                     <div class="table-responsive">
                         <div class="search-items">
                             <div class="jobs-title">
-                                <div class="position">Vị trí tuyển dụng</div>
-                                <div class="employment">Nơi làm việc</div>
-                                <div class="date-posted">Ngày đăng</div>
+                                <div class="position">@Localizer["ViTriTuyenDung"]</div>
+                                <div class="employment">@Localizer["NoiLamViec"]</div>
+                                <div class="date-posted">@Localizer["NgayDang"]</div>
                             </div>
                             <div id="list-career">
                                 @foreach (var item in Model.CareerJobList)
