@@ -47,7 +47,6 @@ namespace VietbankWebsite.Controllers
                 };
                 _cache.Set(keyBanner, boxContainer, cacheEntryOptions);
             }
-            if (boxContainer == null) return RedirectToAction(nameof(NotFoundPage));
             ViewData["Title"] = _localizer["Home"];
             return View(boxContainer);
         }
@@ -66,7 +65,6 @@ namespace VietbankWebsite.Controllers
                 career = await _careersService.GetCareerTemplate(23, _localizer["CareerOpportunityUrl"], GetLangCurrent());
                 _cache.Set(keyCareer, career, cacheEntryOptions);
             }
-            if (career == null) return RedirectToAction(nameof(NotFoundPage));
             ViewData["Title"] = career.Title;
             return View(career);
         }
@@ -84,7 +82,6 @@ namespace VietbankWebsite.Controllers
                 careerDetail = await _careersService.GetCareerDetail(career, GetLangCurrent());
                 _cache.Set($"_careerDetail-{career}", careerDetail, cacheEntryOptions);
             }
-            if (careerDetail == null) return RedirectToAction(nameof(NotFoundPage));
             ViewData["Title"] = careerDetail.Title;
             return View(careerDetail);
         }
@@ -101,7 +98,6 @@ namespace VietbankWebsite.Controllers
                 careerGuid = await _careersService.GetCareerGuide("huong-dan-nop-ho-so", GetLangCurrent());
                 _cache.Set(keyCareerGuide, careerGuid, cacheEntryOptions);
             }
-            if (careerGuid == null) return RedirectToAction(nameof(NotFoundPage));
             ViewData["Title"] = careerGuid.Title;
             return View(careerGuid);
         }
@@ -133,7 +129,6 @@ namespace VietbankWebsite.Controllers
                 shareholderDetail = await _shareholderService.ShareholderDetail("quan-he-co-dong", detail, GetLangCurrent());
                 _cache.Set($"_shareholderDetail-{detail}", shareholderDetail, cacheEntryOptions);
             }
-            if (shareholderDetail == null) return RedirectToAction(nameof(NotFoundPage));
             ViewData["Title"] = shareholderDetail.Title;
             return View(shareholderDetail);
         }
@@ -179,6 +174,12 @@ namespace VietbankWebsite.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+        [HttpGet]
+        public IActionResult NotFoundPage()
+        {
+            ViewData["Title"] = "Không tìm thấy trang";
+            return View();
         }
         #endregion
     }

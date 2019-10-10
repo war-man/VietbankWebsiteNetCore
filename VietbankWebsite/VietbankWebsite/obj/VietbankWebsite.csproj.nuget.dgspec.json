@@ -142,7 +142,7 @@
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[3.0.0-preview9-19453-02, )"
+              "version": "[3.0.0, )"
             },
             "reCAPTCHA.AspNetCore": {
               "target": "Package",
