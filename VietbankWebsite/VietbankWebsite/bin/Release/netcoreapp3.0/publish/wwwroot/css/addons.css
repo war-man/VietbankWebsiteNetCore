@@ -21703,8 +21703,6 @@ figure.effect-duke:hover p {
 .owl-carousel .owl-dot {
   cursor: pointer;
   cursor: hand;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -21950,7 +21948,6 @@ figure.effect-duke:hover p {
   -ms-user-select: none;
   user-select: none;
   -webkit-touch-callout: none;
-  -khtml-user-select: none;
   -ms-touch-action: pan-y;
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent;
@@ -25942,9 +25939,7 @@ website:   	https://www.themepunch.com
 
 .tp-caption {
   -moz-user-select: none;
-  -khtml-user-select: none;
   -webkit-user-select: none;
-  -o-user-select: none;
   position: absolute;
   -webkit-font-smoothing: antialiased !important;
 }
@@ -33323,7 +33318,6 @@ tp-caption.Team-Thumb,
   /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#d9000000', endColorstr='#00000000', GradientType=0);
   /* IE6-9 */
 }
 
@@ -34613,11 +34607,7 @@ website:    https://www.themepunch.com
   transition: all 0.3s;
   -ms-filter: "progid:dximagetransform.microsoft.alpha(opacity=0)";
   filter: alpha(opacity=0);
-  -moz-opacity: 0.0;
-  -khtml-opacity: 0.0;
   opacity: 0.0;
-  -webkit-transform: rotatey(-90deg);
-  transform: rotatey(-90deg);
   -webkit-transform-origin: 0% 50%;
   transform-origin: 0% 50%;
 }
@@ -34634,11 +34624,7 @@ website:    https://www.themepunch.com
 .hades:hover .tp-arr-allwrapper {
   -ms-filter: "progid:dximagetransform.microsoft.alpha(opacity=100)";
   filter: alpha(opacity=100);
-  -moz-opacity: 1;
-  -khtml-opacity: 1;
   opacity: 1;
-  -webkit-transform: rotatey(0deg);
-  transform: rotatey(0deg);
 }
 
 

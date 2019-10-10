@@ -2,7 +2,7 @@
   {
     "outputFileName": "wwwroot/css/site.min.css",
     "inputFiles": [
-      //"wwwroot/css/addons.css",
+      "wwwroot/css/addons.css",
       "wwwroot/css/main.css",
       "wwwroot/css/site.css"
     ]
@@ -36,7 +36,7 @@
     "outputFileName": "wwwroot/js/site-card.min.js",
     "inputFiles": [
       "wwwroot/js/jquery.3.1.1.min.js",
-      //"wwwroot/js/lazyload.min.js",
+      //"wwwroot/js/lazyload.js",
       "wwwroot/card/js/core.js",
       "wwwroot/card/js/main.js",
       "wwwroot/js/moment.js",
