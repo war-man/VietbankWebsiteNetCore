@@ -129,10 +129,16 @@
   <data name="FaqsName" xml:space="preserve">
     <value>Câu hỏi thường gặp</value>
   </data>
+  <data name="ProductName" xml:space="preserve">
+    <value>Sản phẩm</value>
+  </data>
   <data name="SupportName" xml:space="preserve">
     <value>Hỗ trợ</value>
   </data>
   <data name="SupportUrl" xml:space="preserve">
     <value>/doanh-nghiep/ho-tro</value>
+  </data>
+  <data name="ViewAllName" xml:space="preserve">
+    <value>Xem tất cả</value>
   </data>
 </root>

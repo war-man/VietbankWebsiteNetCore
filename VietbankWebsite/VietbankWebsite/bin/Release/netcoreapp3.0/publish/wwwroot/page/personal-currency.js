@@ -290,7 +290,7 @@ $(document).ready(function () {
 function generateCurrencyConvert(currency) {
     var currencyConvert = '';
     for (var i = 0; i < currency.length; i++) {
-        currencyConvert += '<div class="col-xs-12 col-sm-6 col-md-4"><div class="item-exm"><div style="padding-right: 10px;" class="flag"><img class="lazyload" data-src="/Content/user/image/lang/lang_' + currency[i].currencyCode + '.png" src="/Content/user/image/lang/lang_' + currency[i].currencyCode + '.png"></div><div class="ex-info"><div class="rate">' + currency[i].convertCurrency+ ' $</div><div class="unit">' + currency[i].currencyCode+'</div></div></div></div>';
+        currencyConvert += '<div class="col-xs-12 col-sm-6 col-md-4"><div class="item-exm"><div style="padding-right: 10px;" class="flag"><img class="lazyload" data-src="/img/lang/lang_' + currency[i].currencyCode + '.png" src="/img/lang/lang_' + currency[i].currencyCode + '.png"></div><div class="ex-info"><div class="rate">' + Math.round(currency[i].convertCurrency, -1)+ '</div><div class="unit">' + currency[i].currencyCode+'</div></div></div></div>';
     }
     $('.exchange-list .row').html(currencyConvert);
 }

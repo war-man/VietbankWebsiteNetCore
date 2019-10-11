@@ -47,7 +47,6 @@
                         <h1>@Model.Title</h1>
                         <div class="time-wrap clearfix">
                             <time>@Model.PublishedDate</time>
-                            <div class="social"><img class="lazyload" data-src="/img/social_icon.png" src="/img/social_icon.png" alt="Social"></div>
                         </div>
                         <div class="fullContent">
                             @Html.Raw(Model.Content)
@@ -56,7 +55,7 @@
                 </div>
                 <div class="col-xs-12 col-md-4 col-lg-3">
                     <div class="other-news">
-                        <h2 id="lst-random-news">@Localizer["OtherNews"]</h2>
+                        <h2 id="lst-random-news"></h2>
                     </div>
                 </div>
             </div>

@@ -70,6 +70,16 @@ namespace VietbankWebsite.Controllers
         }
 
         [HttpGet]
+        [Route("tin-khuyen-mai/{news}")]
+        [Route("promotions-news/{news}")]
+        public async Task<IActionResult> PromotionNewsDetail(string news)
+        {
+            var newsDetail = await _aboutVietbankService.GetNewsDetail(news, GetLangCurrent()) ?? new NewsDetail();
+            ViewData["Title"] = newsDetail.Title;
+            return View(newsDetail);
+        }
+
+        [HttpGet]
         [Route("ho-tro")]
         [Route("support")]
         [Route("ho-tro/cau-hoi-thuong-gap")]

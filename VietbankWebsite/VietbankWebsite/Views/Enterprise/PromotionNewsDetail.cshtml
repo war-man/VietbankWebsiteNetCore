@@ -1,0 +1,33 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@model VietbankWebsite.ModelMap.NewsDetail
+@inject IViewLocalizer Localizer
+@{
+    ViewData["Title"] = Model.Title;
+    Layout = "~/Views/Shared/_LayoutEnterprise.cshtml";
+}
+
+<main>
+    <section class="news-detail">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-8 col-lg-9">
+                    <div class="news-content">
+                        <h1>@Model.Title</h1>
+                        <div class="time-wrap clearfix">
+                            <time>@Model.PublishedDate</time>
+                        </div>
+                        <div class="fullContent">
+                            @Html.Raw(Model.Content)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+@section Scripts{
+
+    <script src="~/page/vietbank-news-detail.js"></script>
+}
+
