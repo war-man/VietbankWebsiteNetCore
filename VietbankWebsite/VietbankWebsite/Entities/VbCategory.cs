@@ -55,14 +55,23 @@ namespace VietbankWebsite.Entities
 
     public class ProductDetail : CategoryDetailShort
     {
+        public int Id { get; set; }
         public string Description { get; set; }
         public string Content { get; set; }
         public string CategoryName { get; set; }
         public string CategoryUrl { get; set; }
+        public IEnumerable<PrevAndNextProduct> PrevNextProduct { get; set; }
     }
 
     public class CategoryProductShort
     {
+        public string Title { get; set; }
+        public string Url { get; set; }
+    }
+
+    public class PrevAndNextProduct
+    {
+        public int Id { get; set; }
         public string Title { get; set; }
         public string Url { get; set; }
     }

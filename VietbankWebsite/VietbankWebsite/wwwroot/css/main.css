@@ -13558,6 +13558,10 @@ nav.left-menu a:hover, nav.left-menu a:focus, nav.left-menu a.active {
   position: relative;
 }
 
+.left-menusp > li > ul.sub-menu > li.active {
+    font-weight:bold;
+}
+
 .left-menusp > li > ul.sub-menu > li > a {
   font-size: 0.8125rem;
   /*font-weight: 500;*/

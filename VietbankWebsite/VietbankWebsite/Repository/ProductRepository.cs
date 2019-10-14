@@ -1,6 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Dapper;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using VietbankWebsite.Context;
@@ -159,6 +161,15 @@ namespace VietbankWebsite.Repository
             };
         }
 
+        public async Task<IEnumerable<PrevAndNextProduct>> NextAndPrevProduct(int idCate, string aliasCate, string lang)
+        {
+            var p = new DynamicParameters();
+            p.Add("@idProduct", idCate);
+            p.Add("@fullUrl", aliasCate);
+            p.Add("@lang", lang);
+            return await _context.Database.GetDbConnection().QueryAsync<PrevAndNextProduct>("[dbo].[vb_fe_GetPrevAndNextProduct]", p, null, null, commandType: CommandType.StoredProcedure);
+        }
+
         private async Task<IEnumerable<CategoryProductShort>> CategoryProductShorts(int idCate, string aliasCate,string lang)
         {
             var lstCategory = (from a in _context.VbPostCategories
@@ -195,5 +206,6 @@ namespace VietbankWebsite.Repository
         Task<CategoryProduct> ListCategoryProducts(int parentId, string aliasSubCate, string aliasCate, string lang);
         Task<ProductShort> ListProductShort(int parentId,string aliasCate, string aliasFullCate, string lang, int page, int pageSize);
         Task<ProductDetail> GetProductDetail(string aliasCate,string aliastFullCate,string aliasProduct,string lang);
+        Task<IEnumerable<PrevAndNextProduct>> NextAndPrevProduct(int idCate, string aliasCate, string lang);
     }
 }

@@ -232,12 +232,13 @@ namespace VietbankWebsite.Controllers
         public async Task<IActionResult> ProductDetail(string cate, string detail)
         {
             var productDetail = await _productService.GetProductDetail(cate, _localizer["ProductUrl"], detail, GetLangCurrent());
-            if (productDetail == null) return NotFound();
+            var nextPrevProduct = await _productService.NextAndPrevProduct(productDetail.Id, $"{_localizer["ProductUrl"]}/{cate}", GetLangCurrent());
             ViewData["Title"] = productDetail.Title;
             ViewBag.PersonalName = _localizer["PersonalName"];
             ViewBag.PersonalUrl = _localizer["PersonalUrl"];
             ViewBag.ProductName = _localizer["ProductName"];
             ViewBag.ProductUrl = _localizer["ProductUrl"];
+            productDetail.PrevNextProduct = nextPrevProduct;
             return View(productDetail);
         }
     }
