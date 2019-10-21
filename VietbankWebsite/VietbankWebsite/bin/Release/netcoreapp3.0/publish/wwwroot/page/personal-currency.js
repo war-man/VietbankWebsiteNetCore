@@ -184,17 +184,7 @@ jQuery(document).ready(function ($) {
     getLastDateUpdate();
     getCurrencyCurrent();
     getCountTimeCurrent();
-    /*Active left menu*/
-    var pathname = window.location.pathname;
-    $('ul.left-menusp a').each(function (i) {
-        var href = $(this).attr('href');
-        if (href.indexOf(pathname) !== -1) {
-            $('ul.left-menusp li.active').removeClass('active');
-            $(this).parent().addClass('active');
-            $(this).parent().parent().attr("style", "display:block");
-            $(this).parent().parent().parent().addClass('active');
-        }
-    });
+    
     $('#fromdate').datepicker({
         format: 'dd/mm/yyyy',
         autoclose: true

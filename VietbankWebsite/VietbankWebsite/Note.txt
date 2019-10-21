@@ -11,3 +11,6 @@
 
 --vb_career_city
 	set emty string in column en_CityName
+
+--vb_fe_GetPrevAndNextProduct
+	Add new proc

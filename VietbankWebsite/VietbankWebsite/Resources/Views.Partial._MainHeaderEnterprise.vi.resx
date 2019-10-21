@@ -117,11 +117,41 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BaoLanhTrongNuoc" xml:space="preserve">
+    <value>Bão lãnh trong nước</value>
+  </data>
+  <data name="BaoLanhTrongNuocUrl" xml:space="preserve">
+    <value>/doanh-nghiep/san-pham/bao-lanh-trong-nuoc</value>
+  </data>
   <data name="CaNhan" xml:space="preserve">
     <value>Cá Nhân</value>
   </data>
   <data name="CaNhanUrl" xml:space="preserve">
     <value>/ca-nhan/san-pham</value>
+  </data>
+  <data name="ChoVay" xml:space="preserve">
+    <value>Cho vay</value>
+  </data>
+  <data name="ChoVayUrl" xml:space="preserve">
+    <value>/doanh-nghiep/san-pham/cho-vay</value>
+  </data>
+  <data name="ChuyenTienQuocTe" xml:space="preserve">
+    <value>Chuyển tiền quốc tế</value>
+  </data>
+  <data name="ChuyenTienQuocTeUrl" xml:space="preserve">
+    <value>/doanh-nghiep/san-pham/chuyen-tien-quoc-te</value>
+  </data>
+  <data name="DichVuQuanLyDongTien" xml:space="preserve">
+    <value>Dịch vụ quản lý dòng tiền</value>
+  </data>
+  <data name="DichVuQuanLyDongTienUrl" xml:space="preserve">
+    <value>/doanh-nghiep/san-pham/dich-vu-quan-ly-dong-tien</value>
+  </data>
+  <data name="DichVuThuNganSachNhaNuoc" xml:space="preserve">
+    <value>Dịch vụ thu ngân sách nhà nước</value>
+  </data>
+  <data name="DichVuThuNganSachNhaNuocUrl" xml:space="preserve">
+    <value>/doanh-nghiep/san-pham/dich-vu-thu-ngan-sach-nha-nuoc</value>
   </data>
   <data name="DoanhNghiep" xml:space="preserve">
     <value>Doanh Nghiệp</value>
@@ -174,13 +204,13 @@
   <data name="NganHangTrucTuyen" xml:space="preserve">
     <value>Ngân hàng trực tuyến</value>
   </data>
-  <data name="NganHangTrucTuyen1" xml:space="preserve">
+  <data name="NganHangTrucTuyenNav" xml:space="preserve">
     <value>Ngân hàng trực tuyến</value>
   </data>
-  <data name="NganHangTrucTuyenUrl" xml:space="preserve">
-    <value>https://online.vietbank.com.vn</value>
+  <data name="NganHangTrucTuyenNavUrl" xml:space="preserve">
+    <value>/doanh-nghiep/san-pham/ngan-hang-truc-tuyen</value>
   </data>
-  <data name="NganHangTrucTuyenUrl1" xml:space="preserve">
+  <data name="NganHangTrucTuyenUrl" xml:space="preserve">
     <value>https://online.vietbank.com.vn</value>
   </data>
   <data name="SavingAccountInquiryName" xml:space="preserve">
@@ -188,6 +218,12 @@
   </data>
   <data name="SavingAccountInquiryUrl" xml:space="preserve">
     <value>/doanh-nghiep/ho-tro/truy-van-so-tiet-kiem</value>
+  </data>
+  <data name="TaiTroThuongMai" xml:space="preserve">
+    <value>Tài trợ thương mại</value>
+  </data>
+  <data name="TaiTroThuongMaiUrl" xml:space="preserve">
+    <value>/doanh-nghiep/san-pham/tai-tro-thuong-mai</value>
   </data>
   <data name="TariffName" xml:space="preserve">
     <value>Biểu phí</value>
@@ -200,6 +236,12 @@
   </data>
   <data name="TheUrl" xml:space="preserve">
     <value>/the</value>
+  </data>
+  <data name="TienGui" xml:space="preserve">
+    <value>Tiền gửi</value>
+  </data>
+  <data name="TienGuiUrl" xml:space="preserve">
+    <value>/doanh-nghiep/san-pham/tien-gui</value>
   </data>
   <data name="TinKhuyenMaiName" xml:space="preserve">
     <value>Tin Khuyễn Mãi</value>

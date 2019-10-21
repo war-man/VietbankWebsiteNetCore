@@ -117,11 +117,41 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BaoLanhTrongNuoc" xml:space="preserve">
+    <value>Domestic Guarantee</value>
+  </data>
+  <data name="BaoLanhTrongNuocUrl" xml:space="preserve">
+    <value>/enterprise/product/domestic-guarantee</value>
+  </data>
   <data name="CaNhan" xml:space="preserve">
     <value>Personal</value>
   </data>
   <data name="CaNhanUrl" xml:space="preserve">
     <value>/enterprise/product</value>
+  </data>
+  <data name="ChoVay" xml:space="preserve">
+    <value>Lending</value>
+  </data>
+  <data name="ChoVayUrl" xml:space="preserve">
+    <value>/enterprise/product/lending</value>
+  </data>
+  <data name="ChuyenTienQuocTe" xml:space="preserve">
+    <value>International remittance</value>
+  </data>
+  <data name="ChuyenTienQuocTeUrl" xml:space="preserve">
+    <value>/enterprise/product/international-remittance-services</value>
+  </data>
+  <data name="DichVuQuanLyDongTien" xml:space="preserve">
+    <value>Cash Management Services</value>
+  </data>
+  <data name="DichVuQuanLyDongTienUrl" xml:space="preserve">
+    <value>/enterprise/product/cash-management-services</value>
+  </data>
+  <data name="DichVuThuNganSachNhaNuoc" xml:space="preserve">
+    <value>Payment to the State Budget</value>
+  </data>
+  <data name="DichVuThuNganSachNhaNuocUrl" xml:space="preserve">
+    <value>/enterprise/product/payment-to-the-state-budget</value>
   </data>
   <data name="DoanhNghiep" xml:space="preserve">
     <value>Enterprise</value>
@@ -174,6 +204,12 @@
   <data name="NganHangTrucTuyen" xml:space="preserve">
     <value>Internet Banking</value>
   </data>
+  <data name="NganHangTrucTuyenNav" xml:space="preserve">
+    <value>Online Banking</value>
+  </data>
+  <data name="NganHangTrucTuyenNavUrl" xml:space="preserve">
+    <value>/enterprise/product/online-banking</value>
+  </data>
   <data name="NganHangTrucTuyenUrl" xml:space="preserve">
     <value>https://online.vietbank.com.vn</value>
   </data>
@@ -182,6 +218,12 @@
   </data>
   <data name="SavingAccountInquiryUrl" xml:space="preserve">
     <value>/enterprise/support/saving-account-inquiry</value>
+  </data>
+  <data name="TaiTroThuongMai" xml:space="preserve">
+    <value>Trade finance</value>
+  </data>
+  <data name="TaiTroThuongMaiUrl" xml:space="preserve">
+    <value>/enterprise/product/trade-finance</value>
   </data>
   <data name="TariffName" xml:space="preserve">
     <value>Tariff</value>
@@ -194,6 +236,12 @@
   </data>
   <data name="TheUrl" xml:space="preserve">
     <value>/car</value>
+  </data>
+  <data name="TienGui" xml:space="preserve">
+    <value>Deposit</value>
+  </data>
+  <data name="TienGuiUrl" xml:space="preserve">
+    <value>/enterprise/product/deposit</value>
   </data>
   <data name="TinKhuyenMaiName" xml:space="preserve">
     <value>Promotions News</value>

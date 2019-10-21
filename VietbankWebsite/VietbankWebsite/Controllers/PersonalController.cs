@@ -56,7 +56,7 @@ namespace VietbankWebsite.Controllers
 
         [HttpGet]
         [Route("tin-khuyen-mai")]
-        [Route("promotion-new")]
+        [Route("promotions-news")]
         public async Task<IActionResult> PromotionNews()
         {
             var keyPromotionNews = GetLangCurrent() == "vi" ? CacheKeys.PersonalPromotionNewsVi : CacheKeys.PersonalPromotionNewsEn;

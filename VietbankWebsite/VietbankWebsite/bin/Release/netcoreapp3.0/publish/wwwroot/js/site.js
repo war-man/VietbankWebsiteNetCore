@@ -3,6 +3,7 @@
     initialDivToUpClick();
     initOnclickTagPreventDefault();
     initLazyLoad();
+    activeLeftMenuTool();
 })();
 var delay = (function () {
     var timer = 0;
@@ -54,5 +55,20 @@ function initLazyLoad() {
 function initOnclickTagPreventDefault() {
     $('li.dropdown a.dropdown-toggle').click(function (event) {
         event.preventDefault();
+    });
+}
+
+function activeLeftMenuTool() {
+    /*Active left menu*/
+    var pathname = window.location.pathname;
+    $('ul.left-menusp a').each(function (i) {
+        var href = $(this).attr('href');
+        //if (href.indexOf(pathname) !== -1) {
+        if (href === pathname) {
+            $('ul.left-menusp li.active').removeClass('active');
+            $(this).parent().addClass('active');
+            $(this).parent().parent().attr("style", "display:block");
+            $(this).parent().parent().parent().addClass('active');
+        }
     });
 }

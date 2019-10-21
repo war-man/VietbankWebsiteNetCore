@@ -980,7 +980,7 @@ body {
 #container-navbar {
     position: absolute;
     z-index: 1030;
-    top: 100px;
+    top: 60px;
     left: 0%;
 }
 
@@ -1003,7 +1003,7 @@ body {
 
 #list-branch-filter {
     max-height: 500px;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 .btn-group-xs > .btn, .btn-xs {
