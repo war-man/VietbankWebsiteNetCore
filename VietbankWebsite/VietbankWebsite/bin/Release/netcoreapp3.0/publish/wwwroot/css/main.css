@@ -12229,6 +12229,17 @@ footer {
   margin-top: 15px;
 }
 
+.footer-top .title-app {
+    font-size: 0.9375rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom:15px;
+}
+
+.footer-top .title-app:after {
+    display: none;
+}
+
 @media (max-width: 991px) {
   .footer-top .title:after {
     margin: 0;

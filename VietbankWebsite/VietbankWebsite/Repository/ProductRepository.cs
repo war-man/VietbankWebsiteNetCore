@@ -20,7 +20,7 @@ namespace VietbankWebsite.Repository
 
         public async Task<ProductDetail> GetProductDetail(string aliasCate, string aliastFullCate, string aliasProduct, string lang)
         {
-            var productDetail = from a in _context.VbPosts
+            var productDetail = await (from a in _context.VbPosts
                                 join b in _context.VbPostTranslates on a.Id equals b.post_ID
                                 join c in _context.VbPostCategories on a.Id equals c.post_ID
                                 join d in _context.VbCategoryTranslates on c.category_ID equals d.category_ID
@@ -32,15 +32,29 @@ namespace VietbankWebsite.Repository
                                 select new ProductDetail()
                                 {
                                     Id = b.ID,
+                                    PostId = b.post_ID,
                                     Title = b.post_title,
-                                    Thumbnail = a.ping_status ?? "/img/banner_page/vietbank-bg.jpg",
+                                    Thumbnail = a.post_thumbnail ?? "/img/banner_page/vietbank-bg.jpg",
                                     Content = b.post_content,
                                     CategoryName = d.name,
                                     CategoryUrl = $"{aliastFullCate}/{aliasCate}",
                                     Description = b.post_excerpt,
                                     Url = $"{aliastFullCate}/{b.post_url}"
-                                };
-            return await productDetail.SingleOrDefaultAsync();
+                                }).SingleOrDefaultAsync();
+            var vbPostSeo = await _context.VbPostSeo.Where(x => x.IdPost.Equals(productDetail.PostId)).SingleOrDefaultAsync();
+            if (vbPostSeo != null)
+            {
+                productDetail.MetaTitle = vbPostSeo.MetaTitle ?? "";
+                productDetail.MetaDescription = vbPostSeo.MetaDescription ?? "";
+
+            }
+            else
+            {
+                productDetail.MetaTitle = "";
+                productDetail.MetaDescription = "";
+            }
+            productDetail.FeatureImage = productDetail.Thumbnail;
+            return productDetail;
         }
 
         public async Task<CategoryProduct> ListCategoryProducts(int idCate, string aliasCate, string lang)

@@ -2,10 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using VietbankWebsite.Context;
-using VietbankWebsite.Entities;
 using VietbankWebsite.ModelMap;
 
 namespace VietbankWebsite.Repository
@@ -65,6 +63,7 @@ namespace VietbankWebsite.Repository
 
         public async Task<IntroduceDetail> IntroduceDetail(int postId, string lang)
         {
+            var vbPostSeo = await _context.VbPostSeo.Where(x => x.IdPost.Equals(postId)).SingleOrDefaultAsync();
             var introduceDetail = await (from a in _context.VbPostTranslates
                                          join b in _context.VbPosts on a.post_ID equals b.Id
                                          where a.post_ID.Equals(postId)
@@ -75,6 +74,18 @@ namespace VietbankWebsite.Repository
                                              Content = a.post_content,
                                              Image = b.ping_status ?? "/img/banner_page/vietbank-bg.jpg"
                                          }).FirstOrDefaultAsync();
+            if (vbPostSeo != null)
+            {
+                introduceDetail.MetaTitle = vbPostSeo.MetaTitle ?? "";
+                introduceDetail.MetaDescription = vbPostSeo.MetaDescription ?? "";
+                
+            }
+            else
+            {
+                introduceDetail.MetaTitle = "";
+                introduceDetail.MetaDescription = "";
+            }
+            introduceDetail.FeatureImage = introduceDetail.Image;
             return introduceDetail;
         }
 
@@ -104,9 +115,11 @@ namespace VietbankWebsite.Repository
                                           where a.language.Equals(lang)
                                           select new LeadershipDetail()
                                           {
+                                              IdPost = a.post_ID,
                                               Title = a.post_title,
                                               Content = a.post_content
                                           }).FirstOrDefaultAsync();
+
             if (leadershipDetail == null)
             {
                 var langTemp = lang == "vi" ? "en" : "vi";
@@ -115,10 +128,24 @@ namespace VietbankWebsite.Repository
                               where a.language.Equals(lang)
                               select new LeadershipDetail()
                               {
+                                  IdPost = a.post_ID,
                                   Title = a.post_title,
                                   Content = a.post_content
                               }).FirstOrDefaultAsync();
             }
+            var vbPostSeo = await _context.VbPostSeo.Where(x => x.IdPost.Equals(leadershipDetail.IdPost)).SingleOrDefaultAsync();
+            if (vbPostSeo != null)
+            {
+                leadershipDetail.MetaTitle = vbPostSeo.MetaTitle ?? "";
+                leadershipDetail.MetaDescription = vbPostSeo.MetaDescription ?? "";
+
+            }
+            else
+            {
+                leadershipDetail.MetaTitle = "";
+                leadershipDetail.MetaDescription = "";
+            }
+            leadershipDetail.FeatureImage = "";
             return leadershipDetail;
         }
 
@@ -161,17 +188,32 @@ namespace VietbankWebsite.Repository
 
         public async Task<NewsDetail> GetNewsDetail(string alias, string lang)
         {
-            var news = from a in _context.VbPostTranslates
-                       join b in _context.VbPosts on a.post_ID equals b.Id
-                       where a.post_url.Equals(alias)
-                       where a.language.Equals(lang)
-                       select new NewsDetail()
-                       {
-                           Title = a.post_title,
-                           PublishedDate = b.post_date.ToString("dd/MM/yyyy"),
-                           Content = a.post_content
-                       };
-            return await news.SingleOrDefaultAsync();
+            var news = await (from a in _context.VbPostTranslates
+                        join b in _context.VbPosts on a.post_ID equals b.Id
+                        where a.post_url.Equals(alias)
+                        where a.language.Equals(lang)
+                        select new NewsDetail()
+                        {
+                            PostId = a.post_ID,
+                            Title = a.post_title,
+                            PublishedDate = b.post_date.ToString("dd/MM/yyyy"),
+                            Content = a.post_content,
+                            FeatureImage = b.post_thumbnail
+                        }).SingleOrDefaultAsync();
+
+            var vbPostSeo = await _context.VbPostSeo.Where(x => x.IdPost.Equals(news.PostId)).SingleOrDefaultAsync();
+            if (vbPostSeo != null)
+            {
+                news.MetaTitle = vbPostSeo.MetaTitle ?? "";
+                news.MetaDescription = vbPostSeo.MetaDescription ?? "";
+
+            }
+            else
+            {
+                news.MetaTitle = "";
+                news.MetaDescription = "";
+            }
+            return news;
         }
 
         public async Task<IEnumerable<RandomNewsVietbank>> GetRamdomNewsToCategory(int idCate, string aliasCate, string lang)

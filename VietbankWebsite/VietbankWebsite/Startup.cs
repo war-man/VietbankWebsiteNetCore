@@ -74,6 +74,9 @@ namespace VietbankWebsite
             services.AddTransient<IEmailSenderRepository, EmailSenderRepository>();
             services.AddTransient<IRazorViewToStringRenderer, RazorViewToStringRenderer>();
 
+            services.AddTransient<IVbPostSeoRepository, VbPostSeoRepository>();
+            services.AddTransient<IVbPostSeoService, VbPostSeoService>();
+
             services.AddTransient<IUnitOfWork, UnitOfWork>();
 
 

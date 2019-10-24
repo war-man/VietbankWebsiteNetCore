@@ -48,6 +48,7 @@ namespace VietbankWebsite.Controllers
                 _cache.Set(keyBanner, boxContainer, cacheEntryOptions);
             }
             ViewData["Title"] = _localizer["Home"];
+            ViewData["MetaDescription"] = _localizer["MetaDescription"];
             return View(boxContainer);
         }
 

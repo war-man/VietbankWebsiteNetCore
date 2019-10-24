@@ -214,7 +214,7 @@
     <value>/personal/product/deposit-payment</value>
   </data>
   <data name="TienGuiTietKiem" xml:space="preserve">
-    <value>SAVED MONEY</value>
+    <value>Saved Money</value>
   </data>
   <data name="TienGuiTietKiemUrl" xml:space="preserve">
     <value>/personal/product/saved-money</value>

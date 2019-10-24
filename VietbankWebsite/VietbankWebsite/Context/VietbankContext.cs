@@ -29,5 +29,6 @@ namespace VietbankWebsite.Context
         public DbSet<VbMapDistrict> VbMapDistricts { get; set; }
         public DbSet<VbTransagencyMap> VbTransagencyMaps { get; set; }
         public DbSet<VbBankCode> VbBankCodes { get; set; }
+        public DbSet<VbPostSeo> VbPostSeo { get; set; }
     }
 }

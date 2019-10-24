@@ -135,17 +135,47 @@
   <data name="BanLanhDaoUrl" xml:space="preserve">
     <value>/ve-vietbank/ban-lanh-dao/hoi-dong-quan-tri</value>
   </data>
+  <data name="BaoLanhTrongNuoc" xml:space="preserve">
+    <value>Bão lãnh trong nước</value>
+  </data>
+  <data name="BaoLanhTrongNuocUrl" xml:space="preserve">
+    <value>/doanh-nghiep/san-pham/bao-lanh-trong-nuoc</value>
+  </data>
   <data name="ChatLuongName" xml:space="preserve">
     <value>CHÍNH SÁCH CHẤT LƯỢNG</value>
   </data>
   <data name="ChatLuongUrl" xml:space="preserve">
     <value>/ve-vietbank/gioi-thieu/chinh-sach-chat-luong</value>
   </data>
+  <data name="ChoVay" xml:space="preserve">
+    <value>Cho vay</value>
+  </data>
+  <data name="ChoVayUrl" xml:space="preserve">
+    <value>/doanh-nghiep/san-pham/cho-vay</value>
+  </data>
+  <data name="ChuyenTienQuocTe" xml:space="preserve">
+    <value>Chuyển tiền quốc tế</value>
+  </data>
+  <data name="ChuyenTienQuocTeUrl" xml:space="preserve">
+    <value>/doanh-nghiep/san-pham/chuyen-tien-quoc-te</value>
+  </data>
   <data name="CoHoiNgheNghiep" xml:space="preserve">
     <value>CƠ HỘI NGHỀ NGHIỆP</value>
   </data>
   <data name="CoHoiNgheNghiepUrl" xml:space="preserve">
     <value>/tuyen-dung</value>
+  </data>
+  <data name="DichVuQuanLyDongTien" xml:space="preserve">
+    <value>Dịch vụ quản lý dòng tiền</value>
+  </data>
+  <data name="DichVuQuanLyDongTienUrl" xml:space="preserve">
+    <value>/doanh-nghiep/san-pham/dich-vu-quan-ly-dong-tien</value>
+  </data>
+  <data name="DichVuThuNganSachNhaNuoc" xml:space="preserve">
+    <value>Dịch vụ thu ngân sách nhà nước</value>
+  </data>
+  <data name="DichVuThuNganSachNhaNuocUrl" xml:space="preserve">
+    <value>/doanh-nghiep/san-pham/dich-vu-thu-ngan-sach-nha-nuoc</value>
   </data>
   <data name="DoanhNghiep" xml:space="preserve">
     <value>DOANH NGHIỆP</value>
@@ -228,6 +258,12 @@
   <data name="NganHangTrucTuyen" xml:space="preserve">
     <value>NGÂN HÀNG TRỰC TUYẾN</value>
   </data>
+  <data name="NganHangTrucTuyenNav" xml:space="preserve">
+    <value>Ngân hàng trực tuyến</value>
+  </data>
+  <data name="NganHangTrucTuyenNavUrl" xml:space="preserve">
+    <value>/doanh-nghiep/san-pham/ngan-hang-truc-tuyen</value>
+  </data>
   <data name="NganHangTrucTuyenUrl" xml:space="preserve">
     <value>https://online.vietbank.com.vn</value>
   </data>
@@ -255,6 +291,12 @@
   <data name="SavingAccountInquiryUrl" xml:space="preserve">
     <value>/doanh-nghiep/ho-tro/truy-van-so-tiet-kiem</value>
   </data>
+  <data name="TaiTroThuongMai" xml:space="preserve">
+    <value>Tài trợ thương mại</value>
+  </data>
+  <data name="TaiTroThuongMaiUrl" xml:space="preserve">
+    <value>/doanh-nghiep/san-pham/tai-tro-thuong-mai</value>
+  </data>
   <data name="TamNhinSuMenhName" xml:space="preserve">
     <value>TẦM NHÌN - SỨ MỆNH - GIÁ TRỊ CỐT LỖI</value>
   </data>
@@ -278,6 +320,12 @@
   </data>
   <data name="ThuNgoUrl" xml:space="preserve">
     <value>/ve-vietbank/gioi-thieu/thu-ngo-cua-chu-tich-hoi-dong-quan-tri</value>
+  </data>
+  <data name="TienGui" xml:space="preserve">
+    <value>Tiền gửi</value>
+  </data>
+  <data name="TienGuiUrl" xml:space="preserve">
+    <value>/doanh-nghiep/san-pham/tien-gui</value>
   </data>
   <data name="TinKhuyenMaiEnterpriseName" xml:space="preserve">
     <value>TIN KHUYẾN MÃI</value>

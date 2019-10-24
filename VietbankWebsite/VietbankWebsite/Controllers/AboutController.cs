@@ -62,6 +62,9 @@ namespace VietbankWebsite.Controllers
             ViewBag.AboutUrl = _localizer["AboutUrl"];
             ViewBag.AboutName = _localizer["AboutName"];
             ViewData["Title"] = milestones.Title;
+            ViewData["MetaTitle"] = milestones.MetaTitle;
+            ViewData["MetaDescription"] = milestones.MetaDescription;
+            ViewData["FeatureImage"] = milestones.FeatureImage;
             return View(milestones);
         }
 
@@ -79,6 +82,9 @@ namespace VietbankWebsite.Controllers
             ViewBag.AboutName = _localizer["AboutName"];
             ViewBag.AboutUrl = _localizer["AboutUrl"];
             ViewData["Title"] = mission.Title;
+            ViewData["MetaTitle"] = mission.MetaTitle;
+            ViewData["MetaDescription"] = mission.MetaDescription;
+            ViewData["FeatureImage"] = mission.FeatureImage;
             return View(mission);
         }
 
@@ -96,6 +102,9 @@ namespace VietbankWebsite.Controllers
             ViewBag.AboutName = _localizer["AboutName"];
             ViewBag.AboutUrl = _localizer["AboutUrl"];
             ViewData["Title"] = message.Title;
+            ViewData["MetaTitle"] = message.MetaTitle;
+            ViewData["MetaDescription"] = message.MetaDescription;
+            ViewData["FeatureImage"] = message.FeatureImage;
             return View(message);
         }
 
@@ -113,6 +122,9 @@ namespace VietbankWebsite.Controllers
             ViewBag.AboutName = _localizer["AboutName"];
             ViewBag.AboutUrl = _localizer["AboutUrl"];
             ViewData["Title"] = quality.Title;
+            ViewData["MetaTitle"] = quality.MetaTitle;
+            ViewData["MetaDescription"] = quality.MetaDescription;
+            ViewData["FeatureImage"] = quality.FeatureImage;
             return View(quality);
         }
         
@@ -131,6 +143,9 @@ namespace VietbankWebsite.Controllers
             ViewBag.AboutName = _localizer["AboutName"];
             ViewBag.AboutUrl = _localizer["AboutUrl"];
             ViewData["Title"] = policy.Title;
+            ViewData["MetaTitle"] = policy.MetaTitle;
+            ViewData["MetaDescription"] = policy.MetaDescription;
+            ViewData["FeatureImage"] = policy.FeatureImage;
             return View(policy);
         }
 
@@ -160,6 +175,9 @@ namespace VietbankWebsite.Controllers
                 _cache.Set(keyDirector, director, cacheEntryOptions);
             }
             ViewData["Title"] = director.Title;
+            ViewData["MetaTitle"] = director.MetaTitle;
+            ViewData["MetaDescription"] = director.MetaDescription;
+            ViewData["FeatureImage"] = director.FeatureImage;
             return View(director);
         }
 
@@ -170,6 +188,9 @@ namespace VietbankWebsite.Controllers
         {
             var directorDetail = await _aboutVietbankService.LeadershipDetail(detail, GetLangCurrent());
             ViewData["Title"] = directorDetail.Title;
+            ViewData["MetaTitle"] = directorDetail.MetaTitle;
+            ViewData["MetaDescription"] = directorDetail.MetaDescription;
+            ViewData["FeatureImage"] = directorDetail.FeatureImage;
             return View(directorDetail);
         }
 
@@ -186,6 +207,9 @@ namespace VietbankWebsite.Controllers
                 _cache.Set(keySupervisory, supervisory, cacheEntryOptions);
             }
             ViewData["Title"] = supervisory.Title;
+            ViewData["MetaTitle"] = supervisory.MetaTitle;
+            ViewData["MetaDescription"] = supervisory.MetaDescription;
+            ViewData["FeatureImage"] = supervisory.FeatureImage;
             return View(supervisory);
         }
 
@@ -196,6 +220,9 @@ namespace VietbankWebsite.Controllers
         {
             var supervisoryDetail = await _aboutVietbankService.LeadershipDetail(detail, GetLangCurrent());
             ViewData["Title"] = supervisoryDetail.Title;
+            ViewData["MetaTitle"] = supervisoryDetail.MetaTitle;
+            ViewData["MetaDescription"] = supervisoryDetail.MetaDescription;
+            ViewData["FeatureImage"] = supervisoryDetail.FeatureImage;
             return View(supervisoryDetail);
         }
 
@@ -213,6 +240,9 @@ namespace VietbankWebsite.Controllers
                 _cache.Set(keyManagement, management, cacheEntryOptions);
             }
             ViewData["Title"] = management.Title;
+            ViewData["MetaTitle"] = management.MetaTitle;
+            ViewData["MetaDescription"] = management.MetaDescription;
+            ViewData["FeatureImage"] = management.FeatureImage;
             return View(management);
         }
 
@@ -223,16 +253,11 @@ namespace VietbankWebsite.Controllers
         {
             var managementDetail = await _aboutVietbankService.LeadershipDetail(detail, GetLangCurrent());
             ViewData["Title"] = managementDetail.Title;
+            ViewData["MetaTitle"] = managementDetail.MetaTitle;
+            ViewData["MetaDescription"] = managementDetail.MetaDescription;
+            ViewData["FeatureImage"] = managementDetail.FeatureImage;
             return View(managementDetail);
         }
-
-        //[HttpGet]
-        //[Route("tin-tuc")]
-        //[Route("news")]
-        //public async Task<IActionResult> News()
-        //{
-        //    return View(await _aboutVietbankService.TopThreeNewsToCate(0,_localizer["NewsUrl"],GetLangCurrent()));
-        //}
 
         [HttpGet]
         [Route("tin-tuc")]
@@ -301,6 +326,9 @@ namespace VietbankWebsite.Controllers
         {
             var newsDetail = await _aboutVietbankService.GetNewsDetail(news, GetLangCurrent()) ?? new NewsDetail();
             ViewData["Title"] = newsDetail.Title;
+            ViewData["MetaTitle"] = newsDetail.MetaTitle;
+            ViewData["MetaDescription"] = newsDetail.MetaDescription;
+            ViewData["FeatureImage"] = newsDetail.FeatureImage;
             return View(newsDetail);
         }
 
@@ -311,6 +339,9 @@ namespace VietbankWebsite.Controllers
         {
             var newsDetail = await _aboutVietbankService.GetNewsDetail(news, GetLangCurrent()) ?? new NewsDetail();
             ViewData["Title"] = newsDetail.Title;
+            ViewData["MetaTitle"] = newsDetail.MetaTitle;
+            ViewData["MetaDescription"] = newsDetail.MetaDescription;
+            ViewData["FeatureImage"] = newsDetail.FeatureImage;
             return View(newsDetail);
         }
 
@@ -321,6 +352,9 @@ namespace VietbankWebsite.Controllers
         {
             var newsDetail = await _aboutVietbankService.GetNewsDetail(news, GetLangCurrent()) ?? new NewsDetail();
             ViewData["Title"] = newsDetail.Title;
+            ViewData["MetaTitle"] = newsDetail.MetaTitle;
+            ViewData["MetaDescription"] = newsDetail.MetaDescription;
+            ViewData["FeatureImage"] = newsDetail.FeatureImage;
             return View(newsDetail);
         }
 

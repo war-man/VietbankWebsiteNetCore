@@ -5,7 +5,16 @@
         <li class="active dropdown">
             <a href="@Localizer["SanPhamUrl"]" title="@Localizer["SanPham"]" class="dropdown-toggle">@Localizer["SanPham"]<span class="caret"><i class="fa fa-angle-down"></i></span></a>
             <ul class="dropdown-menu">
-                <li><a href="@Localizer["CaNhanUrl"]">@Localizer["CaNhan"]</a></li>
+                <li class="dropdown">
+                    <a href="@Localizer["CaNhanUrl"]" class="dropdown-toggle">@Localizer["CaNhan"]<span class="caret"><i class="fa fa-angle-down"></i></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="@Localizer["TienGuiTietKiemUrl"]">@Localizer["TienGuiTietKiem"]</a></li>
+                        <li><a href="@Localizer["TienGuiThanhToanUrl"]">@Localizer["TienGuiThanhToan"]</a></li>
+                        <li><a href="@Localizer["ChoVayUrl"]">@Localizer["ChoVay"]</a></li>
+                        <li><a href="@Localizer["NganHangTrucTuyenNavUrl"]">@Localizer["NganHangTrucTuyenName"]</a></li>
+                        <li><a href="@Localizer["DichVuUrl"]">@Localizer["DichVu"]</a></li>
+                    </ul>
+                </li>
                 <li><a href="@Localizer["TinKhuyenMaiPersonalUrl"]">@Localizer["TinKhuyenMaiPersonalName"]</a></li>
                 <li class="dropdown">
                     <a href="@Localizer["HoTroUrl"]" class="dropdown-toggle">@Localizer["HoTro"]<span class="caret"><i class="fa fa-angle-down"></i></span></a>

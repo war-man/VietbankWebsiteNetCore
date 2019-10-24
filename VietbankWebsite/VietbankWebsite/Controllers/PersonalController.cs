@@ -63,7 +63,7 @@ namespace VietbankWebsite.Controllers
             IEnumerable<TopThreeNewsToCate> topThreeNewsToCates;
             if (!_cache.TryGetValue(keyPromotionNews, out topThreeNewsToCates))
             {
-                topThreeNewsToCates = await _aboutVietbankService.TopThreeNewsToCate(1073, _localizer["PromotionNewsUrl"], GetLangCurrent());
+                topThreeNewsToCates = await _aboutVietbankService.TopThreeNewsToCate(1071, _localizer["PromotionNewsUrl"], GetLangCurrent());
                 _cache.Set(keyPromotionNews, topThreeNewsToCates, cacheEntryOptions);
             }
             return View(topThreeNewsToCates);
@@ -76,6 +76,9 @@ namespace VietbankWebsite.Controllers
         {
             var newsDetail = await _aboutVietbankService.GetNewsDetail(news, GetLangCurrent()) ?? new NewsDetail();
             ViewData["Title"] = newsDetail.Title;
+            ViewData["MetaTitle"] = newsDetail.MetaTitle;
+            ViewData["MetaDescription"] = newsDetail.MetaDescription;
+            ViewData["FeatureImage"] = newsDetail.FeatureImage;
             return View(newsDetail);
         }
 
@@ -233,12 +236,15 @@ namespace VietbankWebsite.Controllers
         {
             var productDetail = await _productService.GetProductDetail(cate, _localizer["ProductUrl"], detail, GetLangCurrent());
             var nextPrevProduct = await _productService.NextAndPrevProduct(productDetail.Id, $"{_localizer["ProductUrl"]}/{cate}", GetLangCurrent());
+            productDetail.PrevNextProduct = nextPrevProduct;
             ViewData["Title"] = productDetail.Title;
             ViewBag.PersonalName = _localizer["PersonalName"];
             ViewBag.PersonalUrl = _localizer["PersonalUrl"];
             ViewBag.ProductName = _localizer["ProductName"];
             ViewBag.ProductUrl = _localizer["ProductUrl"];
-            productDetail.PrevNextProduct = nextPrevProduct;
+            ViewData["MetaTitle"] = productDetail.MetaTitle;
+            ViewData["MetaDescription"] = productDetail.MetaDescription;
+            ViewData["FeatureImage"] = productDetail.FeatureImage;
             return View(productDetail);
         }
     }

@@ -138,6 +138,9 @@
   <data name="Home" xml:space="preserve">
     <value>Vietbank Thuong Tin Commercial Joint Stock Bank</value>
   </data>
+  <data name="MetaDescription" xml:space="preserve">
+    <value>Vietbank will continuously implement comprehensive service quality improvement for the goal to become a leading bank in Vietnam.</value>
+  </data>
   <data name="Shareholder" xml:space="preserve">
     <value>Shareholders</value>
   </data>

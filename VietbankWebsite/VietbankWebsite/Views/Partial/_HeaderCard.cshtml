@@ -4,8 +4,8 @@
 <link rel="canonical" href="http://@Context.Request.Host@Context.Request.Path" />
 <meta property="og:title" content="@ViewData["Title"]" />
 <meta property="og:type" content="website" />
-<meta property="og:description" content="Vietbank không ngừng nâng cao chất lượng về mọi mặt để trở thành một trong những thương hiệu có uy tín trong lĩnh vực tài chính ngân hàng tại Việt Nam. Phấn đấu trở thành một ngân hàng bán lẻ năng động, hiện đại, chất lượng phục vụ hàng đầu Việt Nam." />
-<meta name="description" content="Vietbank không ngừng nâng cao chất lượng về mọi mặt để trở thành một trong những thương hiệu có uy tín trong lĩnh vực tài chính ngân hàng tại Việt Nam. Phấn đấu trở thành một ngân hàng bán lẻ năng động, hiện đại, chất lượng phục vụ hàng đầu Việt Nam.">
+<meta property="og:description" content="@ViewData["MetaDescription"]" />
+<meta name="description" content="@ViewData["MetaDescription"]">
 <title>@ViewData["Title"]</title>
 <environment include="Development">
     <link href="~/card/css/core.css" rel="stylesheet" />
@@ -15,25 +15,12 @@
 <environment exclude="Development">
     <link href="~/css/site-card.min.css" rel="stylesheet" />
     <script type="application/ld+json">
-        {
-        "@@context":
-        "https://schema.org",
-        "@@type": "Corporation",
-        "url":
-        "https://www.vietbank.com.vn/",
-        "logo":
-        "https://www.vietbank.com.vn/Content/user/image/logo.png",
-        "contactPoint": [
-        { "@@type": "ContactPoint",
-        "telephone": "1800 1122",
-        "contactType": "customer service"
-        } ] }
-        { "@@context": "https://schema.org",
+        { "@@context":"https://schema.org",
         "@@type": "Organization",
         "name": "VietBank",
         "legalName" : "Ngân hàng TMCP Việt Nam Thương Tín",
-        "url": "https://www.vietbank.com.vn/",
-        "logo": "https://www.vietbank.com.vn/Content/user/image/logo.png",
+        "url":"https://www.vietbank.com.vn/",
+        "logo":"https://www.vietbank.com.vn/Content/user/image/logo.png",
         "foundingDate": "2007",
         "founders": [
         {
@@ -56,13 +43,12 @@
         "@@type": "ContactPoint",
         "contactType": "customer support",
         "telephone": "(+84) 1800 1122",
-        "email": "callcenter@vietbank.com.vn"
+        "email":"callcenter@vietbank.com.vn"
         },
         "sameAs": [
-        "http://www.facebook.com/elitestrategies",
-        "https://instagram.com/elitestrategies",
-        "http://www.linkedin.com/company/elite-strategies",
-        "https://plus.google.com/106661773120082093538"
+        "https://www.facebook.com/NH.Vietbank",
+        "https://www.youtube.com/channel/UCAMkVbaN6-0qE9PauSXWJrQ",
+        "https://www.youtube.com/channel/UCww0wu74J_dOsU-vb5Dgj3w"
         ]}
 
         {
@@ -70,12 +56,12 @@
         "@@type": "NewsArticle",
         "mainEntityOfPage": {
         "@@type": "WebPage",
-        "@@id": "url-bai-viet. Vd: https://www.vietbank.com.vn/ve-vietbank/tin-tuc/tin-khuyen-mai/vietbank-tim-ra-chu-nhan-may-man-trung-thuong-10-luong-vang"
+        "@@id": "@Context.Request.Host@Context.Request.Path"
         },
-        "headline": “title-bai-viet",
+        "headline": "@ViewData["MetaTitle"]",
         "image": {
         "@@type": "ImageObject",
-        "url": "feature-image",
+        "url": "@ViewData["FeatureImage"]",
         "height": ,
         "width":
         },
@@ -95,7 +81,16 @@
         "height": 54
         }
         },
-        "description": "meta-description-bai-viet”."
+        "description": "@ViewData["MetaDescription"]"
         }
     </script>
+    <script>
+        (function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PH992V5');</script>
 </environment>

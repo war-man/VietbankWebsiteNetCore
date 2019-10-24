@@ -147,11 +147,23 @@
   <data name="ChatLuongUrl" xml:space="preserve">
     <value>/ve-vietbank/gioi-thieu/chinh-sach-chat-luong</value>
   </data>
+  <data name="ChoVay" xml:space="preserve">
+    <value>Cho vay</value>
+  </data>
+  <data name="ChoVayUrl" xml:space="preserve">
+    <value>/ca-nhan/san-pham/cho-vay</value>
+  </data>
   <data name="CoHoiNgheNghiep" xml:space="preserve">
     <value>CƠ HỘI NGHỀ NGHIỆP</value>
   </data>
   <data name="CoHoiNgheNghiepUrl" xml:space="preserve">
     <value>/tuyen-dung</value>
+  </data>
+  <data name="DichVu" xml:space="preserve">
+    <value>Dịch vụ</value>
+  </data>
+  <data name="DichVuUrl" xml:space="preserve">
+    <value>/ca-nhan/san-pham/dich-vu</value>
   </data>
   <data name="DoanhNghiep" xml:space="preserve">
     <value>DOANH NGHIỆP</value>
@@ -228,6 +240,12 @@
   <data name="NganHangTrucTuyen" xml:space="preserve">
     <value>NGÂN HÀNG TRỰC TUYẾN</value>
   </data>
+  <data name="NganHangTrucTuyenName" xml:space="preserve">
+    <value>Ngân hàng trực tuyến</value>
+  </data>
+  <data name="NganHangTrucTuyenNavUrl" xml:space="preserve">
+    <value>/ca-nhan/san-pham/ngan-hang-truc-tuyen</value>
+  </data>
   <data name="NganHangTrucTuyenUrl" xml:space="preserve">
     <value>https://online.vietbank.com.vn</value>
   </data>
@@ -278,6 +296,18 @@
   </data>
   <data name="ThuNgoUrl" xml:space="preserve">
     <value>/ve-vietbank/gioi-thieu/thu-ngo-cua-chu-tich-hoi-dong-quan-tri</value>
+  </data>
+  <data name="TienGuiThanhToan" xml:space="preserve">
+    <value>Tiền gửi thanh toán</value>
+  </data>
+  <data name="TienGuiThanhToanUrl" xml:space="preserve">
+    <value>/ca-nhan/san-pham/tien-gui-thanh-toan</value>
+  </data>
+  <data name="TienGuiTietKiem" xml:space="preserve">
+    <value>Tiền gửi tiết kiệm</value>
+  </data>
+  <data name="TienGuiTietKiemUrl" xml:space="preserve">
+    <value>/ca-nhan/san-pham/tien-gui-tiet-kiem</value>
   </data>
   <data name="TinKhuyenMaiName" xml:space="preserve">
     <value>TIN KHUYẾN MÃI</value>

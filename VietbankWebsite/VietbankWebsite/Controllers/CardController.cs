@@ -124,7 +124,7 @@ namespace VietbankWebsite.Controllers
 
         [HttpGet]
         [Route("uu-dai/uu-dai-danh-cho-chu-the")]
-        [Route("incentives/happy-day")]
+        [Route("incentives/promotions-of-master-card")]
         public async Task<IActionResult> HappyDay()
         {
             var keyCardPromotionMaster = GetLangCurrent() == "vi" ? CacheKeys.CardPromotionMasterVi : CacheKeys.CardPromotionMasterEn;

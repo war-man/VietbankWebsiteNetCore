@@ -28,7 +28,11 @@ namespace VietbankWebsite.ModelMap
 
     public class NewsDetail : IntroduceVietbank
     {
+        public int PostId { get; set; }
         public string PublishedDate { get; set; }
+        public string MetaTitle { get; set; }
+        public string MetaDescription { get; set; }
+        public string FeatureImage { get; set; }
     }
 
     public class TopThreeNewsToCate
@@ -54,9 +58,14 @@ namespace VietbankWebsite.ModelMap
         public string Title { get; set; }
         public string Image { get; set; }
         public string Content { get; set; }
+        public string MetaTitle { get; set; }
+        public string MetaDescription { get; set; }
+        public string FeatureImage { get; set; }
     }
 
-    public class LeadershipDetail : IntroduceDetail { }
+    public class LeadershipDetail : IntroduceDetail {
+        public int IdPost { get; set; }
+    }
     public class GetListPageAboutVietbank
     {
         [Key]

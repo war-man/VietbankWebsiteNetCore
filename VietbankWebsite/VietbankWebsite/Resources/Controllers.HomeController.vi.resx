@@ -138,6 +138,9 @@
   <data name="Home" xml:space="preserve">
     <value>VietBank - Ngân hàng TMCP Việt Nam Thương Tín</value>
   </data>
+  <data name="MetaDescription" xml:space="preserve">
+    <value>Vietbank không ngừng nâng cao chất lượng về mọi mặt để trở thành một trong những thương hiệu có uy tín trong lĩnh vực tài chính ngân hàng tại Việt Nam. Phấn đấu trở thành một ngân hàng bán lẻ năng động, hiện đại, chất lượng phục vụ hàng đầu Việt Nam.</value>
+  </data>
   <data name="Shareholder" xml:space="preserve">
     <value>Quan hệ cổ đông</value>
   </data>

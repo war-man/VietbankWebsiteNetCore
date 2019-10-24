@@ -63,7 +63,7 @@ namespace VietbankWebsite.Controllers
             IEnumerable<TopThreeNewsToCate> topThreeNewsToCates;
             if (!_cache.TryGetValue(keyPromotionNews, out topThreeNewsToCates))
             {
-                topThreeNewsToCates = await _aboutVietbankService.TopThreeNewsToCate(1074, _localizer["PromotionNewsUrl"], GetLangCurrent());
+                topThreeNewsToCates = await _aboutVietbankService.TopThreeNewsToCate(1072, _localizer["PromotionNewsUrl"], GetLangCurrent());
                 _cache.Set(keyPromotionNews, topThreeNewsToCates, cacheEntryOptions);
             }
             return View(topThreeNewsToCates);
@@ -277,6 +277,9 @@ namespace VietbankWebsite.Controllers
             ViewBag.EnterpriseUrl = _localizer["EnterpriseUrl"];
             ViewBag.ProductName = _localizer["ProductName"];
             ViewBag.ProductUrl = _localizer["ProductUrl"];
+            ViewData["MetaTitle"] = productDetail.MetaTitle;
+            ViewData["MetaDescription"] = productDetail.MetaDescription;
+            ViewData["FeatureImage"] = productDetail.FeatureImage;
             return View(productDetail);
         }
     }

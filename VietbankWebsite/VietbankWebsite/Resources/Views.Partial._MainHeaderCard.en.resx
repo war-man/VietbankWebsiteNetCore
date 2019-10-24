@@ -118,31 +118,31 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="MasterCardName" xml:space="preserve">
-    <value>PROMOTIONS OF MASTER CARD</value>
+    <value>Promotions of master card</value>
   </data>
   <data name="MasterCardUrl" xml:space="preserve">
     <value>/card/incentives/promotions-of-master-card</value>
   </data>
   <data name="NganHangTrucTuyen" xml:space="preserve">
-    <value>INTERNET BANKING</value>
+    <value>Internet banking</value>
   </data>
   <data name="NganHangTrucTuyenUrl" xml:space="preserve">
     <value>https://online.vietbank.com.vn</value>
   </data>
   <data name="OfferName" xml:space="preserve">
-    <value>OFFERS</value>
+    <value>Offers</value>
   </data>
   <data name="OfferUrl" xml:space="preserve">
     <value>/card/incentives/promotions</value>
   </data>
   <data name="ProductName" xml:space="preserve">
-    <value>PRODUCT</value>
+    <value>Product</value>
   </data>
   <data name="ProductUrl" xml:space="preserve">
     <value>/card/product</value>
   </data>
   <data name="PromotionName" xml:space="preserve">
-    <value>PROMOTIONS</value>
+    <value>Promotions</value>
   </data>
   <data name="PromotionUrl" xml:space="preserve">
     <value>/card/incentives/promotions</value>
@@ -151,22 +151,22 @@
     <value>SUPPORT</value>
   </data>
   <data name="SupportUrl" xml:space="preserve">
-    <value>/support</value>
+    <value>/card/support</value>
   </data>
   <data name="VietabankMyStyleName" xml:space="preserve">
-    <value>VIETBANK MY STYLE CREDIT CARD</value>
+    <value>Vietbank My Style Credit Card</value>
   </data>
   <data name="VietabankMyStyleUrl" xml:space="preserve">
     <value>/card/product/vietbank-my-style-credit-card</value>
   </data>
   <data name="VietbankLuxuryPlataniumName" xml:space="preserve">
-    <value>VIETBANK LUXURY PLATINUM CREDIT CARD</value>
+    <value>Vietbank Luxury Platinum Credit Card</value>
   </data>
   <data name="VietbankLuxuryPlataniumUrl" xml:space="preserve">
     <value>/card/product/vietbank-luxury-platinum-credit-card</value>
   </data>
   <data name="VietbankPlataniumName" xml:space="preserve">
-    <value>VIETBANK PLATINUM CREDIT CARD</value>
+    <value>Vietbank Platinum Credit Card</value>
   </data>
   <data name="VietbankPlataniumUrl" xml:space="preserve">
     <value>/card/product/credit-card-vietbank-platinum</value>
