@@ -13,6 +13,13 @@ namespace VietbankWebsite.Entities
         public int Id { get; set; }
         [Column("image")]
         public string Image { get; set; }
+        [Column("imgTwo")]
+        public string ImgTwo { get; set; }
+        [Column("imgThree")]
+        public string ImgThree { get; set; }
+        [Column("imgFour")]
+        public string ImgFour { get; set; }
+
         [Column("title")]
         public string Title { get; set; }
         [Column("description")]

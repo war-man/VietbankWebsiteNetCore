@@ -7,6 +7,8 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading.Tasks;
+using System.Xml;
+using VietbankWebsite.Context;
 using VietbankWebsite.Entities;
 using VietbankWebsite.ModelMap;
 using VietbankWebsite.Models;
@@ -22,7 +24,8 @@ namespace VietbankWebsite.Controllers
         private readonly ICareersService _careersService;
         private readonly IStringLocalizer<HomeController> _localizer;
         private IRecaptchaService _recaptcha;
-        public HomeController(IStringLocalizer<HomeController> localizer, IMemoryCache memoryCache, IHomeService homeService, IShareholderService shareholderService, ICareersService careersService, IRecaptchaService recaptcha)
+        private readonly VietbankContext _vietbankContext;
+        public HomeController(IStringLocalizer<HomeController> localizer, IMemoryCache memoryCache, IHomeService homeService, IShareholderService shareholderService, ICareersService careersService, IRecaptchaService recaptcha, VietbankContext vietbankContext)
         {
             _cache = memoryCache;
             _localizer = localizer;
@@ -30,6 +33,7 @@ namespace VietbankWebsite.Controllers
             _shareholderService = shareholderService;
             _careersService = careersService;
             _recaptcha = recaptcha;
+            _vietbankContext = vietbankContext;
         }
 
         [HttpGet]
@@ -170,6 +174,26 @@ namespace VietbankWebsite.Controllers
                 ModelState.AddModelError("", "There was an error validating recatpcha. Please try again!");
             return View();
         }
+
+        //[Route("/site-map.xml")]
+        //public IActionResult SitemapXml()
+        //{
+        //    string host = Request.Scheme + "://" + Request.Host;
+
+        //    Response.ContentType = "application/xml";
+
+        //    using (var xml = XmlWriter.Create(Response.Body, new XmlWriterSettings { Indent = true }))
+        //    {
+        //        xml.WriteStartDocument();
+        //        xml.WriteStartElement("urlset", "http://www.sitemaps.org/schemas/sitemap/0.9");
+
+        //        xml.WriteStartElement("url");
+        //        xml.WriteElementString("loc", "http://www.example.com/");
+        //        xml.WriteEndElement();
+        //        xml.WriteEndElement();
+        //    }
+        //}
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
