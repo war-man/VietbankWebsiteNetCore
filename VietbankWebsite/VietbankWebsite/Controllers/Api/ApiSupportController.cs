@@ -77,7 +77,7 @@ namespace VietbankWebsite.Controllers.Api
                     "<tbody>"+
                         $"<tr><td>{_localizer["ThuBaoLanhSTK"]}</td><td>{thuBaoLanh.ACCTNBR}</td></tr>"+
                         $"<tr><td>{_localizer["ThuBaoLanhSeri"]}</td><td>{thuBaoLanh.SERIES}</td></tr>"+
-                        $"<tr><td>{_localizer["ThuBaoLanhPublish"]}</td><td>{thuBaoLanh.DATE_EFF.ToString("dd/MM/yyyy")}</td></tr>" +
+                        $"<tr><td>{_localizer["ThuBaoLanhPublish"]}</td><td>{thuBaoLanh.DATE_EFF}</td></tr>" +
                         $"<tr><td>{_localizer["ThuBaoLanhValue"]}</td><td>{thuBaoLanh.CURRENTBALANCE} VND</td></tr>"+
                         $"<tr><td>{_localizer["ThuBaoLanhCompany"]}</td><td>{thuBaoLanh.HOTEN}</td></tr>" +
                         $"<tr><td>{_localizer["ThuBaoLanhActive"]}</td><td>{thuBaoLanh.ISVALID}</td></tr>"+

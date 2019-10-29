@@ -2,11 +2,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="google-site-verification" content="0UKZvTdm5alRZmyyWrB__UcHvhgf1PXJ2ArTzKWoPY8">
 <link rel="canonical" href="http://@Context.Request.Host@Context.Request.Path" />
-<meta property="og:title" content="@ViewData["Title"]" />
+<meta property="og:title" content="@Html.Raw(ViewData["Title"])" />
 <meta property="og:type" content="website" />
-<meta property="og:description" content="@ViewData["MetaDescription"]" />
-<meta name="description" content="@ViewData["MetaDescription"]">
-<title>@ViewData["Title"]</title>
+<meta property="og:description" content="@Html.Raw(ViewData["MetaDescription"])" />
+<meta name="description" content="@Html.Raw(ViewData["MetaDescription"])">
+<title>@Html.Raw(ViewData["Title"])</title>
 <environment include="Development">
     <link href="~/card/css/core.css" rel="stylesheet" />
     <link href="~/card/css/main.css" rel="stylesheet" />
@@ -58,10 +58,10 @@
         "@@type": "WebPage",
         "@@id": "@Context.Request.Host@Context.Request.Path"
         },
-        "headline": "@ViewData["MetaTitle"]",
+        "headline": "@Html.Raw(ViewData["MetaTitle"])",
         "image": {
         "@@type": "ImageObject",
-        "url": "@ViewData["FeatureImage"]",
+        "url": "@Html.Raw(ViewData["FeatureImage"])",
         "height": ,
         "width":
         },
@@ -81,8 +81,8 @@
         "height": 54
         }
         },
-        "description": "@ViewData["MetaDescription"]"
-        }
+        "description": "@Html.Raw(ViewData["MetaDescription"])"
+}
     </script>
     <script>
         (function (w, d, s, l, i) {

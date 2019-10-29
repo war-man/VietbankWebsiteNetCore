@@ -125,6 +125,7 @@ namespace VietbankWebsite
             services.Configure<RecaptchaSettings>(recaptcha);
             services.AddTransient<IRecaptchaService, RecaptchaService>();
             services.Configure<EmailSender>(Configuration.GetSection("EmailSender"));
+            services.Configure<RemoteService>(Configuration.GetSection("RemoteService"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

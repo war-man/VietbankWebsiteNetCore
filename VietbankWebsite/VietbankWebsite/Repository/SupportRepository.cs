@@ -1,12 +1,15 @@
 ﻿using Dapper;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 using VietbankWebsite.Context;
 using VietbankWebsite.ModelMap;
+using VietbankWebsite.Models;
 
 namespace VietbankWebsite.Repository
 {
@@ -148,6 +151,31 @@ namespace VietbankWebsite.Repository
             return lastDate;
         }
 
+        public async Task<ThuBaoLanhModel> GetRemoteGuaranteeLetter(string urlRemote,string acctNbr, string seriesNo)
+        {
+            var response = string.Empty;
+            using (var client = new HttpClient())
+            {
+                HttpResponseMessage result = await client.GetAsync($"{urlRemote}/api/ThuBaoLanh/ReponseGetThongTinTBL?Acct={acctNbr}&soTBL={seriesNo}");
+                if (result.IsSuccessStatusCode)
+                {
+                    response = await result.Content.ReadAsStringAsync();
+                    ThuBaoLanhResponse thuBaoLanhResponse = JsonConvert.DeserializeObject<ThuBaoLanhResponse>(response);
+                    return new ThuBaoLanhModel()
+                    {
+                        ACCTNBR = thuBaoLanhResponse.tbl.acctnbr,
+                        SERIES = thuBaoLanhResponse.tbl.series,
+                        DATE_EFF = thuBaoLanhResponse.tbl.datE_EFF,
+                        CURRENTBALANCE = thuBaoLanhResponse.tbl.balance,
+                        HOTEN = thuBaoLanhResponse.tbl.ten,
+                        ISVALID = thuBaoLanhResponse.tbl.status,
+                        FILESCANURL = thuBaoLanhResponse.tbl.filescan
+                    };
+                }
+            }
+            return new ThuBaoLanhModel();
+        }
+
         private async Task<IEnumerable<FaqsCategory>> GetFaqsCategory(int faqs, string lang)
         {
             var faqsCategory = from a in _context.VbCategories
@@ -185,5 +213,7 @@ namespace VietbankWebsite.Repository
         Task<IEnumerable<CurencyConvert>> GetCurencyConverts(string effCode, string currency);
         Task<string> GetLastDateUpdate();
         Task<ThuBaoLanhModel> GetGuaranteeLetter(string acctNbr, string seriesNo);
+
+        Task<ThuBaoLanhModel> GetRemoteGuaranteeLetter(string urlRemote,string acctNbr, string seriesNo);
     }
 }

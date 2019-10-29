@@ -69,6 +69,11 @@ namespace VietbankWebsite.Service
         {
             return await _unitOfWork.SupportRepository.GetLastDateUpdate();
         }
+
+        public async Task<ThuBaoLanhModel> GetRemoteGuaranteeLetter(string urlRemote,string acctNbr, string seriesNo)
+        {
+            return await _unitOfWork.SupportRepository.GetRemoteGuaranteeLetter(urlRemote,acctNbr, seriesNo);
+        }
     }
 
     public interface ISupportService
@@ -84,5 +89,6 @@ namespace VietbankWebsite.Service
         Task<IEnumerable<CurencyConvert>> GetCurencyConverts(string effCode, string currency);
         Task<string> GetLastDateUpdate();
         Task<ThuBaoLanhModel> GetGuaranteeLetter(string acctNbr, string seriesNo);
+        Task<ThuBaoLanhModel> GetRemoteGuaranteeLetter(string urlRemote,string acctNbr, string seriesNo);
     }
 }

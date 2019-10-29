@@ -62,3 +62,16 @@ GO
 	ALTER TABLE vb_banner ADD imgTwo VARCHAR (255);
 	ALTER TABLE vb_banner ADD imgThree VARCHAR (255);
 	ALTER TABLE vb_banner ADD imgFour VARCHAR (255);
+
+
+----BACK-END
+update these file below
+-- \Areas\Administrator\Views\Public\PreviewBannerTop.cshtml
+-- \Areas\Administrator\Views\Post\Create.cshtml
+-- \Areas\Administrator\Views\Post\Edit.cshtml
+-- \Areas\Administrator\Views\Page\Edit.cshtml
+-- VietbankBackEnd.dll
+-- VietbankBackEnd.dll.config
+-- VietbankBackEnd.pdb
+-- VietbankFramework.dll
+-- VietbankFramework.pdb

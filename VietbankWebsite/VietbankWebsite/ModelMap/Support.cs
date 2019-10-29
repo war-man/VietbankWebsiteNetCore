@@ -44,7 +44,7 @@ namespace VietbankWebsite.ModelMap
         public string Content { get; set; }
     }
 
-    public class Form:InterestRate {}
+    public class Form : InterestRate { }
 
     public class ThuBaoLanhModel
     {
@@ -56,17 +56,44 @@ namespace VietbankWebsite.ModelMap
         public DateTime DENNGAY { get; set; }
         public string CURRACCTSTATCD { get; set; }
         public string HOTEN { get; set; }
-        public double CURRENTBALANCE { get; set; }
+        public string CURRENTBALANCE { get; set; }
         public string SERIES { get; set; }
         public DateTime DATELASTMAINT { get; set; }
-        public Int32 ACCTNBR { get; set; }
-        public DateTime DATE_EFF { get; set; }
+        public string ACCTNBR { get; set; }
+        public string DATE_EFF { get; set; }
         public string STATUS { get; set; }
         public string ISVALID { get; set; }
         public int PRINTED { get; set; }
         public string DIACHI { get; set; }
         public string FILESCAN { get; set; }
         public string FILESCANURL { get; set; }
+    }
+
+    public class ThuBaoLanhResponse
+    {
+        public string resultcode { get; set; }
+        public string resultdesc { get; set; }
+        public ThuBaoLanhItem tbl { get; set; }
+    }
+
+    public class ThuBaoLanhItem
+    {
+        public string tungay { get; set; }
+        public string denngay { get; set; }
+        public string status { get; set; }
+        public string ten { get; set; }
+        public string balance { get; set; }
+        public string series { get; set; }
+        public string datelastmaint { get; set; }
+        public string branchcode { get; set; }
+        public string acctnbr { get; set; }
+        public string datE_EFF { get; set; }
+        public string useraD_KSV { get; set; }
+        public string useraD_LCSR { get; set; }
+        public string printed { get; set; }
+        public string diachi { get; set; }
+        public string branchname { get; set; }
+        public string filescan { get; set; }
 
     }
 
