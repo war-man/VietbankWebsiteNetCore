@@ -5,7 +5,7 @@
 @inject IViewLocalizer Localizer
 @model VietbankWebsite.ModelMap.Contact
 @{
-    ViewData["Title"] = @Localizer["LienHeName"];
+    ViewData["Title"] = Localizer["LienHeName"].Value;
     Layout = "~/Views/Shared/_LayoutAbout.cshtml";
 }
 

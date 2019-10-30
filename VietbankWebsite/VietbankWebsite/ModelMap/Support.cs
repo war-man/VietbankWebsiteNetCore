@@ -48,6 +48,7 @@ namespace VietbankWebsite.ModelMap
 
     public class ThuBaoLanhModel
     {
+        public bool HasResulted { get; set; }
         public string GuaranteeAcct { get; set; }
         public string GuaranteeCode { get; set; }
         public string CaptchaText { get; set; }

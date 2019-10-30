@@ -1,7 +1,7 @@
 ﻿@using Microsoft.AspNetCore.Mvc.Localization
 @inject IViewLocalizer Localizer
 @{
-    ViewData["Title"] = @Localizer["CalculationName"];
+    ViewData["Title"] = @Localizer["CalculationName"].Value;
     Layout = "~/Views/Shared/_LayoutPersonal.cshtml";
 }
 

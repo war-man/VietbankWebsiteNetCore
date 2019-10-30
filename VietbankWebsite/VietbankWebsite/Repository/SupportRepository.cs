@@ -163,6 +163,7 @@ namespace VietbankWebsite.Repository
                     ThuBaoLanhResponse thuBaoLanhResponse = JsonConvert.DeserializeObject<ThuBaoLanhResponse>(response);
                     return new ThuBaoLanhModel()
                     {
+                        HasResulted = true,
                         ACCTNBR = thuBaoLanhResponse.tbl.acctnbr,
                         SERIES = thuBaoLanhResponse.tbl.series,
                         DATE_EFF = thuBaoLanhResponse.tbl.datE_EFF,
@@ -172,8 +173,15 @@ namespace VietbankWebsite.Repository
                         FILESCANURL = thuBaoLanhResponse.tbl.filescan
                     };
                 }
+                else
+                {
+                    return new ThuBaoLanhModel()
+                    {
+                        HasResulted = false
+                    };
+                }
             }
-            return new ThuBaoLanhModel();
+            
         }
 
         private async Task<IEnumerable<FaqsCategory>> GetFaqsCategory(int faqs, string lang)

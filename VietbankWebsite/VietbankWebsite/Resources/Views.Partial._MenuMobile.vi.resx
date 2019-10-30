@@ -220,7 +220,7 @@
     <value>/ve-vietbank/gioi-thieu/tam-nhin-su-menh-gia-tri-cot-loi</value>
   </data>
   <data name="The" xml:space="preserve">
-    <value>THẺ</value>
+    <value>THẺ &amp; NH SỐ</value>
   </data>
   <data name="TheUrl" xml:space="preserve">
     <value>/the</value>

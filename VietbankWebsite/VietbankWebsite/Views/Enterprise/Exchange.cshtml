@@ -1,7 +1,7 @@
 ﻿@using Microsoft.AspNetCore.Mvc.Localization
 @inject IViewLocalizer Localizer
 @{
-    ViewData["Title"] = Localizer["TyGiaName"];
+    ViewData["Title"] = Localizer["TyGiaName"].Value;
     Layout = "~/Views/Shared/_LayoutEnterprise.cshtml";
 }
 @section Styles{

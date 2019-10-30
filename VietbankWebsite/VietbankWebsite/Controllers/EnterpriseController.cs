@@ -219,7 +219,10 @@ namespace VietbankWebsite.Controllers
 
         private string GenerateTableGuaranteeLetter(ThuBaoLanhModel thuBaoLanh)
         {
-            string guaranteeLetter = $"<table class='table table-hover' style='padding-bottom: 14px;'>" +
+            string guaranteeLetter = "";
+            if (thuBaoLanh.HasResulted)
+            {
+                guaranteeLetter = $"<table class='table table-hover' style='padding-bottom: 14px;'>" +
                     $"<thead><tr><th colspan='3'>{_localizer["ThuBaoLanhName"]}</th></tr></thead>" +
                     "<tbody>" +
                         $"<tr><td>{_localizer["ThuBaoLanhSTK"]}</td><td>{thuBaoLanh.ACCTNBR}</td></tr>" +
@@ -231,6 +234,12 @@ namespace VietbankWebsite.Controllers
                         $"<tr><td>{_localizer["ThuBaoLanhContent"]}</td><td><a href='http://static.vietbank.com.vn/web/ThuBaoLanh/{thuBaoLanh.FILESCANURL}' target='_blank'>{_localizer["ThuBaoLanhViewLetter"]}</a></td></tr>" +
                     "</tbody>" +
                 "</table>";
+            }
+            else
+            {
+                guaranteeLetter = $"<h3 class=\"text-center\">Not found result</h3>";
+            }
+            
             return guaranteeLetter;
         }
 
