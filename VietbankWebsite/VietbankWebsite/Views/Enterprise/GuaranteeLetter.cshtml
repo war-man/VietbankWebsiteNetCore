@@ -5,7 +5,7 @@
 @inject IOptions<RecaptchaSettings> RecaptchaSettings
 @inject IViewLocalizer Localizer
 @{
-    ViewData["Title"] = @Localizer["GuaranteeLetterName"];
+    ViewData["Title"] = Localizer["GuaranteeLetterName"].Value;
     Layout = "~/Views/Shared/_LayoutEnterprise.cshtml";
 }
 <section class="banner-wrap">
@@ -16,7 +16,7 @@
                     <ol class="breadcrumb mrt-10">
                         <li><a href="@Localizer["DoanhNghiepUrl"]">@Localizer["DoanhNghiepName"]</a></li>
                         <li><a href="@Localizer["HoTroUrl"]">@Localizer["HoTroName"]</a></li>
-                        <li style="color: #999;"><strong>@Localizer["DoanhNghiepName"]</strong></li>
+                        <li style="color: #999;"><strong>@Localizer["GuaranteeLetterName"]</strong></li>
                     </ol>
                 </div>
             </div>
