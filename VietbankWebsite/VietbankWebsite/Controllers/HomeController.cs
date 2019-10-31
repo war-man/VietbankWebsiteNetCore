@@ -24,8 +24,14 @@ namespace VietbankWebsite.Controllers
         private readonly ICareersService _careersService;
         private readonly IStringLocalizer<HomeController> _localizer;
         private IRecaptchaService _recaptcha;
-        private readonly VietbankContext _vietbankContext;
-        public HomeController(IStringLocalizer<HomeController> localizer, IMemoryCache memoryCache, IHomeService homeService, IShareholderService shareholderService, ICareersService careersService, IRecaptchaService recaptcha, VietbankContext vietbankContext)
+        public HomeController(
+            IStringLocalizer<HomeController> localizer, 
+            IMemoryCache memoryCache, 
+            IHomeService homeService, 
+            IShareholderService shareholderService, 
+            ICareersService careersService, 
+            IRecaptchaService recaptcha
+        )
         {
             _cache = memoryCache;
             _localizer = localizer;
@@ -33,7 +39,6 @@ namespace VietbankWebsite.Controllers
             _shareholderService = shareholderService;
             _careersService = careersService;
             _recaptcha = recaptcha;
-            _vietbankContext = vietbankContext;
         }
 
         [HttpGet]
@@ -175,24 +180,20 @@ namespace VietbankWebsite.Controllers
             return View();
         }
 
-        //[Route("/site-map.xml")]
-        //public IActionResult SitemapXml()
-        //{
-        //    string host = Request.Scheme + "://" + Request.Host;
+        public IActionResult CacheTryGetValueSet()
+        {
+            DateTime cacheEntry;
+            // Look for cache key.
+            if (!_cache.TryGetValue("_Entry", out cacheEntry))
+            {
+                // Key not in cache, so get data.
+                cacheEntry = DateTime.Now;
+                // Save data in cache.
+                _cache.Set("_Entry", cacheEntry, cacheEntryOptions);
+            }
 
-        //    Response.ContentType = "application/xml";
-
-        //    using (var xml = XmlWriter.Create(Response.Body, new XmlWriterSettings { Indent = true }))
-        //    {
-        //        xml.WriteStartDocument();
-        //        xml.WriteStartElement("urlset", "http://www.sitemaps.org/schemas/sitemap/0.9");
-
-        //        xml.WriteStartElement("url");
-        //        xml.WriteElementString("loc", "http://www.example.com/");
-        //        xml.WriteEndElement();
-        //        xml.WriteEndElement();
-        //    }
-        //}
+            return View(cacheEntry);
+        }
 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

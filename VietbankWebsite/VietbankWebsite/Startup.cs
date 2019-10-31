@@ -91,9 +91,10 @@ namespace VietbankWebsite
 
             services.Configure<RequestLocalizationOptions>(options =>
             {
-                options.DefaultRequestCulture = new RequestCulture(culture: "vi", uiCulture: "vi");
+                //options.DefaultRequestCulture = new RequestCulture("vi");
                 options.SupportedCultures = supportedCultures;
                 options.SupportedUICultures = supportedCultures;
+                //options.RequestCultureProviders.Clear();
             });
             services.AddDbContext<VietbankContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
@@ -131,6 +132,9 @@ namespace VietbankWebsite
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            //CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("vi");
+            //CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("vi");
+            //CookieRequestCultureProvider.MakeCookieValue(new RequestCulture("vi"));
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -138,8 +142,13 @@ namespace VietbankWebsite
             else
             {
                 app.UseStatusCodePagesWithReExecute("/Home/NotFoundPage");
+                app.UseExceptionHandler("/Home/NotFoundPage");
                 app.UseHsts();
             }
+            app.UseRequestLocalization(new RequestLocalizationOptions
+            {
+                DefaultRequestCulture = new RequestCulture("vi")
+            });
             app.UseRequestLocalization();
             app.UseHttpsRedirection();
             app.UseStaticFiles();

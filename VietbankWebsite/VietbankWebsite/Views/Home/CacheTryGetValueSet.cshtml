@@ -1,0 +1,9 @@
+﻿@model DateTime?
+@{
+    ViewData["Title"] = "CacheGetOrCreate";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Current Time: @DateTime.Now.TimeOfDay.ToString()</h3>
+<h3>Cached Time: @(Model == null ? "No cached entry found" : Model.Value.TimeOfDay.ToString())</h3>
+

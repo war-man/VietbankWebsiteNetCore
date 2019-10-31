@@ -235,7 +235,6 @@ jQuery(document).ready(function ($) {
     requestAjaxGet('/api/ApiSupport/getcountupdatecurrencywheredate?date=' + moment(new Date()).format("MM/DD/YYYY"))
         .done(function (data) {
             $.get('/api/ApiSupport/getfiltercurrency?date=' + moment(new Date()).format("MM/DD/YYYY") + '&counttime='+data, function (data) {
-                /*optional stuff to do after success */
                 generateTableCurrency(data);
             });
         })
