@@ -220,11 +220,27 @@ jQuery(document).ready(function ($) {
                 console.log(error);
             });
     });
-});function getCurrencyCurrent() {
-    $.get('/api/ApiSupport/getfiltercurrency?date=' + moment(new Date()).format("MM/DD/YYYY") + '&counttime=1', function (data) {
-        /*optional stuff to do after success */
-        generateTableCurrency(data);
+});function getCountTimeNow() {    requestAjaxGet('/api/ApiSupport/getcountupdatecurrencywheredate?date=' + moment(new Date()).format("MM/DD/YYYY"))
+    .done(function (data) {
+        $.get('/api/ApiSupport/getfiltercurrency?date=' + moment(new Date()).format("MM/DD/YYYY") + '&counttime=1', function (data) {
+            /*optional stuff to do after success */
+            generateTableCurrency(data);
+        });
+    })
+    .fail(function (error) {
+        console.log(error);
     });
+
+}function getCurrencyCurrent() {
+    requestAjaxGet('/api/ApiSupport/getcountupdatecurrencywheredate?date=' + moment(new Date()).format("MM/DD/YYYY"))
+        .done(function (data) {
+            $.get('/api/ApiSupport/getfiltercurrency?date=' + moment(new Date()).format("MM/DD/YYYY") + '&counttime='+data, function (data) {
+                generateTableCurrency(data);
+            });
+        })
+        .fail(function (error) {
+            console.log(error);
+        });
 }function getCountTimeCurrent() {
     $.get('/api/ApiSupport/getcountupdatecurrencywheredate?date=' + moment(new Date()).format("MM/DD/YYYY"), function (data) {
         /*optional stuff to do after success */

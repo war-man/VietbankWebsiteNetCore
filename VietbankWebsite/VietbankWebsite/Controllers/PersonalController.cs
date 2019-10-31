@@ -117,7 +117,7 @@ namespace VietbankWebsite.Controllers
             InterestRate interestRate;
             if (!_cache.TryGetValue(keyPersonalInterest, out interestRate))
             {
-                interestRate = await _supportService.GetInterestRate(56, GetLangCurrent());
+                interestRate = await _supportService.GetInterestRate(1049, GetLangCurrent());
                 _cache.Set(keyPersonalInterest, interestRate, cacheEntryOptions);
             }
             ViewData["Title"] = interestRate.Title;
