@@ -91,7 +91,7 @@ namespace VietbankWebsite
 
             services.Configure<RequestLocalizationOptions>(options =>
             {
-                //options.DefaultRequestCulture = new RequestCulture("vi");
+                //options.DefaultRequestCulture = new RequestCulture("en");
                 options.SupportedCultures = supportedCultures;
                 options.SupportedUICultures = supportedCultures;
                 //options.RequestCultureProviders.Clear();
@@ -132,9 +132,6 @@ namespace VietbankWebsite
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            //CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("vi");
-            //CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("vi");
-            //CookieRequestCultureProvider.MakeCookieValue(new RequestCulture("vi"));
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -145,11 +142,20 @@ namespace VietbankWebsite
                 app.UseExceptionHandler("/Home/NotFoundPage");
                 app.UseHsts();
             }
-            app.UseRequestLocalization(new RequestLocalizationOptions
-            {
-                DefaultRequestCulture = new RequestCulture("vi")
-            });
-            app.UseRequestLocalization();
+            //var supportedCultures = new[]
+            //{
+            //    new CultureInfo("vi"),
+            //    new CultureInfo("en"),
+            //};
+
+            //app.UseRequestLocalization(new RequestLocalizationOptions
+            //{
+            //    DefaultRequestCulture = new RequestCulture("vi"),
+            //    // Formatting numbers, dates, etc.
+            //    SupportedCultures = supportedCultures,
+            //    // UI strings that we have localized.
+            //    SupportedUICultures = supportedCultures
+            //});
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             // Serving static file for modules
@@ -168,6 +174,7 @@ namespace VietbankWebsite
                 });
             }
             app.UseRouting();
+            app.UseRequestLocalization();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

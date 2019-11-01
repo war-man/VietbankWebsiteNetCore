@@ -38,7 +38,7 @@ namespace VietbankWebsite.Repository
                           where b.Language.Equals(lang)
                           where a.Status
                           //where DateTime.Compare(DateTime.Now, a.StartDate) >= 0
-                          //where DateTime.Compare(DateTime.Now, a.EndDate) <= 0
+                          where DateTime.Compare(DateTime.Now, a.EndDate) <= 0
                           orderby a.Id descending
                           select new CareerJobList()
                           {
