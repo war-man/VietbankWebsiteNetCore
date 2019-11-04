@@ -88,13 +88,11 @@ namespace VietbankWebsite
                 new CultureInfo("en"),
             };
 
-
             services.Configure<RequestLocalizationOptions>(options =>
             {
-                //options.DefaultRequestCulture = new RequestCulture("en");
+                options.DefaultRequestCulture = new RequestCulture("vi");
                 options.SupportedCultures = supportedCultures;
                 options.SupportedUICultures = supportedCultures;
-                //options.RequestCultureProviders.Clear();
             });
             services.AddDbContext<VietbankContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
