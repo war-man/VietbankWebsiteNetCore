@@ -1,12 +1,9 @@
-﻿@using Microsoft.AspNetCore.Localization
-@model VietbankWebsite.Entities.BoxContainerHomePage
+﻿@model VietbankWebsite.Entities.BoxContainerHomePage
 @{
     ViewData["Description"] = "Vietbank không ngừng nâng cao chất lượng về mọi mặt để trở thành một trong những thương hiệu có uy tín trong lĩnh vực tài chính ngân hàng tại Việt Nam. Phấnđấu trở thành một ngân hàng bán lẻ năng động, hiện đại, chất lượng phục vụ hàngđầu Việt Nam.";
     Layout = "~/Views/Shared/_Layout.cshtml";
-    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
 }
 <main>
-    <h1>@requestCulture.RequestCulture.UICulture.Name</h1>
     <section class="banner-section">
         <div id="banner-carousel" class="banner owl-carousel">
             @foreach (var banner in Model.Banner)

@@ -24,6 +24,7 @@ namespace VietbankWebsite.Controllers
         private readonly ICareersService _careersService;
         private readonly IStringLocalizer<HomeController> _localizer;
         private IRecaptchaService _recaptcha;
+        private static readonly log4net.ILog Log = log4net.LogManager.GetLogger(typeof(HomeController));
         public HomeController(
             IStringLocalizer<HomeController> localizer, 
             IMemoryCache memoryCache, 
@@ -155,6 +156,18 @@ namespace VietbankWebsite.Controllers
         #region Extension
         [HttpPost]
         public IActionResult SetLanguage(string culture, string returnUrl)
+        {
+            Response.Cookies.Append(
+                CookieRequestCultureProvider.DefaultCookieName,
+                CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
+                new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
+            );
+
+            return LocalRedirect("/");
+        }
+
+        [HttpGet]
+        public IActionResult SetLanguage(string culture)
         {
             Response.Cookies.Append(
                 CookieRequestCultureProvider.DefaultCookieName,

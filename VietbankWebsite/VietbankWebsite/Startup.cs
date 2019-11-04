@@ -18,9 +18,11 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.Loader;
+using System.Threading.Tasks;
 using Vietbank.Core;
 using VietbankWebsite.Context;
 using VietbankWebsite.Extensions;
+using VietbankWebsite.Middleware;
 using VietbankWebsite.Models;
 using VietbankWebsite.Repository;
 using VietbankWebsite.Service;
@@ -78,8 +80,6 @@ namespace VietbankWebsite
             services.AddTransient<IVbPostSeoService, VbPostSeoService>();
 
             services.AddTransient<IUnitOfWork, UnitOfWork>();
-
-
 
             services.AddLocalization(options => options.ResourcesPath = "Resources");
             var supportedCultures = new[]
@@ -140,20 +140,8 @@ namespace VietbankWebsite
                 app.UseExceptionHandler("/Home/NotFoundPage");
                 app.UseHsts();
             }
-            //var supportedCultures = new[]
-            //{
-            //    new CultureInfo("vi"),
-            //    new CultureInfo("en"),
-            //};
-
-            //app.UseRequestLocalization(new RequestLocalizationOptions
-            //{
-            //    DefaultRequestCulture = new RequestCulture("vi"),
-            //    // Formatting numbers, dates, etc.
-            //    SupportedCultures = supportedCultures,
-            //    // UI strings that we have localized.
-            //    SupportedUICultures = supportedCultures
-            //});
+            app.UseMiddleware<CultureMiddleware>();
+            app.UseRequestLocalization();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             // Serving static file for modules
@@ -172,7 +160,6 @@ namespace VietbankWebsite
                 });
             }
             app.UseRouting();
-            app.UseRequestLocalization();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

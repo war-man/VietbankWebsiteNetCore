@@ -1,0 +1,69 @@
+2019-11-04 13:53:34,855 [9] INFO  App  
+ Middleware at cookie culture:null 
+ 
+2019-11-04 13:53:35,935 [4] INFO  App  
+ Number of banner: en 3 
+ 
+2019-11-04 13:53:36,193 [4] INFO  App  
+ Middleware at cookie culture:null 
+ 
+2019-11-04 13:54:02,239 [5] INFO  App  
+ Middleware at cookie culture:null 
+ 
+2019-11-04 13:54:02,293 [5] INFO  App  
+ Middleware at cookie culture:c=vi|uic=vi 
+ 
+2019-11-04 13:54:02,358 [19] INFO  App  
+ Number of banner: vi 5 
+ 
+2019-11-04 13:54:15,792 [18] INFO  App  
+ Middleware at cookie culture:c=vi|uic=vi 
+ 
+2019-11-04 13:54:15,811 [18] INFO  App  
+ Number of banner: vi 5 
+ 
+2019-11-04 13:54:15,850 [18] INFO  App  
+ Middleware at cookie culture:c=vi|uic=vi 
+ 
+2019-11-04 13:54:15,853 [19] INFO  App  
+ Middleware at cookie culture:c=vi|uic=vi 
+ 
+2019-11-04 13:54:15,948 [19] INFO  App  
+ Middleware at cookie culture:c=vi|uic=vi 
+ 
+2019-11-04 13:54:15,949 [19] INFO  App  
+ Middleware at cookie culture:c=vi|uic=vi 
+ 
+2019-11-04 13:54:15,950 [19] INFO  App  
+ Middleware at cookie culture:c=vi|uic=vi 
+ 
+2019-11-04 13:54:15,961 [19] INFO  App  
+ Middleware at cookie culture:c=vi|uic=vi 
+ 
+2019-11-04 13:54:24,252 [21] INFO  App  
+ Middleware at cookie culture:c=vi|uic=vi 
+ 
+2019-11-04 13:54:24,276 [19] INFO  App  
+ Middleware at cookie culture:c=en|uic=en 
+ 
+2019-11-04 13:54:24,282 [19] INFO  App  
+ Number of banner: en 3 
+ 
+2019-11-04 13:56:33,445 [4] INFO  App  
+ Number of banner: en 3 
+ 
+2019-11-04 13:56:37,713 [14] INFO  App  
+ Number of banner: vi 5 
+ 
+2019-11-04 13:57:08,665 [8] INFO  App  
+ Number of banner: en 3 
+ 
+2019-11-04 13:59:01,791 [4] INFO  App  
+ Number of banner: en 3 
+ 
+2019-11-04 14:01:03,734 [4] INFO  App  
+ Number of banner: en 3 
+ 
+2019-11-04 14:01:04,027 [13] INFO  App  
+ Number of banner: vi 5 
+ 

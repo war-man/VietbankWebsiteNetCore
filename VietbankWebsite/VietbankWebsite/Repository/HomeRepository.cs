@@ -15,6 +15,7 @@ namespace VietbankWebsite.Repository
     public class HomeRepository : IHomeRepository
     {
         private readonly VietbankContext _context;
+        private static readonly log4net.ILog Log = log4net.LogManager.GetLogger(typeof(VietbankContext));
         public HomeRepository(VietbankContext context)
         {
             _context = context;
@@ -27,7 +28,9 @@ namespace VietbankWebsite.Repository
                          where a.Type.Equals("top")
                          orderby a.Prioritize
                          select a;
-            return await banner.ToListAsync();
+            var bannerList = await banner.ToListAsync();
+            Log.Info($"Number of banner: {lang} {bannerList.Count}");
+            return bannerList;
         }
 
         public async Task<IEnumerable<SearchInfor>> GetSearchInfors(string key)

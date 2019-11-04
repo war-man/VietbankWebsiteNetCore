@@ -49,7 +49,7 @@ namespace VietbankWebsite.Repository
                               CreatedDate = a.CreatedDate.ToString("dd/MM/yyyy"),
                               Url = $"{aliasCareer}/{b.Url}"
                           };
-            return await listJob.Take(20).ToListAsync();
+            return await listJob.ToListAsync();
         }
 
         public async Task<NewsDetail> GetCareerGuide(string alias, string lang)

@@ -13,3 +13,4 @@ T:\Github\VietbankWebsiteNetCore\VietbankWebsite\Vietbank.Core\obj\Debug\netcore
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\Vietbank.Core\obj\Debug\netcoreapp3.0\Vietbank.Core.AssemblyInfo.cs
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\Vietbank.Core\obj\Debug\netcoreapp3.0\Vietbank.Core.dll
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\Vietbank.Core\obj\Debug\netcoreapp3.0\Vietbank.Core.pdb
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\Vietbank.Core\obj\Debug\netcoreapp3.0\Vietbank.Core.csprojAssemblyReference.cache
