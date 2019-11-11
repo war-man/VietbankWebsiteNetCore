@@ -16,6 +16,7 @@ namespace VietbankWebsite.Uow
         public IBranchRepository _branchRepository;
         public ISupportRepository _supportRepository;
         public IVbPostSeoRepository _vbPostSeoRepository;
+        public IRequestLogRepository _requestLogRepository;
         public IHomeRepository HomeRepository => _homeRepository = _homeRepository ?? new HomeRepository(_context);
         public IShareholderRepository ShareholderRepository => _shareholderRepository = _shareholderRepository ?? new ShareholderRepository(_context);
         public IAboutVietbankRepository AboutVietbankRepository => _aboutVietbankRepository = _aboutVietbankRepository ?? new AboutVietbankRepository(_context);
@@ -25,6 +26,7 @@ namespace VietbankWebsite.Uow
         public IBranchRepository BranchRepository => _branchRepository = _branchRepository ?? new BranchRepository(_context);
         public ISupportRepository SupportRepository => _supportRepository = _supportRepository ?? new SupportRepository(_context);
         public IVbPostSeoRepository VbPostSeoRepository => _vbPostSeoRepository = _vbPostSeoRepository ?? new VbPostSeoRepository(_context);
+        public IRequestLogRepository RequestLogRepository => _requestLogRepository = _requestLogRepository ?? new RequestLogRepository(_context);
         public void Complete()
         {
             _context.SaveChanges();
@@ -67,6 +69,7 @@ namespace VietbankWebsite.Uow
         IBranchRepository BranchRepository { get; }
         ISupportRepository SupportRepository { get; }
         IVbPostSeoRepository VbPostSeoRepository { get; }
+        IRequestLogRepository RequestLogRepository { get; }
         void Complete();
     }
 }

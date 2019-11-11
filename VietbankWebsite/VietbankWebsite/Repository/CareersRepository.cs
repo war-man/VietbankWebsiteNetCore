@@ -140,24 +140,96 @@ namespace VietbankWebsite.Repository
         public async Task<IEnumerable<CareerJobList>> SearchCareer(string key, int city, int major, string aliasCareer)
         {
             var citySearch = await _context.VbCareerCities.FindAsync(city);
-            var marjorSearch = await _context.VbCareerLists.FindAsync(major);
-            var careerSearch = from a in _context.VbCareerJobs
-                               join b in _context.VbCareerJobDetails on a.Id equals b.Job_Id
-                               where b.Url.Contains(convertToUnSign2(key.Replace(" ","-")))
-                               where a.CareerID.Contains(marjorSearch.ViCareerName)
-                               where a.CityID.Contains(citySearch.ViCityName)
-                               where a.Status
-                               orderby a.Id descending
-                               select new CareerJobList()
-                               {
-                                   JobTitle = b.JobTitle,
-                                   JobCity = a.CityID,
-                                   JobMajor = a.CareerID,
-                                   IsHot = a.Hot,
-                                   CreatedDate = a.CreatedDate.ToString("dd/MM/yyyy"),
-                                   Url = $"{aliasCareer}/{b.Url}"
-                               };
-            return await careerSearch.ToListAsync();
+            if (major == 0)
+            {
+                if (city == 0)
+                {
+                    var careerSearch = from a in _context.VbCareerJobs
+                                       join b in _context.VbCareerJobDetails on a.Id equals b.Job_Id
+                                       where b.Url.Contains(convertToUnSign2(key.Replace(" ", "-")))
+                                       where a.Status
+                                       where DateTime.Compare(DateTime.Now, a.EndDate) <= 0
+                                       orderby a.Id descending
+                                       select new CareerJobList()
+                                       {
+                                           JobTitle = b.JobTitle,
+                                           JobCity = a.CityID,
+                                           JobMajor = a.CareerID,
+                                           IsHot = a.Hot,
+                                           CreatedDate = a.CreatedDate.ToString("dd/MM/yyyy"),
+                                           Url = $"{aliasCareer}/{b.Url}"
+                                       };
+                    return await careerSearch.ToListAsync();
+                }
+                else
+                {
+                    var careerSearch = from a in _context.VbCareerJobs
+                                       join b in _context.VbCareerJobDetails on a.Id equals b.Job_Id
+                                       where b.Url.Contains(convertToUnSign2(key.Replace(" ", "-")))
+                                       where a.CityID.Contains(citySearch.ViCityName)
+                                       where a.Status
+                                       where DateTime.Compare(DateTime.Now, a.EndDate) <= 0
+                                       orderby a.Id descending
+                                       select new CareerJobList()
+                                       {
+                                           JobTitle = b.JobTitle,
+                                           JobCity = a.CityID,
+                                           JobMajor = a.CareerID,
+                                           IsHot = a.Hot,
+                                           CreatedDate = a.CreatedDate.ToString("dd/MM/yyyy"),
+                                           Url = $"{aliasCareer}/{b.Url}"
+                                       };
+                    return await careerSearch.ToListAsync();
+                }
+                
+            }
+            else
+            {
+                if (city == 0)
+                {
+                    var marjorSearch = await _context.VbCareerLists.FindAsync(major);
+                    var careerSearch = from a in _context.VbCareerJobs
+                                       join b in _context.VbCareerJobDetails on a.Id equals b.Job_Id
+                                       where b.Url.Contains(convertToUnSign2(key.Replace(" ", "-")))
+                                       where a.CareerID.Contains(marjorSearch.ViCareerName)
+                                       where a.Status
+                                       where DateTime.Compare(DateTime.Now, a.EndDate) <= 0
+                                       orderby a.Id descending
+                                       select new CareerJobList()
+                                       {
+                                           JobTitle = b.JobTitle,
+                                           JobCity = a.CityID,
+                                           JobMajor = a.CareerID,
+                                           IsHot = a.Hot,
+                                           CreatedDate = a.CreatedDate.ToString("dd/MM/yyyy"),
+                                           Url = $"{aliasCareer}/{b.Url}"
+                                       };
+                    return await careerSearch.ToListAsync();
+                }
+                else
+                {
+                    var marjorSearch = await _context.VbCareerLists.FindAsync(major);
+                    var careerSearch = from a in _context.VbCareerJobs
+                                       join b in _context.VbCareerJobDetails on a.Id equals b.Job_Id
+                                       where b.Url.Contains(convertToUnSign2(key.Replace(" ", "-")))
+                                       where a.CareerID.Contains(marjorSearch.ViCareerName)
+                                       where a.CityID.Contains(citySearch.ViCityName)
+                                       where a.Status
+                                       where DateTime.Compare(DateTime.Now, a.EndDate) <= 0
+                                       orderby a.Id descending
+                                       select new CareerJobList()
+                                       {
+                                           JobTitle = b.JobTitle,
+                                           JobCity = a.CityID,
+                                           JobMajor = a.CareerID,
+                                           IsHot = a.Hot,
+                                           CreatedDate = a.CreatedDate.ToString("dd/MM/yyyy"),
+                                           Url = $"{aliasCareer}/{b.Url}"
+                                       };
+                    return await careerSearch.ToListAsync();
+                }
+                
+            }
         }
 
         public string convertToUnSign2(string s)

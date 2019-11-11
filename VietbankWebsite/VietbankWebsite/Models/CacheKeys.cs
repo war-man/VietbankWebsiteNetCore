@@ -9,6 +9,11 @@ namespace VietbankWebsite.Models
     {
         public static string BannerVi { get { return "_BannerVi"; } }
         public static string BannerEn { get { return "_BannerEn"; } }
+
+        public static string BannerTabletVi { get { return "_BannerTabletVi"; } }
+        public static string BannerTableEn { get { return "_BannerTabletEn"; } }
+        public static string BannerMobileVi { get { return "_BannerMobileVi"; } }
+        public static string BannerMobileEn { get { return "_BannerMobileEn"; } }
         public static string ShareholderCategoriesVi { get { return "_ShareholderCategoriesVi"; } }
         public static string ShareholderCategoriesEn { get { return "_ShareholderCategoriesEn"; } }
 

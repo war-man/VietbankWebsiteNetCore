@@ -12562,8 +12562,8 @@ footer {
 @media (max-width: 543px) {
   .banner-section .banner img {
     height: auto;
-    margin-left: -45%;
-    width: 145%;
+    /*margin-left: -45%;
+    width: 145%;*/
   }
 }
 

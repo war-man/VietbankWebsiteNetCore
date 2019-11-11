@@ -212,7 +212,7 @@
           "System.Linq.Reference": "4.2.1.0",
           "System.Linq.Expressions.Reference": "4.2.1.0",
           "System.Linq.Parallel": "4.0.3.0",
-          "System.Linq.Queryable": "4.0.3.0",
+          "System.Linq.Queryable.Reference": "4.0.3.0",
           "System.Memory.Reference": "4.2.0.0",
           "System.Net": "4.0.0.0",
           "System.Net.Http.Reference": "4.2.1.0",
@@ -307,7 +307,7 @@
           "System.Xml.Serialization": "4.0.0.0",
           "System.Xml.XDocument.Reference": "4.1.1.0",
           "System.Xml.XmlDocument.Reference": "4.1.1.0",
-          "System.Xml.XmlSerializer": "4.1.1.0",
+          "System.Xml.XmlSerializer.Reference": "4.1.1.0",
           "System.Xml.XPath": "4.1.1.0",
           "System.Xml.XPath.XDocument": "4.1.1.0",
           "WindowsBase": "4.0.0.0"
@@ -340,6 +340,17 @@
         },
         "compile": {
           "lib/netstandard2.0/Dapper.dll": {}
+        }
+      },
+      "Experimental.System.Messaging/1.1.0": {
+        "runtime": {
+          "lib/netstandard2.0/Experimental.System.Messaging.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Experimental.System.Messaging.dll": {}
         }
       },
       "log4net/2.0.8": {
@@ -1522,6 +1533,23 @@
           }
         }
       },
+      "SimpleMvcSitemap/3.1.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc": "2.2.0",
+          "NETStandard.Library": "1.6.1",
+          "System.Linq.Queryable": "4.0.1",
+          "System.Xml.XmlSerializer": "4.0.11"
+        },
+        "runtime": {
+          "lib/netstandard1.6/SimpleMvcSitemap.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.6/SimpleMvcSitemap.dll": {}
+        }
+      },
       "System.AppContext/4.3.0": {
         "dependencies": {
           "System.Runtime": "4.3.0"
@@ -1925,6 +1953,18 @@
           "System.Runtime": "4.3.0",
           "System.Runtime.Extensions": "4.3.0",
           "System.Threading": "4.3.0"
+        }
+      },
+      "System.Linq.Queryable/4.0.1": {
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Linq.Expressions": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Extensions": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0"
         }
       },
       "System.Memory/4.5.3": {},
@@ -2451,13 +2491,140 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
+      "System.Xml.XmlSerializer/4.0.11": {
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.IO": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Emit": "4.3.0",
+          "System.Reflection.Emit.ILGeneration": "4.3.0",
+          "System.Reflection.Extensions": "4.3.0",
+          "System.Reflection.Primitives": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Text.RegularExpressions": "4.3.0",
+          "System.Threading": "4.3.0",
+          "System.Xml.ReaderWriter": "4.3.0",
+          "System.Xml.XmlDocument": "4.0.1"
+        }
+      },
+      "Wangkanai.Detection/2.0.0-beta12": {
+        "dependencies": {
+          "Wangkanai.Detection.Browser": "2.0.0-beta12",
+          "Wangkanai.Detection.Crawler": "2.0.0-beta12",
+          "Wangkanai.Detection.Device": "2.0.0-beta12",
+          "Wangkanai.Detection.Engine": "2.0.0-beta12",
+          "Wangkanai.Detection.Platform": "2.0.0-beta12"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Wangkanai.Detection.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Wangkanai.Detection.dll": {}
+        }
+      },
+      "Wangkanai.Detection.Browser/2.0.0-beta12": {
+        "dependencies": {
+          "Wangkanai.Detection.Core": "2.0.0-beta12"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Wangkanai.Detection.Browser.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Wangkanai.Detection.Browser.dll": {}
+        }
+      },
+      "Wangkanai.Detection.Core/2.0.0-beta12": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http": "2.2.0",
+          "Microsoft.AspNetCore.Razor.Runtime": "2.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Wangkanai.Detection.Core.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Wangkanai.Detection.Core.dll": {}
+        }
+      },
+      "Wangkanai.Detection.Crawler/2.0.0-beta12": {
+        "dependencies": {
+          "Wangkanai.Detection.Core": "2.0.0-beta12"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Wangkanai.Detection.Crawler.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Wangkanai.Detection.Crawler.dll": {}
+        }
+      },
+      "Wangkanai.Detection.Device/2.0.0-beta12": {
+        "dependencies": {
+          "Wangkanai.Detection.Core": "2.0.0-beta12"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Wangkanai.Detection.Device.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Wangkanai.Detection.Device.dll": {}
+        }
+      },
+      "Wangkanai.Detection.Engine/2.0.0-beta12": {
+        "dependencies": {
+          "Wangkanai.Detection.Core": "2.0.0-beta12"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Wangkanai.Detection.Engine.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Wangkanai.Detection.Engine.dll": {}
+        }
+      },
+      "Wangkanai.Detection.Platform/2.0.0-beta12": {
+        "dependencies": {
+          "Wangkanai.Detection.Core": "2.0.0-beta12"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Wangkanai.Detection.Platform.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Wangkanai.Detection.Platform.dll": {}
+        }
+      },
       "Vietbank.Core/1.0.0": {
         "dependencies": {
           "Dapper": "2.0.4",
+          "Experimental.System.Messaging": "1.1.0",
           "Microsoft.AspNetCore.Mvc": "2.2.0",
           "Microsoft.AspNetCore.Mvc.Localization": "2.2.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.0.0-preview8.19405.11",
           "Newtonsoft.Json": "12.0.3-beta1",
+          "SimpleMvcSitemap": "3.1.0",
+          "Wangkanai.Detection": "2.0.0-beta12",
           "log4net": "2.0.8"
         },
         "runtime": {
@@ -3553,7 +3720,7 @@
         },
         "compileOnly": true
       },
-      "System.Linq.Queryable/4.0.3.0": {
+      "System.Linq.Queryable.Reference/4.0.3.0": {
         "compile": {
           "System.Linq.Queryable.dll": {}
         },
@@ -4123,7 +4290,7 @@
         },
         "compileOnly": true
       },
-      "System.Xml.XmlSerializer/4.1.1.0": {
+      "System.Xml.XmlSerializer.Reference/4.1.1.0": {
         "compile": {
           "System.Xml.XmlSerializer.dll": {}
         },
@@ -4168,6 +4335,13 @@
       "sha512": "sha512-DrNPDqK3nR4RpwAPX2R0R34YhlT+k5Fbw7UnqxQ2aH+wSWvEIj+fCDXB8RJWgw6fGFZLavq7nuJ6J/eAqSrIpw==",
       "path": "dapper/2.0.4",
       "hashPath": "dapper.2.0.4.nupkg.sha512"
+    },
+    "Experimental.System.Messaging/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vub7Mtt2WFdFKTZKECVuZx6feP5kUpS9EfVy+Yu4GDfdlMwivRdX4TbdkDYS2lKqCjqzUbnxTbJei1IOqC+CnA==",
+      "path": "experimental.system.messaging/1.1.0",
+      "hashPath": "experimental.system.messaging.1.1.0.nupkg.sha512"
     },
     "log4net/2.0.8": {
       "type": "package",
@@ -4988,6 +5162,13 @@
       "path": "runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0",
       "hashPath": "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512"
     },
+    "SimpleMvcSitemap/3.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zsc2hgvzsAN84F/Hql57iuRrKYuFZNXzYvoRNa9tMS32gRN97EM4moktTJVwU4WVUOHwIICxSruTVVXLHIF5Zw==",
+      "path": "simplemvcsitemap/3.1.0",
+      "hashPath": "simplemvcsitemap.3.1.0.nupkg.sha512"
+    },
     "System.AppContext/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -5225,6 +5406,13 @@
       "sha512": "sha512-WdRlZDN+V3/MfagLAls6oVeyOn8XR6WaZL7u2v5uDJ6UUFCHPjhs0KxuYv+USb5GX5hHHpsnzYiLZQyO8LbOzw==",
       "path": "system.linq.expressions/4.3.0",
       "hashPath": "system.linq.expressions.4.3.0.nupkg.sha512"
+    },
+    "System.Linq.Queryable/4.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3AlfMc/VaY21pMCn0sWOs6BjAPLdBnS1ypUlpGTyWnhLa5fiejRfwMEZNapC/sO0bBS+OsRDyolNuJ9bPSbNrQ==",
+      "path": "system.linq.queryable/4.0.1",
+      "hashPath": "system.linq.queryable.4.0.1.nupkg.sha512"
     },
     "System.Memory/4.5.3": {
       "type": "package",
@@ -5610,6 +5798,62 @@
       "sha512": "sha512-J8LJLVi3TxuiHJuzto3lMkIsOd70iqM+sKqJoNbtp0ZIWyuC4ciF4F7CBSEQOReXIS0k50V05+R7M0SOKrsS/w==",
       "path": "system.xml.xmldocument/4.0.1",
       "hashPath": "system.xml.xmldocument.4.0.1.nupkg.sha512"
+    },
+    "System.Xml.XmlSerializer/4.0.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vMxoNEiCAiwiTtWpwP7COX2HRSoEdfEzTFe5FIEDRF3MMF4UEzeTg8gDuxhmDGx5V/QXi45ovJfSWC/vGhmC8w==",
+      "path": "system.xml.xmlserializer/4.0.11",
+      "hashPath": "system.xml.xmlserializer.4.0.11.nupkg.sha512"
+    },
+    "Wangkanai.Detection/2.0.0-beta12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-S0Ne+AweIHuoX6dHk9oTQ+KPXUOfc1yrMvmL1xMn2idp8v0VUbNqmQNsquWJf3nCRKTBXeZ+9jG8WhpSDfFpcw==",
+      "path": "wangkanai.detection/2.0.0-beta12",
+      "hashPath": "wangkanai.detection.2.0.0-beta12.nupkg.sha512"
+    },
+    "Wangkanai.Detection.Browser/2.0.0-beta12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mSIsJGUcjZhy0GkknVPSrNrdtp2dUFCUA9EBQTeCmPJvo/xuNm337+1YQH897iiuFsi62i0P/HQ7BOt1pbKBpw==",
+      "path": "wangkanai.detection.browser/2.0.0-beta12",
+      "hashPath": "wangkanai.detection.browser.2.0.0-beta12.nupkg.sha512"
+    },
+    "Wangkanai.Detection.Core/2.0.0-beta12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-E8QOAY4Bs62HvWuwEwpIOQeEJ0WDydxDaewyZkNu5z/HfmWMsaF29WYpiq8ltZkCEM9+Uceur77TqOPGbalN2Q==",
+      "path": "wangkanai.detection.core/2.0.0-beta12",
+      "hashPath": "wangkanai.detection.core.2.0.0-beta12.nupkg.sha512"
+    },
+    "Wangkanai.Detection.Crawler/2.0.0-beta12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DXs88myAgsTcvy95AxD8tc/z38vc3Q03/stP9gE6Rsk/kTVa157FfNxwvF9HI/BbhZeRqI1OBKv1TOqGfB4r+A==",
+      "path": "wangkanai.detection.crawler/2.0.0-beta12",
+      "hashPath": "wangkanai.detection.crawler.2.0.0-beta12.nupkg.sha512"
+    },
+    "Wangkanai.Detection.Device/2.0.0-beta12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6T2g7r8MrH/EZOVZxa7zu+GFoOAE7Qf9z8XGV8PhPjjBpYqqQzZKyhjVd7FRA2t7/vwDJ64ZN66Uiwo/alK11w==",
+      "path": "wangkanai.detection.device/2.0.0-beta12",
+      "hashPath": "wangkanai.detection.device.2.0.0-beta12.nupkg.sha512"
+    },
+    "Wangkanai.Detection.Engine/2.0.0-beta12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0yOZC67vWoA/m9c1W/UzI5w5t3DIY/7YwivppK4kWiKnqx9o0ni2UpkPfkOPdGQAuOgIuH+DVQLTz/wGO2AUXw==",
+      "path": "wangkanai.detection.engine/2.0.0-beta12",
+      "hashPath": "wangkanai.detection.engine.2.0.0-beta12.nupkg.sha512"
+    },
+    "Wangkanai.Detection.Platform/2.0.0-beta12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jed1/UkIp1dPbQWxMj9i/V+alc8kzAGsShSfDKzrxzKLeHTGPdJm23oGr1ljns65kDVxkzaK2CEE8F0x8Q+npw==",
+      "path": "wangkanai.detection.platform/2.0.0-beta12",
+      "hashPath": "wangkanai.detection.platform.2.0.0-beta12.nupkg.sha512"
     },
     "Vietbank.Core/1.0.0": {
       "type": "project",
@@ -6521,7 +6765,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Linq.Queryable/4.0.3.0": {
+    "System.Linq.Queryable.Reference/4.0.3.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -6996,7 +7240,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Xml.XmlSerializer/4.1.1.0": {
+    "System.Xml.XmlSerializer.Reference/4.1.1.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""

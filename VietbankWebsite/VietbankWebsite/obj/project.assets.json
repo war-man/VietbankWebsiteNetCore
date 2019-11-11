@@ -20,6 +20,15 @@
           "lib/netstandard2.0/Dapper.dll": {}
         }
       },
+      "Experimental.System.Messaging/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Experimental.System.Messaging.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Experimental.System.Messaging.dll": {}
+        }
+      },
       "log4net/2.0.8": {
         "type": "package",
         "dependencies": {
@@ -1735,6 +1744,21 @@
           }
         }
       },
+      "SimpleMvcSitemap/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc": "1.0.3",
+          "NETStandard.Library": "1.6.0",
+          "System.Linq.Queryable": "4.0.1",
+          "System.Xml.XmlSerializer": "4.0.11"
+        },
+        "compile": {
+          "lib/netstandard1.6/SimpleMvcSitemap.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/SimpleMvcSitemap.dll": {}
+        }
+      },
       "System.AppContext/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -2339,6 +2363,25 @@
         },
         "runtime": {
           "lib/netstandard1.6/System.Linq.Expressions.dll": {}
+        }
+      },
+      "System.Linq.Queryable/4.0.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.11",
+          "System.Diagnostics.Debug": "4.0.11",
+          "System.Linq": "4.1.0",
+          "System.Linq.Expressions": "4.1.0",
+          "System.Reflection": "4.1.0",
+          "System.Reflection.Extensions": "4.0.1",
+          "System.Resources.ResourceManager": "4.0.1",
+          "System.Runtime": "4.1.0"
+        },
+        "compile": {
+          "ref/netstandard1.0/System.Linq.Queryable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Linq.Queryable.dll": {}
         }
       },
       "System.Memory/4.5.3": {
@@ -3306,15 +3349,135 @@
           "lib/netstandard1.3/System.Xml.XmlDocument.dll": {}
         }
       },
+      "System.Xml.XmlSerializer/4.0.11": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.11",
+          "System.Globalization": "4.0.11",
+          "System.IO": "4.1.0",
+          "System.Linq": "4.1.0",
+          "System.Reflection": "4.1.0",
+          "System.Reflection.Emit": "4.0.1",
+          "System.Reflection.Emit.ILGeneration": "4.0.1",
+          "System.Reflection.Extensions": "4.0.1",
+          "System.Reflection.Primitives": "4.0.1",
+          "System.Reflection.TypeExtensions": "4.1.0",
+          "System.Resources.ResourceManager": "4.0.1",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Text.RegularExpressions": "4.1.0",
+          "System.Threading": "4.0.11",
+          "System.Xml.ReaderWriter": "4.0.11",
+          "System.Xml.XmlDocument": "4.0.1"
+        },
+        "compile": {
+          "ref/netstandard1.3/System.Xml.XmlSerializer.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
+        }
+      },
+      "Wangkanai.Detection/2.0.0-beta12": {
+        "type": "package",
+        "dependencies": {
+          "Wangkanai.Detection.Browser": "2.0.0-beta12",
+          "Wangkanai.Detection.Crawler": "2.0.0-beta12",
+          "Wangkanai.Detection.Device": "2.0.0-beta12",
+          "Wangkanai.Detection.Engine": "2.0.0-beta12",
+          "Wangkanai.Detection.Platform": "2.0.0-beta12"
+        },
+        "compile": {
+          "lib/netstandard2.0/Wangkanai.Detection.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Wangkanai.Detection.dll": {}
+        }
+      },
+      "Wangkanai.Detection.Browser/2.0.0-beta12": {
+        "type": "package",
+        "dependencies": {
+          "Wangkanai.Detection.Core": "2.0.0-beta12"
+        },
+        "compile": {
+          "lib/netstandard2.0/Wangkanai.Detection.Browser.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Wangkanai.Detection.Browser.dll": {}
+        }
+      },
+      "Wangkanai.Detection.Core/2.0.0-beta12": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http": "2.0.0",
+          "Microsoft.AspNetCore.Razor.Runtime": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Wangkanai.Detection.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Wangkanai.Detection.Core.dll": {}
+        }
+      },
+      "Wangkanai.Detection.Crawler/2.0.0-beta12": {
+        "type": "package",
+        "dependencies": {
+          "Wangkanai.Detection.Core": "2.0.0-beta12"
+        },
+        "compile": {
+          "lib/netstandard2.0/Wangkanai.Detection.Crawler.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Wangkanai.Detection.Crawler.dll": {}
+        }
+      },
+      "Wangkanai.Detection.Device/2.0.0-beta12": {
+        "type": "package",
+        "dependencies": {
+          "Wangkanai.Detection.Core": "2.0.0-beta12"
+        },
+        "compile": {
+          "lib/netstandard2.0/Wangkanai.Detection.Device.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Wangkanai.Detection.Device.dll": {}
+        }
+      },
+      "Wangkanai.Detection.Engine/2.0.0-beta12": {
+        "type": "package",
+        "dependencies": {
+          "Wangkanai.Detection.Core": "2.0.0-beta12"
+        },
+        "compile": {
+          "lib/netstandard2.0/Wangkanai.Detection.Engine.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Wangkanai.Detection.Engine.dll": {}
+        }
+      },
+      "Wangkanai.Detection.Platform/2.0.0-beta12": {
+        "type": "package",
+        "dependencies": {
+          "Wangkanai.Detection.Core": "2.0.0-beta12"
+        },
+        "compile": {
+          "lib/netstandard2.0/Wangkanai.Detection.Platform.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Wangkanai.Detection.Platform.dll": {}
+        }
+      },
       "Vietbank.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.0",
         "dependencies": {
           "Dapper": "2.0.4",
+          "Experimental.System.Messaging": "1.1.0",
           "Microsoft.AspNetCore.Mvc": "2.2.0",
           "Microsoft.AspNetCore.Mvc.Localization": "2.2.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.0.0-preview8.19405.11",
           "Newtonsoft.Json": "12.0.3-beta1",
+          "SimpleMvcSitemap": "3.1.0",
+          "Wangkanai.Detection": "2.0.0-beta12",
           "log4net": "2.0.8"
         },
         "compile": {
@@ -3360,6 +3523,20 @@
         "dapper.nuspec",
         "lib/netstandard2.0/Dapper.dll",
         "lib/netstandard2.0/Dapper.xml"
+      ]
+    },
+    "Experimental.System.Messaging/1.1.0": {
+      "sha512": "vub7Mtt2WFdFKTZKECVuZx6feP5kUpS9EfVy+Yu4GDfdlMwivRdX4TbdkDYS2lKqCjqzUbnxTbJei1IOqC+CnA==",
+      "type": "package",
+      "path": "experimental.system.messaging/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "experimental.system.messaging.1.1.0.nupkg.sha512",
+        "experimental.system.messaging.nuspec",
+        "lib/netstandard2.0/Experimental.System.Messaging.dll",
+        "lib/netstandard2.0/Experimental.System.Messaging.xml"
       ]
     },
     "log4net/2.0.8": {
@@ -5465,6 +5642,21 @@
         "version.txt"
       ]
     },
+    "SimpleMvcSitemap/3.1.0": {
+      "sha512": "zsc2hgvzsAN84F/Hql57iuRrKYuFZNXzYvoRNa9tMS32gRN97EM4moktTJVwU4WVUOHwIICxSruTVVXLHIF5Zw==",
+      "type": "package",
+      "path": "simplemvcsitemap/3.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/SimpleMvcSitemap.dll",
+        "lib/net45/SimpleMvcSitemap.xml",
+        "lib/netstandard1.6/SimpleMvcSitemap.dll",
+        "lib/netstandard1.6/SimpleMvcSitemap.xml",
+        "simplemvcsitemap.3.1.0.nupkg.sha512",
+        "simplemvcsitemap.nuspec"
+      ]
+    },
     "System.AppContext/4.3.0": {
       "sha512": "nA+bqPH9KhRymk8QP201Gwjwe51XDXfb2zi5Z3SX0GMO9wGMrunHgjwnqr7LAL2rzGHAvfXSd52YLQbSMbAZbQ==",
       "type": "package",
@@ -7018,6 +7210,64 @@
         "runtimes/aot/lib/netcore50/System.Linq.Expressions.dll",
         "system.linq.expressions.4.3.0.nupkg.sha512",
         "system.linq.expressions.nuspec"
+      ]
+    },
+    "System.Linq.Queryable/4.0.1": {
+      "sha512": "3AlfMc/VaY21pMCn0sWOs6BjAPLdBnS1ypUlpGTyWnhLa5fiejRfwMEZNapC/sO0bBS+OsRDyolNuJ9bPSbNrQ==",
+      "type": "package",
+      "path": "system.linq.queryable/4.0.1",
+      "files": [
+        ".nupkg.metadata",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/monoandroid10/_._",
+        "lib/monotouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/System.Linq.Queryable.dll",
+        "lib/netstandard1.3/System.Linq.Queryable.dll",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/monoandroid10/_._",
+        "ref/monotouch10/_._",
+        "ref/net45/_._",
+        "ref/netcore50/System.Linq.Queryable.dll",
+        "ref/netcore50/System.Linq.Queryable.xml",
+        "ref/netcore50/de/System.Linq.Queryable.xml",
+        "ref/netcore50/es/System.Linq.Queryable.xml",
+        "ref/netcore50/fr/System.Linq.Queryable.xml",
+        "ref/netcore50/it/System.Linq.Queryable.xml",
+        "ref/netcore50/ja/System.Linq.Queryable.xml",
+        "ref/netcore50/ko/System.Linq.Queryable.xml",
+        "ref/netcore50/ru/System.Linq.Queryable.xml",
+        "ref/netcore50/zh-hans/System.Linq.Queryable.xml",
+        "ref/netcore50/zh-hant/System.Linq.Queryable.xml",
+        "ref/netstandard1.0/System.Linq.Queryable.dll",
+        "ref/netstandard1.0/System.Linq.Queryable.xml",
+        "ref/netstandard1.0/de/System.Linq.Queryable.xml",
+        "ref/netstandard1.0/es/System.Linq.Queryable.xml",
+        "ref/netstandard1.0/fr/System.Linq.Queryable.xml",
+        "ref/netstandard1.0/it/System.Linq.Queryable.xml",
+        "ref/netstandard1.0/ja/System.Linq.Queryable.xml",
+        "ref/netstandard1.0/ko/System.Linq.Queryable.xml",
+        "ref/netstandard1.0/ru/System.Linq.Queryable.xml",
+        "ref/netstandard1.0/zh-hans/System.Linq.Queryable.xml",
+        "ref/netstandard1.0/zh-hant/System.Linq.Queryable.xml",
+        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.linq.queryable.4.0.1.nupkg.sha512",
+        "system.linq.queryable.nuspec"
       ]
     },
     "System.Memory/4.5.3": {
@@ -9714,6 +9964,167 @@
         "ref/xamarinwatchos10/_._",
         "system.xml.xmldocument.4.0.1.nupkg.sha512",
         "system.xml.xmldocument.nuspec"
+      ]
+    },
+    "System.Xml.XmlSerializer/4.0.11": {
+      "sha512": "vMxoNEiCAiwiTtWpwP7COX2HRSoEdfEzTFe5FIEDRF3MMF4UEzeTg8gDuxhmDGx5V/QXi45ovJfSWC/vGhmC8w==",
+      "type": "package",
+      "path": "system.xml.xmlserializer/4.0.11",
+      "files": [
+        ".nupkg.metadata",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/System.Xml.XmlSerializer.dll",
+        "lib/netstandard1.3/System.Xml.XmlSerializer.dll",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcore50/System.Xml.XmlSerializer.dll",
+        "ref/netcore50/System.Xml.XmlSerializer.xml",
+        "ref/netcore50/de/System.Xml.XmlSerializer.xml",
+        "ref/netcore50/es/System.Xml.XmlSerializer.xml",
+        "ref/netcore50/fr/System.Xml.XmlSerializer.xml",
+        "ref/netcore50/it/System.Xml.XmlSerializer.xml",
+        "ref/netcore50/ja/System.Xml.XmlSerializer.xml",
+        "ref/netcore50/ko/System.Xml.XmlSerializer.xml",
+        "ref/netcore50/ru/System.Xml.XmlSerializer.xml",
+        "ref/netcore50/zh-hans/System.Xml.XmlSerializer.xml",
+        "ref/netcore50/zh-hant/System.Xml.XmlSerializer.xml",
+        "ref/netstandard1.0/System.Xml.XmlSerializer.dll",
+        "ref/netstandard1.0/System.Xml.XmlSerializer.xml",
+        "ref/netstandard1.0/de/System.Xml.XmlSerializer.xml",
+        "ref/netstandard1.0/es/System.Xml.XmlSerializer.xml",
+        "ref/netstandard1.0/fr/System.Xml.XmlSerializer.xml",
+        "ref/netstandard1.0/it/System.Xml.XmlSerializer.xml",
+        "ref/netstandard1.0/ja/System.Xml.XmlSerializer.xml",
+        "ref/netstandard1.0/ko/System.Xml.XmlSerializer.xml",
+        "ref/netstandard1.0/ru/System.Xml.XmlSerializer.xml",
+        "ref/netstandard1.0/zh-hans/System.Xml.XmlSerializer.xml",
+        "ref/netstandard1.0/zh-hant/System.Xml.XmlSerializer.xml",
+        "ref/netstandard1.3/System.Xml.XmlSerializer.dll",
+        "ref/netstandard1.3/System.Xml.XmlSerializer.xml",
+        "ref/netstandard1.3/de/System.Xml.XmlSerializer.xml",
+        "ref/netstandard1.3/es/System.Xml.XmlSerializer.xml",
+        "ref/netstandard1.3/fr/System.Xml.XmlSerializer.xml",
+        "ref/netstandard1.3/it/System.Xml.XmlSerializer.xml",
+        "ref/netstandard1.3/ja/System.Xml.XmlSerializer.xml",
+        "ref/netstandard1.3/ko/System.Xml.XmlSerializer.xml",
+        "ref/netstandard1.3/ru/System.Xml.XmlSerializer.xml",
+        "ref/netstandard1.3/zh-hans/System.Xml.XmlSerializer.xml",
+        "ref/netstandard1.3/zh-hant/System.Xml.XmlSerializer.xml",
+        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll",
+        "system.xml.xmlserializer.4.0.11.nupkg.sha512",
+        "system.xml.xmlserializer.nuspec"
+      ]
+    },
+    "Wangkanai.Detection/2.0.0-beta12": {
+      "sha512": "S0Ne+AweIHuoX6dHk9oTQ+KPXUOfc1yrMvmL1xMn2idp8v0VUbNqmQNsquWJf3nCRKTBXeZ+9jG8WhpSDfFpcw==",
+      "type": "package",
+      "path": "wangkanai.detection/2.0.0-beta12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Wangkanai.Detection.dll",
+        "lib/netstandard2.0/Wangkanai.Detection.xml",
+        "wangkanai.detection.2.0.0-beta12.nupkg.sha512",
+        "wangkanai.detection.nuspec"
+      ]
+    },
+    "Wangkanai.Detection.Browser/2.0.0-beta12": {
+      "sha512": "mSIsJGUcjZhy0GkknVPSrNrdtp2dUFCUA9EBQTeCmPJvo/xuNm337+1YQH897iiuFsi62i0P/HQ7BOt1pbKBpw==",
+      "type": "package",
+      "path": "wangkanai.detection.browser/2.0.0-beta12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Wangkanai.Detection.Browser.dll",
+        "lib/netstandard2.0/Wangkanai.Detection.Browser.xml",
+        "wangkanai.detection.browser.2.0.0-beta12.nupkg.sha512",
+        "wangkanai.detection.browser.nuspec"
+      ]
+    },
+    "Wangkanai.Detection.Core/2.0.0-beta12": {
+      "sha512": "E8QOAY4Bs62HvWuwEwpIOQeEJ0WDydxDaewyZkNu5z/HfmWMsaF29WYpiq8ltZkCEM9+Uceur77TqOPGbalN2Q==",
+      "type": "package",
+      "path": "wangkanai.detection.core/2.0.0-beta12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Wangkanai.Detection.Core.dll",
+        "lib/netstandard2.0/Wangkanai.Detection.Core.xml",
+        "wangkanai.detection.core.2.0.0-beta12.nupkg.sha512",
+        "wangkanai.detection.core.nuspec"
+      ]
+    },
+    "Wangkanai.Detection.Crawler/2.0.0-beta12": {
+      "sha512": "DXs88myAgsTcvy95AxD8tc/z38vc3Q03/stP9gE6Rsk/kTVa157FfNxwvF9HI/BbhZeRqI1OBKv1TOqGfB4r+A==",
+      "type": "package",
+      "path": "wangkanai.detection.crawler/2.0.0-beta12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Wangkanai.Detection.Crawler.dll",
+        "lib/netstandard2.0/Wangkanai.Detection.Crawler.xml",
+        "wangkanai.detection.crawler.2.0.0-beta12.nupkg.sha512",
+        "wangkanai.detection.crawler.nuspec"
+      ]
+    },
+    "Wangkanai.Detection.Device/2.0.0-beta12": {
+      "sha512": "6T2g7r8MrH/EZOVZxa7zu+GFoOAE7Qf9z8XGV8PhPjjBpYqqQzZKyhjVd7FRA2t7/vwDJ64ZN66Uiwo/alK11w==",
+      "type": "package",
+      "path": "wangkanai.detection.device/2.0.0-beta12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Wangkanai.Detection.Device.dll",
+        "lib/netstandard2.0/Wangkanai.Detection.Device.xml",
+        "wangkanai.detection.device.2.0.0-beta12.nupkg.sha512",
+        "wangkanai.detection.device.nuspec"
+      ]
+    },
+    "Wangkanai.Detection.Engine/2.0.0-beta12": {
+      "sha512": "0yOZC67vWoA/m9c1W/UzI5w5t3DIY/7YwivppK4kWiKnqx9o0ni2UpkPfkOPdGQAuOgIuH+DVQLTz/wGO2AUXw==",
+      "type": "package",
+      "path": "wangkanai.detection.engine/2.0.0-beta12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Wangkanai.Detection.Engine.dll",
+        "lib/netstandard2.0/Wangkanai.Detection.Engine.xml",
+        "wangkanai.detection.engine.2.0.0-beta12.nupkg.sha512",
+        "wangkanai.detection.engine.nuspec"
+      ]
+    },
+    "Wangkanai.Detection.Platform/2.0.0-beta12": {
+      "sha512": "jed1/UkIp1dPbQWxMj9i/V+alc8kzAGsShSfDKzrxzKLeHTGPdJm23oGr1ljns65kDVxkzaK2CEE8F0x8Q+npw==",
+      "type": "package",
+      "path": "wangkanai.detection.platform/2.0.0-beta12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Wangkanai.Detection.Platform.dll",
+        "lib/netstandard2.0/Wangkanai.Detection.Platform.xml",
+        "wangkanai.detection.platform.2.0.0-beta12.nupkg.sha512",
+        "wangkanai.detection.platform.nuspec"
       ]
     },
     "Vietbank.Core/1.0.0": {

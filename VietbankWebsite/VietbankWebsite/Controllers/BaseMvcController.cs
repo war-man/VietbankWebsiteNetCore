@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Localization;
+﻿using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
+using System;
 
 namespace VietbankWebsite.Controllers
 {
@@ -14,7 +11,7 @@ namespace VietbankWebsite.Controllers
         [Route("GetLangCurrent")]
         public string GetLangCurrent()
         {
-            return Request.HttpContext.Features.Get<IRequestCultureFeature>().RequestCulture.Culture.Name;
+            return Request.HttpContext.Features.Get<IRequestCultureFeature>().RequestCulture.Culture.Name??"vi";
         }
     }
 }

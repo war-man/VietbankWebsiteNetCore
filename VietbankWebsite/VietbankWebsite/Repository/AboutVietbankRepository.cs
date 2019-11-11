@@ -36,6 +36,7 @@ namespace VietbankWebsite.Repository
                                       where b.category_ID.Equals(idCate)
                                       where c.language.Equals(lang)
                                       where a.post_status.Equals(4)
+                                      where a.to_ping.Equals(1)
                                       orderby a.Id descending
                                       select new ListNewsItem()
                                       {
@@ -52,6 +53,7 @@ namespace VietbankWebsite.Repository
                             join c in _context.VbPostTranslates on b.post_ID equals c.post_ID
                             where b.category_ID.Equals(idCate)
                             where c.language.Equals(lang)
+                            where a.to_ping.Equals(1)
                             where a.post_status.Equals(4)
                             select c;
             return new ListNews()
@@ -160,6 +162,7 @@ namespace VietbankWebsite.Repository
                               join c in _context.VbPostTranslates on b.post_ID equals c.post_ID
                               where arrayCate.Contains(b.category_ID)
                               where c.language.Equals(lang)
+                              where a.to_ping.Equals(1)
                               orderby a.Id descending
                               select new TopThreeNewsToCate()
                               {
@@ -175,6 +178,7 @@ namespace VietbankWebsite.Repository
                           join c in _context.VbPostTranslates on b.post_ID equals c.post_ID
                           where b.category_ID.Equals(idCate)
                           where c.language.Equals(lang)
+                          where a.to_ping.Equals(1)
                           orderby a.Id descending
                           select new TopThreeNewsToCate()
                           {
@@ -231,6 +235,7 @@ namespace VietbankWebsite.Repository
                                     join b in _context.VbPostCategories on a.Id equals b.post_ID
                                     join c in _context.VbPostTranslates on b.post_ID equals c.post_ID
                                     where b.category_ID.Equals(idCate)
+                                    where a.to_ping.Equals(1)
                                     where c.language.Equals(lang)
                                     where result.Distinct().Contains(b.post_ID)
                                     where a.post_status.Equals(4)

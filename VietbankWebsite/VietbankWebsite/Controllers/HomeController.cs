@@ -3,12 +3,12 @@ using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Localization;
+using SimpleMvcSitemap;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Xml;
-using VietbankWebsite.Context;
 using VietbankWebsite.Entities;
 using VietbankWebsite.ModelMap;
 using VietbankWebsite.Models;
@@ -24,7 +24,6 @@ namespace VietbankWebsite.Controllers
         private readonly ICareersService _careersService;
         private readonly IStringLocalizer<HomeController> _localizer;
         private IRecaptchaService _recaptcha;
-        private static readonly log4net.ILog Log = log4net.LogManager.GetLogger(typeof(HomeController));
         public HomeController(
             IStringLocalizer<HomeController> localizer, 
             IMemoryCache memoryCache, 
@@ -50,7 +49,7 @@ namespace VietbankWebsite.Controllers
             if (!_cache.TryGetValue(keyBanner, out boxContainer))
             {
                 boxContainer = new BoxContainerHomePage() { 
-                    Banner = await _homeService.GetBanner(GetLangCurrent()),
+                    Banner = await _homeService.GetBanner(GetLangCurrent(),"Desktop"),
                     Box = await _homeService.GetBoxContainer("box",GetLangCurrent()),
                     Between = await _homeService.GetBoxContainer("between", GetLangCurrent()),
                     News = await _homeService.GetBoxContainer("news", GetLangCurrent())
@@ -59,6 +58,7 @@ namespace VietbankWebsite.Controllers
             }
             ViewData["Title"] = _localizer["Home"];
             ViewData["MetaDescription"] = _localizer["MetaDescription"];
+            //await create();
             return View(boxContainer);
         }
 
@@ -174,7 +174,6 @@ namespace VietbankWebsite.Controllers
                 CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
                 new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
             );
-
             return LocalRedirect("/");
         }
 

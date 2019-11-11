@@ -1,0 +1,42 @@
+2019-11-08 13:48:04,834 [1] INFO  App  
+ Generate Site Service running. 
+ 
+2019-11-08 13:48:04,846 [4] INFO  App  
+ Generate sitemap file at: Friday, 08 November 2019 13:48:04 
+ 
+2019-11-08 13:48:04,918 [5] INFO  App  
+ IpRequest: ::1 - Url:  
+ 
+2019-11-08 13:48:05,592 [11] INFO  App  
+ IpRequest: ::1 - Url:  
+ 
+2019-11-08 13:48:05,607 [5] INFO  App  
+ IpRequest: ::1 - Url:  
+ 
+2019-11-08 13:48:05,616 [11] INFO  App  
+ IpRequest: ::1 - Url:  
+ 
+2019-11-08 13:48:05,624 [5] INFO  App  
+ IpRequest: ::1 - Url:  
+ 
+2019-11-08 13:48:05,640 [11] INFO  App  
+ IpRequest: ::1 - Url:  
+ 
+2019-11-08 13:48:05,648 [5] INFO  App  
+ IpRequest: ::1 - Url:  
+ 
+2019-11-08 13:48:05,657 [11] INFO  App  
+ IpRequest: ::1 - Url:  
+ 
+2019-11-08 13:48:05,665 [5] INFO  App  
+ IpRequest: ::1 - Url: http://localhost:8078/ 
+ 
+2019-11-08 13:48:05,673 [11] INFO  App  
+ IpRequest: ::1 - Url: http://localhost:8078/js/site.min.js 
+ 
+2019-11-08 13:48:05,682 [5] INFO  App  
+ IpRequest: ::1 - Url: http://localhost:8078/ 
+ 
+2019-11-08 13:48:06,332 [11] INFO  App  
+ IpRequest: ::1 - Url: http://localhost:8078/favicon.ico 
+ 

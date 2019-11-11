@@ -41,12 +41,14 @@
                     <div class="search-job">
                         <input placeholder="@Localizer["TuKhoa"]" name="keyword" class="field">
                         <select name="career" class="career">
+                            <option value="0">@Localizer["All"]</option>
                             @foreach (var item in Model.VbCareerList)
                             {
                                 <option value="@item.Id">@item.CareerName</option>
                             }
                         </select>
                         <select name="address" class="address">
+                            <option value="0">@Localizer["All"]</option>
                             @foreach (var item in Model.VbCareerCity)
                             {
                                 <option value="@item.Id">@item.CityName</option>
@@ -62,7 +64,7 @@
                                 <div class="date-posted">@Localizer["NgayDang"]</div>
                             </div>
                             <div id="list-career">
-                                @foreach (var item in Model.CareerJobList)
+                                @foreach (var item in Model.CareerJobList.OrderByDescending(x=>x.CreatedDate))
                                 {
                                     <div class="jobs-item">
                                         <div class="job_head">

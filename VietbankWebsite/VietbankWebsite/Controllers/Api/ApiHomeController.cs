@@ -22,19 +22,6 @@ namespace VietbankWebsite.Controllers.Api
             _homeService = homeService;
         }
 
-        [HttpGet("getbanner")]
-        public async Task<IEnumerable<VbBanner>> GetBanner()
-        {
-            var keyBanner = GetLangCurrent() == "vi" ? CacheKeys.BannerVi : CacheKeys.BannerEn;
-            IEnumerable<VbBanner> banner;
-            if (!_cache.TryGetValue(keyBanner, out banner))
-            {
-                banner = await _homeService.GetBanner(GetLangCurrent());
-                _cache.Set(keyBanner, banner, cacheEntryOptions);
-            }
-            return banner;
-        }
-
         [HttpGet("search")]
         public async Task<IEnumerable<SearchInfor>> Search(string key)
         {

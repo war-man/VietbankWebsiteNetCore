@@ -22,6 +22,7 @@ using System.Threading.Tasks;
 using Vietbank.Core;
 using VietbankWebsite.Context;
 using VietbankWebsite.Extensions;
+using VietbankWebsite.HostedService;
 using VietbankWebsite.Middleware;
 using VietbankWebsite.Models;
 using VietbankWebsite.Repository;
@@ -79,6 +80,9 @@ namespace VietbankWebsite
             services.AddTransient<IVbPostSeoRepository, VbPostSeoRepository>();
             services.AddTransient<IVbPostSeoService, VbPostSeoService>();
 
+            services.AddTransient<IRequestLogRepository, RequestLogRepository>();
+            services.AddTransient<IRequestLogService, RequestLogService>();
+
             services.AddTransient<IUnitOfWork, UnitOfWork>();
 
             services.AddLocalization(options => options.ResourcesPath = "Resources");
@@ -100,6 +104,7 @@ namespace VietbankWebsite
             {
                 options.ViewLocationExpanders.Add(new ModuleViewLocationExpander());
             });
+            //services.AddDetection();
             var mvcBuilder = services.AddMvc(options => {
                 options.Filters.Add(new ResponseCacheAttribute() { NoStore = true, Location = ResponseCacheLocation.None });
             })
@@ -125,6 +130,9 @@ namespace VietbankWebsite
             services.AddTransient<IRecaptchaService, RecaptchaService>();
             services.Configure<EmailSender>(Configuration.GetSection("EmailSender"));
             services.Configure<RemoteService>(Configuration.GetSection("RemoteService"));
+            services.Configure<MessageQueueConfig>(Configuration.GetSection("MessageQueueConfig"));
+            services.AddHostedService<GenerateSiteMapHostedService>();
+            //services.AddHostedService<QueueCentralHostedService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -140,6 +148,7 @@ namespace VietbankWebsite
                 app.UseExceptionHandler("/Home/NotFoundPage");
                 app.UseHsts();
             }
+            app.UseMiddleware<RequestComputeMiddleware>();
             app.UseMiddleware<CultureMiddleware>();
             app.UseRequestLocalization();
             app.UseHttpsRedirection();

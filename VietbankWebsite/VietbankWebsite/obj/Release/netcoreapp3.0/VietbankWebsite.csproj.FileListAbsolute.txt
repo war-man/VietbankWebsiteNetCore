@@ -563,3 +563,13 @@ T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\net
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\Razor\Views\Home\CacheTryGetValueSet.cshtml.g.cs
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Release\netcoreapp3.0\log4net.config
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Release\netcoreapp3.0\log4net.dll
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Release\netcoreapp3.0\Wangkanai.Detection.dll
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Release\netcoreapp3.0\Wangkanai.Detection.Browser.dll
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Release\netcoreapp3.0\Wangkanai.Detection.Core.dll
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Release\netcoreapp3.0\Wangkanai.Detection.Crawler.dll
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Release\netcoreapp3.0\Wangkanai.Detection.Device.dll
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Release\netcoreapp3.0\Wangkanai.Detection.Engine.dll
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Release\netcoreapp3.0\Wangkanai.Detection.Platform.dll
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\Razor\Views\Home\Detection.cshtml.g.cs
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Release\netcoreapp3.0\SimpleMvcSitemap.dll
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Release\netcoreapp3.0\Experimental.System.Messaging.dll

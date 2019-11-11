@@ -15,12 +15,11 @@ namespace VietbankWebsite.Repository
     public class HomeRepository : IHomeRepository
     {
         private readonly VietbankContext _context;
-        private static readonly log4net.ILog Log = log4net.LogManager.GetLogger(typeof(VietbankContext));
         public HomeRepository(VietbankContext context)
         {
             _context = context;
         }
-        public async Task<IEnumerable<VbBanner>> GetBanner(string lang)
+        public async Task<IEnumerable<VbBanner>> GetBanner(string lang, string device)
         {
             var banner = from a in _context.VbBanners
                          where a.Status.Equals(1)
@@ -29,8 +28,39 @@ namespace VietbankWebsite.Repository
                          orderby a.Prioritize
                          select a;
             var bannerList = await banner.ToListAsync();
-            Log.Info($"Number of banner: {lang} {bannerList.Count}");
-            return bannerList;
+            return FormatBanner(bannerList,device);
+        }
+
+        private IEnumerable<VbBanner> FormatBanner(IEnumerable<VbBanner> banner,string device)
+        {
+            switch (device)
+            {
+                case "Mobile":
+                    var bannerMobile = banner.Where(x => x.ImgThree?.Length > 0).ToList();
+                    if (bannerMobile.Any())
+                    {
+                        foreach (var item in bannerMobile)
+                        {
+                            item.Image = item.ImgThree;
+                        }
+                        return bannerMobile;
+                    }
+                    return new List<VbBanner>();
+                    
+                case "Tablet":
+                    var bannerTable = banner.Where(x => x.ImgTwo?.Length > 0).ToList();
+                    if (bannerTable.Any())
+                    {
+                        foreach (var item in bannerTable)
+                        {
+                            item.Image = item.ImgTwo;
+                        }
+                        return bannerTable;
+                    }
+                    return new List<VbBanner>();
+                default:
+                    return banner;
+            }
         }
 
         public async Task<IEnumerable<SearchInfor>> GetSearchInfors(string key)
@@ -66,12 +96,25 @@ namespace VietbankWebsite.Repository
             var boxContainer = await _context.Database.GetDbConnection().QueryAsync<BannerIndexView>("[dbo].[vb_fe_get_filter_banner_lang]", p, null, null, commandType: CommandType.StoredProcedure);
             return boxContainer;
         }
+
+        public async Task<IEnumerable<VbMapUrl>> GetVbMapUrl()
+        {
+            return await _context.VbMapUrls.Where(x=>x.UrlMap.Length > 0).OrderByDescending(x=>x.Id).ToArrayAsync();
+        }
+
+        public IEnumerable<SPVbFormatSiteMap> GetFormatSiteMap()
+        {
+            var result = _context.Database.GetDbConnection().Query<SPVbFormatSiteMap>("[dbo].[vb_fe_formatUrlSitemap]", commandType: CommandType.StoredProcedure).ToList();
+            return result;
+        }
     }
 
     public interface IHomeRepository
     {
-        Task<IEnumerable<VbBanner>> GetBanner(string lang);
+        Task<IEnumerable<VbBanner>> GetBanner(string lang,string device);
         Task<IEnumerable<SearchInfor>> GetSearchInfors(string key);
         Task<IEnumerable<BannerIndexView>> GetBoxContainer(string type,string lang);
+        Task<IEnumerable<VbMapUrl>> GetVbMapUrl();
+        IEnumerable<SPVbFormatSiteMap> GetFormatSiteMap();
     }
 }

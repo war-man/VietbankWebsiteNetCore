@@ -32,4 +32,11 @@ namespace VietbankWebsite.Entities
         [Column("CardId")]
         public string CardId { get; set; }
     }
+
+    public class SPVbFormatSiteMap
+    {
+        public string url { get; set; }
+        public string lang { get; set; }
+        public string priority { get; set; }
+    }
 }
