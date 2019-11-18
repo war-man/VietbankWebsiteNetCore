@@ -175,9 +175,16 @@ namespace VietbankWebsite.Controllers
         [HttpGet]
         [Route("ho-tro/cong-cu-tinh-toan")]
         [Route("support/tools-calculators")]
-        public IActionResult Calculation()
+        public async Task<IActionResult> Calculation()
         {
-            return View();
+            var keyPersonalCalculation = GetLangCurrent() == "vi" ? CacheKeys.PersonalCalculationVi : CacheKeys.PersonalCalculationEn;
+            IntroduceDetail calculation;
+            if (!_cache.TryGetValue(keyPersonalCalculation, out calculation))
+            {
+                calculation = await _aboutVietbankService.IntroduceDetail(10883, GetLangCurrent());
+                _cache.Set(keyPersonalCalculation, calculation, cacheEntryOptions);
+            }
+            return View(calculation);
         }
 
         [HttpGet]

@@ -59,6 +59,10 @@ namespace VietbankWebsite.Models
         public static string PersonalFormTariffEn { get { return "_PersonalFormTariffEn"; } }
         public static string PersonalTariffVi { get { return "_PersonalTariffVi"; } }
         public static string PersonalTariffEn { get { return "_PersonalTariffEn"; } }
+
+        public static string PersonalCalculationVi { get { return "_PersonalCalculationVi"; } }
+        public static string PersonalCalculationEn { get { return "_PersonalCalculationEn"; } }
+
         public static string PersonalAccountInquiryVi { get { return "_PersonalAccountInquiryVi"; } }
         public static string PersonalAccountInquiryEn { get { return "_PersonalAccountInquiryEn"; } }
         public static string PersonalProductVi { get { return "_PersonalProductVi"; } }

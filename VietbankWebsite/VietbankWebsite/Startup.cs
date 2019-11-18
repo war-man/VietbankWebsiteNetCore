@@ -104,7 +104,7 @@ namespace VietbankWebsite
             {
                 options.ViewLocationExpanders.Add(new ModuleViewLocationExpander());
             });
-            //services.AddDetection();
+            
             var mvcBuilder = services.AddMvc(options => {
                 options.Filters.Add(new ResponseCacheAttribute() { NoStore = true, Location = ResponseCacheLocation.None });
             })
@@ -131,6 +131,8 @@ namespace VietbankWebsite
             services.Configure<EmailSender>(Configuration.GetSection("EmailSender"));
             services.Configure<RemoteService>(Configuration.GetSection("RemoteService"));
             services.Configure<MessageQueueConfig>(Configuration.GetSection("MessageQueueConfig"));
+
+            services.AddDetection();
             services.AddHostedService<GenerateSiteMapHostedService>();
             //services.AddHostedService<QueueCentralHostedService>();
         }
@@ -148,7 +150,8 @@ namespace VietbankWebsite
                 app.UseExceptionHandler("/Home/NotFoundPage");
                 app.UseHsts();
             }
-            app.UseMiddleware<RequestComputeMiddleware>();
+            //app.UseMiddleware<RequestComputeMiddleware>();
+            app.UseMiddleware<FixDetectionMiddleware>();
             app.UseMiddleware<CultureMiddleware>();
             app.UseRequestLocalization();
             app.UseHttpsRedirection();

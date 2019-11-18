@@ -58,6 +58,7 @@
     <None Include="wwwroot\card\fonts\revicons\revicons.svg" />
     <None Include="wwwroot\card\js\core.js" />
     <None Include="wwwroot\card\js\main.js" />
+    <None Include="wwwroot\images\bullet.svg" />
   </ItemGroup>
 
   <ItemGroup>

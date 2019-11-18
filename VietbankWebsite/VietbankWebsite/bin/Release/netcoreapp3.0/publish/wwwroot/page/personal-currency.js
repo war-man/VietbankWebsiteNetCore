@@ -195,7 +195,8 @@ jQuery(document).ready(function ($) {
     });
     $('#datecurrent').datepicker({
         format: 'dd/mm/yyyy',
-        autoclose: true
+        autoclose: true,
+        defaultDate: '11/11/2019'
     }).on('changeDate', function (ev) {
         requestAjaxGet('/api/ApiSupport/getcountupdatecurrencywheredate?date=' + moment(ev.date).format("MM/DD/YYYY"))
             .done(function (data) {

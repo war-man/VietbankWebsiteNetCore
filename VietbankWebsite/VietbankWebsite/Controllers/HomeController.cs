@@ -13,6 +13,7 @@ using VietbankWebsite.Entities;
 using VietbankWebsite.ModelMap;
 using VietbankWebsite.Models;
 using VietbankWebsite.Service;
+using Wangkanai.Detection;
 
 namespace VietbankWebsite.Controllers
 {
@@ -24,13 +25,15 @@ namespace VietbankWebsite.Controllers
         private readonly ICareersService _careersService;
         private readonly IStringLocalizer<HomeController> _localizer;
         private IRecaptchaService _recaptcha;
+        private readonly IDetection _detection;
         public HomeController(
             IStringLocalizer<HomeController> localizer, 
             IMemoryCache memoryCache, 
             IHomeService homeService, 
             IShareholderService shareholderService, 
             ICareersService careersService, 
-            IRecaptchaService recaptcha
+            IRecaptchaService recaptcha,
+            IDetection detection
         )
         {
             _cache = memoryCache;
@@ -39,27 +42,27 @@ namespace VietbankWebsite.Controllers
             _shareholderService = shareholderService;
             _careersService = careersService;
             _recaptcha = recaptcha;
+            _detection = detection;
         }
 
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            var keyBanner = GetLangCurrent() == "vi" ? CacheKeys.BannerVi : CacheKeys.BannerEn;
-            BoxContainerHomePage boxContainer;
-            if (!_cache.TryGetValue(keyBanner, out boxContainer))
+            BoxContainerHomePage boxContainer = new BoxContainerHomePage()
             {
-                boxContainer = new BoxContainerHomePage() { 
-                    Banner = await _homeService.GetBanner(GetLangCurrent(),"Desktop"),
-                    Box = await _homeService.GetBoxContainer("box",GetLangCurrent()),
-                    Between = await _homeService.GetBoxContainer("between", GetLangCurrent()),
-                    News = await _homeService.GetBoxContainer("news", GetLangCurrent())
-                };
-                _cache.Set(keyBanner, boxContainer, cacheEntryOptions);
-            }
+                Banner = await _homeService.GetBanner(GetLangCurrent(), "Desktop"),
+                Box = await _homeService.GetBoxContainer("box", GetLangCurrent()),
+                Between = await _homeService.GetBoxContainer("between", GetLangCurrent()),
+                News = await _homeService.GetBoxContainer("news", GetLangCurrent())
+            }; 
             ViewData["Title"] = _localizer["Home"];
             ViewData["MetaDescription"] = _localizer["MetaDescription"];
-            //await create();
             return View(boxContainer);
+        }
+
+        public IActionResult Detection()
+        {
+            return View(_detection);
         }
 
         [HttpGet]
@@ -205,6 +208,12 @@ namespace VietbankWebsite.Controllers
             }
 
             return View(cacheEntry);
+        }
+
+
+        public IActionResult NewProduct()
+        {
+            return View();
         }
 
 

@@ -573,3 +573,4 @@ T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Release\net
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\Razor\Views\Home\Detection.cshtml.g.cs
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Release\netcoreapp3.0\SimpleMvcSitemap.dll
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Release\netcoreapp3.0\Experimental.System.Messaging.dll
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\Razor\Views\Home\NewProduct.cshtml.g.cs

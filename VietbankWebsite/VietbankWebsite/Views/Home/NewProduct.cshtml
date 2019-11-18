@@ -1,0 +1,631 @@
+﻿
+@{
+    ViewData["Title"] = "NewProduct";
+    Layout = "~/Views/Shared/_LayoutPersonal.cshtml";
+}
+@section Styles{
+    <link href="~/css/style.css" rel="stylesheet" />
+    <link href="~/css/boostrap.css" rel="stylesheet" />
+    <link href="~/css/swiper.min.css" rel="stylesheet" />
+}
+<main style="background-color:white;">
+    <section class="breadcrumb-wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="#">Cá nhân</a>
+                        </li>
+                        <li>
+                            <a href="#">Sản phẩm</a>
+                        </li>
+                        <li>
+                            <a href="#">Cho vay</a>
+                        </li>
+                        <li class="active">
+                            <span style="color: #0071bb;">Vay du học</span>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="banner-wrap">
+        <div class="imgBg" style="background-image:url('/images/banner.jpg');"></div>
+        <div class="desc-banner">
+            <div class="row flex-end">
+                <div class="col-xs-12 col-sm-5 col-lg-4 col-xl-4">
+                    <h1 class="title">vay du học</h1>
+                    <div class="content">
+                        <img src="/images/bullet.svg" alt="bullet" />
+                        <p>
+                            Đối tượng : Khách hàng cá nhân có nhu cầu vay vốn thanh toán học phí,
+                            sinh hoạt phí cho du học sinh.
+                        </p>
+                    </div>
+                    <div class="content">
+                        <img src="/images/bullet.svg" alt="bullet" />
+                        <p>Hỗ trợ vay toàn bộ chi phí du học</p>
+                    </div>
+                    <div class="content">
+                        <img src="/images/bullet.svg" alt="bullet" />
+                        <p>Lãi suất ưu đãi trong năm đầu chỉ 8%/năm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="menu-wrap">
+        <div class="container">
+            <ul class="row menu-horizontal" id="myTopnav">
+                <li class="active col-12 col-sm-12 col-md-12 col-lg-2"><a href="#1">Đặc tính sản phẩm</a></li>
+                <li class="col-12 col-sm-12 col-md-12 col-lg-2"><a href="#2">Tiện ích sản phẩm</a></li>
+                <li class="col-12 col-sm-12 col-md-12 col-lg-2"><a href="#3">Biểu lãi suất</a></li>
+                <li class="col-12 col-sm-12 col-md-12 col-lg-2"><a href="#4">Hướng dẫn đăng kí</a></li>
+                <li class="col-12 col-sm-12 col-md-12 col-lg-2"><a href="#5">Ưu đãi cho khách hàng</a></li>
+                <li class="col-12 col-sm-12 col-md-12 col-lg-2"><a href="#6">Cẩm nang cho khách hàng</a></li>
+            </ul>
+
+            <a class="mobile-menu-toggle js-toggle-menu hamburger-menu" href="#">
+                <div class="mobile-header-nav">
+                    <span class="menu-item"></span>
+                    <span class="menu-item"></span>
+                    <span class="menu-item"></span>
+                </div>
+            </a>
+        </div>
+    </section>
+    <section class="sec_slide1" id="1">
+        <div class="container">
+            <div class="title-menu">
+                <h1>ĐẶC TÍNH SẢN PHẨM</h1>
+            </div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slide-content">
+                            <h4>Đối tượng</h4>
+                            <p>Khách hàng cá nhân từ đủ 18 tuổi trở lên có nhu cầu mua căn hộ/nhà ở/đất nền thuộc các dự án Bất động sản.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-active">
+                        <div class="slide-content">
+                            <h4> Mức cho vay</h4>
+                            <p>Tối đa 100% nhu cầu vốn.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-content">
+                            <h4>Thời hạn vay tối đa</h4>
+                            <p> 240 tháng.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-content">
+                            <h4> Phương thức trả nợ</h4>
+                            <p>Linh hoạt, phù hợp tình hình tài chính của khách hàng.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+    <section class="product-nature" id="2">
+        <div class="container">
+            <div class="title-menu">
+                <h1>TIỆN ÍCH SẢN PHẨM</h1>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <div class="box-img">
+                        <a href="#" class="img tRes_65 zoom-brighten"><img src="/images/product4.jpg" alt="" /></a>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <div class="slide-content">
+                        <h4>Nội dung</h4>
+                        <p>Được thế chấp căn hộ/nhà ở/đất nền thuộc dự án ngay khi có Hợp đồng mua bán</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row reverse mt-50">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <div class="box-img">
+                        <a href="#" class="img tRes_65 zoom-brighten"><img src="/images/product5.jpg" alt="" /></a>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <div class="slide-content">
+                        <h4>Hồ sơ/Thủ tục:</h4>
+                        <p>+ CMND/Thẻ CCCD/Hộ chiếu, Hộ khẩu/KT3.</p>
+                        <p>+ Hồ sơ chứng minh nguồn trả nợ.</p>
+                        <p>+ Hợp đồng mua bán/Văn bản chuyển nhượng căn hộ.</p>
+                        <p>+ Giấy tờ liên quan đến tài sản bảo đảm theo quy định của VietBank.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="interest-rate mt-50" id="3">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
+                    <div class="img-bullet">
+                        <img src="/images/bullet.png" alt="Bullet" />
+                        <h1 class="title">biểu lãi suất tiết kiệm vietbank</h1>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                    <div class="dflex-end">
+                        <a href="https://static.vietbank.com.vn/web/lai%20suat%20%20huy%20dong%20_KHDN/BIEU%20PHI%20LSHD.PDF" class="btn btn-a">
+                            <span>Xem ngay</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="form-index mt-50" id="4">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 mb-30">
+                    <div class="register-guide">
+                        <div class="box-title">
+                            <h1 class="title">Hướng dẫn đăng kí</h1>
+                        </div>
+                        <div class="step">
+                            <div class="row">
+                                <div class="col-lg-3 col-xs-3">
+                                    <p class="title-step">Bước 1</p>
+                                </div>
+                                <div class="col-lg-9 col-xs-9">
+                                    <p>Truy cập vào website <a href="https://online.vietbank.com.vn/ibk/vn/sotietkiem/index.jsp"><span>VietBank Online</span></a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="row">
+                                <div class="col-lg-3 col-xs-3">
+                                    <p class="title-step">Bước 2</p>
+                                </div>
+                                <div class="col-lg-9 col-xs-9">
+                                    <p>Nhập số tài khoản tiết kiệm và số CMND/ Passport.</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="row">
+                                <div class="col-lg-3 col-xs-3">
+                                    <p class="title-step">Bước 3</p>
+                                </div>
+                                <div class="col-lg-9 col-xs-9">
+                                    <!-- <p>Chọn hình thức vay &nbsp;<span>Vay > Vay du học</span></p> -->
+                                    <p>Vietbank gửi tin nhắn mã xác thực (OTP) đến ĐTDĐ của khách hàng. Thời hạn hiệu lực OTP: 05 phút.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="row">
+                                <div class="col-lg-3 col-xs-3">
+                                    <p class="title-step">Bước 4</p>
+                                </div>
+                                <div class="col-lg-9 col-xs-9">
+                                    <p>
+                                        Khách hàng nhập mã OTP vào màn hình xác nhận và nhấn <span> Đồng ý.</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="row">
+                                <div class="col-lg-3 col-xs-3">
+                                    <p class="title-step">Bước 5</p>
+                                </div>
+                                <div class="col-lg-9 col-xs-9">
+                                    <p>Chương trình hiển thị thông tin chi tiết sổ tiết kiệm của khách hàng (Họ tên khách hàng, số dư, ngày gửi, ngày hết hạn).</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <div class="form-register">
+                        <div class="box-title">
+                            <h1 class="title">Hỗ trợ tư vấn</h1>
+                            <div class="icon-container">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <p>Hotline: <span style="color: yellow">1800 1122</span></p>
+                        </div>
+                        <div class="form-wrapper">
+                            <div class="note-form">
+                                <p>Nhập thông tin về bạn để được hỗ trợ</p>
+                            </div>
+                            <form action="/" method="POST">
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xs-3">
+                                        <p>Họ và tên</p>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-9 col-lg-9 col-xs-9">
+                                        <input type="text" name="name" placeholder="Họ và tên" required />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xs-3">
+                                        <p>Email</p>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-9 col-lg-9 col-xs-9">
+                                        <input type="email" name="email" placeholder="Email" required />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xs-3">
+                                        <p>Số điện thoại</p>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-9 col-lg-9 col-xs-9">
+                                        <input type="text" name="phone" placeholder="Số điện thoại" required />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xs-3">
+                                        <p>Nội dung</p>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-9 col-lg-9 col-xs-9">
+                                        <input type="text" name="content" placeholder="Nội dung" required />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xs-3">
+                                        <p>Mã xác thực</p>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-9 col-lg-9 col-xs-9">
+                                        <div class="g-recaptcha" data-sitekey="6Lc3NMIUAAAAAAlkLTXgjOdAjaEOe0_5X9KU6ZG2"></div>
+                                    </div>
+                                </div>
+                                <div class="dflex-center">
+                                    <button type="submit" class="btn btn-a">Gửi</button>
+                                </div>
+                                <div class="note">
+                                    <p class="notice">
+                                        (*)Tất cả thông tin bạn cung cấp sẽ được lưu trữ và giữ bí mật. Chúng
+                                        tôi không bán, cho thuê danh sách và thông tin khách hàng cho các công ty khác.
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sec_slide2 mt-50" id="5">
+        <div class="container">
+            <div class="title-menu">
+                <h1>Ưu đãi cho khách hàng</h1>
+            </div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="https://www.vietbank.com.vn/the/uu-dai/chuong-trinh-khuyen-mai/gong-cha">
+                            <div class="img tRes_65 zoom-brighten">
+                                <img class="" src="/images/sec2_2.jpg" alt="Gong cha" />
+                            </div>
+                            <div class="slide-content">
+                                <h4>GONG CHA</h4>
+                                <p>Giảm giá trực tiếp 30.000 VND trên hóa đơn mỗi thứ 3 hàng tuần, từ 9AM (áp dụng cho 260 giao dịch đầu tiên)</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="https://www.vietbank.com.vn/the/uu-dai/chuong-trinh-khuyen-mai/Now">
+                            <div class="img tRes_65 zoom-brighten">
+                                <img class="" src="/images/Now.jpg" alt="Now" />
+                            </div>
+                            <div class="slide-content">
+                                <h4>Now.vn</h4>
+                                <p>Nhận ngay ưu đãi trực tiếp 15.000 VND tại https://www.now.vn khi thanh toán bằng thẻ Vietbank Visa</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="https://www.vietbank.com.vn/the/uu-dai/chuong-trinh-khuyen-mai/agoda">
+                            <div class="img tRes_65 zoom-brighten">
+                                <img src="/images/sec2_4.jpg" alt="Agoda" />
+                            </div>
+                            <div class="slide-content">
+                                <h4>Agoda.com</h4>
+                                <p>Giảm giá trực tiếp 19% vào mỗi thứ 4 hàng tuần và giảm giá 9% cho các ngày còn lại khi đặt phòng tại Agoda </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="https://www.vietbank.com.vn/the/uu-dai/chuong-trinh-khuyen-mai/benh-vien-quoc-te-city-cih">
+                            <div class="img tRes_65 zoom-brighten">
+                                <img src="/images/BV.jpg" alt="Benh vien quoc te" />
+                            </div>
+                            <div class="slide-content">
+                                <h4>Đặc Quyền Sức Khỏe</h4>
+                                <p>
+                                    + ĐẶC QUYỀN SỨC KHỎE CÙNG THẺ VIETBANK Vietbank Visa<br />
+                                    + Khách hàng khi mở thẻ Vietbank Vietbank Visa Platinum hoặc Luxury sẽ được tặng các gói khám sức khỏe:
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="http://cmsfe.vietbank.com.vn/ve-vietbank/tin-tuc/tin-khuyen-mai/nhanh-san-ma-%E2%80%93-nhan-tien-lien">
+                            <div class="img tRes_65 zoom-brighten">
+                                <img src="/images/sec2_1.jpg" alt="Nhan tien lien" />
+                            </div>
+                            <div class="slide-content">
+                                <h4>NHANH SĂN MÃ – NHẬN TIỀN LIỀN</h4>
+                                <p>
+                                    1. Thời gian triển khai: từ 21/10  đến hết ngày 15/12/2019.<br>
+                                    2. Đối tượng: Chủ thẻ tín dụng Vietbank Visa (bao gồm chủ thẻ hiện hữu
+                                    và chủ thẻ mở mới trong thời gian triển khai chương trình).
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+    <section class="customers" id="6">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <div class="title-menu">
+                        <h1>Cẩm nang cho khách hàng</h1>
+                        <a href="http://cmsfe.vietbank.com.vn/ve-vietbank/tin-tuc/tin-khuyen-mai/nhanh-san-ma-%E2%80%93-nhan-tien-lien"><p class="notice">Xem tất cả</p></a>
+                    </div>
+                    <div class="list-posts">
+                        <div class="row no-gutters">
+                            <div class="col-4">
+                                <a href="#">
+                                    <div class="img tRes_70 zoom-basic">
+                                        <img src="/images/sec2_1.jpg" alt="" />
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-8">
+                                <article class="posts">
+                                    <h4><a href="#">NHANH SĂN MÃ – NHẬN TIỀN LIỀN</a></h4>
+                                    <p>
+                                        1. Thời gian triển khai: từ 21/10  đến hết ngày 15/12/2019.
+
+                                        2. Đối tượng: Chủ thẻ tín dụng Vietbank Visa (bao gồm chủ thẻ hiện hữu và chủ thẻ mở mới trong thời gian triển khai chương trình).
+
+                                        3. Nội dung chương trình:
+
+                                        - Mỗi tuần tặng tiền đối với 10 Khách hàng (KH) có 06 số của mã chuẩn chi t
+                                    </p>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="row no-gutters">
+                            <div class="col-4">
+                                <a href="#">
+                                    <div class="img tRes_70 zoom-basic">
+                                        <img src="/images/slide1.jpg" alt="" />
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-8">
+                                <article class="posts">
+                                    <h4>
+                                        <a href="#">
+                                            Points To Remember About A Spastic
+                                            Colon
+                                        </a>
+                                    </h4>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                                        elit, sed do eiusmod tempor incididunt…
+                                    </p>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="row no-gutters">
+                            <div class="col-4">
+                                <a href="#">
+                                    <div class="img tRes_70 zoom-basic">
+                                        <img src="/images/slide1.jpg" alt="" />
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-8">
+                                <article class="posts">
+                                    <h4>
+                                        <a href="#">
+                                            Points To Remember About A Spastic
+                                            Colon
+                                        </a>
+                                    </h4>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                                        elit, sed do eiusmod tempor incididunt…
+                                    </p>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <div class="row no-gutters title-menu">
+                        <h1>Sản phẩm liên quan</h1>
+                        <a href="#"><p class="notice">Xem tất cả</p></a>
+                    </div>
+                    <div class="list-posts">
+                        <div class="row no-gutters">
+                            <div class="col-4">
+                                <a href="#">
+                                    <div class="img tRes_70 zoom-basic">
+                                        <img src="/images/slide1.jpg" alt="" />
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-8">
+                                <article class="posts">
+                                    <h4>
+                                        <a href="#">
+                                            Points To Remember About A Spastic
+                                            Colon
+                                        </a>
+                                    </h4>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                                        elit, sed do eiusmod tempor incididunt…
+                                    </p>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="row no-gutters">
+                            <div class="col-4">
+                                <a href="#">
+                                    <div class="img tRes_70 zoom-basic">
+                                        <img src="/images/slide1.jpg" alt="" />
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-8">
+                                <article class="posts">
+                                    <h4>
+                                        <a href="#">
+                                            Points To Remember About A Spastic
+                                            Colon
+                                        </a>
+                                    </h4>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                                        elit, sed do eiusmod tempor incididunt…
+                                    </p>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="row no-gutters">
+                            <div class="col-4">
+                                <a href="#">
+                                    <div class="img tRes_70 zoom-basic">
+                                        <img src="/images/slide1.jpg" alt="" />
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-8">
+                                <article class="posts">
+                                    <h4>
+                                        <a href="#">
+                                            Points To Remember About A Spastic
+                                            Colon
+                                        </a>
+                                    </h4>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                                        elit, sed do eiusmod tempor incididunt…
+                                    </p>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="customers-reviews">
+        <div class="container">
+            <div class="title-menu">
+                <h1>Nhận xét từ khách hàng</h1>
+            </div>
+            <div class="reviews">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col--md-12 col-lg-8 mb-30">
+                        <a href="#">
+                            <div class="video tRes_65">
+                                <video controls="controls">
+                                    <source src=""></source>
+                                </video>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                        <div class="row no-gutters">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 pd-res1">
+                                <a href="#">
+                                    <div class="img tRes_64">
+                                        <img src="/images/cus1.jpg" alt="" data-lazy-type="images" data-lazy-src="/images/cus1.jpg" />
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-12 col-lg-12 pd-res2">
+                                <a href="#">
+                                    <div class="img tRes_64">
+                                        <img src="/images/cus2.jpg" alt="" data-lazy-type="images" data-lazy-src="/images/cus2.jpg" />
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="banner-bottom mt-50">
+        <div class="banner-color"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-sm-6 col-md-6 col-lg-3">
+                    <div class="inner-banner">
+                        <a href="#">
+                            <img src="/images/ico_bieumau.png" alt="" />
+                            <h4>Biểu mẫu</h4>
+                            <p>Tham khảo nội dung biểu mẫu mà bạn cần tại đây</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-6 col-lg-3">
+                    <div class="inner-banner">
+                        <a href="#">
+                            <img src="/images/ico_tong dai.png" alt="" />
+                            <h4>Tổng đài 1800 1122</h4>
+                            <p>Tham khảo nội dung biểu mẫu mà bạn cần tại đây</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-6 col-lg-3">
+                    <div class="inner-banner">
+                        <a href="#">
+                            <img src="/images/ico_email.png" alt="" />
+                            <h4>Gửi Email cho chúng tôi</h4>
+                            <p>Tham khảo nội dung biểu mẫu mà bạn cần tại đây</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-6 col-lg-3">
+                    <div class="inner-banner">
+                        <a href="#">
+                            <img src="/images/ico_chi nhanh.png" alt="" />
+                            <h4>Chi nhánh</h4>
+                            <p>Tham khảo nội dung biểu mẫu mà bạn cần tại đây</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</main>
+@section Scripts{
+
+    <script src="~/js/swiper.min.js"></script>
+    <script src="~/js/script.js"></script>
+}
