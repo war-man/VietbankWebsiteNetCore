@@ -160,9 +160,13 @@ function showChart(mang, mang1, mang2, tennt1, tennt2) {
 }
 
 function generateCountTimeUpdate(time) {
-    var countTime = '<option></option>';
-    for (var i = 1; i <= time; i++) {
-        countTime += '<option value="'+i+'">'+i+'</option>';
+    var countTime = '';
+    for (var i = 0; i <= time; i++) {
+        if (i === time) {
+            countTime += '<option selected="selected" value="' + i + '">' + i + '</option>';
+        } else {
+            countTime += '<option value="' + i + '">' + i + '</option>';
+        }
     }
     $('#count-update select').html(countTime);
 }
@@ -206,7 +210,9 @@ jQuery(document).ready(function ($) {
     $('#datecurrent').datepicker({
         format: 'dd/mm/yyyy',
         autoclose: true,
-    }).on('changeDate', function (ev) {
+    })
+    .datepicker("setDate", new Date())
+    .on('changeDate', function (ev) {
         requestAjaxGet('/api/ApiSupport/getcountupdatecurrencywheredate?date=' + moment(ev.date).format("MM/DD/YYYY"))
             .done(function (data) {
                 generateCountTimeUpdate(data)
