@@ -1,21 +1,21 @@
 ﻿@using Microsoft.AspNetCore.Mvc.Localization
 @inject IViewLocalizer Localizer
-<section class="main-header">
-    <div class="container">
-        <div class="logo"><a href="/"><img class="lazyload" data-src="/img/logo.png" src="/img/logo.png" alt=""></a></div>
-        <div class="btn-showmenu"> <i class="fa fa-bars"></i></div>
-        <div class="overlay"></div>
-        <div class="main-menu">
-            <div class="btn-closemenu">X</div>
-            <div class="menu-content">
-                <ul>
-                    <li><a href="@Localizer["CaNhanUrl"]">@Localizer["CaNhan"]</a></li>
-                    <li><a href="@Localizer["DoanhNghiepUrl"]">@Localizer["DoanhNghiep"]</a></li>
-                    <li><a href="@Localizer["TheUrl"]">@Localizer["The"]</a></li>
-                </ul>
+    <section class="main-header fixe" id="header">
+        <div class="container">
+            <div class="logo"><a href="/"><img class="lazyload" data-src="/img/logo.png" src="/img/logo.png" alt=""></a></div>
+            <div class="btn-showmenu"> <i class="fa fa-bars"></i></div>
+            <div class="overlay"></div>
+            <div class="main-menu">
+                <div class="btn-closemenu">X</div>
+                <div class="menu-content">
+                    <ul>
+                        <li><a href="@Localizer["CaNhanUrl"]">@Localizer["CaNhan"]</a></li>
+                        <li><a href="@Localizer["DoanhNghiepUrl"]">@Localizer["DoanhNghiep"]</a></li>
+                        <li><a href="@Localizer["TheUrl"]">@Localizer["The"]</a></li>
+                    </ul>
+                </div>
+                <partial name="~/Views/Partial/_MenuMobile.cshtml" />
+                <partial name="~/Views/Partial/_ToolLinkMobile.cshtml" />
             </div>
-            <partial name="~/Views/Partial/_MenuMobile.cshtml" />
-            <partial name="~/Views/Partial/_ToolLinkMobile.cshtml" />
         </div>
-    </div>
-</section>
+    </section>

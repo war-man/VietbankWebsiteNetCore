@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using VietbankWebsite.Entities;
 using VietbankWebsite.ModelMap;
 using VietbankWebsite.Uow;
 
@@ -14,6 +11,11 @@ namespace VietbankWebsite.Service
         public AboutVietbankService(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
+        }
+
+        public async Task AddContact(Contact contact)
+        {
+            await _unitOfWork.AboutVietbankRepository.AddContact(contact);
         }
 
         public async Task<ListNews> GetListNews(int idCate, string cateName, string aliasCate, string lang, int page, int pageSize)
@@ -67,5 +69,6 @@ namespace VietbankWebsite.Service
         Task<NewsDetail> GetNewsDetail(string alias, string lang);
         Task<IEnumerable<RandomNewsVietbank>> GetRamdomNewsToCategory(int idCate, string aliasCate, string lang);
         Task<BankCodeDataTable> GetVbBankCodes();
+        Task AddContact(Contact contact);
     }
 }

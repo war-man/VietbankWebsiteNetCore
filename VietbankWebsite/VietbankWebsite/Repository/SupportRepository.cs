@@ -156,6 +156,7 @@ namespace VietbankWebsite.Repository
             var response = string.Empty;
             using (var client = new HttpClient())
             {
+                client.DefaultRequestHeaders.Add("Origin", "http://vietbank.com.vn");
                 HttpResponseMessage result = await client.GetAsync($"{urlRemote}/api/ThuBaoLanh/ReponseGetThongTinTBL?Acct={acctNbr}&soTBL={seriesNo}");
                 if (result.IsSuccessStatusCode)
                 {

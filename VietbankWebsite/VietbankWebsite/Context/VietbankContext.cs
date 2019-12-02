@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using VietbankWebsite.Entities;
 using VietbankWebsite.Entities.Analytic;
+using VietbankWebsite.ModelMap;
 
 namespace VietbankWebsite.Context
 {
@@ -31,5 +32,6 @@ namespace VietbankWebsite.Context
         public DbSet<VbBankCode> VbBankCodes { get; set; }
         public DbSet<VbPostSeo> VbPostSeo { get; set; }
         public DbSet<RequestLogs> RequestLogs { get; set; }
+        public DbSet<Contact> Contact { get; set; }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 using VietbankWebsite.Entities;
@@ -80,8 +81,11 @@ namespace VietbankWebsite.ModelMap
         public IEnumerable<VbBankCode> Data { get; set; }
     }
 
+    [Table("vb_contact",Schema = "dbo")]
     public class Contact
     {
+        [Key]
+        public int Id { get; set; }
         [Required(ErrorMessage = "Vui lòng nhập họ tên!")]
         public string FullName { get; set; }
         public string Phone { get; set; }
@@ -94,5 +98,6 @@ namespace VietbankWebsite.ModelMap
         public string Career { get; set; }
         [Required(ErrorMessage = "Vui lòng nhập nội dung cần hỗ trợ!")]
         public string Message { get; set; }
+        public DateTime CreatedAt { get; set; }
     }
 }

@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Options;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using VietbankWebsite.ModelMap;
@@ -397,9 +398,14 @@ namespace VietbankWebsite.Controllers
                 ModelState.AddModelError("", "Mã xác thực không đúng, Vui lòng thử lại");
                 return View(model);
             }
+
+            model.CreatedAt = DateTime.Now;
             _emailSenderRepository.SendMail(model.Email, model.Title, await _razorViewToStringRenderer.RenderViewToStringAsync("/Views/EmailSender/ContactResponseToUser.cshtml", new ContactResponseToUser() { 
                 Message = "Vietbank đã nhận được lời nhắn của bạn, chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất!"
             }));
+
+            await _aboutVietbankService.AddContact(model);
+
             _emailSenderRepository.SendMail(_emailSender.CallCenter, model.Title, await _razorViewToStringRenderer.RenderViewToStringAsync("/Views/EmailSender/ContactResponseToCallCenter.cshtml", new ContactResponseToCallCenter() { 
                 FullName = model.FullName,
                 Address = model.Address,

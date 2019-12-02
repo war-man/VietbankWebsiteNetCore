@@ -269,6 +269,12 @@ namespace VietbankWebsite.Repository
                 Data = await _context.VbBankCodes.Where(x => x.IsInsert.Equals(0)).Where(x => x.IsUpdate.Equals(0)).ToListAsync()
             };
         }
+
+        public async Task AddContact(Contact contact)
+        {
+            _context.Contact.Add(contact);
+            await _context.SaveChangesAsync();
+        }
     }
 
     public interface IAboutVietbankRepository
@@ -282,5 +288,6 @@ namespace VietbankWebsite.Repository
         Task<NewsDetail> GetNewsDetail(string alias, string lang);
         Task<IEnumerable<RandomNewsVietbank>> GetRamdomNewsToCategory(int idCate, string aliasCate, string lang);
         Task<BankCodeDataTable> GetVbBankCodes();
+        Task AddContact(Contact contact); 
     }
 }

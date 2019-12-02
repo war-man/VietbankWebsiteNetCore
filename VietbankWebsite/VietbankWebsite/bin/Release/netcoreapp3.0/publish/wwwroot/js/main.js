@@ -221,6 +221,7 @@
                 navRewind: true,
                 slideBy: 1,
                 dots: true,
+                autoHeight: true,
                 responsive: {
                     0: {
                         items: 1
