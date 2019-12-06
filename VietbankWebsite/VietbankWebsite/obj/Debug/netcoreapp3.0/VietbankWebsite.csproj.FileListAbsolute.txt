@@ -354,8 +354,6 @@ T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netco
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.Resources.Views.Personal.Tariff.en.resources
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.Resources.Views.Personal.Tariff.vi.resources
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.csproj.GenerateResource.cache
-T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.MvcApplicationPartsAssemblyInfo.cs
-T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.MvcApplicationPartsAssemblyInfo.cache
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.RazorAssemblyInfo.cache
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.RazorAssemblyInfo.cs
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.AssemblyInfoInputs.cache
@@ -506,3 +504,5 @@ T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netco
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netcoreapp3.0\SimpleMvcSitemap.dll
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netcoreapp3.0\Experimental.System.Messaging.dll
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\Razor\Views\Home\NewProduct.cshtml.g.cs
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.MvcApplicationPartsAssemblyInfo.cs
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.MvcApplicationPartsAssemblyInfo.cache

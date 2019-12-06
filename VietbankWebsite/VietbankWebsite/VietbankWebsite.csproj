@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="ApplicationDbContext.cs" />
     <Compile Remove="Extensions\ReferencesMetadataReferenceFeatureProvider.cs" />
   </ItemGroup>
 
