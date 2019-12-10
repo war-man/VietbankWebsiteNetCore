@@ -574,3 +574,6 @@ T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\net
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Release\netcoreapp3.0\SimpleMvcSitemap.dll
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Release\netcoreapp3.0\Experimental.System.Messaging.dll
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\Razor\Views\Home\NewProduct.cshtml.g.cs
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Release\netcoreapp3.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Release\netcoreapp3.0\Microsoft.AspNetCore.Identity.UI.dll
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Release\netcoreapp3.0\Microsoft.AspNetCore.Identity.UI.xml
