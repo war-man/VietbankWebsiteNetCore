@@ -509,3 +509,4 @@ T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netco
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.MvcApplicationPartsAssemblyInfo.cs
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.MvcApplicationPartsAssemblyInfo.cache
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\Razor\Modules\Modular.Modules.TraCuuHoaDon\Views\TraCuuHoaDon\Index.cshtml.g.cs
