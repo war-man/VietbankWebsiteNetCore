@@ -1,0 +1,27 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+    <section class="main-header fixe" id="header">
+        <div class="container">
+            <div class="logo"><a href="/"><img class="lazyload" data-src="/img/logo.png" src="/img/logo.png" alt=""></a></div>
+            <div class="btn-showmenu"> <i class="fa fa-bars"></i></div>
+            <div class="overlay"></div>
+            <div class="main-menu">
+                <div class="btn-closemenu">X</div>
+                <div class="menu-content">
+                    <ul>
+                        <li class="dropdown">
+                            <a href="@Localizer["NganHangSoUrl"]" data-toggle="dropdown" class="dropdown-toggle">@Localizer["NganHangSo"]<span class="caret"><i class="fa fa-caret-down"></i></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="@Localizer["MobileBankingUrl"]">@Localizer["MobileBanking"]</a></li>
+                                <li><a href="@Localizer["InternetBankingUrl"]">@Localizer["InternetBanking"]</a></li>
+                                <li><a href="@Localizer["SmsBankingUrl"]">@Localizer["SmsBanking"]</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="@Localizer["ChuongTrinhKMUrl"]">@Localizer["ChuongTrinhKM"]</a></li>
+                    </ul>
+                </div>
+                <partial name="~/Views/Partial/_MenuPersonalMobile.cshtml" />
+                <partial name="~/Views/Partial/_ToolLinkMobile.cshtml" />
+            </div>
+        </div>
+    </section>

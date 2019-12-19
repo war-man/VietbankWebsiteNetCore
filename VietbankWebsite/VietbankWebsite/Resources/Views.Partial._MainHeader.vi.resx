@@ -165,6 +165,12 @@
   <data name="InterestRateUrl" xml:space="preserve">
     <value>/ho-tro/lai-suat</value>
   </data>
+  <data name="NganHangSo" xml:space="preserve">
+    <value>Ngân hàng số</value>
+  </data>
+  <data name="NganHangSoUrl" xml:space="preserve">
+    <value>/ngan-hang-so</value>
+  </data>
   <data name="NganHangTrucTuyen" xml:space="preserve">
     <value>Ngân hàng trực tuyến</value>
   </data>

@@ -83,6 +83,7 @@ namespace VietbankWebsite.Controllers
             return View(career);
         }
 
+        
         [HttpGet]
         [Route("ve-vietbank/tuyen-dung/{career}")]
         [Route("about-vietbank/careers/{career}")]
