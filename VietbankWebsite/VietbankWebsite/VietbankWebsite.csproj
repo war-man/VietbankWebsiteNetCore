@@ -5,23 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Modules\Modular.Modules.TraCuuHoaDon\bin\**" />
-    <Compile Remove="Modules\Modular.Modules.TraCuuHoaDon\Controllers\**" />
-    <Compile Remove="Modules\Modular.Modules.TraCuuHoaDon\obj\**" />
-    <Content Remove="Modules\Modular.Modules.TraCuuHoaDon\bin\**" />
-    <Content Remove="Modules\Modular.Modules.TraCuuHoaDon\Controllers\**" />
-    <Content Remove="Modules\Modular.Modules.TraCuuHoaDon\obj\**" />
-    <EmbeddedResource Remove="Modules\Modular.Modules.TraCuuHoaDon\bin\**" />
-    <EmbeddedResource Remove="Modules\Modular.Modules.TraCuuHoaDon\Controllers\**" />
-    <EmbeddedResource Remove="Modules\Modular.Modules.TraCuuHoaDon\obj\**" />
-    <None Remove="Modules\Modular.Modules.TraCuuHoaDon\bin\**" />
-    <None Remove="Modules\Modular.Modules.TraCuuHoaDon\Controllers\**" />
-    <None Remove="Modules\Modular.Modules.TraCuuHoaDon\obj\**" />
+    <Compile Remove="Modules\Modular.Modules.TraCuuHoaDon\**" />
+    <Content Remove="Modules\Modular.Modules.TraCuuHoaDon\**" />
+    <EmbeddedResource Remove="Modules\Modular.Modules.TraCuuHoaDon\**" />
+    <None Remove="Modules\Modular.Modules.TraCuuHoaDon\**" />
   </ItemGroup>
 
   <ItemGroup>
     <Compile Remove="Extensions\ReferencesMetadataReferenceFeatureProvider.cs" />
-    <Compile Remove="Modules\Modular.Modules.TraCuuHoaDon\ModuleInitializer.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -42,7 +33,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Modules\Modular.Modules.TraCuuHoaDon\Views\TraCuuHoaDon\Index.cshtml" />
     <None Include="Views\About\Index.cshtml" />
     <None Include="Views\About\Message.cshtml" />
     <None Include="Views\About\Mission.cshtml" />
@@ -72,6 +62,10 @@
     <Reference Include="Microsoft.AspNetCore.Identity.UI">
       <HintPath>C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.aspnetcore.identity.ui\2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Identity.UI.dll</HintPath>
     </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Modules\" />
   </ItemGroup>
 
 </Project>

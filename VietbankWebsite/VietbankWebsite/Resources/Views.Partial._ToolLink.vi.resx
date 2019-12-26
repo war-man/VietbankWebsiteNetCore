@@ -129,6 +129,12 @@
   <data name="ChiNhanhUrl" xml:space="preserve">
     <value>/chi-nhanh</value>
   </data>
+  <data name="HoaDon" xml:space="preserve">
+    <value>Tra cứu hóa đơn</value>
+  </data>
+  <data name="HoaDonUrl" xml:space="preserve">
+    <value>/tracuuhoadon</value>
+  </data>
   <data name="KhuyenMai" xml:space="preserve">
     <value>Khuyến Mãi</value>
   </data>

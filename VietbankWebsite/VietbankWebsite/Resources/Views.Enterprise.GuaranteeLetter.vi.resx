@@ -124,7 +124,7 @@
     <value>/doanh-nghiep</value>
   </data>
   <data name="GuaranteeLetterName" xml:space="preserve">
-    <value>Xác thực thư bão lãnh</value>
+    <value>Xác thực thư bảo lãnh</value>
   </data>
   <data name="GuaranteeLetterUrl" xml:space="preserve">
     <value>/doanh-nghiep/ho-tro/xac-thuc-thu-bao-lanh</value>
