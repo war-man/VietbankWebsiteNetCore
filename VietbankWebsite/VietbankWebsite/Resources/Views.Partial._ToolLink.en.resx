@@ -141,6 +141,12 @@
   <data name="KhuyenMaiUrl" xml:space="preserve">
     <value>/about-vietbank/news/promotion-news</value>
   </data>
+  <data name="LaiSuat" xml:space="preserve">
+    <value>Interest rate</value>
+  </data>
+  <data name="LaiSuatUrl" xml:space="preserve">
+    <value>/personal/support/interest-rate</value>
+  </data>
   <data name="LienHe" xml:space="preserve">
     <value>Contact</value>
   </data>

@@ -147,23 +147,59 @@
   <data name="ChatLuongUrl" xml:space="preserve">
     <value>/about-vietbank/introduce/vietbank-quality-commitment</value>
   </data>
+  <data name="ChoVay" xml:space="preserve">
+    <value>LENDING</value>
+  </data>
+  <data name="ChoVayUrl" xml:space="preserve">
+    <value>/personal/product/lending</value>
+  </data>
   <data name="CoHoiNgheNghiep" xml:space="preserve">
     <value>CAREER OPPORTUNITIES</value>
   </data>
   <data name="CoHoiNgheNghiepUrl" xml:space="preserve">
     <value>/careers</value>
   </data>
-  <data name="DigitalBanking" xml:space="preserve">
-    <value>DIGITAL BANKING</value>
+  <data name="DichVu" xml:space="preserve">
+    <value>SERVICES</value>
   </data>
-  <data name="DigitalBankingUrl" xml:space="preserve">
-    <value>/digital-banking</value>
+  <data name="DichVuNHS" xml:space="preserve">
+    <value>DIGITAL BANKING SERVICE</value>
+  </data>
+  <data name="DichVuNHSUrl" xml:space="preserve">
+    <value>/digital-banking/digital-banking-service</value>
+  </data>
+  <data name="DichVuUrl" xml:space="preserve">
+    <value>/personal/product/services</value>
+  </data>
+  <data name="DigitalPromotionName" xml:space="preserve">
+    <value>PROMOTIONS</value>
+  </data>
+  <data name="DigitalPromotionUrl" xml:space="preserve">
+    <value>/digital-banking/promotions</value>
   </data>
   <data name="DoanhNghiep" xml:space="preserve">
     <value>ENTERPRISE</value>
   </data>
   <data name="DoanhNghiepUrl" xml:space="preserve">
     <value>/enterprise/product</value>
+  </data>
+  <data name="FaqsName" xml:space="preserve">
+    <value>FAQ’S</value>
+  </data>
+  <data name="FaqsUrl" xml:space="preserve">
+    <value>/personal/support/faqs</value>
+  </data>
+  <data name="ForeignExchangeName" xml:space="preserve">
+    <value>FOREIGN EXCHANGE</value>
+  </data>
+  <data name="ForeignExchangeUrl" xml:space="preserve">
+    <value>/personal/support/foreign-exchange</value>
+  </data>
+  <data name="FormsName" xml:space="preserve">
+    <value>FORMS</value>
+  </data>
+  <data name="FormsUrl" xml:space="preserve">
+    <value>/personal/support/forms</value>
   </data>
   <data name="GioiThieuName" xml:space="preserve">
     <value>INTRODUCE</value>
@@ -177,11 +213,35 @@
   <data name="HoiDongQuanTriUrl" xml:space="preserve">
     <value>/about-vietbank/leadership/board-of-directors</value>
   </data>
+  <data name="HoTro" xml:space="preserve">
+    <value>SUPPORT</value>
+  </data>
+  <data name="HoTroUrl" xml:space="preserve">
+    <value>/personal/support</value>
+  </data>
   <data name="HuongDanNopHoSo" xml:space="preserve">
-    <value>GUID</value>
+    <value>GUIDE</value>
   </data>
   <data name="HuongDanNopHoSoUrl" xml:space="preserve">
     <value>/careers/guide</value>
+  </data>
+  <data name="InterestRateBasisName" xml:space="preserve">
+    <value>INTEREST RATE BASIS</value>
+  </data>
+  <data name="InterestRateBasisUrl" xml:space="preserve">
+    <value>/personal/support/interest-rate-basic</value>
+  </data>
+  <data name="InterestRateName" xml:space="preserve">
+    <value>INTEREST RATE</value>
+  </data>
+  <data name="InterestRateUrl" xml:space="preserve">
+    <value>/personal/support/interest-rate</value>
+  </data>
+  <data name="InternetBankingName" xml:space="preserve">
+    <value>INTERNET BANKING VIETBANK DIGITAL</value>
+  </data>
+  <data name="InternetBankingNameUrl" xml:space="preserve">
+    <value>/personal/product/online-banking/corporate-banking-3916</value>
   </data>
   <data name="LienHeName" xml:space="preserve">
     <value>CONTACT</value>
@@ -189,14 +249,32 @@
   <data name="LienHeUrl" xml:space="preserve">
     <value>/ve-vietbank/contact</value>
   </data>
+  <data name="MobileBankingName" xml:space="preserve">
+    <value>MOBILE BANKING VIETBANK DIGITAL</value>
+  </data>
+  <data name="MobileBankingUrl" xml:space="preserve">
+    <value>/personal/product/online-banking/mobile-banking-4041</value>
+  </data>
   <data name="NganHangDaiLyName" xml:space="preserve">
     <value>LIST OF CORRESPONDENT BANKS</value>
   </data>
   <data name="NganHangDaiLyUrl" xml:space="preserve">
     <value>/about-vietbank/introduce/correspondent-bank-agent</value>
   </data>
+  <data name="NganHangSo" xml:space="preserve">
+    <value>DIGITAL BANKING</value>
+  </data>
+  <data name="NganHangSoUrl" xml:space="preserve">
+    <value>/digital-banking</value>
+  </data>
   <data name="NganHangTrucTuyen" xml:space="preserve">
     <value>VIETBANK DIGITAL</value>
+  </data>
+  <data name="NganHangTrucTuyenName" xml:space="preserve">
+    <value>VIETBANK DIGITAL</value>
+  </data>
+  <data name="NganHangTrucTuyenNavUrl" xml:space="preserve">
+    <value>/personal/product/online-banking</value>
   </data>
   <data name="NganHangTrucTuyenUrl" xml:space="preserve">
     <value>https://online.vietbank.com.vn</value>
@@ -219,11 +297,29 @@
   <data name="SanPhamUrl" xml:space="preserve">
     <value>/</value>
   </data>
+  <data name="SavingAccountInquiryName" xml:space="preserve">
+    <value>SAVING ACCOUNT INQUIRY</value>
+  </data>
+  <data name="SavingAccountInquiryUrl" xml:space="preserve">
+    <value>/personal/support/saving-account-inquiry</value>
+  </data>
+  <data name="SmsBankingName" xml:space="preserve">
+    <value>SMS BANKING SERVICE</value>
+  </data>
+  <data name="SmsBankingUrl" xml:space="preserve">
+    <value>/personal/product/online-banking/sms-banking-3915</value>
+  </data>
   <data name="TamNhinSuMenhName" xml:space="preserve">
     <value>VISION - MISSION - CORE VALUE</value>
   </data>
   <data name="TamNhinSuMenhUrl" xml:space="preserve">
     <value>/about-vietbank/introduce/vision-mission-core-value</value>
+  </data>
+  <data name="TariffName" xml:space="preserve">
+    <value>TARIFF</value>
+  </data>
+  <data name="TariffUrl" xml:space="preserve">
+    <value>/personal/support/tariff</value>
   </data>
   <data name="The" xml:space="preserve">
     <value>CARD</value>
@@ -236,6 +332,18 @@
   </data>
   <data name="ThuNgoUrl" xml:space="preserve">
     <value>/about-vietbank/introduce/message-from-the-chairman-board-of-directors</value>
+  </data>
+  <data name="TienGuiThanhToan" xml:space="preserve">
+    <value>DEPOSIT PAYMENT</value>
+  </data>
+  <data name="TienGuiThanhToanUrl" xml:space="preserve">
+    <value>/personal/product/deposit-payment</value>
+  </data>
+  <data name="TienGuiTietKiem" xml:space="preserve">
+    <value>SAVED MONEY</value>
+  </data>
+  <data name="TienGuiTietKiemUrl" xml:space="preserve">
+    <value>/personal/product/saved-money</value>
   </data>
   <data name="TinKhuyenMaiName" xml:space="preserve">
     <value>PROMOTION NEWS</value>
@@ -255,6 +363,12 @@
   <data name="TinVietbankUrl" xml:space="preserve">
     <value>/about-vietbank/news/vietbank-news</value>
   </data>
+  <data name="Tools&amp;CalculatorsName" xml:space="preserve">
+    <value>TOOLS &amp; CALCULATORS</value>
+  </data>
+  <data name="Tools&amp;CalculatorsUrl" xml:space="preserve">
+    <value>/personal/support/tools-calculators</value>
+  </data>
   <data name="TuanThuName" xml:space="preserve">
     <value>COMPLIANCE POLICY</value>
   </data>
@@ -272,6 +386,12 @@
   </data>
   <data name="VeVietBankUrl" xml:space="preserve">
     <value>/about-vietbank</value>
+  </data>
+  <data name="VideoName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="VideoUrl" xml:space="preserve">
+    <value />
   </data>
   <data name="VietbankTvName" xml:space="preserve">
     <value>VIETBANK TV</value>

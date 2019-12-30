@@ -153,6 +153,12 @@
   <data name="CoHoiNgheNghiepUrl" xml:space="preserve">
     <value>/tuyen-dung</value>
   </data>
+  <data name="DigitalBanking" xml:space="preserve">
+    <value>NGÂN HÀNG SỐ</value>
+  </data>
+  <data name="DigitalBankingUrl" xml:space="preserve">
+    <value>/ngan-hang-so</value>
+  </data>
   <data name="DoanhNghiep" xml:space="preserve">
     <value>DOANH NGHIỆP</value>
   </data>
@@ -220,7 +226,7 @@
     <value>/ve-vietbank/gioi-thieu/tam-nhin-su-menh-gia-tri-cot-loi</value>
   </data>
   <data name="The" xml:space="preserve">
-    <value>THẺ &amp; NH SỐ</value>
+    <value>THẺ</value>
   </data>
   <data name="TheUrl" xml:space="preserve">
     <value>/the</value>

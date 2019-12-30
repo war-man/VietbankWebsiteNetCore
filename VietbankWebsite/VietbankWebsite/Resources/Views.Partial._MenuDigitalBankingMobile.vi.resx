@@ -118,165 +118,285 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="BanDieuHanhName" xml:space="preserve">
-    <value>THE MANAGEMENT</value>
+    <value>BAN ĐIỀU HÀNH</value>
   </data>
   <data name="BanDieuHanhUrl" xml:space="preserve">
-    <value>/about-vietbank/leadership/the-management</value>
+    <value>/ve-vietbank/ban-lanh-dao/ban-dieu-hanh</value>
   </data>
   <data name="BanKiemSoatName" xml:space="preserve">
-    <value>SUPERVISORY BOARD</value>
+    <value>BAN KIỂM SOÁT</value>
   </data>
   <data name="BanKiemSoatUrl" xml:space="preserve">
-    <value>/about-vietbank/leadership/supervisory-board</value>
+    <value>/ve-vietbank/ban-lanh-dao/ban-kiem-soat</value>
   </data>
   <data name="BanLanhDaoName" xml:space="preserve">
-    <value>LEADERSHIP</value>
+    <value>BAN LÃNH ĐẠO</value>
   </data>
   <data name="BanLanhDaoUrl" xml:space="preserve">
-    <value>/about-vietbank/leadership/board-of-directors</value>
+    <value>/ve-vietbank/ban-lanh-dao/hoi-dong-quan-tri</value>
   </data>
   <data name="CaNhan" xml:space="preserve">
-    <value>PERSONAL</value>
+    <value>CÁ NHÂN</value>
   </data>
   <data name="CaNhanUrl" xml:space="preserve">
-    <value>/personal/product</value>
+    <value>/ca-nhan/san-pham</value>
   </data>
   <data name="ChatLuongName" xml:space="preserve">
-    <value>VIETBANK QUALITY COMMITMENT</value>
+    <value>CHÍNH SÁCH CHẤT LƯỢNG</value>
   </data>
   <data name="ChatLuongUrl" xml:space="preserve">
-    <value>/about-vietbank/introduce/vietbank-quality-commitment</value>
+    <value>/ve-vietbank/gioi-thieu/chinh-sach-chat-luong</value>
+  </data>
+  <data name="ChoVay" xml:space="preserve">
+    <value>CHO VAY</value>
+  </data>
+  <data name="ChoVayUrl" xml:space="preserve">
+    <value>/ca-nhan/san-pham/cho-vay</value>
   </data>
   <data name="CoHoiNgheNghiep" xml:space="preserve">
-    <value>CAREER OPPORTUNITIES</value>
+    <value>CƠ HỘI NGHỀ NGHIỆP</value>
   </data>
   <data name="CoHoiNgheNghiepUrl" xml:space="preserve">
-    <value>/careers</value>
+    <value>/tuyen-dung</value>
   </data>
-  <data name="DigitalBanking" xml:space="preserve">
-    <value>DIGITAL BANKING</value>
+  <data name="DichVu" xml:space="preserve">
+    <value>Dịch vụ</value>
   </data>
-  <data name="DigitalBankingUrl" xml:space="preserve">
-    <value>/digital-banking</value>
+  <data name="DichVuNHS" xml:space="preserve">
+    <value>DỊCH VỤ NGÂN HÀNG SỐ</value>
+  </data>
+  <data name="DichVuNHSUrl" xml:space="preserve">
+    <value>/ngan-hang-so/dich-vu-ngan-hang-so</value>
+  </data>
+  <data name="DichVuUrl" xml:space="preserve">
+    <value>/ca-nhan/san-pham/dich-vu</value>
+  </data>
+  <data name="DigitalPromotionName" xml:space="preserve">
+    <value>CHƯƠNG TRÌNH KHUYẾN MÃI</value>
+  </data>
+  <data name="DigitalPromotionUrl" xml:space="preserve">
+    <value>/ngan-hang-so/chuong-trinh-khuyen-mai</value>
   </data>
   <data name="DoanhNghiep" xml:space="preserve">
-    <value>ENTERPRISE</value>
+    <value>DOANH NGHIỆP</value>
   </data>
   <data name="DoanhNghiepUrl" xml:space="preserve">
-    <value>/enterprise/product</value>
+    <value>/doanh-nghiep/san-pham</value>
+  </data>
+  <data name="FaqsName" xml:space="preserve">
+    <value>CÂU HỎI THƯỜNG GẶP</value>
+  </data>
+  <data name="FaqsUrl" xml:space="preserve">
+    <value>/ca-nhan/ho-tro/cau-hoi-thuong-gap</value>
+  </data>
+  <data name="ForeignExchangeName" xml:space="preserve">
+    <value>TỶ GIÁ</value>
+  </data>
+  <data name="ForeignExchangeUrl" xml:space="preserve">
+    <value>/ca-nhan/ho-tro/ty-gia</value>
+  </data>
+  <data name="FormsName" xml:space="preserve">
+    <value>BIỂU MẪU</value>
+  </data>
+  <data name="FormsUrl" xml:space="preserve">
+    <value>/ca-nhan/ho-tro/bieu-mau</value>
   </data>
   <data name="GioiThieuName" xml:space="preserve">
-    <value>INTRODUCE</value>
+    <value>GIỚI THIỆU</value>
   </data>
   <data name="GioiThieuUrl" xml:space="preserve">
-    <value>/about-vietbank/introduce</value>
+    <value> /ve-vietbank/gioi-thieu</value>
   </data>
   <data name="HoiDongQuanTriName" xml:space="preserve">
-    <value>BOARD OF DIRECTORS</value>
+    <value>HỘI ĐỒNG QUẢN TRỊ</value>
   </data>
   <data name="HoiDongQuanTriUrl" xml:space="preserve">
-    <value>/about-vietbank/leadership/board-of-directors</value>
+    <value>/ve-vietbank/ban-lanh-dao/hoi-dong-quan-tri</value>
+  </data>
+  <data name="HoTro" xml:space="preserve">
+    <value>HỖ TRỢ</value>
+  </data>
+  <data name="HoTroUrl" xml:space="preserve">
+    <value>/ca-nhan/ho-tro</value>
   </data>
   <data name="HuongDanNopHoSo" xml:space="preserve">
-    <value>GUID</value>
+    <value>HƯỚNG DẪN NỘP HỒ SƠ</value>
   </data>
   <data name="HuongDanNopHoSoUrl" xml:space="preserve">
-    <value>/careers/guide</value>
+    <value>/tuyen-dung/huong-dan-nop-ho-so</value>
+  </data>
+  <data name="InterestRateBasisName" xml:space="preserve">
+    <value>LÃI SUẤT CƠ SỞ</value>
+  </data>
+  <data name="InterestRateBasisUrl" xml:space="preserve">
+    <value>/ca-nhan/ho-tro/lai-suat-co-so</value>
+  </data>
+  <data name="InterestRateName" xml:space="preserve">
+    <value>LÃI SUẤT</value>
+  </data>
+  <data name="InterestRateUrl" xml:space="preserve">
+    <value>/ca-nhan/ho-tro/lai-suat</value>
+  </data>
+  <data name="InternetBankingName" xml:space="preserve">
+    <value>INTERNET BANKING VIETBANK DIGITAL</value>
+  </data>
+  <data name="InternetBankingNameUrl" xml:space="preserve">
+    <value>/ca-nhan/san-pham/ngan-hang-truc-tuyen/ngan-hang-truc-tuyen</value>
   </data>
   <data name="LienHeName" xml:space="preserve">
-    <value>CONTACT</value>
+    <value>LIÊN HỆ</value>
   </data>
   <data name="LienHeUrl" xml:space="preserve">
-    <value>/ve-vietbank/contact</value>
+    <value>/ve-vietbank/lien-he</value>
+  </data>
+  <data name="MobileBankingName" xml:space="preserve">
+    <value>MOBILE BANKING VIETBANK DIGITAL</value>
+  </data>
+  <data name="MobileBankingUrl" xml:space="preserve">
+    <value>/ca-nhan/san-pham/ngan-hang-truc-tuyen/mobile-banking</value>
   </data>
   <data name="NganHangDaiLyName" xml:space="preserve">
-    <value>LIST OF CORRESPONDENT BANKS</value>
+    <value>VIETBANK DIGITAL</value>
   </data>
   <data name="NganHangDaiLyUrl" xml:space="preserve">
-    <value>/about-vietbank/introduce/correspondent-bank-agent</value>
+    <value>/ve-vietbank/gioi-thieu/ngan-hang-dai-ly</value>
+  </data>
+  <data name="NganHangSo" xml:space="preserve">
+    <value>NGÂN HÀNG SỐ</value>
+  </data>
+  <data name="NganHangSoUrl" xml:space="preserve">
+    <value>/ngan-hang-so</value>
   </data>
   <data name="NganHangTrucTuyen" xml:space="preserve">
     <value>VIETBANK DIGITAL</value>
+  </data>
+  <data name="NganHangTrucTuyenName" xml:space="preserve">
+    <value>VIETBANK DIGITAL</value>
+  </data>
+  <data name="NganHangTrucTuyenNavUrl" xml:space="preserve">
+    <value>/ca-nhan/san-pham/ngan-hang-truc-tuyen</value>
   </data>
   <data name="NganHangTrucTuyenUrl" xml:space="preserve">
     <value>https://online.vietbank.com.vn</value>
   </data>
   <data name="QuanHeCoDong" xml:space="preserve">
-    <value>SHAREHOLDERS</value>
+    <value>QUAN HỆ CỔ ĐÔNG</value>
   </data>
   <data name="QuanHeCoDongUrl" xml:space="preserve">
-    <value>/shareholders</value>
+    <value>/quan-he-co-dong</value>
   </data>
   <data name="QuaTrinhPhatTrienName" xml:space="preserve">
-    <value>DEVELOPMENT MILESTONES</value>
+    <value>QUÁ TRÌNH PHÁT TRIỂN</value>
   </data>
   <data name="QuaTrinhPhatTrienUrl" xml:space="preserve">
-    <value>/about-vietbank/introduce/development-milestones</value>
+    <value>/ve-vietbank/gioi-thieu/qua-trinh-phat-trien</value>
   </data>
   <data name="SanPham" xml:space="preserve">
-    <value>PRODUCT</value>
+    <value>SẢN PHẨM</value>
   </data>
   <data name="SanPhamUrl" xml:space="preserve">
     <value>/</value>
   </data>
+  <data name="SavingAccountInquiryName" xml:space="preserve">
+    <value>TRUY VẤN SỔ TIẾT KIỆM</value>
+  </data>
+  <data name="SavingAccountInquiryUrl" xml:space="preserve">
+    <value>/ca-nhan/ho-tro/truy-van-so-tiet-kiem</value>
+  </data>
+  <data name="SmsBankingName" xml:space="preserve">
+    <value>DỊCH VỤ SMS BANKING</value>
+  </data>
+  <data name="SmsBankingUrl" xml:space="preserve">
+    <value>/ca-nhan/san-pham/ngan-hang-truc-tuyen/smsbao-thay-doi-so-du</value>
+  </data>
   <data name="TamNhinSuMenhName" xml:space="preserve">
-    <value>VISION - MISSION - CORE VALUE</value>
+    <value>TẦM NHÌN - SỨ MỆNH - GIÁ TRỊ CỐT LỖI</value>
   </data>
   <data name="TamNhinSuMenhUrl" xml:space="preserve">
-    <value>/about-vietbank/introduce/vision-mission-core-value</value>
+    <value>/ve-vietbank/gioi-thieu/tam-nhin-su-menh-gia-tri-cot-loi</value>
+  </data>
+  <data name="TariffName" xml:space="preserve">
+    <value>BIỂU PHÍ</value>
+  </data>
+  <data name="TariffUrl" xml:space="preserve">
+    <value>/ca-nhan/ho-tro/bieu-phi</value>
   </data>
   <data name="The" xml:space="preserve">
-    <value>CARD</value>
+    <value>THẺ</value>
   </data>
   <data name="TheUrl" xml:space="preserve">
-    <value>/card</value>
+    <value>/the</value>
   </data>
   <data name="ThuNgoName" xml:space="preserve">
-    <value>MESSAGE FROM THE CHAIRMAN BOARD OF DIRECTORS</value>
+    <value>THƯ NGỎ CỦA CHỦ TỊCH HỘI ĐỒNG QUẢN TRỊ</value>
   </data>
   <data name="ThuNgoUrl" xml:space="preserve">
-    <value>/about-vietbank/introduce/message-from-the-chairman-board-of-directors</value>
+    <value>/ve-vietbank/gioi-thieu/thu-ngo-cua-chu-tich-hoi-dong-quan-tri</value>
+  </data>
+  <data name="TienGuiThanhToan" xml:space="preserve">
+    <value>TIỀN GỬI THANH TOÁN</value>
+  </data>
+  <data name="TienGuiThanhToanUrl" xml:space="preserve">
+    <value>/ca-nhan/san-pham/tien-gui-thanh-toan</value>
+  </data>
+  <data name="TienGuiTietKiem" xml:space="preserve">
+    <value>TIỀN GỬI TIẾT KIỆM</value>
+  </data>
+  <data name="TienGuiTietKiemUrl" xml:space="preserve">
+    <value>/ca-nhan/san-pham/tien-gui-tiet-kiem</value>
   </data>
   <data name="TinKhuyenMaiName" xml:space="preserve">
-    <value>PROMOTION NEWS</value>
+    <value>TIN KHUYẾN MÃI</value>
+  </data>
+  <data name="TinKhuyenMaiPersonalName" xml:space="preserve">
+    <value>TIN KHUYỄN MÃI</value>
+  </data>
+  <data name="TinKhuyenMaiPersonalUrl" xml:space="preserve">
+    <value>/ca-nhan/tin-khuyen-mai</value>
   </data>
   <data name="TinKhuyenMaiUrl" xml:space="preserve">
-    <value>/about-vietbank/news/promotion-news</value>
+    <value>/ve-vietbank/tin-tuc/tin-khuyen-mai</value>
   </data>
   <data name="TinTucName" xml:space="preserve">
-    <value>NEWS</value>
+    <value>TIN TỨC</value>
   </data>
   <data name="TinTucUrl" xml:space="preserve">
-    <value>/about-vietbank/news</value>
+    <value>/ve-vietbank/tin-tuc</value>
   </data>
   <data name="TinVietbankName" xml:space="preserve">
-    <value>VIETBANK NEWS</value>
+    <value>TIN VIETBANK</value>
   </data>
   <data name="TinVietbankUrl" xml:space="preserve">
-    <value>/about-vietbank/news/vietbank-news</value>
+    <value>/ve-vietbank/tin-tuc/tin-vietbank</value>
+  </data>
+  <data name="Tools&amp;CalculatorsName" xml:space="preserve">
+    <value>CÔNG CỤ TÍNH TOÁN</value>
+  </data>
+  <data name="Tools&amp;CalculatorsUrl" xml:space="preserve">
+    <value>/ca-nhan/ho-tro/cong-cu-tinh-toan</value>
   </data>
   <data name="TuanThuName" xml:space="preserve">
-    <value>COMPLIANCE POLICY</value>
+    <value>CHÍNH SÁCH TUÂN THỦ</value>
   </data>
   <data name="TuanThuUrl" xml:space="preserve">
-    <value>/about-vietbank/introduce/compliance-policy</value>
+    <value>/ve-vietbank/gioi-thieu/chinh-sach-tuan-thu</value>
   </data>
   <data name="TuyenDung" xml:space="preserve">
-    <value>CAREERS</value>
+    <value>TUYỂN DỤNG</value>
   </data>
   <data name="TuyenDungUrl" xml:space="preserve">
-    <value>/careers</value>
+    <value>/tuyen-dung</value>
   </data>
   <data name="VeVietBank" xml:space="preserve">
-    <value>ABOUT VIETBANK</value>
+    <value>VỀ VIETBANK</value>
   </data>
   <data name="VeVietBankUrl" xml:space="preserve">
-    <value>/about-vietbank</value>
+    <value>/ve-vietbank</value>
   </data>
   <data name="VietbankTvName" xml:space="preserve">
     <value>VIETBANK TV</value>
   </data>
   <data name="VietbankTvUrl" xml:space="preserve">
-    <value>/about-vietbank/news/vietbank-tv</value>
+    <value>/ve-vietbank/tin-tuc/vietbank-tv</value>
   </data>
 </root>

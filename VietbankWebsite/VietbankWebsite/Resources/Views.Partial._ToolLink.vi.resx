@@ -141,6 +141,12 @@
   <data name="KhuyenMaiUrl" xml:space="preserve">
     <value>/ve-vietbank/tin-tuc/tin-khuyen-mai</value>
   </data>
+  <data name="LaiSuat" xml:space="preserve">
+    <value>Lãi suất</value>
+  </data>
+  <data name="LaiSuatUrl" xml:space="preserve">
+    <value>/ca-nhan/ho-tro/lai-suat</value>
+  </data>
   <data name="LienHe" xml:space="preserve">
     <value>Liên Hệ</value>
   </data>
