@@ -14,6 +14,7 @@ namespace VietbankWebsite.Entities
         [Column("ID")]
         public int Id { get; set; }
         public int BranchType { get; set; }
+        public string BranchCode { get; set; }
         public string TransAgencyName { get; set; }
         public string Latitude { get; set; }
         public string Longtitude { get; set; }

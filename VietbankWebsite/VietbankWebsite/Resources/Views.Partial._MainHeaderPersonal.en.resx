@@ -178,13 +178,10 @@
     <value>/personal/support/interest-rate</value>
   </data>
   <data name="NganHangTrucTuyen" xml:space="preserve">
-    <value>Internet Banking</value>
-  </data>
-  <data name="NganHangTrucTuyen1" xml:space="preserve">
-    <value>Internet Banking</value>
+    <value>Vietbank Digital</value>
   </data>
   <data name="NganHangTrucTuyenName" xml:space="preserve">
-    <value>Online Banking</value>
+    <value>Vietbank Digital</value>
   </data>
   <data name="NganHangTrucTuyenNavUrl" xml:space="preserve">
     <value>/personal/product/online-banking</value>

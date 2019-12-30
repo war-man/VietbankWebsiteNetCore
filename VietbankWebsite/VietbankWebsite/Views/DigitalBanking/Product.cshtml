@@ -1,7 +1,8 @@
 ﻿@using Microsoft.AspNetCore.Mvc.Localization
-@model VietbankWebsite.Entities.CategoryProduct
+@*@model VietbankWebsite.Entities.CategoryProduct*@
 @inject IViewLocalizer Localizer
 @{
+    ViewData["Title"] = Localizer["DichVuNHS"].Value;
     Layout = "~/Views/Shared/_LayoutDigitalBanking.cshtml";
 }
 
@@ -19,13 +20,13 @@
         </div>
     </section>
     <section class="banner-page imageBanner">
-        <div style="background-image:url('@Model.Thumbnail')" class="imgBg"></div>
+        <div style="background-image:url('/img/banner_page/vietbank-bg.jpg')" class="imgBg"></div>
         <div class="desc">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-5 col-lg-5 col-xl-5">
-                        <h1 class="title">@Model.Title</h1>
-                        <div class="content">@Html.Raw(Model.Description)</div>
+                        <h1 class="title">@Localizer["DichVuNHS"]</h1>
+                        @*<div class="content">@Html.Raw(Model.Description)</div>*@
                     </div>
                 </div>
             </div>
@@ -37,25 +38,56 @@
         <div class="container">
             <div class="sanpham-wrap">
                 <div class="row flex flex-wrap">
-                    @foreach (var item in Model.ListCategoryProduct)
-                    {
-                        <div class="col-xs-12 col-md-4 col-lg-4">
-                            <div class="item-sp">
-                                <figure>
-                                    <a href="@item.CategoryDetailShort.Url"><img class="lazyload" data-src="@item.CategoryDetailShort.Thumbnail" src="@item.CategoryDetailShort.Thumbnail" alt="@item.CategoryDetailShort.Title"></a>
-                                    <figcaption>
-                                        <h3> <a href="@item.CategoryDetailShort.Url">@item.CategoryDetailShort.Title</a></h3>
-                                        <ul>
-                                            @foreach (var subItem in item.CategoryProductShorts)
-                                            {
-                                                <li><a href="@subItem.Url">@subItem.Title</a></li>
-                                            }
-                                        </ul><a href="@item.CategoryDetailShort.Url" class="readMore"><span>@Localizer["ViewAllName"] </span><i class="fa fa-angle-right"></i></a>
-                                    </figcaption>
-                                </figure>
-                            </div>
+                    @*@foreach (var item in Model.ListCategoryProduct)
+        {
+            <div class="col-xs-12 col-md-4 col-lg-4">
+                <div class="item-sp">
+                    <figure>
+                        <a href="@item.CategoryDetailShort.Url"><img class="lazyload" data-src="@item.CategoryDetailShort.Thumbnail" src="@item.CategoryDetailShort.Thumbnail" alt="@item.CategoryDetailShort.Title"></a>
+                        <figcaption>
+                            <h3> <a href="@item.CategoryDetailShort.Url">@item.CategoryDetailShort.Title</a></h3>
+                            <ul>
+                                @foreach (var subItem in item.CategoryProductShorts)
+                                {
+                                    <li><a href="@subItem.Url">@subItem.Title</a></li>
+                                }
+                            </ul><a href="@item.CategoryDetailShort.Url" class="readMore"><span>@Localizer["ViewAllName"] </span><i class="fa fa-angle-right"></i></a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        }*@
+
+                    <div class="col-xs-12 col-md-4 col-lg-4">
+                        <div class="item-sp">
+                            <figure>
+                                <a href="@Localizer["MobileBankingUrl"]"><img class="lazyload" data-src="https://static.vietbank.com.vn/web/SPCN/NganHangTrucTuyen/Mobilebanking/mobile-banking.jpg" src="https://static.vietbank.com.vn/web/SPCN/NganHangTrucTuyen/Mobilebanking/mobile-banking.jpg" alt="@Localizer["MobileBankingName"]"></a>
+                                <figcaption>
+                                    <h3> <a href="@Localizer["MobileBankingUrl"]">@Localizer["MobileBankingName"]</a></h3>
+                                </figcaption>
+                            </figure>
                         </div>
-                    }
+                    </div>
+                    <div class="col-xs-12 col-md-4 col-lg-4">
+                        <div class="item-sp">
+                            <figure>
+                                <a href="@Localizer["InternetBankingNameUrl"]"><img class="lazyload" data-src="https://static.vietbank.com.vn/web/SPCN/NganHangTrucTuyen/Mobilebanking/internet-banking_1.jpg" src="https://static.vietbank.com.vn/web/SPCN/NganHangTrucTuyen/Mobilebanking/internet-banking_1.jpg" alt="@Localizer["InternetBankingName"]"></a>
+                                <figcaption>
+                                    <h3> <a href="@Localizer["InternetBankingNameUrl"]">@Localizer["InternetBankingName"]</a></h3>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-4 col-lg-4">
+                        <div class="item-sp">
+                            <figure>
+                                <a href="@Localizer["SmsBankingUrl"]"><img class="lazyload" data-src="https://static.vietbank.com.vn/web/SAN%20PHAM%20DN/ngan-hang-truc-tuyen/3.3-sms-bao-thay-doi-so-du.jpg" src="https://static.vietbank.com.vn/web/SAN%20PHAM%20DN/ngan-hang-truc-tuyen/3.3-sms-bao-thay-doi-so-du.jpg" alt="@Localizer["SmsBankingName"]"></a>
+                                <figcaption>
+                                    <h3> <a href="@Localizer["SmsBankingUrl"]">@Localizer["SmsBankingName"]</a></h3>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

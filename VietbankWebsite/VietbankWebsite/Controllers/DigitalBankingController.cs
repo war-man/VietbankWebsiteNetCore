@@ -38,15 +38,16 @@ namespace VietbankWebsite.Controllers
         [Route("digital-banking-service")]
         public async Task<IActionResult> Product()
         {
-            var keyProduct = GetLangCurrent() == "vi" ? CacheKeys.PersonalProductVi : CacheKeys.PersonalProductEn;
-            CategoryProduct products;
-            if (!_cache.TryGetValue(keyProduct, out products))
-            {
-                products = await _productService.ListCategoryProducts(1078, _localizer["DichVuNHSUrl"], GetLangCurrent()) ?? new CategoryProduct();
-                _cache.Set(keyProduct, products, cacheEntryOptions);
-            }
-            ViewData["Title"] = products.Title;
-            return View(products);
+            //var keyProduct = GetLangCurrent() == "vi" ? CacheKeys.PersonalProductVi : CacheKeys.PersonalProductEn;
+            //CategoryProduct products;
+            //if (!_cache.TryGetValue(keyProduct, out products))
+            //{
+            //    products = await _productService.ListCategoryProducts(1078, _localizer["DichVuNHSUrl"], GetLangCurrent()) ?? new CategoryProduct();
+            //    _cache.Set(keyProduct, products, cacheEntryOptions);
+            //}
+            //ViewData["Title"] = products.Title;
+            //return View(products);
+            return View();
         }
 
         [HttpGet]

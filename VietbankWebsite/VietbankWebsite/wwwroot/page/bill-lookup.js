@@ -3,4 +3,9 @@ var link = document.createElement('a');
 link.innerHTML = 'Download PDF file';
 link.download = 'file.pdf';
 link.href = 'data:application/octet-stream;base64,' + b64;
-$('#link-pdf').append(link);
+//$('#link-pdf').append(link);
+
+function createAndOpenFile() {
+    var stupidExample = '<?xml version="1.0" encoding="utf-8"?><aTag>something</aTag>';
+    document.open('data:Application/octet-stream,'+'Le Anh Toan');
+}

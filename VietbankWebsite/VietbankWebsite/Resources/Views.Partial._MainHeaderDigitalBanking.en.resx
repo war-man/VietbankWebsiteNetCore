@@ -127,24 +127,24 @@
     <value>Internet Banking Vietbank Digital</value>
   </data>
   <data name="InternetBankingUrl" xml:space="preserve">
-    <value>/digital-banking/digital-banking-service/internet-banking-vietbank-digital</value>
+    <value>/personal/product/online-banking/corporate-banking-3916</value>
   </data>
   <data name="MobileBanking" xml:space="preserve">
     <value>Mobile Banking Vietbank Digital</value>
   </data>
   <data name="MobileBankingUrl" xml:space="preserve">
-    <value>/digital-banking/digital-banking-service/mobile-banking-vietbank-digital</value>
+    <value>/personal/product/online-banking/mobile-banking-4041</value>
   </data>
   <data name="NganHangSo" xml:space="preserve">
     <value>Digital Banking Service</value>
   </data>
   <data name="NganHangSoUrl" xml:space="preserve">
-    <value>/digital-banking/digital-banking-service</value>
+    <value>/personal/product/online-banking/corporate-banking-3916</value>
   </data>
   <data name="SmsBanking" xml:space="preserve">
     <value>SMS Banking Service</value>
   </data>
   <data name="SmsBankingUrl" xml:space="preserve">
-    <value>/digital-banking/digital-banking-service/dich-vu-sms-banking</value>
+    <value>/personal/product/online-banking/sms-banking-3915</value>
   </data>
 </root>

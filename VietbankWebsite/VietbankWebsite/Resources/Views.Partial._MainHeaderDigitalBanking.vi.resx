@@ -127,24 +127,24 @@
     <value>Internet Banking Vietbank Digital</value>
   </data>
   <data name="InternetBankingUrl" xml:space="preserve">
-    <value>/ngan-hang-so/dich-vu-ngan-hang-so/internet-banking-vietbank-digital</value>
+    <value>/ca-nhan/san-pham/ngan-hang-truc-tuyen/ngan-hang-truc-tuyen</value>
   </data>
   <data name="MobileBanking" xml:space="preserve">
     <value>Mobile Banking Vietbank Digital</value>
   </data>
   <data name="MobileBankingUrl" xml:space="preserve">
-    <value>/ngan-hang-so/dich-vu-ngan-hang-so/mobile-banking-vietbank-digital</value>
+    <value>/ca-nhan/san-pham/ngan-hang-truc-tuyen/mobile-banking</value>
   </data>
   <data name="NganHangSo" xml:space="preserve">
     <value>Dịch vụ ngân hàng số</value>
   </data>
   <data name="NganHangSoUrl" xml:space="preserve">
-    <value>/ngan-hang-so/dich-vu-ngan-hang-so</value>
+    <value>/ca-nhan/san-pham/ngan-hang-truc-tuyen/ngan-hang-truc-tuyen</value>
   </data>
   <data name="SmsBanking" xml:space="preserve">
     <value>Dịch vụ SMS Banking</value>
   </data>
   <data name="SmsBankingUrl" xml:space="preserve">
-    <value>/ngan-hang-so/dich-vu-ngan-hang-so/dich-vu-sms-banking</value>
+    <value>/ca-nhan/san-pham/ngan-hang-truc-tuyen/smsbao-thay-doi-so-du</value>
   </data>
 </root>

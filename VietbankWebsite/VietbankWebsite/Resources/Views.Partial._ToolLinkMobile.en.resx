@@ -129,6 +129,12 @@
   <data name="ChiNhanhUrl" xml:space="preserve">
     <value>/branches</value>
   </data>
+  <data name="HoaDon" xml:space="preserve">
+    <value>Look up the bill</value>
+  </data>
+  <data name="HoaDonUrl" xml:space="preserve">
+    <value>/tracuuhoadon</value>
+  </data>
   <data name="KhuyenMai" xml:space="preserve">
     <value>Promotions</value>
   </data>
@@ -142,7 +148,7 @@
     <value>/about-vietbank/contact</value>
   </data>
   <data name="NganHangTrucTuyen" xml:space="preserve">
-    <value>Internet Banking</value>
+    <value>Vietbank Digital</value>
   </data>
   <data name="NganHangTrucTuyenUrl" xml:space="preserve">
     <value>https://online.vietbank.com.vn</value>

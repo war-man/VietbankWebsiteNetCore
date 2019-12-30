@@ -129,6 +129,12 @@
   <data name="ChiNhanhUrl" xml:space="preserve">
     <value>/chi-nhanh</value>
   </data>
+  <data name="HoaDon" xml:space="preserve">
+    <value>Tra cứu hóa đơn</value>
+  </data>
+  <data name="HoaDonUrl" xml:space="preserve">
+    <value>/tracuuhoadon</value>
+  </data>
   <data name="KhuyenMai" xml:space="preserve">
     <value>Khuyến Mãi</value>
   </data>
@@ -142,7 +148,7 @@
     <value>/ve-vietbank/lien-he</value>
   </data>
   <data name="NganHangTrucTuyen" xml:space="preserve">
-    <value>Ngân hàng trực tuyến</value>
+    <value>Vietbank Digital</value>
   </data>
   <data name="NganHangTrucTuyenUrl" xml:space="preserve">
     <value>https://online.vietbank.com.vn</value>

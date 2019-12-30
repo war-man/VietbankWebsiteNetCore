@@ -66,6 +66,7 @@
 
   <ItemGroup>
     <Folder Include="Modules\" />
+    <Folder Include="wwwroot\billlookup\" />
   </ItemGroup>
 
 </Project>

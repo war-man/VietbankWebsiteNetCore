@@ -124,7 +124,7 @@
     <value>/the/uu-dai/uu-dai-danh-cho-chu-the</value>
   </data>
   <data name="NganHangTrucTuyen" xml:space="preserve">
-    <value>NGÂN HÀNG TRỰC TUYẾN</value>
+    <value>Vietbank Digital</value>
   </data>
   <data name="NganHangTrucTuyenUrl" xml:space="preserve">
     <value>https://online.vietbank.com.vn</value>

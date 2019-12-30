@@ -57,8 +57,6 @@
         </div>
         <div class="container">
             <div class="row" id="infoGuarantee" style="padding-top:20px">
-                <div id="link-pdf">
-                </div>
                 @if (ViewData["BillResult"] != null)
                 {
                     @if (ViewData["BillResult"].ToString().Equals("No data found"))
@@ -67,7 +65,7 @@
                     }
                     else
                     {
-                        <a download="@String.Concat(Model.BillCode,".pdf")" href="data:application/octet-stream;base64,@ViewData["BillResult"]">@Localizer["BillLookupDownload"] @String.Concat(Model.BillCode, ".pdf")</a>
+                        @Html.Raw(ViewData["BillResult"])
                     }
 
                 }
@@ -77,4 +75,5 @@
 </main>
 
 @section Scripts{
+    
 }

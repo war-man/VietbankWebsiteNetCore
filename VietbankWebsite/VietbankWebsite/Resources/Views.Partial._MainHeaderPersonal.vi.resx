@@ -178,10 +178,10 @@
     <value>/ca-nhan/ho-tro/lai-suat</value>
   </data>
   <data name="NganHangTrucTuyen" xml:space="preserve">
-    <value>Ngân hàng trực tuyến</value>
+    <value>Vietbank Digital</value>
   </data>
   <data name="NganHangTrucTuyenName" xml:space="preserve">
-    <value>Ngân hàng trực tuyến</value>
+    <value>Vietbank Digital</value>
   </data>
   <data name="NganHangTrucTuyenNavUrl" xml:space="preserve">
     <value>/ca-nhan/san-pham/ngan-hang-truc-tuyen</value>

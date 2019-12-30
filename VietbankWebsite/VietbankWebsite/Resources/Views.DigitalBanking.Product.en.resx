@@ -123,11 +123,29 @@
   <data name="DichVuNHSUrl" xml:space="preserve">
     <value>/digital-banking/digital-banking-service</value>
   </data>
+  <data name="InternetBankingName" xml:space="preserve">
+    <value>Internet Banking Vietbank Digital</value>
+  </data>
+  <data name="InternetBankingNameUrl" xml:space="preserve">
+    <value>/personal/product/online-banking/corporate-banking-3916</value>
+  </data>
+  <data name="MobileBankingName" xml:space="preserve">
+    <value>Mobile Banking Vietbank Digital</value>
+  </data>
+  <data name="MobileBankingUrl" xml:space="preserve">
+    <value>/personal/product/online-banking/mobile-banking-4041</value>
+  </data>
   <data name="NganHangSo" xml:space="preserve">
     <value>Digital Banking</value>
   </data>
   <data name="NganHangSoUrl" xml:space="preserve">
     <value>/digital-banking</value>
+  </data>
+  <data name="SmsBankingName" xml:space="preserve">
+    <value>SMS Banking services</value>
+  </data>
+  <data name="SmsBankingUrl" xml:space="preserve">
+    <value>/personal/product/online-banking/sms-banking-3915</value>
   </data>
   <data name="ViewAllName" xml:space="preserve">
     <value>View all</value>
