@@ -64,6 +64,7 @@ namespace VietbankWebsite.Entities
         public string MetaTitle { get; set; }
         public string MetaDescription { get; set; }
         public string FeatureImage { get; set; }
+        public string BannerProduct { get; set; }
         public IEnumerable<PrevAndNextProduct> PrevNextProduct { get; set; }
     }
 

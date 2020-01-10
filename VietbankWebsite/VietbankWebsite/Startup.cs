@@ -140,7 +140,7 @@ namespace VietbankWebsite
             services.Configure<MessageQueueConfig>(Configuration.GetSection("MessageQueueConfig"));
 
             services.AddDetection();
-            //services.AddHostedService<GenerateSiteMapHostedService>();
+            services.AddHostedService<GenerateSiteMapHostedService>();
             //services.AddHostedService<QueueCentralHostedService>();
         }
 

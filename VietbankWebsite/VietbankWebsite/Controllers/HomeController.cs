@@ -48,58 +48,36 @@ namespace VietbankWebsite.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
+            ViewData["Title"] = _localizer["Home"];
+            ViewData["MetaDescription"] = _localizer["MetaDescription"];
             switch (_detection.Device?.Type.ToString())
             {
                 case "Mobile":
-                    var keyMobileBanner = GetLangCurrent() == "vi" ? CacheKeys.BannerMobileVi : CacheKeys.BannerMobileEn;
-                    BoxContainerHomePage boxMobileContainer;
-                    if (!_cache.TryGetValue(keyMobileBanner, out boxMobileContainer))
-                    {
-                        boxMobileContainer = new BoxContainerHomePage()
+                    BoxContainerHomePage boxMobileContainer = new BoxContainerHomePage()
                         {
                             Banner = await _homeService.GetBanner(GetLangCurrent(), _detection.Device?.Type.ToString()),
                             Box = await _homeService.GetBoxContainer("box", GetLangCurrent()),
                             Between = await _homeService.GetBoxContainer("between", GetLangCurrent()),
                             News = await _homeService.GetBoxContainer("news", GetLangCurrent())
                         };
-                        _cache.Set(keyMobileBanner, boxMobileContainer, cacheEntryOptions);
-                    }
-                    ViewData["Title"] = _localizer["Home"];
-                    ViewData["MetaDescription"] = _localizer["MetaDescription"];
                     return View(boxMobileContainer);
                 case "Tablet":
-                    var keyTableBanner = GetLangCurrent() == "vi" ? CacheKeys.BannerTabletVi : CacheKeys.BannerTableEn;
-                    BoxContainerHomePage boxTabletContainer;
-                    if (!_cache.TryGetValue(keyTableBanner, out boxTabletContainer))
-                    {
-                        boxTabletContainer = new BoxContainerHomePage()
+                    BoxContainerHomePage boxTabletContainer = new BoxContainerHomePage()
                         {
                             Banner = await _homeService.GetBanner(GetLangCurrent(), _detection.Device?.Type.ToString()),
                             Box = await _homeService.GetBoxContainer("box", GetLangCurrent()),
                             Between = await _homeService.GetBoxContainer("between", GetLangCurrent()),
                             News = await _homeService.GetBoxContainer("news", GetLangCurrent())
                         };
-                        _cache.Set(keyTableBanner, boxTabletContainer, cacheEntryOptions);
-                    }
-                    ViewData["Title"] = _localizer["Home"];
-                    ViewData["MetaDescription"] = _localizer["MetaDescription"];
                     return View(boxTabletContainer);
                 default:
-                    var keyBanner = GetLangCurrent() == "vi" ? CacheKeys.BannerVi : CacheKeys.BannerEn;
-                    BoxContainerHomePage boxContainer;
-                    if (!_cache.TryGetValue(keyBanner, out boxContainer))
-                    {
-                        boxContainer = new BoxContainerHomePage()
+                    BoxContainerHomePage boxContainer = new BoxContainerHomePage()
                         {
                             Banner = await _homeService.GetBanner(GetLangCurrent(), _detection.Device?.Type.ToString()),
                             Box = await _homeService.GetBoxContainer("box", GetLangCurrent()),
                             Between = await _homeService.GetBoxContainer("between", GetLangCurrent()),
                             News = await _homeService.GetBoxContainer("news", GetLangCurrent())
                         };
-                        _cache.Set(keyBanner, boxContainer, cacheEntryOptions);
-                    }
-                    ViewData["Title"] = _localizer["Home"];
-                    ViewData["MetaDescription"] = _localizer["MetaDescription"];
                     return View(boxContainer);
             }
         }

@@ -38,6 +38,7 @@ namespace VietbankWebsite.Repository
                                     CategoryName = d.name,
                                     CategoryUrl = $"{aliastFullCate}/{aliasCate}",
                                     Description = b.post_excerpt,
+                                    BannerProduct = a.ping_status,
                                     Url = $"{aliastFullCate}/{b.post_url}"
                                 }).SingleOrDefaultAsync();
             var vbPostSeo = await _context.VbPostSeo.Where(x => x.IdPost.Equals(productDetail.PostId)).SingleOrDefaultAsync();

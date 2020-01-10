@@ -159,6 +159,12 @@
   <data name="VietabankMyStyleUrl" xml:space="preserve">
     <value>/the/san-pham/the-tin-dung-vietbank-my-style</value>
   </data>
+  <data name="VietbankDebitName" xml:space="preserve">
+    <value>THẺ THANH TOÁN NỘI ĐỊA VIETBANK</value>
+  </data>
+  <data name="VietbankDebitUrl" xml:space="preserve">
+    <value>/the/san-pham/the-thanh-toan-noi-dia-vietbank</value>
+  </data>
   <data name="VietbankLuxuryPlataniumName" xml:space="preserve">
     <value>THẺ TÍN DỤNG VIETBANK LUXURY PLATINUM</value>
   </data>

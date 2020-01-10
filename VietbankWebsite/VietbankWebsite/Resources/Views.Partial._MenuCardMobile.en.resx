@@ -303,6 +303,12 @@
   <data name="VietabankMyStyleUrl" xml:space="preserve">
     <value>/card/product/vietbank-my-style-credit-card</value>
   </data>
+  <data name="VietbankDebitName" xml:space="preserve">
+    <value>Vietbank Domestic Debit Card</value>
+  </data>
+  <data name="VietbankDebitUrl" xml:space="preserve">
+    <value>/card/product/VIETBANK-DOMESTIC-DEBIT-CARD</value>
+  </data>
   <data name="VietbankLuxuryPlataniumName" xml:space="preserve">
     <value>VIETBANK LUXURY PLATINUM CREDIT CARD</value>
   </data>
