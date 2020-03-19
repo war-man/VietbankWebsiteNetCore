@@ -171,6 +171,12 @@
   <data name="NganHangTrucTuyenUrl" xml:space="preserve">
     <value>https://online.vietbank.com.vn</value>
   </data>
+  <data name="PromotionNewsName" xml:space="preserve">
+    <value>Tin khuyến mãi</value>
+  </data>
+  <data name="PromotionNewsUrl" xml:space="preserve">
+    <value>/about-vietbank/news/promotion-news</value>
+  </data>
   <data name="QuaTrinhPhatTrienName" xml:space="preserve">
     <value>Development Milestones</value>
   </data>

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using VietbankWebsite.Context;
+using VietbankWebsite.Entities;
 using VietbankWebsite.ModelMap;
 using VietbankWebsite.Models;
 
@@ -185,6 +186,12 @@ namespace VietbankWebsite.Repository
             
         }
 
+        public async Task RecieveFeedBack(VbFeedBack feedBack)
+        {
+            _context.VbFeedBacks.Add(feedBack);
+            await _context.SaveChangesAsync();
+        }
+
         private async Task<IEnumerable<FaqsCategory>> GetFaqsCategory(int faqs, string lang)
         {
             var faqsCategory = from a in _context.VbCategories
@@ -224,5 +231,6 @@ namespace VietbankWebsite.Repository
         Task<ThuBaoLanhModel> GetGuaranteeLetter(string acctNbr, string seriesNo);
 
         Task<ThuBaoLanhModel> GetRemoteGuaranteeLetter(string urlRemote,string acctNbr, string seriesNo);
+        Task RecieveFeedBack(VbFeedBack feedBack);
     }
 }

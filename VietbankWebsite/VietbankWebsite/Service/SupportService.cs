@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using VietbankWebsite.Entities;
 using VietbankWebsite.ModelMap;
 using VietbankWebsite.Uow;
 
@@ -74,6 +75,11 @@ namespace VietbankWebsite.Service
         {
             return await _unitOfWork.SupportRepository.GetRemoteGuaranteeLetter(urlRemote,acctNbr, seriesNo);
         }
+
+        public async Task RecieveFeedBack(VbFeedBack feedBack)
+        {
+            await _unitOfWork.SupportRepository.RecieveFeedBack(feedBack);
+        }
     }
 
     public interface ISupportService
@@ -90,5 +96,6 @@ namespace VietbankWebsite.Service
         Task<string> GetLastDateUpdate();
         Task<ThuBaoLanhModel> GetGuaranteeLetter(string acctNbr, string seriesNo);
         Task<ThuBaoLanhModel> GetRemoteGuaranteeLetter(string urlRemote,string acctNbr, string seriesNo);
+        Task RecieveFeedBack(VbFeedBack feedBack);
     }
 }

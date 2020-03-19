@@ -1,11 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Localization;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using VietbankWebsite.Entities;
 using VietbankWebsite.ModelMap;
 using VietbankWebsite.Models;
+using VietbankWebsite.Repository;
 using VietbankWebsite.Service;
 
 namespace VietbankWebsite.Controllers
@@ -15,14 +17,20 @@ namespace VietbankWebsite.Controllers
     public class PersonalController : BaseMvcController
     {
         private IMemoryCache _cache;
+        private IRecaptchaService _recaptcha;
         private readonly IProductService _productService;
         private readonly IStringLocalizer<PersonalController> _localizer;
         private readonly ISupportService _supportService;
         private readonly IAboutVietbankService _aboutVietbankService;
+        private readonly IEmailSenderRepository _emailSenderRepository;
+        private readonly IRazorViewToStringRenderer _razorViewToStringRenderer;
         public PersonalController(
             IStringLocalizer<PersonalController> localizer, 
             IProductService productService, 
-            ISupportService supportService, 
+            ISupportService supportService,
+            IEmailSenderRepository emailSenderRepository,
+            IRecaptchaService recaptcha,
+            IRazorViewToStringRenderer razorViewToStringRenderer,
             IMemoryCache cache, 
             IAboutVietbankService aboutVietbankService
         )
@@ -31,6 +39,9 @@ namespace VietbankWebsite.Controllers
             _localizer = localizer;
             _productService = productService;
             _supportService = supportService;
+            _emailSenderRepository = emailSenderRepository;
+            _recaptcha = recaptcha;
+            _razorViewToStringRenderer = razorViewToStringRenderer;
             _aboutVietbankService = aboutVietbankService;
         }
         public IActionResult Index()
@@ -253,6 +264,31 @@ namespace VietbankWebsite.Controllers
             ViewData["MetaDescription"] = productDetail.MetaDescription;
             ViewData["FeatureImage"] = productDetail.FeatureImage;
             return View(productDetail);
+        }
+
+        [HttpPost]
+        [Route("san-pham/{cate}/{detail}")]
+        [Route("product/{cate}/{detail}")]
+        public async Task<IActionResult> ProductDetail(string cate, string detail,VbFeedBack model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+            var recaptcha = await _recaptcha.Validate(Request);
+            if (!recaptcha.success)
+            {
+                ModelState.AddModelError("", "Mã xác thực không đúng, Vui lòng thử lại");
+                return RedirectToAction("ProductDetail", new { cate, detail });
+            }
+            model.CreatedDate = DateTime.Now;
+            _emailSenderRepository.SendMail(model.EmailCustomer, model.TitlePost, await _razorViewToStringRenderer.RenderViewToStringAsync("/Views/EmailSender/ContactResponseToUser.cshtml", new ContactResponseToUser()
+            {
+                Message = "Vietbank đã nhận được lời nhắn của bạn, chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất!"
+            }));
+            await _supportService.RecieveFeedBack(model);
+            TempData["success"] = true;
+            return RedirectToAction("ProductDetail", new { cate,detail });
         }
     }
 }

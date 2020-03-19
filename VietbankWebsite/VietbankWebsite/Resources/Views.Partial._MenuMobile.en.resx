@@ -201,6 +201,12 @@
   <data name="NganHangTrucTuyenUrl" xml:space="preserve">
     <value>https://online.vietbank.com.vn</value>
   </data>
+  <data name="PromotionNewsName" xml:space="preserve">
+    <value>Promotion News</value>
+  </data>
+  <data name="PromotionNewsUrl" xml:space="preserve">
+    <value>/about-vietbank/news/promotion-news</value>
+  </data>
   <data name="QuanHeCoDong" xml:space="preserve">
     <value>SHAREHOLDERS</value>
   </data>
@@ -272,6 +278,12 @@
   </data>
   <data name="VeVietBankUrl" xml:space="preserve">
     <value>/about-vietbank</value>
+  </data>
+  <data name="VietbankHandbookName" xml:space="preserve">
+    <value>CUSTOMER HANDBOOK</value>
+  </data>
+  <data name="VietbankHandbookUrl" xml:space="preserve">
+    <value>/about-vietbank/news/customer-handbook</value>
   </data>
   <data name="VietbankTvName" xml:space="preserve">
     <value>VIETBANK TV</value>

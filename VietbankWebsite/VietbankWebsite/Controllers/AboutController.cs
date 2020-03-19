@@ -321,6 +321,22 @@ namespace VietbankWebsite.Controllers
         }
 
         [HttpGet]
+        [Route("tin-tuc/cam-nang-khach-hang")]
+        [Route("news/customer-handbook")]
+        public async Task<IActionResult> VietbankHandbook()
+        {
+            var keyVietbankTv = GetLangCurrent() == "vi" ? CacheKeys.VietbankTvVi : CacheKeys.VietbankTvEn;
+            IEnumerable<TopThreeNewsToCate> topThreeNewsToCates;
+            if (!_cache.TryGetValue(keyVietbankTv, out topThreeNewsToCates))
+            {
+                topThreeNewsToCates = await _aboutVietbankService.TopThreeNewsToCate(1079, _localizer["VietbankHandbookUrl"], GetLangCurrent());
+                _cache.Set(keyVietbankTv, topThreeNewsToCates, cacheEntryOptions);
+            }
+            ViewData["Title"] = _localizer["VietbankHandbookName"];
+            return View(topThreeNewsToCates);
+        }
+
+        [HttpGet]
         [Route("tin-tuc/tin-vietbank/{news}")]
         [Route("news/vietbank-news/{news}")]
         public async Task<IActionResult> VietbankNewsDetail(string news)
@@ -350,6 +366,19 @@ namespace VietbankWebsite.Controllers
         [Route("tin-tuc/vietbank-tv/{news}")]
         [Route("news/vietbank-tv/{news}")]
         public async Task<IActionResult> VietbankTvDetail(string news)
+        {
+            var newsDetail = await _aboutVietbankService.GetNewsDetail(news, GetLangCurrent()) ?? new NewsDetail();
+            ViewData["Title"] = newsDetail.Title;
+            ViewData["MetaTitle"] = newsDetail.MetaTitle;
+            ViewData["MetaDescription"] = newsDetail.MetaDescription;
+            ViewData["FeatureImage"] = newsDetail.FeatureImage;
+            return View(newsDetail);
+        }
+
+        [HttpGet]
+        [Route("tin-tuc/cam-nang-khach-hang/{news}")]
+        [Route("news/customer-handbook/{news}")]
+        public async Task<IActionResult> VietbankHandbookDetail(string news)
         {
             var newsDetail = await _aboutVietbankService.GetNewsDetail(news, GetLangCurrent()) ?? new NewsDetail();
             ViewData["Title"] = newsDetail.Title;

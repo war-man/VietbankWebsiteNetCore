@@ -120,7 +120,13 @@
   <data name="PromotionNewsName" xml:space="preserve">
     <value>TIN KHUYẾN MÃI</value>
   </data>
+  <data name="PromotionNewsName1" xml:space="preserve">
+    <value>Tin khuyến mãi</value>
+  </data>
   <data name="PromotionNewsUrl" xml:space="preserve">
+    <value>/ve-vietbank/tin-tuc/tin-khuyen-mai</value>
+  </data>
+  <data name="PromotionNewsUrl1" xml:space="preserve">
     <value>/ve-vietbank/tin-tuc/tin-khuyen-mai</value>
   </data>
   <data name="VietbankNewsName" xml:space="preserve">

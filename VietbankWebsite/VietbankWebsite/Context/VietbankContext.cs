@@ -33,5 +33,6 @@ namespace VietbankWebsite.Context
         public DbSet<VbPostSeo> VbPostSeo { get; set; }
         public DbSet<RequestLogs> RequestLogs { get; set; }
         public DbSet<Contact> Contact { get; set; }
+        public DbSet<VbFeedBack> VbFeedBacks { get; set; }
     }
 }

@@ -243,6 +243,7 @@ namespace VietbankWebsite.Repository
                                     select new RandomNewsVietbank()
                                     {
                                         Title = c.post_title,
+                                        Image = a.post_thumbnail,
                                         Url = $"{aliasCate}/{c.post_url}",
                                         PublishedDate = a.post_date.ToString("dd/MM/yyyy")
                                     }).Take(5).ToListAsync();

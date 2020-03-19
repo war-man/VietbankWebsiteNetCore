@@ -220,7 +220,7 @@ namespace VietbankWebsite.Controllers
         private string GenerateTableGuaranteeLetter(ThuBaoLanhModel thuBaoLanh)
         {
             string guaranteeLetter = "";
-            if (thuBaoLanh.HasResulted)
+            if (thuBaoLanh.HasResulted && thuBaoLanh.FILESCANURL != null && thuBaoLanh.ACCTNBR != null && thuBaoLanh.SERIES != null)
             {
                 guaranteeLetter = $"<table class='table table-hover' style='padding-bottom: 14px;'>" +
                     $"<thead><tr><th colspan='3'>{_localizer["ThuBaoLanhName"]}</th></tr></thead>" +

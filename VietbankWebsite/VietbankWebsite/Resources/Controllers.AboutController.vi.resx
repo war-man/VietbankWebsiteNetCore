@@ -153,6 +153,12 @@
   <data name="PromotionNewsUrl" xml:space="preserve">
     <value>/ve-vietbank/tin-tuc/tin-khuyen-mai</value>
   </data>
+  <data name="VietbankHandbookName" xml:space="preserve">
+    <value>Cẩm nang khách hàng</value>
+  </data>
+  <data name="VietbankHandbookUrl" xml:space="preserve">
+    <value>/ve-vietbank/tin-tuc/cam-nang-khach-hang</value>
+  </data>
   <data name="VietbankNewsName" xml:space="preserve">
     <value>Tin Vietbank</value>
   </data>

@@ -45,6 +45,12 @@ namespace VietbankWebsite.Controllers.Api
             return await _aboutVietbankService.GetListNews(1069, _localizer["VietbankTvName"], _localizer["VietbankTvUrl"], GetLangCurrent(), pageCurrent, pageSize);
         }
 
+        [HttpGet("getlistvietbankhandbook/{pageCurrent}/{pageSize}")]
+        public async Task<ListNews> GetListVietbankHandBook(int pageCurrent, int pageSize)
+        {
+            return await _aboutVietbankService.GetListNews(1079, _localizer["VietbankHandbookName"], _localizer["VietbankHandbookUrl"], GetLangCurrent(), pageCurrent, pageSize);
+        }
+
         [HttpGet("getrandomlistvietbanknews")]
         public async Task<IEnumerable<RandomNewsVietbank>> RandomVietbankNews()
         {
@@ -61,6 +67,12 @@ namespace VietbankWebsite.Controllers.Api
         public async Task<IEnumerable<RandomNewsVietbank>> RandomVietbankTv()
         {
             return await _aboutVietbankService.GetRamdomNewsToCategory(1069, _localizer["VietbankTvUrl"], GetLangCurrent());
+        }
+
+        [HttpGet("getrandomlistvietbankhandbook")]
+        public async Task<IEnumerable<RandomNewsVietbank>> RandomVietbankHandbook()
+        {
+            return await _aboutVietbankService.GetRamdomNewsToCategory(1079, _localizer["VietbankHandbookUrl"], GetLangCurrent());
         }
 
         [HttpGet("getbankcode")]

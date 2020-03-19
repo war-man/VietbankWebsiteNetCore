@@ -1,0 +1,64 @@
+﻿@model VietbankWebsite.Entities.ProductDetail
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<section class="banner-wrap">
+    <section class="breadcrumb-wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <ol class="breadcrumb mrt-10">
+                        <li><a href="@ViewBag.PersonalUrl">@ViewBag.PersonalName</a></li>
+                        <li><a href="@ViewBag.ProductUrl">@ViewBag.ProductName</a></li>
+                        <li><a href="@Model.CategoryUrl">@Model.CategoryName</a></li>
+                        <li class="active"><span style="color:#999;">@Model.Title</span></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="banner-page imageBanner">
+        <div style="background-image:url('@Model.BannerProduct')" class="imgBg"></div>
+        <div class="desc">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-5 col-lg-5 col-xl-5">
+                        <h1 class="title">@Model.Title</h1>
+                        <div class="content">@Html.Raw(Model.Description)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+<main>
+    @Html.Raw(Model.Content)
+    <section class="pagination-prd">
+        <div class="container">
+            <div class="row flex flex-wrap">
+                <div class="col-xs-12 col-md-4">
+                    @if (Model.PrevNextProduct.Count() > 0)
+                    {
+                        if (@Model.PrevNextProduct.ElementAt(0) != null)
+                        {
+                    <div class="prev-link"><a href="@Model.PrevNextProduct.ElementAt(0).Url"><i class="fa fa-chevron-left" aria-hidden="true"></i><span>@Model.PrevNextProduct.ElementAt(0).Title</span></a></div>
+                        }
+                    }
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="prd-list"><a href="@Model.CategoryUrl"><i class="fa fa-bars" aria-hidden="true"></i><span>@Model.CategoryName</span></a></div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    @if (Model.PrevNextProduct.Count() > 1)
+                    {
+                        if (Model.PrevNextProduct.ElementAt(1) != null)
+                        {
+                            <div class="next-link"><a href="@Model.PrevNextProduct.ElementAt(1).Url"><span>@Model.PrevNextProduct.ElementAt(1).Title</span><i class="fa fa-chevron-right" aria-hidden="true"></i></a></div>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+

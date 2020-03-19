@@ -213,6 +213,12 @@
   <data name="TuanThuUrl" xml:space="preserve">
     <value>/ve-vietbank/gioi-thieu/chinh-sach-tuan-thu</value>
   </data>
+  <data name="VietbankHandbookName" xml:space="preserve">
+    <value>Cẩm nang khách hàng</value>
+  </data>
+  <data name="VietbankHandbookUrl" xml:space="preserve">
+    <value>/ve-vietbank/tin-tuc/cam-nang-khach-hang</value>
+  </data>
   <data name="VietbankTvName" xml:space="preserve">
     <value>Vietbank TV</value>
   </data>

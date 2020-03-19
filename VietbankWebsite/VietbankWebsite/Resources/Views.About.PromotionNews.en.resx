@@ -142,10 +142,16 @@
     <value>Other news</value>
   </data>
   <data name="PromotionNewsName" xml:space="preserve">
-    <value>Tin khuyến mãi</value>
+    <value>Promotion News</value>
   </data>
   <data name="PromotionNewsUrl" xml:space="preserve">
     <value>/about-vietbank/news/promotion-news</value>
+  </data>
+  <data name="VietbankHandbookName" xml:space="preserve">
+    <value>Customer Handbook</value>
+  </data>
+  <data name="VietbankHandbookUrl" xml:space="preserve">
+    <value>/about-vietbank/news/customer-handbook</value>
   </data>
   <data name="VietbankNewsName" xml:space="preserve">
     <value>Tin Vietbank</value>

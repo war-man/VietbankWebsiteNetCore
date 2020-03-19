@@ -147,6 +147,12 @@
   <data name="PromotionNewsUrl" xml:space="preserve">
     <value>/about-vietbank/news/promotion-news</value>
   </data>
+  <data name="VietbankHandbookName" xml:space="preserve">
+    <value>Customer Handbook</value>
+  </data>
+  <data name="VietbankHandbookUrl" xml:space="preserve">
+    <value>/about-vietbank/news/customer-handbook</value>
+  </data>
   <data name="VietbankNewsName" xml:space="preserve">
     <value>Vietbank News</value>
   </data>
