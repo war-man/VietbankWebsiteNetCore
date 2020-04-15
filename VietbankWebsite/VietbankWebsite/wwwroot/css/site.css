@@ -1066,3 +1066,477 @@ body {
 .content a.btn-ex .fa {
     margin-right: 5px;
 }
+
+.block-exchangeChart {
+    padding: 30px 15px;
+    background-color: #fff;
+    margin-bottom: 15px;
+    overflow: scroll;
+}
+
+    .block-exchangeChart .title-wrap {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+        .block-exchangeChart .title-wrap:after {
+            content: '';
+            display: table;
+            clear: both;
+            min-height: 1;
+        }
+
+        .block-exchangeChart .title-wrap .title-rate {
+            font-size: 1.625rem;
+            font-weight: 500;
+            line-height: 1.4;
+            margin: 0;
+            float: left;
+            display: block;
+        }
+
+        .block-exchangeChart .title-wrap .support-wrap {
+            display: block;
+            text-align: right;
+            float: right;
+            margin-top: 10px;
+            position: relative;
+        }
+
+            .block-exchangeChart .title-wrap .support-wrap .note {
+                clear: both;
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 15px;
+            }
+
+                .block-exchangeChart .title-wrap .support-wrap .note .currency {
+                    font-size: 0.75rem;
+                    position: relative;
+                    font-weight: 500;
+                    line-height: 1.5;
+                    color: #999;
+                }
+
+                    .block-exchangeChart .title-wrap .support-wrap .note .currency:before {
+                        content: '';
+                        position: absolute;
+                        top: 7px;
+                        right: calc(100% + 5px);
+                        background-color: #09bff4;
+                        height: 4px;
+                        width: 30px;
+                    }
+
+                    .block-exchangeChart .title-wrap .support-wrap .note .currency.op-2:before {
+                        background-color: #0077c2;
+                    }
+
+            .block-exchangeChart .title-wrap .support-wrap a {
+                font-size: 0.75rem;
+                font-weight: 500;
+                color: #999;
+                line-height: 1;
+                margin-right: 15px;
+            }
+
+                .block-exchangeChart .title-wrap .support-wrap a img {
+                    margin-right: 10px;
+                    vertical-align: top;
+                }
+
+                .block-exchangeChart .title-wrap .support-wrap a span {
+                    position: relative;
+                    top: -6px;
+                }
+
+                .block-exchangeChart .title-wrap .support-wrap a.icon-share:hover + .social-list {
+                    display: inline-block;
+                }
+
+            .block-exchangeChart .title-wrap .support-wrap .social-list {
+                background-color: #fff;
+                padding: 7px 15px;
+                min-width: 100px;
+                box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.3);
+                border-radius: 5px;
+                position: absolute;
+                top: calc(100% - 5px);
+                right: 0;
+                display: none;
+                -webkit-transition: all 0.3s;
+                transition: all 0.3s;
+            }
+
+                .block-exchangeChart .title-wrap .support-wrap .social-list:hover {
+                    display: block;
+                }
+
+                .block-exchangeChart .title-wrap .support-wrap .social-list a {
+                    font-size: 1rem;
+                    font-weight: 500;
+                    margin: 0 10px;
+                }
+
+                    .block-exchangeChart .title-wrap .support-wrap .social-list a .fa.fa-facebook {
+                        color: #005489;
+                    }
+
+                    .block-exchangeChart .title-wrap .support-wrap .social-list a .fa.fa-google-plus {
+                        color: red;
+                    }
+
+    .block-exchangeChart .form-group label {
+        display: block;
+    }
+
+@media (max-width: 767px) {
+    .block-exchangeChart .form-group label {
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 768px) {
+    .block-exchangeChart .form-group label {
+        width: 70px;
+        float: left;
+        line-height: 35px;
+    }
+}
+
+.block-exchangeChart .form-group .group, .block-exchangeChart .form-group .btn-ex {
+    display: block;
+}
+
+@media (max-width: 767px) {
+    .block-exchangeChart .form-group .group, .block-exchangeChart .form-group .btn-ex {
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 768px) {
+    .block-exchangeChart .form-group .group, .block-exchangeChart .form-group .btn-ex {
+        float: left;
+        width: calc(100% - 75px);
+    }
+}
+
+.block-exchangeChart .form-group .btn-ex {
+    position: relative;
+}
+
+    .block-exchangeChart .form-group .btn-ex > a {
+        height: 35px;
+        line-height: 35px;
+        padding: 0 15px;
+        display: block;
+        position: relative;
+        border-radius: 3px;
+        font-size: 0.8125rem;
+        color: #333;
+        border: 1px solid #d9d9d9;
+    }
+
+        .block-exchangeChart .form-group .btn-ex > a:before {
+            content: '\f107';
+            font-family: "FontAwesome";
+            font-size: 0.9375rem;
+            font-weight: 500;
+            line-height: 1;
+            position: absolute;
+            top: 8px;
+            right: 10px;
+            color: #333;
+        }
+
+        .block-exchangeChart .form-group .btn-ex > a img {
+            max-width: 20px;
+            vertical-align: middle;
+            margin-right: 10px;
+            margin-top: -4px;
+        }
+
+    .block-exchangeChart .form-group .btn-ex > ul.dropdown-menu {
+        margin: 0;
+        padding: 0;
+        right: 0;
+        border-radius: 0;
+    }
+
+        .block-exchangeChart .form-group .btn-ex > ul.dropdown-menu li a {
+            font-size: 0.8125rem;
+            color: #333;
+            padding: 10px 15px;
+            display: block;
+        }
+
+            .block-exchangeChart .form-group .btn-ex > ul.dropdown-menu li a img {
+                max-width: 20px;
+                vertical-align: middle;
+                margin-right: 10px;
+                margin-top: -4px;
+            }
+
+.block-exchangeMoney {
+    padding: 20px 15px;
+    background-color: #fff;
+    margin-bottom: 15px;
+}
+
+    .block-exchangeMoney .form-group {
+        margin-bottom: 15px;
+    }
+
+@media (min-width: 768px) {
+    .block-exchangeMoney .form-group {
+        margin-bottom: 0;
+    }
+}
+
+.block-exchangeMoney .form-group label {
+    display: block;
+}
+
+@media (max-width: 767px) {
+    .block-exchangeMoney .form-group label {
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 768px) {
+    .block-exchangeMoney .form-group label {
+        width: 65px;
+        float: left;
+        line-height: 35px;
+        margin-right: 5px;
+    }
+}
+
+.block-exchangeMoney .form-group .form-control {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .block-exchangeMoney .form-group .form-control {
+        float: left;
+    }
+}
+
+.block-exchangeMoney .form-group input[type="submit"] {
+    margin-top: 0;
+}
+
+@media (min-width: 768px) {
+    .block-exchangeMoney .form-group.width-full label {
+        width: 135px;
+    }
+}
+
+@media (min-width: 768px) {
+    .block-exchangeMoney .form-group.width-full .form-control {
+        width: calc(100% - 155px);
+    }
+}
+
+.block-exchangeMoney .form-group .btn-ex {
+    position: relative;
+    width: calc(100% - 70px);
+    float: left;
+}
+
+    .block-exchangeMoney .form-group .btn-ex > a {
+        height: 35px;
+        line-height: 35px;
+        padding: 0 15px;
+        display: block;
+        position: relative;
+        border-radius: 3px;
+        font-size: 0.8125rem;
+        color: #333;
+        border: 1px solid #d9d9d9;
+    }
+
+        .block-exchangeMoney .form-group .btn-ex > a:before {
+            content: '\f107';
+            font-family: "FontAwesome";
+            font-size: 0.9375rem;
+            font-weight: 500;
+            line-height: 1;
+            position: absolute;
+            top: 8px;
+            right: 10px;
+            color: #333;
+        }
+
+        .block-exchangeMoney .form-group .btn-ex > a img {
+            max-width: 20px;
+            vertical-align: middle;
+            margin-right: 10px;
+            margin-top: -4px;
+        }
+
+    .block-exchangeMoney .form-group .btn-ex > ul.dropdown-menu {
+        margin: 0;
+        padding: 0;
+        right: 0;
+        border-radius: 0;
+    }
+
+        .block-exchangeMoney .form-group .btn-ex > ul.dropdown-menu li a {
+            font-size: 0.8125rem;
+            color: #333;
+            padding: 10px 15px;
+            display: block;
+        }
+
+            .block-exchangeMoney .form-group .btn-ex > ul.dropdown-menu li a img {
+                max-width: 20px;
+                vertical-align: middle;
+                margin-right: 10px;
+                margin-top: -4px;
+            }
+
+.block-exchangeMoney .title-wrap {
+    position: relative;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #cccccc;
+}
+
+    .block-exchangeMoney .title-wrap:after {
+        content: '';
+        display: table;
+        clear: both;
+        min-height: 1;
+    }
+
+    .block-exchangeMoney .title-wrap .title-exchange {
+        font-size: 0.875rem;
+        font-weight: 500;
+        line-height: 1.4;
+        color: #999;
+        margin-bottom: 10px;
+    }
+
+@media (min-width: 768px) {
+    .block-exchangeMoney .title-wrap .title-exchange {
+        float: left;
+        margin-bottom: 0;
+    }
+}
+
+.block-exchangeMoney .title-wrap .support-wrap {
+    display: block;
+    position: relative;
+    text-align: right;
+}
+
+@media (min-width: 768px) {
+    .block-exchangeMoney .title-wrap .support-wrap {
+        float: right;
+    }
+}
+
+.block-exchangeMoney .title-wrap .support-wrap a {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #999;
+    line-height: 1;
+    margin-right: 15px;
+}
+
+    .block-exchangeMoney .title-wrap .support-wrap a img {
+        margin-right: 10px;
+        vertical-align: top;
+    }
+
+    .block-exchangeMoney .title-wrap .support-wrap a span {
+        position: relative;
+        top: -2px;
+    }
+
+    .block-exchangeMoney .title-wrap .support-wrap a.icon-share:hover + .social-list {
+        display: inline-block;
+    }
+
+.block-exchangeMoney .title-wrap .support-wrap .social-list {
+    background-color: #fff;
+    padding: 7px 15px;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    min-width: 100px;
+    position: absolute;
+    top: calc(100% - 5px);
+    right: 0;
+    display: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+    .block-exchangeMoney .title-wrap .support-wrap .social-list:hover {
+        display: block;
+    }
+
+    .block-exchangeMoney .title-wrap .support-wrap .social-list a {
+        font-size: 1rem;
+        font-weight: 500;
+        margin: 0 10px;
+    }
+
+        .block-exchangeMoney .title-wrap .support-wrap .social-list a .fa.fa-facebook {
+            color: #005489;
+        }
+
+        .block-exchangeMoney .title-wrap .support-wrap .social-list a .fa.fa-google-plus {
+            color: red;
+        }
+
+.block-exchangeMoney .exchange-list .item-exm {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+    .block-exchangeMoney .exchange-list .item-exm:after {
+        content: '';
+        display: table;
+        min-height: 1;
+        clear: both;
+    }
+
+    .block-exchangeMoney .exchange-list .item-exm .flag {
+        display: block;
+        width: 50px;
+        float: left;
+    }
+
+        .block-exchangeMoney .exchange-list .item-exm .flag img {
+            vertical-align: middle;
+            line-height: 1;
+            margin-top: 5px;
+        }
+
+    .block-exchangeMoney .exchange-list .item-exm .ex-info {
+        width: calc(100% - 50px);
+        float: left;
+    }
+
+        .block-exchangeMoney .exchange-list .item-exm .ex-info .rate {
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .block-exchangeMoney .exchange-list .item-exm .ex-info .unit {
+            font-size: 0.875rem;
+            font-weight: 600;
+            line-height: 1.4;
+            color: #666;
+        }
+
+        .block-exchangeMoney .exchange-list .item-exm .ex-info .ex {
+            font-size: 0.875rem;
+            font-weight: 500;
+            line-height: 1.4;
+            color: #999;
+        }

@@ -4,9 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.Options;
 using VietbankWebsite.Entities;
 using VietbankWebsite.ModelMap;
 using VietbankWebsite.Models;
+using VietbankWebsite.Repository;
 using VietbankWebsite.Service;
 
 namespace VietbankWebsite.Controllers
@@ -17,10 +19,25 @@ namespace VietbankWebsite.Controllers
     {
         private readonly ICardService _cardService;
         private IMemoryCache _cache;
-        public CardController(ICardService cardService, IMemoryCache cache)
+        private readonly ExternalService _externalService;
+        private IRecaptchaService _recaptcha;
+        private readonly IEmailSenderRepository _emailSenderRepository;
+        private readonly IRazorViewToStringRenderer _razorViewToStringRenderer;
+        public CardController(
+            ICardService cardService, 
+            IMemoryCache cache, 
+            IOptions<ExternalService> externalService, 
+            IRecaptchaService recaptcha,
+            IEmailSenderRepository emailSenderRepository,
+            IRazorViewToStringRenderer razorViewToStringRenderer
+            )
         {
             _cache = cache;
             _cardService = cardService;
+            _externalService = externalService.Value;
+            _recaptcha = recaptcha;
+            _emailSenderRepository = emailSenderRepository;
+            _razorViewToStringRenderer = razorViewToStringRenderer;
         }
         [HttpGet]
         public async Task<IActionResult> Index()
@@ -136,6 +153,51 @@ namespace VietbankWebsite.Controllers
             }
             ViewData["Title"] = incentivesCateThreeDto.Name;
             return View(incentivesCateThreeDto);
+        }
+
+
+        [HttpGet]
+        [Route("dang-ky")]
+        [Route("registry")]
+        public IActionResult Registry()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [Route("dang-ky")]
+        [Route("registry")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Registry(CardRegistry model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+            var recaptcha = await _recaptcha.Validate(Request);
+            if (!recaptcha.success)
+            {
+                ModelState.AddModelError("", "Mã xác thực không đúng, Vui lòng thử lại");
+                return View(model);
+            }
+            _emailSenderRepository.SendMail(model.Email, "Đăng ký thẻ Vietbank", await _razorViewToStringRenderer.RenderViewToStringAsync("/Views/EmailSender/ContactResponseToUser.cshtml", new ContactResponseToUser()
+            {
+                Message = "Vietbank đã nhận được thông tin đang ký thẻ của bạn, chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất!"
+            }));
+            TempData["success"] = await _cardService.CardOnlineRegister(_externalService.ThamDinhThe, new CustomerInfo()
+            {
+                HoTen = model.HoTen,
+                DienThoai = model.DienThoai,
+                Email = model.Email,
+                GioiTinh = model.GioiTinh,
+                LoaiGiayTo = model.LoaiGiayTo,
+                SoGiayTo= model.SoGiayTo,
+                BranchId = model.BranchId,
+                Status = 1,
+                IsOnline = "Y",
+                Tinh = model.Tinh
+            });
+            return View();
         }
     }
 }

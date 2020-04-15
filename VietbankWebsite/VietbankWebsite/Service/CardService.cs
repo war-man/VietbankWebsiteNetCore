@@ -16,6 +16,11 @@ namespace VietbankWebsite.Service
             _unitOfWork = unitOfWork;
         }
 
+        public async Task<bool> CardOnlineRegister(string service, CustomerInfo customerInfo)
+        {
+            return await _unitOfWork.CardRepository.CardOnlineRegister(service, customerInfo);
+        }
+
         public async Task<CardHomeTemplate> GetCardHome(string lang)
         {
             return await _unitOfWork.CardRepository.GetCardHome(lang);
@@ -79,5 +84,6 @@ namespace VietbankWebsite.Service
         Task<IEnumerable<IncentivesCateThreeFieldView>> GetCategoryMasterCard(string lang);
         Task<IncentivesCateThreeFieldPostPageNum> GetListPostToCategoryMasterCard(string id, string lang, int pageCurrent, int pageSize);
         Task<CardSupportPostView> GetCardSupport(string alias, string lang);
+        Task<bool> CardOnlineRegister(string service, CustomerInfo customerInfo);
     }
 }

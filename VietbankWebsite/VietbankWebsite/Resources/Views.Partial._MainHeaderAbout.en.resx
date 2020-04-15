@@ -219,6 +219,12 @@
   <data name="TuanThuUrl" xml:space="preserve">
     <value>/about-vietbank/introduce/compliance-policy</value>
   </data>
+  <data name="VietbankHandbookName" xml:space="preserve">
+    <value>Customer Handbook</value>
+  </data>
+  <data name="VietbankHandbookUrl" xml:space="preserve">
+    <value>/about-vietbank/news/customer-handbook</value>
+  </data>
   <data name="VietbankTvName" xml:space="preserve">
     <value>Vietbank TV</value>
   </data>

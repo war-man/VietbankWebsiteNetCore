@@ -1,0 +1,152 @@
+﻿@{
+    ViewData["Title"] = "Registry";
+    Layout = "~/Views/Shared/_LayoutCard.cshtml";
+}
+@using Microsoft.Extensions.Options
+@using reCAPTCHA.AspNetCore
+@model VietbankWebsite.ModelMap.CardRegistry
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IOptions<RecaptchaSettings> RecaptchaSettings
+@inject IViewLocalizer Localizer
+@section Styles{
+    <link href="~/css/select2-bootstrap.css" rel="stylesheet" />
+    <link href="~/css/select2.min.css" rel="stylesheet" />
+    <style type="text/css">
+        .select2-container .select2-selection--single {
+            height: auto;
+        }
+
+        .select2-container--default .select2-selection--single .select2-selection__arrow {
+            height: 35px !important;
+        }
+
+        .text-danger {
+            font-size: 12px !important;
+        }
+    </style>
+}
+<main>
+    <section class="breadcrumb-wrap">
+        <div class="breadcrumb-content">
+            <div class="container">
+                <ol class="breadcrumb">
+                    <li><a href="#!"><span>Thẻ</span></a></li>
+                    <li><a href="#!"><span>Đăng ký thẻ</span></a></li>
+                </ol>
+            </div>
+        </div>
+    </section>
+    <section class="register-page">
+        <div class="container">
+            <h1 class="home-title text-blue text-center mb-2">Đăng ký thẻ</h1>
+            <div class="home-content text-center mb-0" style="max-width: unset">
+                <div class="content">
+                    <p>Đăng ký thẻ Quốc tế Visa Vietbank để nhận ưu đãi lớn từ VietBank</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-7 col-lg-6">
+                    <div class="register-form mt-0 mt-lg-2 pt-0">
+                        <div class="form-wrap">
+                            <div class="form-title">Điều kiện đăng ký:</div>
+                            <div class="content">
+                                <ul>
+                                    <li>Trên 18 tuổi</li>
+                                    <li>Thu nhập hàng tháng từ 10 triệu VND trở lên</li>
+                                    <li>Nhận lương qua tài khoản ngân hàng</li>
+                                </ul>
+                                <p class="text-blue">Điền đầy đủ thông tin của bạn bên dưới, chúng tôi sẽ gọi lại để hỗ trợ bạn đăng ký.</p>
+                            </div>
+                            <div class="form-title">Thông tin cá nhân:</div>
+                            @if (TempData["success"] != null && Boolean.Parse(TempData["success"].ToString()) == true)
+                            {
+                                <div class="alert alert-success" role="alert">
+                                    Đăng ký thẻ thành công
+                                </div>
+                            }
+
+                            @if (TempData["success"] != null && Boolean.Parse(TempData["success"].ToString()) == false)
+                            {
+                                <div class="alert alert-danger" role="alert">
+                                    Đăng ký thẻ thất bại. Vui lòng liên hệ 1800 1122
+                                </div>
+                            }
+                            @using (Html.BeginForm())
+                            {
+                                @Html.AntiForgeryToken()
+                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.HoTen, new { htmlAttributes = new { @class = "w-100", placeholder = "Họ tên" } })
+                                    @Html.ValidationMessageFor(model => model.HoTen, "", new { @class = "field-validation-valid text-danger" })
+                                </div>
+                                <div class="form-group">
+                                    <div style="padding-right:20px;" class="radio">
+                                        <label><input type="radio" value="CMND" name="LoaiGiayTo" checked />CMND</label>
+                                    </div>
+                                    <div class="radio">
+                                        <label><input type="radio" value="CCCD" name="LoaiGiayTo" />CCCD</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.SoGiayTo, new { htmlAttributes = new { @class = "w-100", placeholder = "Số CMND / CCCD / HC" } })
+                                    @Html.ValidationMessageFor(model => model.SoGiayTo, "", new { @class = "field-validation-valid text-danger" })
+                                </div>
+                                <div class="form-group">
+                                    <div style="padding-right:20px;" class="radio">
+                                        <label><input type="radio" value="Nam" name="GioiTinh" checked />Nam</label>
+                                    </div>
+                                    <div class="radio">
+                                        <label><input type="radio" value="Nữ" name="GioiTinh" />Nữ</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.DienThoai, new { htmlAttributes = new { @class = "w-100", placeholder = "Số điện thoại di động" } })
+                                    @Html.ValidationMessageFor(model => model.DienThoai, "", new { @class = "field-validation-valid text-danger" })
+                                </div>
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "w-100", placeholder = "Địa chỉ email" } })
+                                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "field-validation-valid text-danger" })
+                                </div>
+                                <div class="form-group">
+                                    <select style="width:100%;" name="Tinh" class="form-control"></select>
+                                    @Html.ValidationMessageFor(model => model.Tinh, "", new { @class = "field-validation-valid text-danger" })
+                                </div>
+                                <div class="form-group">
+                                    <select style="width:100%;" name="district" class="form-control"></select>
+                                </div>
+                                <div class="form-group">
+                                    <select style="width:100%;" name="BranchId" class="form-control"></select>
+                                    @Html.ValidationMessageFor(model => model.BranchId, "", new { @class = "field-validation-valid text-danger" })
+                                </div>
+                                <div class="form-group mb-3">
+                                    <div class="checkbox w-100">
+                                        @Html.CheckBoxFor(m => m.DongY, new { id = "cb1" })
+                                        <label for="cb1">Tôi đồng ý rằng Vietbank có thể sử dụng thông tin trên đây để liên hệ với tôi nhằm giới thiệu những sản phẩm, dịch vụ và chương trình khuyến mãi của Vietbank từ nay trở về sau.</label>
+                                        @Html.ValidationMessageFor(model => model.DongY, "", new { @class = "field-validation-valid text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="captcha-box clearfix">
+                                        @Html.Recaptcha(RecaptchaSettings?.Value)
+                                    </div>
+                                </div>
+                                <div class="form-note mb-3">*Lưu ý: Các thông tin của Quý khách sẽ không được sử dụng cho các mục đích khác ngoài những mục đích được nêu trên hoặc chia sẻ với bên thứ 3 ngoại trừ Vietbank.</div>
+                                <div class="frm-btn">
+                                    <input class="btn-primary" type="submit" value="Gửi">
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5 col-lg-6">
+                    <div class="drop text-center"><img src="/images/dangky/drop.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+@section Scripts{
+    <script src="~/js/select2.full.js"></script>
+    <script src="~/page/card-registry.js"></script>
+}

@@ -138,7 +138,7 @@ namespace VietbankWebsite
             services.Configure<EmailSender>(Configuration.GetSection("EmailSender"));
             services.Configure<RemoteService>(Configuration.GetSection("RemoteService"));
             services.Configure<MessageQueueConfig>(Configuration.GetSection("MessageQueueConfig"));
-
+            services.Configure<ExternalService>(Configuration.GetSection("ExternalService"));
             services.AddDetection();
             //services.AddHostedService<GenerateSiteMapHostedService>();
             //services.AddHostedService<QueueCentralHostedService>();

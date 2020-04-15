@@ -741,4 +741,29 @@ namespace VietbankWebsite.ModelMap
         public string Title { get; set; }
         public string Url { get; set; }
     }
+
+    public class CardRegistry
+    {
+        [Required]
+        
+        public string HoTen { get; set; }
+        [Required]
+        public string LoaiGiayTo { get; set; }
+        [Required]
+        public string SoGiayTo { get; set; }
+        [Required]
+        public string GioiTinh { get; set; }
+        [Required]
+        public string DienThoai { get; set; }
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; }
+        [Required]
+        public string BranchId { get; set; }
+        [Required]
+        public string Tinh { get; set; }
+        [Required]
+        [Range(typeof(bool), "true", "true", ErrorMessage = "Bạn chưa đồng ý với điều khoản trên!")]
+        public bool DongY { get; set; }
+    }
 }

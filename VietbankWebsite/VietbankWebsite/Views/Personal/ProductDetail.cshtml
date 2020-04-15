@@ -1,6 +1,5 @@
 ﻿@using Microsoft.Extensions.Options
 @using reCAPTCHA.AspNetCore
-@using Microsoft.AspNetCore.Mvc.Localization
 @inject IOptions<RecaptchaSettings> RecaptchaSettings
 @model VietbankWebsite.Entities.ProductDetail
 @{
@@ -8,8 +7,6 @@
 }
 @section Styles{
     <link href="~/css/product.css" rel="stylesheet" />
-    <link href="~/css/boostrap.css" rel="stylesheet" />
-
     <link href="~/css/swiper.min.css" rel="stylesheet" />
 }
 <main class="pt-80">
@@ -180,6 +177,8 @@
                                     <div class="col-12 col-sm-12 col-md-9 col-lg-9 col-xs-9">
                                         <input data-validation="required" type="text" name="NameCustomer" placeholder="Họ và tên" required />
                                         <input type="text" name="TitlePost" value="@Model.Title" class="hidden" />
+                                        <input type="text" id="categoryId" value="@Model.CategoryId" class="hidden" />
+                                        <input type="text" id="categoryUrl" value="@Model.CategoryUrl" class="hidden" />
                                     </div>
                                 </div>
                                 <div class="row">
@@ -260,79 +259,9 @@
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                     <div class="row no-gutters title-menu">
                         <h1>Sản phẩm liên quan</h1>
-                        <a href="#"><p class="notice">Xem tất cả</p></a>
+                        <a href="@Model.CategoryUrl"><p class="notice">Xem tất cả</p></a>
                     </div>
-                    <div class="list-posts">
-                        <div class="row no-gutters">
-                            <div class="col-4">
-                                <a href="#">
-                                    <div class="img tRes_70 zoom-basic">
-                                        <img src="/images/slide1.jpg" alt="" />
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-8">
-                                <article class="posts">
-                                    <h4>
-                                        <a href="#">
-                                            Points To Remember About A Spastic
-                                            Colon
-                                        </a>
-                                    </h4>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                                        elit, sed do eiusmod tempor incididunt…
-                                    </p>
-                                </article>
-                            </div>
-                        </div>
-                        <div class="row no-gutters">
-                            <div class="col-4">
-                                <a href="#">
-                                    <div class="img tRes_70 zoom-basic">
-                                        <img src="/images/slide1.jpg" alt="" />
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-8">
-                                <article class="posts">
-                                    <h4>
-                                        <a href="#">
-                                            Points To Remember About A Spastic
-                                            Colon
-                                        </a>
-                                    </h4>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                                        elit, sed do eiusmod tempor incididunt…
-                                    </p>
-                                </article>
-                            </div>
-                        </div>
-                        <div class="row no-gutters">
-                            <div class="col-4">
-                                <a href="#">
-                                    <div class="img tRes_70 zoom-basic">
-                                        <img src="/images/slide1.jpg" alt="" />
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-8">
-                                <article class="posts">
-                                    <h4>
-                                        <a href="#">
-                                            Points To Remember About A Spastic
-                                            Colon
-                                        </a>
-                                    </h4>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                                        elit, sed do eiusmod tempor incididunt…
-                                    </p>
-                                </article>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="list-posts" id="list-random-post"></div>
                 </div>
             </div>
         </div>

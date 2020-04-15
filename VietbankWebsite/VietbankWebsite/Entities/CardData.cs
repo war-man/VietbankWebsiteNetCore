@@ -41,4 +41,18 @@ namespace VietbankWebsite.Entities
 
         public DateTime CreatedDate { get; set; }
     }
+
+    public class CustomerInfo
+    {
+        public string HoTen { get; set; }
+        public string LoaiGiayTo { get; set; }
+        public string SoGiayTo { get; set; }
+        public string DienThoai { get; set; }
+        public string Email { get; set; }
+        public string GioiTinh { get; set; }
+        public string Tinh { get; set; }
+        public string IsOnline { get; set; }
+        public string BranchId { get; set; }
+        public int Status { get; set; }
+    }
 }

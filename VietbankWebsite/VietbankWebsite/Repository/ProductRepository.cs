@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -35,6 +36,7 @@ namespace VietbankWebsite.Repository
                                     Title = b.post_title,
                                     Thumbnail = a.post_thumbnail ?? "/img/banner_page/vietbank-bg.jpg",
                                     Content = b.post_content,
+                                    CategoryId = d.category_ID,
                                     CategoryName = d.name,
                                     CategoryUrl = $"{aliastFullCate}/{aliasCate}",
                                     Description = b.post_excerpt,
@@ -175,6 +177,38 @@ namespace VietbankWebsite.Repository
             };
         }
 
+        public async Task<IEnumerable<ListProductShort>> ListRandomProduct(int idCate, string lang)
+        {
+            var r = new Random();
+            var lstPost = await _context.VbPostCategories.Where(x => x.category_ID.Equals(idCate)).Select(x => x.post_ID).ToArrayAsync();
+            int[] result = new int[8];
+            for (int i = 0; i < 8; i++)
+            {
+                var elementRand = r.Next(0, lstPost.Count() - 1);
+                result[i] = lstPost.ElementAt(elementRand);
+            }
+            var lstProduct = await (from a in _context.VbCategoryTranslates
+                                    join b in _context.VbPostCategories on a.category_ID equals b.category_ID
+                                    join c in _context.VbPostTranslates on b.post_ID equals c.post_ID
+                                    join d in _context.VbPosts on c.post_ID equals d.Id
+                                    join e in _context.VbCategories on a.category_ID equals e.ID
+                                    where a.category_ID.Equals(idCate)
+                                    where a.language.Equals(lang)
+                                    where c.language.Equals(lang)
+                                    where result.Distinct().Contains(b.post_ID)
+                                    where d.post_status.Equals(4)
+                                    orderby c.ID descending
+                                    select new ListProductShort()
+                                    {
+                                        Id = c.ID,
+                                        Title = c.post_title,
+                                        Description = c.post_excerpt,
+                                        Thumbnail = d.post_thumbnail,
+                                        Url = $"{c.post_url}"
+                                    }).Take(8).ToListAsync();
+            return lstProduct;
+        }
+
         public async Task<IEnumerable<PrevAndNextProduct>> NextAndPrevProduct(int idCate, string aliasCate, string lang)
         {
             var p = new DynamicParameters();
@@ -219,6 +253,7 @@ namespace VietbankWebsite.Repository
         Task<CategoryProduct> ListCategoryProducts(int idCate,string aliasCate,string lang);
         Task<CategoryProduct> ListCategoryProducts(int parentId, string aliasSubCate, string aliasCate, string lang);
         Task<ProductShort> ListProductShort(int parentId,string aliasCate, string aliasFullCate, string lang, int page, int pageSize);
+        Task<IEnumerable<ListProductShort>> ListRandomProduct(int idCate, string lang);
         Task<ProductDetail> GetProductDetail(string aliasCate,string aliastFullCate,string aliasProduct,string lang);
         Task<IEnumerable<PrevAndNextProduct>> NextAndPrevProduct(int idCate, string aliasCate, string lang);
     }

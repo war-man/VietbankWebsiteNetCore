@@ -35,6 +35,11 @@ namespace VietbankWebsite.Service
             return await _unitOfWork.ProductRepository.ListProductShort(parentId,aliasCate, aliasFullCate, lang, page, pageSize);
         }
 
+        public async Task<IEnumerable<ListProductShort>> ListRandomProduct(int idCate, string lang)
+        {
+            return await _unitOfWork.ProductRepository.ListRandomProduct(idCate, lang);
+        }
+
         public async Task<IEnumerable<PrevAndNextProduct>> NextAndPrevProduct(int idCate, string aliasCate, string lang)
         {
             return await _unitOfWork.ProductRepository.NextAndPrevProduct(idCate,aliasCate,lang);
@@ -46,6 +51,7 @@ namespace VietbankWebsite.Service
         Task<CategoryProduct> ListCategoryProducts(int idCate, string aliasCate, string lang);
         Task<CategoryProduct> ListCategoryProducts(int parentId, string aliasSubCate, string aliasCate, string lang);
         Task<ProductShort> ListProductShort(int parentId,string aliasCate, string aliasFullCate, string lang, int page, int pageSize);
+        Task<IEnumerable<ListProductShort>> ListRandomProduct(int idCate, string lang);
         Task<ProductDetail> GetProductDetail(string aliasCate, string aliastFullCate, string aliasProduct, string lang);
         Task<IEnumerable<PrevAndNextProduct>> NextAndPrevProduct(int idCate, string aliasCate, string lang);
     }

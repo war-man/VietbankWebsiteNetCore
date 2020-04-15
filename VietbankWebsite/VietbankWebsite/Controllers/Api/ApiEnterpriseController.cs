@@ -36,5 +36,11 @@ namespace VietbankWebsite.Controllers.Api
         {
             return await _aboutVietbankService.GetListNews(1074, _localizer["PromotionNewsName"], _localizer["PromotionNewsUrl"], GetLangCurrent(), pageCurrent, pageSize);
         }
+
+        [HttpGet("listproductrandom/{idCate}")]
+        public async Task<IEnumerable<ListProductShort>> ListRandomProduct(int idCate)
+        {
+            return await _productService.ListRandomProduct(idCate, GetLangCurrent());
+        }
     }
 }

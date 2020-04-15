@@ -3,6 +3,8 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 using Vietbank.Core.Helper;
 using VietbankWebsite.Context;
@@ -371,6 +373,19 @@ namespace VietbankWebsite.Repository
             }
             return categories;
         }
+
+        public async Task<bool> CardOnlineRegister(string service, CustomerInfo customerInfo)
+        {
+            using (var client = new HttpClient())
+            {
+                HttpResponseMessage result = await client.PostAsync(service, new StringContent(JsonConvert.SerializeObject(customerInfo), Encoding.UTF8, "application/json"));
+                if (result.IsSuccessStatusCode)
+                {
+                    return true;
+                }
+                return false;
+            }
+        }
     }
 
     public interface ICardRepository
@@ -386,6 +401,6 @@ namespace VietbankWebsite.Repository
         Task<IncentivesCateThreeFieldPostPageNum> GetListPostToCategoryMasterCard(string id,string lang, int pageCurrent, int pageSize);
         Task<CardSupportPostView> GetCardSupport(string alias, string lang);
         Task<CardHome> FindById(string id);
-
+        Task<bool> CardOnlineRegister(string service, CustomerInfo customerInfo);
     }
 }

@@ -2,6 +2,7 @@
     initialValidateForm();
     getListRandomVietbankHandBook();
     getCardPromotionPostDefault();
+    getListRandomProduct();
     $(window).scroll(function () {
         var sticky = $('#sticky'),
 
@@ -12,7 +13,14 @@
 
     function getListRandomVietbankHandBook() {
         requestAjaxGet('/api/ApiAbout/getrandomlistvietbankhandbook').done(function (data) {
-            $('#list-posts').after(generateListRandomVietbankHandBook(data));
+            $('#list-posts').html(generateListRandomVietbankHandBook(data));
+        }).fail();
+    }
+
+    function getListRandomProduct() {
+        var categoryId = $('#categoryId').val();
+        requestAjaxGet('/api/ApiEnterprise/listproductrandom/' + categoryId).done(function (data) {
+            loopListRandomProduction($('#categoryUrl').val(), data);
         }).fail();
     }
 
@@ -32,6 +40,34 @@
             listPost += generatePostItem(list[i]);
         }
         return listPost;
+    }
+
+    function loopListRandomProduction(categoryUrl,products) {
+        var listProduction = '';
+        for (var i = 0; i < 3; i++) {
+            listProduction += generateProductItem(categoryUrl,products[i]);
+        }
+        $('#list-random-post').html(listProduction);
+    }
+
+    function generateProductItem(categoryUrl,product) {
+        var post = '<div class="row no-gutters">'+
+            '<div class="col-4">'+
+                '<a href="#">'+
+                    '<div class="img tRes_70 zoom-basic">'+
+                        '<img src="' + product.thumbnail+'" alt="" />'+
+                    '</div>'+
+                '</a>'+
+            '</div >'+
+            '<div class="col-8">'+
+                '<article class="posts">'+
+            '<h4>' +
+            '<a href="' + categoryUrl + '/' + product.url + '">' + product.title+'</a>' +
+            '</h4>' +
+            '<p>' + product.description + '</p>' +
+                '</article>'+
+            '</div></div>';
+        return post;
     }
 
     function generatePostItem(promotion) {
@@ -99,7 +135,6 @@
                         $('.menu-wrap').addClass('fixed');
                         var top = hd.outerHeight();
                         $('.menu-wrap').css('top', top);
-                        console.log(top);
                     }
                     else {
                         $('.menu-wrap').removeClass('fixed');
