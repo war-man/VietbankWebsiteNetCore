@@ -21,5 +21,6 @@ namespace VietbankWebsite.Entities
         [Required]
         public string ContentCustomer { get; set; }
         public DateTime CreatedDate { get; set; }
+        public bool IsDone { get; set; }
     }
 }

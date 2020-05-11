@@ -108,7 +108,8 @@
                                     @Html.ValidationMessageFor(model => model.Email, "", new { @class = "field-validation-valid text-danger" })
                                 </div>
                                 <div class="form-group">
-                                    <select style="width:100%;" name="Tinh" class="form-control"></select>
+                                    <select style="width:100%;" id="tinh" class="form-control"></select>
+                                    <input class="form-control hidden" name="Tinh" value=""/>
                                     @Html.ValidationMessageFor(model => model.Tinh, "", new { @class = "field-validation-valid text-danger" })
                                 </div>
                                 <div class="form-group">

@@ -281,6 +281,7 @@ namespace VietbankWebsite.Controllers
                 ModelState.AddModelError("", "Mã xác thực không đúng, Vui lòng thử lại");
                 return RedirectToAction("ProductDetail", new { cate, detail });
             }
+            model.IsDone = false;
             model.CreatedDate = DateTime.Now;
             _emailSenderRepository.SendMail(model.EmailCustomer, model.TitlePost, await _razorViewToStringRenderer.RenderViewToStringAsync("/Views/EmailSender/ContactResponseToUser.cshtml", new ContactResponseToUser()
             {

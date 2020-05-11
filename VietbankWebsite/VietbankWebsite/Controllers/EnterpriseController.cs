@@ -9,6 +9,7 @@ using Microsoft.Extensions.Options;
 using VietbankWebsite.Entities;
 using VietbankWebsite.ModelMap;
 using VietbankWebsite.Models;
+using VietbankWebsite.Repository;
 using VietbankWebsite.Service;
 
 namespace VietbankWebsite.Controllers
@@ -23,13 +24,17 @@ namespace VietbankWebsite.Controllers
         private readonly IStringLocalizer<EnterpriseController> _localizer;
         private readonly ISupportService _supportService;
         private readonly IAboutVietbankService _aboutVietbankService;
+        private readonly IEmailSenderRepository _emailSenderRepository;
         private readonly RemoteService _remoteService;
+        private readonly IRazorViewToStringRenderer _razorViewToStringRenderer;
         public EnterpriseController(
             IProductService productService, 
             IStringLocalizer<EnterpriseController> localizer, 
-            ISupportService supportService, 
+            ISupportService supportService,
+            IEmailSenderRepository emailSenderRepository,
             IMemoryCache cache, 
             IRecaptchaService recaptcha,
+            IRazorViewToStringRenderer razorViewToStringRenderer,
             IAboutVietbankService aboutVietbankService,
             IOptions<RemoteService> remoteService
         )
@@ -40,7 +45,9 @@ namespace VietbankWebsite.Controllers
             _supportService = supportService;
             _recaptcha = recaptcha;
             _aboutVietbankService = aboutVietbankService;
+            _razorViewToStringRenderer = razorViewToStringRenderer;
             _remoteService = remoteService.Value;
+            _emailSenderRepository = emailSenderRepository;
         }
         [HttpGet]
         [Route("ban-can")]
@@ -291,6 +298,32 @@ namespace VietbankWebsite.Controllers
             ViewData["MetaDescription"] = productDetail.MetaDescription;
             ViewData["FeatureImage"] = productDetail.FeatureImage;
             return View(productDetail);
+        }
+
+        [HttpPost]
+        [Route("san-pham/{cate}/{detail}")]
+        [Route("product/{cate}/{detail}")]
+        public async Task<IActionResult> ProductDetail(string cate, string detail, VbFeedBack model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+            var recaptcha = await _recaptcha.Validate(Request);
+            if (!recaptcha.success)
+            {
+                ModelState.AddModelError("", "Mã xác thực không đúng, Vui lòng thử lại");
+                return RedirectToAction("ProductDetail", new { cate, detail });
+            }
+            model.IsDone = false;
+            model.CreatedDate = DateTime.Now;
+            _emailSenderRepository.SendMail(model.EmailCustomer, model.TitlePost, await _razorViewToStringRenderer.RenderViewToStringAsync("/Views/EmailSender/ContactResponseToUser.cshtml", new ContactResponseToUser()
+            {
+                Message = "Vietbank đã nhận được lời nhắn của bạn, chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất!"
+            }));
+            await _supportService.RecieveFeedBack(model);
+            TempData["success"] = true;
+            return RedirectToAction("ProductDetail", new { cate, detail });
         }
     }
 }

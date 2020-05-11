@@ -10,14 +10,13 @@ function getProvince() {
     });
 }
 
-
 function generateSelectProvince(province) {
     var option = '<option></option>';
     for (var i = 0; i < province.length; i++) {
         option += '<option value="' + province[i].provinceId + '">' + province[i].name + '</option>';
     }
-    $('select[name=Tinh]').html(option);
-    $('select[name=Tinh]').select2({
+    $('select[id=tinh]').html(option);
+    $('select[id=tinh]').select2({
         placeholder: 'Chọn tỉnh thành',
         width: '100%',
         height: '40px',
@@ -27,7 +26,8 @@ function generateSelectProvince(province) {
 }
 
 function initSelectProvinceChange() {
-    $('select[name=Tinh]').change(function () {
+    $('select[id=tinh]').change(function () {
+        $('input[name=Tinh]').val($(this)[0].options[$(this)[0].selectedIndex].text);
         getDistrict($(this).val());
     });
 }
@@ -57,7 +57,7 @@ function generateSelectDistrict(district) {
 
 function initialSelectDistrictChange() {
     $('select[name=district]').change(function () {
-        var province = $('select[name=Tinh]').val();
+        var province = $('select[id=tinh]').val();
         var district = $('select[name=district]').val();
         filterTransagencyMap(province, district);
     });

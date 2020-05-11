@@ -91,6 +91,20 @@ namespace VietbankWebsite.Controllers
         [Route("support/{alias}")]
         [Route("ho-tro/nhung-cau-hoi-thuong-gap/{alias}")]
         [Route("support/frequently-asked-questions/{alias}")]
+        [Route("ho-tro/bieu-phi/{alias}")]
+        [Route("support/Fees-charges/{alias}")]
+        [Route("ho-tro/bieu-mau/{alias}")]
+        [Route("support/forms/{alias}")]
+        [Route("ho-tro/dung-the-thong-minh/{alias}")]
+        [Route("support/smart-card-use/{alias}")]
+        [Route("ho-tro/kich-hoat-the/{alias}")]
+        [Route("support/card-activation/{alias}")]
+        [Route("ho-tro/han-muc-giao-dich-the/{alias}")]
+        [Route("ho-tro/Vietbank-Visa-payWave/{alias}")]
+        [Route("ho-tro/huong-dan-su-dung-an-toan-bao-mat-the/{alias}")]
+        [Route("ho-tro/huong-dan-thanh-toan-du-no-the-tren-internet-banking-vietbank/{alias}")]
+        [Route("ho-tro/huong-dan-su-dung-the-thanh-toan-noi-dia-vietbank/{alias}")]
+        [Route("ho-tro/dieu-khoan-va-dieu-kien-phat-hanh-va-su-dung-the-tra-truoc-vietbank/{alias}")]
         public async Task<IActionResult> Forms(string alias)
         {
             if (alias == null)

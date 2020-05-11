@@ -1540,3 +1540,801 @@ body {
             line-height: 1.4;
             color: #999;
         }
+
+.border-bottom-none {
+    border-bottom: none !important;
+}
+
+.border-bottom-white {
+    border-bottom: 1px solid #fff !important;
+}
+
+.mw100 {
+    max-width: 100%;
+}
+
+.bold {
+    font-weight: bold !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+#wrapper {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    background-color:white;
+}
+
+
+.fa-home:before {
+    content: '\f015';
+}
+
+/*============================Page 1 & All Page===============================*/
+.fullpage-form {
+    padding: 30px 20px;
+    border: 2px solid #0C56A5;
+}
+
+.inner {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.main-header-form .logo {
+    padding: 20px 0px;
+}
+
+    .main-header-form .logo img {
+        width: 25%;
+    }
+
+.main-header-form .title-main h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #333;
+    margin-bottom: 0px;
+}
+
+.main-header-form .description-header p {
+    text-align: center;
+    color: #333;
+    text-transform: uppercase;
+    margin: 5px 0px;
+    font-size: 25px;
+}
+
+.law p {
+    text-align: center;
+    margin: 5px 0px;
+}
+
+.main-form{
+    background-color:white;
+}
+
+.main-form .title-cat h4 {
+    text-transform: uppercase;
+    color: #f00;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.main-form .box-item {
+    margin-bottom: 30px;
+}
+
+    .main-form .box-item .title-content {
+        font-weight: bold;
+        color: #333;
+        margin: 10px 0px;
+    }
+
+    .main-form .box-item .note {
+        margin-top: 10px;
+        color: #414042;
+    }
+
+.fullpage-1 .contact-footer {
+    display: flex;
+    align-items: center;
+    float: right;
+}
+
+    .fullpage-1 .contact-footer span {
+        padding: 0px 10px;
+    }
+
+    .fullpage-1 .contact-footer .hotline, .contact-footer .website {
+        padding: 0px 10px;
+    }
+
+    .fullpage-1 .contact-footer .hotline {
+        border-right: 1px solid #444;
+    }
+
+/*============================Page 1===============================*/
+.fullpage-1 {
+    max-width: 100%;
+    margin: 30px;
+    border: 5px solid #0054a6;
+    padding: 30px
+}
+
+    .fullpage-1 .title-cat {
+        margin-left: 30px;
+    }
+
+    .fullpage-1 .main-form .title-content {
+        margin-left: 50px;
+    }
+
+table, th, td {
+    text-align: center;
+}
+
+table {
+    margin: 0 auto;
+    width: 100%;
+    border-collapse: collapse;
+    box-sizing: border-box;
+}
+
+.fullpage-1 table th {
+    color: #fff;
+    background-color: #0055AA;
+}
+
+.fullpage-1 table tr:first-child th:first-child {
+    border-radius: 10px 0 0 0;
+    border: 1px solid #fff;
+    border-bottom: 1px solid #333;
+    border-right: 4px solid #fff;
+}
+
+.fullpage-1 table tr:first-child th:nth-child(2) {
+    border: 1px solid #fff;
+    border-bottom: 3px solid #fff;
+    border-radius: 0 10px 0 0;
+}
+
+.fullpage-1 table tr:nth-child(2) th {
+    background-color: #00b0f0;
+    border-bottom: 3px solid #fff;
+}
+
+    .fullpage-1 table tr:nth-child(2) th:not(:last-child) {
+        border-right: 3px solid #fff;
+    }
+
+.fullpage-1 table tr:nth-child(3) th:not(:last-child) {
+    border-right: 3px solid #fff;
+}
+
+.fullpage-1 table tr:nth-child(3) th:last-child {
+    border-right: 1px solid #fff;
+}
+
+.fullpage-1 table tr td:first-child {
+    color: #333;
+}
+
+.fullpage-1 table tr td:not(:first-child) {
+    color: #666;
+}
+/*Table 1 page 1*/
+.fullpage-1 table tr {
+    height: 30px;
+}
+
+    .fullpage-1 table tr td {
+        color: #414042;
+    }
+
+.fullpage-1 table.table-1 tr td:first-child {
+    color: #231f20;
+    font-weight: bold;
+    padding-left: 30px;
+    text-align: left;
+}
+/*Table 2 page 1*/
+.fullpage-1 table.table-2 tr:nth-child(2) th {
+    border-bottom: none;
+}
+/*Table 3 page 1*/
+.fullpage-1 table.table-3 tr:nth-child(2) th {
+    border-bottom: none;
+}
+/*Table 4 page 1*/
+table tr:first-child th:first-child {
+    border-right: 2px solid #fff;
+}
+
+.fullpage-1 table.table-4 tr:first-child th:first-child, .fullpage-1 table.table-4 tr:nth-child(9) th:first-child {
+    border-right: 2px solid #fff;
+}
+
+/*============================Page 2===============================*/
+.fullpage-2 .title-main h1 {
+    color: #444;
+}
+
+.fullpage-2 .description-header p {
+    color: #444;
+}
+
+.fullpage-2 .law p {
+    color: #444;
+    font-style: italic;
+}
+
+.fullpage-2 .main-form .title-cat h4 {
+    color: #0054a6;
+    font-size: 20px;
+}
+
+.fullpage-2 .main-form .box-item .title-content {
+    color: #0054a6;
+    font-weight: normal;
+}
+
+.fullpage-2 table th, .fullpage-2 table td {
+    border: 1px solid #444;
+}
+
+.fullpage-2 table tr {
+    height: 30px;
+}
+
+    .fullpage-2 table tr th {
+        background: #0054a6;
+        color: #fff;
+    }
+
+    .fullpage-2 table tr:first-child th:first-child {
+        border: none;
+        border-radius: 10px 0 0 0;
+        border-right: 4px solid #fff;
+    }
+
+    .fullpage-2 table tr:first-child th:last-child {
+        border: none;
+        border-radius: 0 10px 0 0;
+        border-bottom: 3px solid #fff;
+    }
+
+    .fullpage-2 table tr:nth-child(2) th:not(:last-child) {
+        border-right: 3px solid #fff;
+    }
+
+.fullpage-2 table.table-3-2 tr:nth-child(2) th {
+    border-bottom: 3px solid #fff;
+}
+
+.fullpage-2 table.table-3-2 tr:nth-child(3) th {
+    background: #00b0f0;
+}
+
+    .fullpage-2 table.table-3-2 tr:nth-child(3) th:not(:last-child) {
+        border-right: 3px solid #fff;
+    }
+
+/*============================Page 3===============================*/
+.fullpage-3 {
+    max-width: 100%;
+    margin: 30px;
+    border: 1px solid #0054a6;
+    padding: 30px
+}
+
+    .fullpage-3 .main-header-form .logo img {
+        width: 30%;
+    }
+
+    .fullpage-3 .main-form {
+        padding: 50px 0px;
+        box-sizing: border-box;
+    }
+
+    .fullpage-3 .main-header-form .title-main h1 {
+        color: #0C56A5;
+        font-size: 40px;
+    }
+
+    .fullpage-3 .box-content {
+        box-sizing: border-box;
+    }
+
+    .fullpage-3 .title-content {
+        display: inline-block;
+        position: relative;
+    }
+
+    .fullpage-3 .box-content p.description {
+        margin: 10px 0px 10px 40px;
+    }
+
+    .fullpage-3 .box-content p.inline-block {
+        display: inline-block;
+    }
+
+    .fullpage-3 .title-content span {
+        padding: 5px;
+        max-width: 100%;
+        background: #e60000;
+        color: #fff;
+    }
+
+        .fullpage-3 .title-content span.shape {
+            width: 30px;
+            height: 28px;
+            background: #e60000;
+            clip-path: polygon(100% 50%, 0 0, 0 100%);
+            position: absolute;
+            top: -5px;
+            right: -29px;
+            box-sizing: border-box;
+        }
+
+    .fullpage-3 .box-content .calculation span.title-cal {
+        position: relative;
+        padding-left: 30px;
+        font-weight: bold;
+    }
+
+        .fullpage-3 .box-content .calculation span.title-cal:before {
+            position: absolute;
+            content: '';
+            width: 10px;
+            height: 10px;
+            clip-path: polygon(100% 50%, 0 0, 0 100%);
+            background: #0C56A5;
+            left: 10px;
+            top: 3px;
+        }
+
+    .fullpage-3 .box-content .calculation .recipe-1, .recipe-3 {
+        padding: 30px 10px 30px;
+    }
+
+    .fullpage-3 .box-content .calculation .recipe-2 {
+        padding: 10px 10px 30px;
+    }
+
+        .fullpage-3 .box-content .calculation .recipe-2 p {
+            display: inline-block;
+            padding: 20px;
+            background: #0655a2;
+            color: #fff;
+            border-radius: 10px;
+            margin: 0px;
+        }
+
+    .fullpage-3 .contact-footer ul {
+        text-align: center;
+        list-style: none;
+        margin: 0px;
+    }
+
+        .fullpage-3 .contact-footer ul li {
+            display: inline-block;
+            padding: 0px 20px;
+        }
+
+            .fullpage-3 .contact-footer ul li:first-child {
+                border-right: 1px solid #333;
+            }
+
+    .fullpage-3 table.formula {
+        color: #fff;
+        box-sizing: border-box;
+    }
+
+        .fullpage-3 table.formula tr:first-child th {
+            text-align: right;
+            padding-right: 10px;
+        }
+
+        .fullpage-3 table.formula tr th ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+            .fullpage-3 table.formula tr th ul li {
+                padding: 10px 0px;
+                width: 90%;
+            }
+
+                .fullpage-3 table.formula tr th ul li:first-child {
+                    border-bottom: 1px solid #fff;
+                }
+
+    .fullpage-3 .recipe-1 table.formula {
+        border: none;
+        margin: 0px;
+        width: 500px;
+        height: 50px;
+        background: #0655a2;
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
+
+    .fullpage-3 .recipe-3 table.formula {
+        border: none;
+        margin: 0px;
+        width: 700px;
+        height: 70px;
+        background: #0655a2;
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
+
+    .fullpage-3 table.formula tr th {
+        background: transparent;
+        border: none;
+        border-radius: 0px;
+    }
+
+/*============================Page 4===============================*/
+
+
+/*============================Page 5===============================*/
+
+
+.fullpage-5 {
+    max-width: 100%;
+    margin: 30px;
+    border: 5px solid #006fc0;
+    padding: 30px;
+    position: relative;
+}
+
+    .fullpage-5 .main-header-form .title-main h1 {
+        color: #0064A3;
+    }
+
+    .fullpage-5 .main-header-form .apply-time p {
+        text-align: center;
+        color: #333;
+    }
+
+    .fullpage-5 .note .note-1 {
+        margin-top: 10px;
+    }
+
+    .fullpage-5 .note .note-2 p:first-child {
+        text-decoration: underline;
+        font-weight: bold;
+    }
+
+    .fullpage-5 .note .note-2 p:not(:first-child) {
+        padding-left: 50px;
+        position: relative;
+    }
+
+        .fullpage-5 .note .note-2 p:not(:first-child):before {
+            content: '-';
+            position: absolute;
+            left: 0;
+        }
+
+    .fullpage-5 table.table-1-5, .fullpage-5 table.table-2-5, .fullpage-5 table.table-1-5 th, .fullpage-5 table.table-1-5 td, .fullpage-5 table.table-2-5 tr th, .fullpage-5 table.table-2-5 tr td {
+        border: 1px dashed #333;
+    }
+
+        .fullpage-5 table.table-1-5 tr td, .fullpage-5 table.table-2-5 tr td {
+            color: #333;
+            height: 30px;
+        }
+
+            .fullpage-5 table.table-1-5 tr td:not(:first-child) {
+                text-align: left;
+                padding-left: 10px;
+            }
+
+        .fullpage-5 table.table-1-5 tr:first-child th, .fullpage-5 table.table-2-5 tr:first-child th {
+            background: #0064A3;
+            height: 30px;
+            border-radius: 0px;
+            border: 1px dashed #333;
+        }
+
+        .fullpage-5 table.table-1-5 tr:nth-child(2) th, .fullpage-5 table.table-2-5 tr:nth-child(2) th, .fullpage-5 table.table-2-5 tr:nth-child(3) th {
+            height: 30px;
+            background: #FFC50C;
+            color: #000;
+            border: 1px dashed #333;
+        }
+
+/*============================Page 6===============================*/
+
+.fullpage-6 .main-header-form .law p {
+    width: 40%;
+    margin: 10px auto 30px;
+}
+
+.fullpage-6 table.table-6, th, td {
+    border: 1px solid #749fc9;
+}
+
+    .fullpage-6 table.table-6 tr:first-child th {
+        border: 1px solid #749fc9;
+        background: #15a;
+        border-radius: 0px;
+        height: 50px;
+        color: #fff;
+    }
+
+    .fullpage-6 table.table-6 tr:nth-child(2) th {
+        height: 50px;
+        background: #15a;
+        border: 1px solid #749fc9;
+        color: #fff;
+    }
+
+    .fullpage-6 table.table-6 tr:nth-child(n+3) th {
+        background: #cef;
+        text-align: left;
+        color: #222;
+        padding-left: 20px;
+        height: 30px;
+        border-bottom: 1px solid #cef;
+    }
+
+    .fullpage-6 table.table-6 tr td {
+        height: 30px;
+        color: #222;
+    }
+
+        .fullpage-6 table.table-6 tr td:first-child {
+            text-align: left;
+            padding-left: 20px;
+        }
+
+.fullpage-6 .note p {
+    color: #d23;
+}
+
+.fullpage-6 .contact p.title-contact {
+    color: #222;
+    font-weight: bold;
+    margin: 5px 0px;
+}
+
+.fullpage-6 .contact p:not(:first-child) {
+    display: inline-block;
+    padding-right: 20px;
+}
+
+.fullpage-6 .contact p {
+    position: relative;
+}
+
+    .fullpage-6 .contact p:after {
+        content: '-';
+        position: absolute;
+        right: 5px;
+    }
+
+    .fullpage-6 .contact p:last-child:after {
+        display: none;
+    }
+
+    .fullpage-6 .contact p span {
+        font-weight: bold;
+    }
+
+/*============================Page 7===============================*/
+
+.fullpage-7 {
+    max-width: 100%;
+    margin: 30px;
+    border: 5px solid #0054a6;
+    padding: 30px
+}
+
+    .fullpage-7 .main-header-form .title-main h1 {
+        color: #05a;
+    }
+
+    .fullpage-7 .main-header-form .description-header p {
+        color: #05a;
+        font-size: 25px;
+    }
+
+    .fullpage-7 .main-header-form .apply-time p {
+        text-align: center;
+        color: #333;
+    }
+
+    .fullpage-7 .main-form .title-cat h4 {
+        margin: 0px;
+        padding: 5px;
+        background: #0bf;
+        color: #fff;
+    }
+
+    .fullpage-7 .main-form .page-7 {
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 50px;
+    }
+
+        .fullpage-7 .main-form .page-7:nth-of-type(2) {
+            max-width: 100%;
+            grid-template-columns: 1fr;
+        }
+
+    .fullpage-7 .contact-footer ul {
+        text-align: right;
+        list-style: none;
+        margin: 0px;
+    }
+
+        .fullpage-7 .contact-footer ul li {
+            display: inline-block;
+            padding: 0px 20px;
+        }
+
+            .fullpage-7 .contact-footer ul li:first-child {
+                border-right: 1px solid #333;
+            }
+
+    .fullpage-7 table, .fullpage-7 table th, .fullpage-7 table td {
+        border: 1px solid #333 !important;
+        color: #000 !important;
+    }
+
+        .fullpage-7 table tr {
+            height: 30px;
+        }
+
+        .fullpage-7 table.table-1-7 tr:first-child th, .fullpage-7 table.table-2-7 tr:first-child th {
+            border-top: 1px solid #0054a6;
+            background: #0054a6;
+            border-radius: 0px;
+            text-align: left;
+            padding-left: 5px;
+            color: #fff !important;
+        }
+
+        .fullpage-7 table.table-1-7 tr:nth-child(2) th, .fullpage-7 table.table-1-7 tr:nth-child(3) th {
+            background: #fff;
+            color: #222;
+        }
+
+        .fullpage-7 table.table-2-7 tr:nth-child(2) th, .fullpage-7 table.table-2-7 tr:nth-child(3) th {
+            background: #fff;
+            color: #000;
+        }
+
+        .fullpage-7 table.table-2-7 tr td:first-child {
+            width: 15%;
+        }
+
+/*============================Page 8===============================*/
+
+/*============================Page 9, Page 11, Page 13===============================*/
+
+.fullpage-9, .fullpage-11, .fullpage-13 {
+    max-width: 100%;
+    margin: 30px;
+}
+
+    .fullpage-9 .main-header-form .title-main, .fullpage-11 .main-header-form .title-main, .fullpage-13 .main-header-form .title-main {
+        margin-bottom: 30px;
+    }
+
+        .fullpage-9 .main-header-form .title-main h1, .fullpage-11 .main-header-form .title-main h1, .fullpage-13 .main-header-form .title-main h1 {
+            color: #531;
+            background: #fed;
+            font-size: 25px;
+        }
+
+    .fullpage-9 table, .fullpage-9 table th, .fullpage-9 table td,
+    .fullpage-11 table, .fullpage-11 table th, .fullpage-11 table td,
+    .fullpage-11 table, .fullpage-13 table th, .fullpage-13 table td {
+        border: 1px solid #000 !important;
+        color: #000 !important;
+    }
+
+        .fullpage-9 table tr, .fullpage-11 table tr, .fullpage-13 table tr {
+            height: 30px;
+        }
+
+            .fullpage-9 table tr th {
+                border-top: 2px solid #000 !important;
+                border-bottom: 2px solid #000 !important;
+                background: #efe;
+            }
+
+            .fullpage-9 table tr:first-child th, .fullpage-11 table tr:first-child th, .fullpage-13 table tr:first-child th {
+                border-radius: 0px;
+                background: #fed;
+            }
+
+            .fullpage-9 table tr:not(:first-child) th:not(:first-child), .fullpage-9 table tr:not(:first-child) td:not(:first-child) {
+                text-align: left;
+            }
+
+            .fullpage-9 table tr:nth-child(8) td:last-child ul, .fullpage-9 table tr:nth-child(12) td:nth-child(2) ul {
+                list-style: none;
+                margin: 0px;
+                padding: 0px;
+            }
+
+                .fullpage-9 table tr:nth-child(8) td:last-child ul li, .fullpage-9 table tr:nth-child(12) td:nth-child(2) ul li {
+                    padding: 5px 0px;
+                }
+
+
+            /*============================Page 10===============================*/
+
+            /*============================Page 11===============================*/
+
+            .fullpage-11 table tr td {
+                vertical-align: text-top;
+            }
+
+                .fullpage-11 table tr td:nth-child(2) {
+                    width: 50%;
+                }
+
+                .fullpage-11 table tr td:not(:first-child) {
+                    text-align: left;
+                    padding-left: 5px;
+                }
+
+                .fullpage-11 table tr td ul {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                    .fullpage-11 table tr td ul li {
+                        margin: 10px 0px;
+                    }
+
+            .fullpage-11 table tr:nth-child(2) td ul li, .fullpage-13 table tr:nth-child(22) td ul li {
+                padding-left: 20px;
+                position: relative;
+            }
+
+                .fullpage-11 table tr:nth-child(2) td ul li:before, .fullpage-13 table tr:nth-child(22) td ul li:before {
+                    content: '-';
+                    left: 0px;
+                    position: absolute;
+                }
+
+            /*============================Page 12===============================*/
+
+            /*============================Page 13===============================*/
+
+            .fullpage-13 table tr:not(:first-child) th:not(:first-child),
+            .fullpage-13 table tr:not(:first-child) td:not(:first-child) {
+                text-align: left;
+                padding-left: 5px;
+            }
+
+            .fullpage-13 table tr th {
+                background: #e2efd9;
+            }
+
+                .fullpage-13 table tr th:nth-child(3) {
+                    font-weight: normal;
+                }
+
+                .fullpage-13 table tr th ul, .fullpage-13 table tr td ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                }
+
+                    .fullpage-13 table tr th ul li, .fullpage-13 table tr td ul li {
+                        margin: 10px 0px;
+                    }

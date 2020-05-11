@@ -329,7 +329,7 @@ namespace VietbankWebsite.Controllers
             IEnumerable<TopThreeNewsToCate> topThreeNewsToCates;
             if (!_cache.TryGetValue(keyVietbankTv, out topThreeNewsToCates))
             {
-                topThreeNewsToCates = await _aboutVietbankService.TopThreeNewsToCate(1079, _localizer["VietbankHandbookUrl"], GetLangCurrent());
+                topThreeNewsToCates = await _aboutVietbankService.TopThreeNewsToCate(1080, _localizer["VietbankHandbookUrl"], GetLangCurrent());
                 _cache.Set(keyVietbankTv, topThreeNewsToCates, cacheEntryOptions);
             }
             ViewData["Title"] = _localizer["VietbankHandbookName"];

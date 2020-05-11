@@ -29,7 +29,7 @@ namespace VietbankWebsite.Controllers.Api
         [HttpGet("getlistpromotionnews/{pageCurrent}/{pageSize}")]
         public async Task<ListNews> GetListPromotion(int pageCurrent, int pageSize)
         {
-            return await _aboutVietbankService.GetListNews(1073, _localizer["PromotionNewsName"], _localizer["PromotionNewsUrl"], GetLangCurrent(), pageCurrent, pageSize);
+            return await _aboutVietbankService.GetListNews(1071, _localizer["PromotionNewsName"], _localizer["PromotionNewsUrl"], GetLangCurrent(), pageCurrent, pageSize);
         }
     }
 }

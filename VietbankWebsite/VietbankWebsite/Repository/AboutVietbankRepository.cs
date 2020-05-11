@@ -35,7 +35,6 @@ namespace VietbankWebsite.Repository
                                       join c in _context.VbPostTranslates on b.post_ID equals c.post_ID
                                       where b.category_ID.Equals(idCate)
                                       where c.language.Equals(lang)
-                                      where a.post_status.Equals(4)
                                       where a.to_ping.Equals(1)
                                       orderby a.Id descending
                                       select new ListNewsItem()
