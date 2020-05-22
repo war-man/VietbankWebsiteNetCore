@@ -18,12 +18,16 @@ namespace VietbankWebsite.Controllers
         private readonly RemoteService _remoteService;
         private IRecaptchaService _recaptcha;
         private readonly string _webRootPath;
+
+        [Obsolete]
         public TraCuuHoaDonController(IOptions<RemoteService> remoteService, IRecaptchaService recaptcha, IHostingEnvironment hostingEnvironment)
         {
             _remoteService = remoteService.Value;
             _recaptcha = recaptcha;
             _webRootPath = hostingEnvironment.WebRootPath;
         }
+
+        [HttpGet]
         public IActionResult Index()
         {
             return View();

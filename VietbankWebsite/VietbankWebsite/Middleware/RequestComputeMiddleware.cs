@@ -26,7 +26,7 @@ namespace VietbankWebsite.Middleware
         {
             Stopwatch watch = new Stopwatch();
             watch.Start();
-             httpContext.Response.OnStarting(async () =>
+             httpContext.Response.OnStarting(() =>
             {
                 watch.Stop();
                 SendRequestToCountQueue(new CountRequestQueue()

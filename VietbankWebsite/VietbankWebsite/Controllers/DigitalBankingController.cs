@@ -36,7 +36,7 @@ namespace VietbankWebsite.Controllers
         [Route("")]
         [Route("dich-vu-ngan-hang-so")]
         [Route("digital-banking-service")]
-        public async Task<IActionResult> Product()
+        public IActionResult Product()
         {
             //var keyProduct = GetLangCurrent() == "vi" ? CacheKeys.PersonalProductVi : CacheKeys.PersonalProductEn;
             //CategoryProduct products;

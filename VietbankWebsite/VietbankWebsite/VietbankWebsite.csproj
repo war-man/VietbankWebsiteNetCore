@@ -13,6 +13,8 @@
 
   <ItemGroup>
     <Compile Remove="Extensions\ReferencesMetadataReferenceFeatureProvider.cs" />
+    <Compile Remove="HostedService\QueueCentralHostedService.cs" />
+    <Compile Remove="Middleware\RequestComputeMiddleware.cs" />
   </ItemGroup>
 
   <ItemGroup>

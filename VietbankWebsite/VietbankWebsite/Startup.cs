@@ -1,8 +1,6 @@
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Razor;
@@ -19,7 +17,6 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.Loader;
-using System.Threading.Tasks;
 using Vietbank.Core;
 using VietbankWebsite.Context;
 using VietbankWebsite.Extensions;
@@ -34,10 +31,11 @@ namespace VietbankWebsite
 {
     public class Startup
     {
+        [Obsolete]
         private readonly Microsoft.AspNetCore.Hosting.IHostingEnvironment _hostingEnvironment;
         private readonly IList<ModuleInfo> _modules = new List<ModuleInfo>();
 
-        [System.Obsolete]
+        [Obsolete]
         public Startup(IConfiguration configuration, Microsoft.AspNetCore.Hosting.IHostingEnvironment hostingEnvironment)
         {
             _hostingEnvironment = hostingEnvironment;
@@ -47,6 +45,7 @@ namespace VietbankWebsite
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
+        [Obsolete]
         public void ConfigureServices(IServiceCollection services)
         {
             LoadInstalledModules();
@@ -157,7 +156,6 @@ namespace VietbankWebsite
                 app.UseExceptionHandler("/Home/NotFoundPage");
                 app.UseHsts();
             }
-            //app.UseMiddleware<RequestComputeMiddleware>();
             app.UseMiddleware<FixDetectionMiddleware>();
             app.UseMiddleware<CultureMiddleware>();
             app.UseRequestLocalization();
@@ -188,6 +186,7 @@ namespace VietbankWebsite
             });
         }
 
+        [Obsolete]
         private void LoadInstalledModules()
         {
             var moduleRootFolder = new DirectoryInfo(Path.Combine(_hostingEnvironment.ContentRootPath, "Modules"));
