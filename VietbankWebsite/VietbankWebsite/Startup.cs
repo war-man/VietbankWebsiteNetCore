@@ -97,6 +97,11 @@ namespace VietbankWebsite
                 options.DefaultRequestCulture = new RequestCulture("vi");
                 options.SupportedCultures = supportedCultures;
                 options.SupportedUICultures = supportedCultures;
+                options.RequestCultureProviders = new List<IRequestCultureProvider>
+                {
+                    new QueryStringRequestCultureProvider(),
+                    new CookieRequestCultureProvider()
+                };
             });
             services.AddDbContext<VietbankContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
