@@ -1,0 +1,77 @@
+(function($){		
+
+
+
+	if( $('body').hasClass('loaded') ) return;
+		$('body').addClass('loaded');
+	
+	// mobile menu 
+	$('#hamburger_menu').click(function(){
+		$('body').toggleClass('show_hamburger_menu');
+		$('.navigator').toggleClass('active');
+		$('#hamburger_menu').toggleClass('active');
+	});
+		
+	$('li').hover(function(e){
+		$(this).addClass('hover');
+	},function(e){
+		$(this).removeClass('hover');
+	});
+	
+
+
+	$('li.active').each(function(e){
+		var p = $(this).parent(),
+			i = 0;
+		while( p.hasClass('block-menu') == false && i<10 )
+		{
+			i++;
+			if( p.is('li') ){
+				p.addClass('active');
+			}
+			p = p.parent();
+		}
+	});
+
+	$(window).scroll(function() {
+	  	var $height = $(window).scrollTop();
+	  	if($height > 350) {
+			$('body').addClass('scrolling');
+		} else {
+			$('body').removeClass('scrolling');
+		}
+	});
+
+	
+	// Popup Thể lệ
+	$('.bnt-the-le-popup').on('click', function(e){
+	    e.preventDefault();
+	    $('#the_le_popup').toggleClass('open');
+	    $('#the_le_popup').show();
+	});
+	$('#the_le_popup').on('click', '.btnclose', function(e){
+	    e.preventDefault();
+	    $('#the_le_popup').toggleClass('open');
+	    $('#the_le_popup').hide();
+	});
+
+	// Popup Giải thưởng
+	$('.bnt-giai-thuong-popup').on('click', function(e){
+	    e.preventDefault();
+	    $('#giai_thuong_popup').toggleClass('open');
+	    $('#giai_thuong_popup').show();
+	});
+	$('#giai_thuong_popup').on('click', '.btnclose', function(e){
+	    e.preventDefault();
+	    $('#giai_thuong_popup').toggleClass('open');
+	    $('#giai_thuong_popup').hide();
+	});
+	  
+	  // $(".main").onepage_scroll({
+	  //   sectionContainer: "section",
+	  //   responsiveFallback: 600,
+	  //   loop: false
+	  // }); 	
+		
+		
+})(jQuery);

@@ -612,3 +612,6 @@ T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\net
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\Razor\Views\About\VietbankHandbookDetail.cshtml.g.cs
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\Razor\Views\Card\Registry.cshtml.g.cs
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\Razor\Views\Enterprise\ProductDetail - Copy.cshtml.g.cs
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\Razor\Modules\Modular.Modules.TietKiemTrungNha\Views\TietKiemTrungNha\Index.cshtml.g.cs
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\Razor\Modules\Modular.Modules.TietKiemTrungNha\Views\TietKiemTrungNha\Mobile.cshtml.g.cs
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Release\netcoreapp3.0\Razor\Modules\Modular.Modules.TietKiemTrungNha\Views\TietKiemTrungNha\Thanks.cshtml.g.cs

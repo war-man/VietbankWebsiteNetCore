@@ -544,3 +544,6 @@ T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netco
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.csproj.CopyComplete
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.dll
 T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\VietbankWebsite.pdb
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\Razor\Modules\Modular.Modules.TietKiemTrungNha\Views\TietKiemTrungNha\Index.cshtml.g.cs
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\Razor\Modules\Modular.Modules.TietKiemTrungNha\Views\TietKiemTrungNha\Mobile.cshtml.g.cs
+T:\Github\VietbankWebsiteNetCore\VietbankWebsite\VietbankWebsite\obj\Debug\netcoreapp3.0\Razor\Modules\Modular.Modules.TietKiemTrungNha\Views\TietKiemTrungNha\Thanks.cshtml.g.cs

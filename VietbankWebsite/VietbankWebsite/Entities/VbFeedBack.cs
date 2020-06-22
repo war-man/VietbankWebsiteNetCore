@@ -11,14 +11,13 @@ namespace VietbankWebsite.Entities
         public int Id { get; set; }
         public int IdPost { get; set; }
         public string TitlePost { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Thông tin này cần phải được nhập")]
         public string NameCustomer { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Thông tin này cần phải được nhập")]
         [EmailAddress]
         public string EmailCustomer { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Thông tin này cần phải được nhập")]
         public string PhonerCustomer { get; set; }
-        [Required]
         public string ContentCustomer { get; set; }
         public DateTime CreatedDate { get; set; }
         public bool IsDone { get; set; }

@@ -1,0 +1,621 @@
+﻿@using Microsoft.Extensions.Options
+@using reCAPTCHA.AspNetCore
+@inject IOptions<RecaptchaSettings> RecaptchaSettings
+@model VietbankWebsite.Entities.VbFeedBack
+<html lang="en-US">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <title>VIETBANK – Tiết kiệm trúng nhà, nhận quà sức khỏe</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&amp;display=swap&amp;subset=vietnamese" rel="stylesheet">
+    <link rel="stylesheet" href="~/TietKiemTrungNha/css/animate.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="~/TietKiemTrungNha/css/reset.css" type="text/css" media="all">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css?ver=5.4.2" type="text/css" media="all">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css?ver=5.4.2" type="text/css" media="all">
+
+    <link rel="stylesheet" href="~/TietKiemTrungNha/css/swiper.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="~/TietKiemTrungNha/css/main.css" type="text/css" media="all">
+    <link rel="stylesheet" href="~/TietKiemTrungNha/css/style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="~/TietKiemTrungNha/css/mobile.css" type="text/css" media="all">
+
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var mPS2id_params = { "instances": { "mPS2id_instance_0": { "selector": "a[href*='#']:not([href='#'])", "autoSelectorMenuLinks": "true", "excludeSelector": "a[href^='#tab-'], a[href^='#tabs-'], a[data-toggle]:not([data-toggle='tooltip']), a[data-slide], a[data-vc-tabs], a[data-vc-accordion], a.screen-reader-text.skip-link", "scrollSpeed": 800, "autoScrollSpeed": "true", "scrollEasing": "easeInOutQuint", "scrollingEasing": "easeOutQuint", "pageEndSmoothScroll": "true", "stopScrollOnUserAction": "false", "autoCorrectScroll": "false", "layout": "vertical", "offset": "100", "dummyOffset": "false", "highlightSelector": "", "clickedClass": "mPS2id-clicked", "targetClass": "mPS2id-target", "highlightClass": "mPS2id-highlight", "forceSingleHighlight": "false", "keepHighlightUntilNext": "false", "highlightByNextTarget": "false", "appendHash": "false", "scrollToHash": "true", "scrollToHashForAll": "true", "scrollToHashDelay": 0, "scrollToHashUseElementData": "true", "scrollToHashRemoveUrlHash": "false", "disablePluginBelow": 0, "adminDisplayWidgetsId": "true", "adminTinyMCEbuttons": "true", "unbindUnrelatedClickEvents": "false", "normalizeAnchorPointTargets": "false" } }, "total_instances": "1", "shortcode_class": "_ps2id" };
+        /* ]]> */
+    </script>
+
+    <script type="text/javascript" src="~/TietKiemTrungNha/js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.form-validator.min.js"></script>
+    <!-- <script type="text/javascript" src="~/TietKiemTrungNha/js/jquery.js"></script> -->
+    <script type="text/javascript" src="~/TietKiemTrungNha/js/ple.preloader.min.js"></script>
+    <script type="text/javascript" src="~/TietKiemTrungNha/js/jquery-migrate.min.js"></script>
+
+    <script type="text/javascript" src="~/TietKiemTrungNha/js/page-scroll-to-id.min.js"></script>
+    <script type="text/javascript" src="~/TietKiemTrungNha/js/bootstrap.min.js"></script>
+    <!-- <script type="text/javascript" src="~/TietKiemTrungNha/js/swiper.jquery.js"></script>
+    <script type="text/javascript" src="~/TietKiemTrungNha/js/swiper.js"></script> -->
+    <script type="text/javascript" src="~/TietKiemTrungNha/js/swiper.min.js"></script>
+    <script type="text/javascript" src="~/TietKiemTrungNha/js/main.js"></script>
+
+    <script type="text/javascript">
+        plePreloader.speed = "";
+        if (!plePreloader.speed) {
+            plePreloader.speed = 4000;
+        }
+        plePreloader.elem = "ple-loader-wraps3";
+        plePreloader.elemInner = "<div class=\"spinner\"></div>";
+        plePreloader.kicks();
+    </script>
+    <style type="text/css">
+        #ple-loader-wraps3 {
+            background: #135d76;
+        }
+
+            #ple-loader-wraps3 .spinner {
+                border-top-color: rgba(255, 255, 255, 0.95);
+                border-bottom-color: rgba(255, 255, 255, 0.25);
+                border-left-color: rgba(255, 255, 255, 0.95);
+                border-right-color: rgba(255, 255, 255, 0.25);
+            }
+    </style>
+</head>
+<div id="ple-loader-wraps3" style="display: none;">
+    <div id="ple-animates" style="display: none;">
+        <div class="spinner"></div>
+    </div>
+</div>
+<body class="home grid mobile-device">
+    <ul class="onepage-pagination">
+        <li>
+            <a data-index="1" href="#1" class="active"></a>
+        </li>
+        <li>
+            <a data-index="2" href="#2"></a>
+        </li>
+        <li>
+            <a data-index="3" href="#3"></a>
+        </li>
+        <li>
+            <a data-index="4" href="#4"></a>
+        </li>
+        <li>
+            <a data-index="5" href="#5"></a>
+        </li>
+        <li>
+            <a data-index="6" href="#6"></a>
+        </li>
+        <li>
+            <a data-index="7" href="#7"></a>
+        </li>
+    </ul>
+    <div class="wrapper">
+        <div class="header clearfix">
+            <div class="top-hearder">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5 logo">
+                            <a href="/" rel="home"><img src="/TietKiemTrungNha/images/logo.png" alt="Logo"></a>
+                        </div>
+                        <div class="col-md-7 hide-on-mobile dangky-btn">
+                            <a class="main-btn ps2id" href="#formbox">Đăng ký ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main clearfix">
+            <section class="page0 section">
+                <div class="banner-section">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" style="background: url(/TietKiemTrungNha/images/mobile/banner-home-mb-01.jpg) center center / cover no-repeat;">
+                                <div class="swiper-slide-content">
+                                    <a class="main-btn ps2id" href="#formbox">Đăng ký ngay</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" style="background: url(/TietKiemTrungNha/images/mobile/banner-home-mb-02.jpg) center center / cover no-repeat;">
+                                <div class="swiper-slide-content">
+                                    <a class="main-btn ps2id" href="#formbox">Đăng ký ngay</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" style="background: url(/TietKiemTrungNha/images/mobile/banner-home-mb-03.jpg) center center / cover no-repeat;">
+                                <div class="swiper-slide-content">
+                                    <a class="main-btn ps2id" href="#formbox">Đăng ký ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                    <script type="text/javascript">
+                        var bannerHeader = new Swiper('.banner-section .swiper-container', {
+                            effect: 'fade',//'slide', //'coverflow',
+                            loop: true,
+                            speed: 2000,
+                            autoplay: {
+                                delay: 3500,
+                                disableOnInteraction: false,
+                            },
+                            slidesPerView: 1,
+                            //parallax: true,
+                            navigation: {
+                                nextEl: '.banner-section .swiper-button-next',
+                                prevEl: '.banner-section .swiper-button-prev',
+                            },
+                        });
+                    </script>
+                </div>
+            </section>
+            <section class="page1 section">
+                <div class="row-box row-box-01">
+                    <div class="container">
+                        <div class="table">
+                            <div class="table-cell">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="col-left">
+                                            <div class="table">
+                                                <div class="table-cell">
+                                                    <p>Chỉ từ</p>
+                                                    <p><strong>25 triệu đồng</strong></p>
+                                                    <p>bạn sẽ nhận được</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <div class="col-right">
+                                            <div class="list-items row">
+                                                <div class="col-md-6 col-md">
+                                                    <div class="list-item">
+                                                        <div class="list-item-inside">
+                                                            <div class="item-image">
+                                                                <img src="/TietKiemTrungNha/images/ico-increased-revenue.png" alt="">
+                                                            </div>
+                                                            <div class="item-text">
+                                                                <strong>Giữ nguyên lãi suất</strong> khi gửi <br>tiết kiệm từ 6 tháng trở lên
+                                                            </div>
+                                                            <div class="item-link">
+                                                                <a href="https://static.vietbank.com.vn/web/CTKM%20H%C3%A8%202020/lai%20suat%20CTKM.pdf" target="_blank">Chi tiết <i class="fas fa-chevron-right"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-md">
+                                                    <div class="list-item">
+                                                        <div class="list-item-inside">
+                                                            <div class="item-image">
+                                                                <img src="/TietKiemTrungNha/images/ico-gift.png" alt="">
+                                                            </div>
+                                                            <div class="item-text">
+                                                                <strong>100% Quà tặng</strong> ngay hấp dẫn <br>từ chương trình
+                                                            </div>
+                                                            <div class="item-link">
+                                                                <a class="ps2id" href="#row-05">Chi tiết <i class="fas fa-chevron-right"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-md">
+                                                    <div class="list-item">
+                                                        <div class="list-item-inside">
+                                                            <div class="item-image">
+                                                                <img src="/TietKiemTrungNha/images/ico-money.png" alt="">
+                                                            </div>
+                                                            <div class="item-text">
+                                                                Trúng ngay <strong>giải Lộc Phát <br>01 triệu đồng</strong>
+                                                            </div>
+                                                            <div class="item-link">
+                                                                <a class="ps2id" href="#row-04">Chi tiết <i class="fas fa-chevron-right"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-md">
+                                                    <div class="list-item">
+                                                        <div class="list-item-inside">
+                                                            <div class="item-image">
+                                                                <img src="/TietKiemTrungNha/images/ico-price.png" alt="">
+                                                            </div>
+                                                            <div class="item-text">
+                                                                Cơ hội trúng <strong>giải “Căn hộ bạc tỷ”</strong> <br>và nhiều giải thưởng khác
+                                                            </div>
+                                                            <div class="item-link">
+                                                                <a class="ps2id" href="#row-03">Chi tiết <i class="fas fa-chevron-right"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="list-btn">
+                                            <div class="btn-item">
+                                                <a class="main-btn" href="https://static.vietbank.com.vn/web/CTKM%20H%C3%A8%202020/lai%20suat%20CTKM.pdf" target="_blank">Tham khảo lãi suất</a>
+                                            </div>
+                                            <div class="btn-item">
+                                                <a class="main-btn" href="https://static.vietbank.com.vn/web/CTKM%20H%C3%A8%202020/The%20le%20CTKM%20He%202020_final_website.pdf" target="_blank">Tham khảo thể lệ</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="page2 section">
+                <div class="row-box row-box-02">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="col-left">
+                                    <div class="box-content">
+                                        <div class="box-content-inside">
+                                            <div class="image">
+                                                <img src="/TietKiemTrungNha/images/img-house-section-03.jpg" alt="">
+                                            </div>
+                                            <div class="content">
+                                                Chỉ cần gửi <strong>tiết kiệm từ 25 triệu đồng</strong>, nhận cơ hội trúng Mô hình căn hộ bằng 28 lượng vàng 9999
+                                            </div>
+                                            <div class="dangky-btn">
+                                                <a class="ps2id main-btn" href="#formbox">Đăng ký ngay</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="col-right">
+                                    <div class="title">
+                                        <h2 class="orange-txt">CĂN HỘ BẠC TỶ</h2>
+                                        <h2 class="blue-txt">NGÔI NHÀ NHƯ Ý</h2>
+                                        <p>Cơ hội trúng Mô hình căn hộ bằng 28 lượng vàng 9999 (*)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="page3 section">
+                <div id="row-03" class="row-box row-box-03">
+                    <div class="container">
+                        <div class="row">
+                            <div class="">
+                                <div class="table">
+                                    <div class="table-cell">
+                                        <div class="title">
+                                            <h2 class="orange-txt">GỬI TIẾT KIỆM - THỬ VẬN MAY</h2>
+                                            <h2 class="blue-txt">GỬI CÀNG NHIỀU CƠ HỘI TRÚNG CÀNG CAO</h2>
+                                            <p>Mỗi khách hàng gửi tiết kiệm tại Vietbank sẽ được nhận mã dự thưởng tương đương với doanh số tiền gửi và được tham gia quay số trúng thưởng cuối chương trình với nhiều giải thưởng hấp dẫn lên đến 1.5 tỷ đồng</p>
+                                        </div>
+                                        <div class="desc">
+                                            <div class="link-detail">
+                                                <a class="bnt-the-le-popup" href="#">Xem thể lệ cấp mã dự thưởng  <i class="fas fa-chevron-right"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="list-items row">
+                                            <div class="col-md-4">
+                                                <div class="col-item">
+                                                    <div class="list-item">
+                                                        <div class="item-image" style="background: url(/TietKiemTrungNha/images/award-01.png) center center no-repeat; background-size: cover;">
+                                                        </div>
+                                                        <div class="item-text">
+                                                            <div class="row-01">
+                                                                <div class="number">
+                                                                    <div class="number-inside">
+                                                                        <div class="table">
+                                                                            <div class="table-cell">
+                                                                                <p><span>05</span></p>
+                                                                                <p>Giải</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="title">
+                                                                    <h4>Sức khỏe <br>An gia</h4>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row-02">
+                                                                <img src="/TietKiemTrungNha/images/img-100tr.png" alt="">
+                                                            </div>
+                                                            <div class="row-03">
+                                                                <div class="desc"><p>Gói <strong>bảo hiểm nhân thọ kèm sức khỏe</strong> cho cả gia đình (3 thành viên)</p></div>
+                                                                <div class="dangky-btn">
+                                                                    <a class="ps2id main-btn" href="#formbox">Đăng ký ngay</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="col-item col-item-center">
+                                                    <div class="list-item">
+                                                        <div class="item-image" style="background: url(/TietKiemTrungNha/images/award-02.png) center center no-repeat; background-size: cover;">
+                                                        </div>
+                                                        <div class="item-text">
+                                                            <div class="row-01">
+                                                                <div class="number">
+                                                                    <div class="number-inside">
+                                                                        <div class="table">
+                                                                            <div class="table-cell">
+                                                                                <p><span>01</span></p>
+                                                                                <p>Giải</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="title">
+                                                                    <h4>Căn hộ <br>bạc tỷ</h4>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row-02">
+                                                                <img src="/TietKiemTrungNha/images/img-1-5-ty.png" alt="">
+                                                            </div>
+                                                            <div class="row-03">
+                                                                <div class="desc"><p>Mô hình căn hộ bằng <strong>28 lượng vàng 9999</strong></p></div>
+                                                                <div class="dangky-btn">
+                                                                    <a class="ps2id main-btn" href="#formbox">Đăng ký ngay</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="col-item">
+                                                    <div class="list-item">
+                                                        <div class="item-image" style="background: url(/TietKiemTrungNha/images/award-03.png) center center no-repeat; background-size: cover;">
+                                                        </div>
+                                                        <div class="item-text">
+                                                            <div class="row-01">
+                                                                <div class="number">
+                                                                    <div class="number-inside">
+                                                                        <div class="table">
+                                                                            <div class="table-cell">
+                                                                                <p><span>08</span></p>
+                                                                                <p>Giải</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="title">
+                                                                    <h4>Ngôi nhà <br>An khang</h4>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row-02">
+                                                                <img src="/TietKiemTrungNha/images/img-50tr.png" alt="">
+                                                            </div>
+                                                            <div class="row-03">
+                                                                <div class="desc"><p>Voucher <strong>trang trí nội thất Nhà Xinh</strong></p></div>
+                                                                <div class="dangky-btn">
+                                                                    <a class="ps2id main-btn" href="#formbox">Đăng ký ngay</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="page4 section">
+                <div id="row-04" class="row-box row-box-04">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-5 offset-md-5">
+                                <div class="table">
+                                    <div class="table-cell">
+                                        <div class="title">
+                                            <h2 class="white-txt">GIẢI LỘC PHÁT</h2>
+                                            <h3>Con số may mắn 68</h3>
+                                        </div>
+                                        <div class="description">
+                                            <p>400 Mã số dự thưởng siêu may mắn có số đuôi 68 sẽ được nhận ngay 1.000.000 đồng.</p>
+                                            <p>Chỉ áp dụng cho 400 khách hàng sớm nhất, sau khi hết 400 giải thưởng Vietbank sẽ thông báo ngưng giải thưởng này.</p>
+                                        </div>
+                                        <div class="dangky-btn">
+                                            <a class="ps2id main-btn" href="#formbox">Đăng ký ngay</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="page5 section">
+                <div id="row-05" class="row-box row-box-05">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="col-left">
+                                    <div class="table">
+                                        <div class="table-cell">
+                                            <div class="title">
+                                                <h2 class="orange-txt">QUÀ TẶNG SỨC KHOẺ</h2>
+                                                <h2 class="blue-txt">CHO CUỘC SỐNG AN LÀNH</h2>
+                                            </div>
+                                            <div class="description">
+                                                <p><strong>Gửi là có quà.</strong></p>
+                                                <p>Cả nhà cùng khoẻ với <strong>10.385 giải thưởng</strong> siêu hấp dẫn đang chờ đón!</p>
+                                            </div>
+                                            <div class="link-detail">
+                                                <a class="main-btn ps2id" href="#formbox">Đăng ký ngay</a>
+                                            </div>
+                                            <div class="link-list-gifts">
+                                                <a class="bnt-giai-thuong-popup" href="#">Xem danh sách quà tặng <i class="fas fa-chevron-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="col-right">
+                                    <div class="table">
+                                        <div class="table-cell">
+                                            <img src="/TietKiemTrungNha/images/img-right-section-05.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="page6 section">
+                <div class="row-box row-box-06">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="table">
+                                    <div class="table-cell">
+                                        <div id="formbox" class="formbox">
+                                            <div class="formbox-inside">
+                                                <h2>Đăng ký tư vấn ngay</h2>
+                                                <!-- <h3>để nhận tư vấn</h3> -->
+                                                <div role="form" class="wpcf7" id="wpcf7-f5-o1" lang="en-US" dir="ltr">
+                                                    <div class="screen-reader-response" aria-live="polite"></div>
+                                                    @using (Html.BeginForm())
+                                                    {
+                                                        @Html.AntiForgeryToken()
+                                                        <div class="row fieldbox">
+                                                            <div class="col-md-12"><label>Họ tên</label></div>
+                                                            <div class="col-md-12">
+                                                                @Html.EditorFor(model => model.NameCustomer, new { htmlAttributes = new { @class = "wpcf7-form-control wpcf7-text wpcf7-validates-as-required" } })
+                                                                @Html.ValidationMessageFor(model => model.NameCustomer, "", new { @class = "field-validation-valid text-danger" })
+                                                                <input type="text" name="TitlePost" value="Tiết kiệm trúng nhà - nhận quà liền tay" class="hide" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="row fieldbox">
+                                                            <div class="col-md-12"><label>Số điện thoại</label></div>
+                                                            <div class="col-md-12">
+                                                                @Html.EditorFor(model => model.PhonerCustomer, new { htmlAttributes = new { @class = "wpcf7-form-control wpcf7-text wpcf7-validates-as-required" } })
+                                                                @Html.ValidationMessageFor(model => model.PhonerCustomer, "", new { @class = "field-validation-valid text-danger" })
+                                                            </div>
+                                                        </div>
+                                                        <div class="row fieldbox">
+                                                            <div class="col-md-12"><label>Email</label></div>
+                                                            <div class="col-md-12">
+                                                                @Html.EditorFor(model => model.EmailCustomer, new { htmlAttributes = new { @class = "wpcf7-form-control wpcf7-text wpcf7-validates-as-required" } })
+                                                                @Html.ValidationMessageFor(model => model.EmailCustomer, "", new { @class = "field-validation-valid text-danger" })
+                                                            </div>
+                                                        </div>
+                                                        <div class="row fielbox">
+                                                            <div class="col-md-12">
+                                                                @Html.Recaptcha(RecaptchaSettings?.Value)
+                                                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                                            </div>
+                                                        </div>
+                                                        <div class="row fieldbox fieldbox-button">
+                                                            <div class="col-md-12"><input type="submit" value="Đăng ký" class="wpcf7-form-control wpcf7-submit"></div>
+                                                        </div>
+                                                    }
+                                                </div>
+                                                <p>Chúng tôi cam kết bảo mật tất cả thông tin mà BẠN đã cung cấp</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="table">
+                                    <div class="table-cell">
+                                        <img class="footer-title" src="/TietKiemTrungNha/images/footer-title.png" alt="">
+                                        <img class="footer-desc" src="/TietKiemTrungNha/images/footer-desc.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        @if (!Html.ViewData.ModelState.IsValid)
+        {
+            <script type="text/javascript">
+                location.replace(location.href + '#7');
+            </script>
+        }
+        <div style="display: none">
+            <script type="text/javascript">
+                jQuery(document).ready(function ($) {
+                    if ($("#ple-animates").length > 0 && $("#ple-animates").css("display") != "none") {
+                        $(window).load(function () {
+                            $("#ple-loader-wraps3").delay(450).fadeOut("slow");
+                            $("#ple-animates").fadeOut();
+                        });
+                    }
+                    $.validate({
+                        form: 'form',
+                        messages: {
+                            NameCustomer: { required: 'Thông tin này cần phải được nhập' },
+                            PhonerCustomer: 'Thông tin này cần phải được nhập',
+                            EmailCustomer: 'Thông tin này cần phải được nhập'
+                        },
+                        validateHiddenInputs: true,
+                        onError: function ($form) {
+                            alert('Vui lòng nhập đầy đủ thông tin!');
+                        },
+                        onSuccess: function ($form) {
+                            return true; // Will stop the submission of the form
+                        }
+                    });
+                })
+            </script>
+        </div>
+        <div class="hotline-box hotline-box-facebook">
+            <a href="https://www.facebook.com/NH.Vietbank/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        </div>
+        <div class="hotline-box hotline-box-youtube">
+            <a href="https://www.youtube.com/channel/UCAMkVbaN6-0qE9PauSXWJrQ" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="hotline-box">
+            <a class="" href="tel:18001122"><i class="fas fa-phone-volume animated infinite tada"></i> <span class="number">1800 1122</span></a>
+        </div>
+        <!-- List Popup -->
+        <div class="list-popups">
+            <div class="popup-box" id="the_le_popup">
+                <div class="popup-box-inside">
+                    <div class="popup-container animated zoomIn delay-2s">
+                        <div class="popup-content">
+                            <div class="popup-info">
+                                <img src="/TietKiemTrungNha/images/mobile/img-popup-the-le-mb.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="btnclose">
+                            <span class="icon-close">×</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-box" id="giai_thuong_popup">
+                <div class="popup-box-inside">
+                    <div class="popup-container animated zoomIn delay-2s">
+                        <div class="popup-content">
+                            <div class="popup-info">
+                                <img src="/TietKiemTrungNha/images/mobile/img-popup-giai-thuong-mb.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="btnclose">
+                            <span class="icon-close">×</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

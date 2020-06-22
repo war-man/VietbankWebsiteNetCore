@@ -1,0 +1,260 @@
+{
+  "format": 1,
+  "restore": {
+    "T:\\Github\\VietbankWebsiteNetCore\\VietbankWebsite\\VietbankWebsite\\Modules\\Modular.Modules.TietKiemTrungNha\\Modular.Modules.TietKiemTrungNha.csproj": {}
+  },
+  "projects": {
+    "T:\\Github\\VietbankWebsiteNetCore\\VietbankWebsite\\Vietbank.Core\\Vietbank.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "T:\\Github\\VietbankWebsiteNetCore\\VietbankWebsite\\Vietbank.Core\\Vietbank.Core.csproj",
+        "projectName": "Vietbank.Core",
+        "projectPath": "T:\\Github\\VietbankWebsiteNetCore\\VietbankWebsite\\Vietbank.Core\\Vietbank.Core.csproj",
+        "packagesPath": "C:\\Users\\leanhtoan\\.nuget\\packages\\",
+        "outputPath": "T:\\Github\\VietbankWebsiteNetCore\\VietbankWebsite\\Vietbank.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\leanhtoan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.4, )"
+            },
+            "Experimental.System.Messaging": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Localization": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.0.0-preview8.19405.11, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3-beta1, )"
+            },
+            "SimpleMvcSitemap": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Wangkanai.Detection": {
+              "target": "Package",
+              "version": "[2.0.0-beta12, )"
+            },
+            "log4net": {
+              "target": "Package",
+              "version": "[2.0.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100-preview9-014004\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "T:\\Github\\VietbankWebsiteNetCore\\VietbankWebsite\\VietbankWebsite\\Modules\\Modular.Modules.TietKiemTrungNha\\Modular.Modules.TietKiemTrungNha.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "T:\\Github\\VietbankWebsiteNetCore\\VietbankWebsite\\VietbankWebsite\\Modules\\Modular.Modules.TietKiemTrungNha\\Modular.Modules.TietKiemTrungNha.csproj",
+        "projectName": "Modular.Modules.TietKiemTrungNha",
+        "projectPath": "T:\\Github\\VietbankWebsiteNetCore\\VietbankWebsite\\VietbankWebsite\\Modules\\Modular.Modules.TietKiemTrungNha\\Modular.Modules.TietKiemTrungNha.csproj",
+        "packagesPath": "C:\\Users\\leanhtoan\\.nuget\\packages\\",
+        "outputPath": "T:\\Github\\VietbankWebsiteNetCore\\VietbankWebsite\\VietbankWebsite\\Modules\\Modular.Modules.TietKiemTrungNha\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\leanhtoan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {
+              "T:\\Github\\VietbankWebsiteNetCore\\VietbankWebsite\\Vietbank.Core\\Vietbank.Core.csproj": {
+                "projectPath": "T:\\Github\\VietbankWebsiteNetCore\\VietbankWebsite\\Vietbank.Core\\Vietbank.Core.csproj"
+              },
+              "T:\\Github\\VietbankWebsiteNetCore\\VietbankWebsite\\VietbankWebsite\\VietbankWebsite.csproj": {
+                "projectPath": "T:\\Github\\VietbankWebsiteNetCore\\VietbankWebsite\\VietbankWebsite\\VietbankWebsite.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100-preview9-014004\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "T:\\Github\\VietbankWebsiteNetCore\\VietbankWebsite\\VietbankWebsite\\VietbankWebsite.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "T:\\Github\\VietbankWebsiteNetCore\\VietbankWebsite\\VietbankWebsite\\VietbankWebsite.csproj",
+        "projectName": "VietbankWebsite",
+        "projectPath": "T:\\Github\\VietbankWebsiteNetCore\\VietbankWebsite\\VietbankWebsite\\VietbankWebsite.csproj",
+        "packagesPath": "C:\\Users\\leanhtoan\\.nuget\\packages\\",
+        "outputPath": "T:\\Github\\VietbankWebsiteNetCore\\VietbankWebsite\\VietbankWebsite\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\leanhtoan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {
+              "T:\\Github\\VietbankWebsiteNetCore\\VietbankWebsite\\Vietbank.Core\\Vietbank.Core.csproj": {
+                "projectPath": "T:\\Github\\VietbankWebsiteNetCore\\VietbankWebsite\\Vietbank.Core\\Vietbank.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "dependencies": {
+            "BuildBundlerMinifier": {
+              "target": "Package",
+              "version": "[2.9.406, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Razor": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
+            "Microsoft.Extensions.Logging.Debug": {
+              "target": "Package",
+              "version": "[3.0.0-preview8.19405.4, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "reCAPTCHA.AspNetCore": {
+              "target": "Package",
+              "version": "[2.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100-preview9-014004\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

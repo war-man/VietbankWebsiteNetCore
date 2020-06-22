@@ -5,9 +5,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Modules\Modular.Modules.TietKiemTrungNha\bin\**" />
+    <Compile Remove="Modules\Modular.Modules.TietKiemTrungNha\Controllers\**" />
+    <Compile Remove="Modules\Modular.Modules.TietKiemTrungNha\obj\**" />
     <Compile Remove="Modules\Modular.Modules.TraCuuHoaDon\**" />
+    <Content Remove="Modules\Modular.Modules.TietKiemTrungNha\bin\**" />
+    <Content Remove="Modules\Modular.Modules.TietKiemTrungNha\Controllers\**" />
+    <Content Remove="Modules\Modular.Modules.TietKiemTrungNha\obj\**" />
     <Content Remove="Modules\Modular.Modules.TraCuuHoaDon\**" />
+    <EmbeddedResource Remove="Modules\Modular.Modules.TietKiemTrungNha\bin\**" />
+    <EmbeddedResource Remove="Modules\Modular.Modules.TietKiemTrungNha\Controllers\**" />
+    <EmbeddedResource Remove="Modules\Modular.Modules.TietKiemTrungNha\obj\**" />
     <EmbeddedResource Remove="Modules\Modular.Modules.TraCuuHoaDon\**" />
+    <None Remove="Modules\Modular.Modules.TietKiemTrungNha\bin\**" />
+    <None Remove="Modules\Modular.Modules.TietKiemTrungNha\Controllers\**" />
+    <None Remove="Modules\Modular.Modules.TietKiemTrungNha\obj\**" />
     <None Remove="Modules\Modular.Modules.TraCuuHoaDon\**" />
   </ItemGroup>
 
@@ -15,6 +27,7 @@
     <Compile Remove="Extensions\ReferencesMetadataReferenceFeatureProvider.cs" />
     <Compile Remove="HostedService\QueueCentralHostedService.cs" />
     <Compile Remove="Middleware\RequestComputeMiddleware.cs" />
+    <Compile Remove="Modules\Modular.Modules.TietKiemTrungNha\ModuleInitializer.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -35,6 +48,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Modules\Modular.Modules.TietKiemTrungNha\Views\TietKiemTrungNha\Index.cshtml" />
     <None Include="Views\About\Index.cshtml" />
     <None Include="Views\About\Message.cshtml" />
     <None Include="Views\About\Mission.cshtml" />
@@ -67,7 +81,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Modules\" />
     <Folder Include="wwwroot\billlookup\" />
   </ItemGroup>
 
